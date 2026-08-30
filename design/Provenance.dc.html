@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: "Archivo", system-ui, sans-serif; background: #EAE1CC; color: #17190F; }
+    a { color: #8A5E15; text-decoration: none; border-bottom: 1px solid #CFC5A9; }
+    a:hover { color: #17190F; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="width: 820px; min-height: 1000px; background: #EAE1CC; padding: 0 0 44px;">
+
+  <div style="background: #1C3A29; border-bottom: 5px solid #B8862B; padding: 13px 44px;">
+    <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.19em; text-transform: uppercase; color: #F4EEDD;">Prague Beer Atlas · Component sheet</div>
+  </div>
+
+  <div style="padding: 36px 44px 0;">
+
+    <h1 style="font-family: 'Abril Fatface', Georgia, serif; font-weight: 400; font-size: 46px; line-height: 1.02; margin: 0 0 12px; color: #17190F;">How certain a number is</h1>
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+      <span style="height: 3px; width: 46px; background: #B8862B;"></span>
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: #1C3A29;">Six levels · one publishing rule</span>
+    </div>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 30px; color: #35382A; max-width: 62ch;">Every value on the site carries where it came from. The reader sees it, and so does a guide — the one person here who can catch us being wrong, and the one whose trust we cannot get back.</p>
+
+    <!-- levels -->
+    <div style="border: 2px solid #17190F; background: #F4EEDD;">
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; background: #17190F; color: #EAE1CC; padding: 9px 18px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">
+        <div>Level</div><div>Looks like</div><div>Rule</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; padding: 15px 18px; border-bottom: 1px solid #DCD2B6; align-items: baseline;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #1C3A29;">Na etiketě</div>
+        <div style="font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums;">4.4 %</div>
+        <div style="font-size: 15.5px; line-height: 1.5; color: #35382A;">Off the label or the brewery's own page. Set plainly, no marking — the baseline everything else is measured against.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; padding: 15px 18px; border-bottom: 1px solid #DCD2B6; align-items: baseline;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #1C3A29;">Seen</div>
+        <div style="font-size: 17px; font-weight: 700; color: #1C3A29; font-variant-numeric: tabular-nums;">59 Kč</div>
+        <div style="font-size: 15.5px; line-height: 1.5; color: #35382A;">We stood there and read the menu. Always carries a date — a price without one is worthless to a visitor.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; padding: 15px 18px; border-bottom: 1px solid #DCD2B6; align-items: baseline;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #1C3A29;">By phone</div>
+        <div style="font-size: 16px; font-weight: 600;">Walk in, 12</div>
+        <div style="font-size: 15.5px; line-height: 1.5; color: #35382A;">Someone answered and told us. Group capacity lives here — and nowhere else has it at all.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; padding: 15px 18px; border-bottom: 1px solid #DCD2B6; align-items: baseline;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #8A5E15;">Estimated</div>
+        <div style="font-size: 16px; font-weight: 500; color: #6F6B57; border-bottom: 1px dotted #A89A72; justify-self: start;">est. 20 IBU</div>
+        <div style="font-size: 15.5px; line-height: 1.5; color: #35382A;">Our sensory judgement, or derived from style. Dotted, muted, and the word <em>est.</em> — never dressed up as a measurement.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; padding: 15px 18px; border-bottom: 1px solid #DCD2B6; align-items: baseline;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #8E2318;">Stale</div>
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8E2318;">Needs re-check</div>
+        <div style="font-size: 15.5px; line-height: 1.5; color: #35382A;">Older than six months, or the venue stopped answering. We say so instead of showing a number we no longer stand behind.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 152px 168px 1fr; gap: 20px; padding: 15px 18px; align-items: baseline; background: #E4DAC0;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #6F6B57;">Unverified</div>
+        <div style="font-size: 15px; color: #6F6B57; font-style: italic;">never published</div>
+        <div style="font-size: 15.5px; line-height: 1.5; color: #35382A;">Filled in from memory or a model, not yet checked against a source. Exists in the dataset, <b>blocked from the public build</b>.</div>
+      </div>
+    </div>
+
+    <!-- in context -->
+    <div style="margin-top: 32px;">
+      <h2 style="font-family: 'Abril Fatface', Georgia, serif; font-weight: 400; font-size: 27px; margin: 0 0 14px; color: #17190F;">In running text</h2>
+      <div style="border: 2px solid #CFC5A9; background: #F4EEDD; padding: 20px 24px;">
+        <p style="font-size: 17.5px; line-height: 1.62; margin: 0 0 13px; color: #35382A;">Kozel Černý is <b>10 °P</b> and <b>3.8 %</b>, among the weakest dark beers on a Prague tap. Bitterness sits around <span style="color: #6F6B57; border-bottom: 1px dotted #A89A72;">est. 20 IBU</span> — low, though IBU is a poor guide to what you actually taste in a beer this sweet.</p>
+        <p style="font-size: 17.5px; line-height: 1.62; margin: 0; color: #35382A;">At Pivovarský klub it was <b>45 Kč</b> <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6F6B57;">(12 Sep 2026)</span>. At U Slovanské lípy the tap list <span style="color: #8E2318; font-weight: 600;">needs re-checking</span> — nobody has answered the phone since March.</p>
+      </div>
+      <div style="margin-top: 12px; font-size: 14.5px; color: #6F6B57; line-height: 1.55; max-width: 64ch;">Estimates never sit next to measured values without a mark. A reader who cannot tell them apart assumes the whole page is invented the moment they catch one.</div>
+    </div>
+
+    <!-- rule -->
+    <div style="margin-top: 30px; border: 3px solid #1C3A29; padding: 5px; background: #1C3A29;">
+      <div style="border: 1px solid #7E9A88; background: #1C3A29; padding: 24px 28px;">
+        <div style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #D9A03C; margin-bottom: 12px;">Publishing rule</div>
+        <p style="font-family: 'Abril Fatface', Georgia, serif; font-size: 25px; line-height: 1.34; margin: 0 0 14px; color: #F4EEDD; max-width: 52ch;">A beer page ships only if a venue is attached to it, and only if gravity and alcohol come from a source.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #C4D2C8; max-width: 62ch;">Everything else may be estimated, provided it is marked. Beers with no Prague venue live as a line in the brewery's range and get no page of their own — a page with nothing to click through to is exactly what the search engines are throwing away.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

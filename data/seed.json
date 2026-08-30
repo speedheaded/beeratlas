@@ -1,0 +1,133 @@
+{
+  "_readme": "Затравочный набор: он существует, чтобы проверить форму схемы и запустить подбор, а НЕ чтобы быть данными. Все цифры проставлены по памяти и помечены unverified/inferred — ни одна из них не должна попасть в публикацию без проверки по этикетке или сайту пивоварни. Координаты заведений намеренно нулевые: гео заполняется из Google Places на первом шаге пайплайна.",
+
+  "breweries": [
+    { "id": "pu",       "name": "Pilsner Urquell", "city": "Plzeň",   "founded": 1842, "kind": "industrial", "site": "https://www.pilsnerurquell.com" },
+    { "id": "kozel",    "name": "Velkopopovický Kozel", "city": "Velké Popovice", "founded": 1874, "kind": "industrial" },
+    { "id": "budvar",   "name": "Budweiser Budvar", "city": "České Budějovice", "founded": 1895, "kind": "industrial" },
+    { "id": "svijany",  "name": "Pivovar Svijany", "city": "Svijany", "founded": 1564, "kind": "regional" },
+    { "id": "matuska",  "name": "Pivovar Matuška", "city": "Broumy",  "founded": 2009, "kind": "craft" }
+  ],
+
+  "beers": [
+    {
+      "id": "pu-12",
+      "breweryId": "pu",
+      "name": "Pilsner Urquell",
+      "menuNameCs": "Plzeňský Prazdroj 12°",
+      "style": "Czech pale lager",
+      "plato": { "value": 12,  "method": "unverified" },
+      "abv":   { "value": 4.4, "method": "unverified" },
+      "ibu":   { "value": 35,  "method": "unverified" },
+      "ebc":   { "value": 9,   "method": "unverified" },
+      "flavour": {
+        "method": "inferred",
+        "value": { "bitterness": 6.5, "maltSweetness": 5.5, "body": 5, "dryness": 6, "roast": 1, "fruitEster": 2, "sourness": 1, "hopAroma": 5, "hopProfile": 1 }
+      },
+      "tastesLike": ["Heineken (но заметно горче и солоднее)"],
+      "availability": "core"
+    },
+    {
+      "id": "kozel-11",
+      "breweryId": "kozel",
+      "name": "Kozel 11",
+      "menuNameCs": "Velkopopovický Kozel 11°",
+      "style": "Czech pale lager",
+      "plato": { "value": 11,  "method": "unverified" },
+      "abv":   { "value": 4.6, "method": "unverified" },
+      "flavour": {
+        "method": "inferred",
+        "value": { "bitterness": 4, "maltSweetness": 6.5, "body": 5, "dryness": 4, "roast": 1, "fruitEster": 2, "sourness": 1, "hopAroma": 3, "hopProfile": 1 }
+      },
+      "availability": "core"
+    },
+    {
+      "id": "kozel-cerny",
+      "breweryId": "kozel",
+      "name": "Kozel Černý",
+      "menuNameCs": "Kozel Černý 10°",
+      "style": "Czech dark lager",
+      "plato": { "value": 10,  "method": "unverified" },
+      "abv":   { "value": 3.8, "method": "unverified" },
+      "flavour": {
+        "method": "inferred",
+        "value": { "bitterness": 3, "maltSweetness": 8, "body": 5.5, "dryness": 3, "roast": 6.5, "fruitEster": 2, "sourness": 1, "hopAroma": 2, "hopProfile": 1 }
+      },
+      "tastesLike": ["для тех, кто ждёт Guinness, — но сладкое и без сухого финиша"],
+      "availability": "core"
+    },
+    {
+      "id": "budvar-12",
+      "breweryId": "budvar",
+      "name": "Budweiser Budvar Original",
+      "menuNameCs": "Budvar 12°",
+      "style": "Czech pale lager",
+      "plato": { "value": 12,  "method": "unverified" },
+      "abv":   { "value": 5.0, "method": "unverified" },
+      "flavour": {
+        "method": "inferred",
+        "value": { "bitterness": 5, "maltSweetness": 6.5, "body": 5.5, "dryness": 4.5, "roast": 1, "fruitEster": 3, "sourness": 1, "hopAroma": 4, "hopProfile": 1 }
+      },
+      "availability": "core"
+    },
+    {
+      "id": "svijany-maz",
+      "breweryId": "svijany",
+      "name": "Svijanský Máz",
+      "menuNameCs": "Svijanský Máz 11°",
+      "style": "Czech pale lager",
+      "plato": { "value": 11, "method": "unverified" },
+      "abv":   { "value": 4.8, "method": "unverified" },
+      "flavour": {
+        "method": "inferred",
+        "value": { "bitterness": 5, "maltSweetness": 6, "body": 5.5, "dryness": 5, "roast": 1, "fruitEster": 2, "sourness": 1, "hopAroma": 4, "hopProfile": 1 }
+      },
+      "availability": "core"
+    },
+    {
+      "id": "matuska-raptor",
+      "breweryId": "matuska",
+      "name": "Matuška Raptor",
+      "menuNameCs": "Matuška Raptor IPA",
+      "style": "American IPA",
+      "abv": { "value": 6.3, "method": "unverified" },
+      "flavour": {
+        "method": "inferred",
+        "value": { "bitterness": 8, "maltSweetness": 4, "body": 5, "dryness": 6.5, "roast": 1, "fruitEster": 5, "sourness": 1, "hopAroma": 9, "hopProfile": 8.5 }
+      },
+      "tastesLike": ["BrewDog Punk IPA"],
+      "availability": "core"
+    }
+  ],
+
+  "venues": [
+    {
+      "id": "v-lokal-dlouha",
+      "name": "Lokál Dlouhá",
+      "district": "Praha 1",
+      "lat": 0, "lng": 0,
+      "kind": "tankovna",
+      "breweryIds": ["pu"],
+      "tankBeer": { "value": true, "method": "unverified" },
+      "notesEn": "Tank Pilsner Urquell, unpasteurised. Ask for a hladinka."
+    },
+    {
+      "id": "v-zly-casy",
+      "name": "Zlý časy",
+      "district": "Nusle",
+      "lat": 0, "lng": 0,
+      "kind": "multitap",
+      "breweryIds": ["matuska", "svijany"],
+      "notesEn": "Long rotating tap list, well outside the tourist centre."
+    },
+    {
+      "id": "v-pivovarsky-klub",
+      "name": "Pivovarský klub",
+      "district": "Karlín",
+      "lat": 0, "lng": 0,
+      "kind": "multitap",
+      "breweryIds": ["matuska", "kozel", "svijany"],
+      "notesEn": "Bottle shop plus taps; good first stop for a range in one place."
+    }
+  ]
+}

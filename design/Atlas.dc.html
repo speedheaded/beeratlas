@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: "Spectral", Georgia, serif; background: #F3EFE3; color: #1F2A22; }
+    a { color: #8C6A3F; text-decoration: none; }
+    a:hover { color: #6B4F2C; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; min-height: 900px; background: #F3EFE3; display: flex; flex-direction: column;">
+
+  <!-- masthead -->
+  <div style="display: flex; align-items: baseline; gap: 20px; padding: 20px 30px 18px; border-bottom: 1px solid #1F3A2B;">
+    <div style="font-family: 'Spectral', Georgia, serif; font-weight: 700; font-size: 23px; letter-spacing: 0.01em;">Prague Beer Atlas</div>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A8577;">61 venues · 38 breweries · verified Sep 2026</div>
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 0; border: 1px solid #C2C3B0; background: #FBF9F2;">
+      <span style="padding: 9px 15px; font-size: 14.5px; color: #7A8577; font-style: italic;">Beers like…</span>
+      <span style="padding: 9px 16px 9px 0; font-size: 14.5px; color: #1F2A22;">Pilsner Urquell, but darker</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 232px minmax(0, 1fr) 348px; flex-grow: 1;">
+
+    <!-- filters -->
+    <div style="border-right: 1px solid #D8D5C4; padding: 24px 22px; display: flex; flex-direction: column; gap: 26px;">
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A8577;">Pour</div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 15px;">
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 13px; height: 13px; border: 1px solid #1F3A2B; background: #1F3A2B;"></span>Tank, unpasteurised</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 13px; height: 13px; border: 1px solid #A9AC98;"></span>Rotating multitap</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 13px; height: 13px; border: 1px solid #A9AC98;"></span>Brewpub, on site</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 13px; height: 13px; border: 1px solid #A9AC98;"></span>Classic hospoda</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A8577;">Half litre under</div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="flex-grow: 1; height: 2px; background: #C2C3B0; position: relative;">
+            <div style="position: absolute; left: 0; top: 0; height: 2px; width: 58%; background: #8C6A3F;"></div>
+            <div style="position: absolute; left: 58%; top: -6px; width: 13px; height: 13px; background: #8C6A3F;"></div>
+          </div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px;">65 Kč</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A8577;">Brewery</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 13.5px;">
+          <span style="padding: 5px 10px; border: 1px solid #1F3A2B; background: #1F3A2B; color: #F3EFE3;">Kozel</span>
+          <span style="padding: 5px 10px; border: 1px solid #C2C3B0;">Svijany</span>
+          <span style="padding: 5px 10px; border: 1px solid #C2C3B0;">Matuška</span>
+          <span style="padding: 5px 10px; border: 1px solid #C2C3B0;">Bernard</span>
+          <span style="padding: 5px 10px; border: 1px solid #C2C3B0;">Zichovec</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #D8D5C4; padding-top: 20px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A8577;">Honesty</div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 15px;">
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 13px; height: 13px; border: 1px solid #1F3A2B; background: #1F3A2B;"></span>Hide tourist traps</div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 13px; height: 13px; border: 1px solid #A9AC98;"></span>Checked this month only</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- map -->
+    <div style="position: relative; background: #E8E4D5; overflow: hidden;">
+      <svg width="100%" height="100%" viewBox="0 0 620 780" preserveAspectRatio="xMidYMid slice" style="display: block;">
+        <rect x="0" y="0" width="620" height="780" fill="#E8E4D5"></rect>
+
+        <!-- blocks -->
+        <g fill="#DFDBCA">
+          <rect x="40" y="60" width="150" height="110"></rect>
+          <rect x="40" y="190" width="96" height="140"></rect>
+          <rect x="152" y="190" width="120" height="80"></rect>
+          <rect x="152" y="288" width="120" height="180"></rect>
+          <rect x="40" y="352" width="96" height="150"></rect>
+          <rect x="392" y="80" width="180" height="130"></rect>
+          <rect x="392" y="228" width="110" height="190"></rect>
+          <rect x="520" y="228" width="60" height="120"></rect>
+          <rect x="392" y="440" width="180" height="120"></rect>
+          <rect x="40" y="524" width="230" height="150"></rect>
+          <rect x="392" y="580" width="180" height="120"></rect>
+        </g>
+
+        <!-- river -->
+        <path d="M300 -20 C 340 120, 268 220, 300 340 C 332 460, 276 560, 312 800 L 372 800 C 336 560, 392 460, 360 340 C 328 220, 400 120, 360 -20 Z" fill="#C9D6D0"></path>
+
+        <!-- bridges -->
+        <g stroke="#B0AE9B" stroke-width="3">
+          <line x1="286" y1="196" x2="374" y2="196"></line>
+          <line x1="282" y1="418" x2="370" y2="418"></line>
+          <line x1="294" y1="612" x2="382" y2="612"></line>
+        </g>
+
+        <!-- district labels -->
+        <g font-family="Spectral, Georgia, serif" font-size="13" font-style="italic" fill="#8D9186">
+          <text x="60" y="46">Malá Strana</text>
+          <text x="416" y="66">Staré Město</text>
+          <text x="416" y="430">Nové Město</text>
+          <text x="60" y="514">Smíchov</text>
+          <text x="416" y="572">Vinohrady</text>
+        </g>
+
+        <!-- pins: tank (filled square), multitap (outline circle) -->
+        <g>
+          <rect x="437" y="139" width="17" height="17" fill="#1F3A2B"></rect>
+          <rect x="503" y="266" width="17" height="17" fill="#1F3A2B"></rect>
+          <rect x="96" y="238" width="17" height="17" fill="#1F3A2B"></rect>
+          <rect x="182" y="600" width="17" height="17" fill="#1F3A2B"></rect>
+
+          <circle cx="466" cy="318" r="9" fill="#F3EFE3" stroke="#8C6A3F" stroke-width="2.5"></circle>
+          <circle cx="205" cy="330" r="9" fill="#F3EFE3" stroke="#8C6A3F" stroke-width="2.5"></circle>
+          <circle cx="480" cy="500" r="9" fill="#F3EFE3" stroke="#8C6A3F" stroke-width="2.5"></circle>
+          <circle cx="128" cy="424" r="9" fill="#F3EFE3" stroke="#8C6A3F" stroke-width="2.5"></circle>
+          <circle cx="500" cy="642" r="9" fill="#F3EFE3" stroke="#8C6A3F" stroke-width="2.5"></circle>
+
+          <!-- selected -->
+          <circle cx="450" cy="186" r="20" fill="none" stroke="#8C6A3F" stroke-width="1.5" opacity="0.55"></circle>
+          <rect x="440" y="176" width="21" height="21" fill="#8C6A3F"></rect>
+        </g>
+      </svg>
+
+      <!-- legend -->
+      <div style="position: absolute; left: 20px; bottom: 20px; background: #FBF9F2; border: 1px solid #1F3A2B; padding: 13px 16px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 12px; height: 12px; background: #1F3A2B;"></span>Tank beer, unpasteurised</div>
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 12px; height: 12px; border: 2px solid #8C6A3F; border-radius: 50%;"></span>Rotating multitap</div>
+      </div>
+    </div>
+
+    <!-- venue panel -->
+    <div style="border-left: 1px solid #D8D5C4; background: #FBF9F2; padding: 26px 24px; display: flex; flex-direction: column; gap: 20px;">
+
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C6A3F;">Tankovna · Praha 1</div>
+        <div style="font-family: 'Spectral', Georgia, serif; font-weight: 700; font-size: 27px; line-height: 1.12;">Lokál Dlouhá</div>
+        <div style="font-size: 14.5px; color: #5C6459; font-style: italic;">Dlouhá 33 · open until 24:00</div>
+      </div>
+
+      <div style="height: 132px; background: #DFDBCA; border: 1px solid #D0CCBA; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9A9B8B;">Your photo</div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #D8D5C4; border: 1px solid #D8D5C4;">
+        <div style="background: #FBF9F2; padding: 12px 14px; display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #7A8577;">Half litre</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px;">59 Kč</span>
+        </div>
+        <div style="background: #FBF9F2; padding: 12px 14px; display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #7A8577;">Group of 10</span>
+          <span style="font-size: 17px; font-weight: 600; color: #1F3A2B;">Walk in</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A8577;">On tap</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dotted #C2C3B0; padding-bottom: 7px;">
+            <span style="font-size: 16px;">Pilsner Urquell 12°</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #7A8577;">4.4%</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dotted #C2C3B0; padding-bottom: 7px;">
+            <span style="font-size: 16px;">Pilsner Urquell nefiltrovaná</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #7A8577;">seasonal</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #3D4539;">Ask for a <em>hladinka</em> — the standard pour, three fingers of foam. A <em>mlíko</em> is nearly all foam and is drunk in one go, not sipped.</p>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 9px; border-top: 1px solid #D8D5C4; padding-top: 16px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #7A8577;">Checked 12 Sep 2026 · by phone</div>
+        <div style="background: #1F3A2B; color: #F3EFE3; text-align: center; padding: 13px; font-size: 15px;">Beer tours that stop here</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,989 @@
+[
+ {
+  "breweryId": "plzensky-prazdroj",
+  "brewery": "Plzeňský Prazdroj",
+  "site": "https://www.pilsnerurquell.com/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "https://www.pilsnerurquell.com/"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "pivovar-velke-popovice",
+  "brewery": "Pivovar Velké Popovice",
+  "site": "http://www.kozel.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.kozel.cz/",
+   "http://www.kozel.cz/cs/nase-piva"
+  ],
+  "beers": [
+   {
+    "name": "Velkopopovický Kozel",
+    "plato": null,
+    "abv": "4.2",
+    "needsReview": false,
+    "context": "Velkopopovický Kozel",
+    "url": "http://www.kozel.cz/cs/nase-piva"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "4.6",
+    "needsReview": false,
+    "context": "4,6 % obj.",
+    "url": "http://www.kozel.cz/cs/nase-piva"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "5.1",
+    "needsReview": false,
+    "context": "5,1% obj.",
+    "url": "http://www.kozel.cz/cs/nase-piva"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "3.6",
+    "needsReview": false,
+    "context": "3,6 % obj.",
+    "url": "http://www.kozel.cz/cs/nase-piva"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "4.7",
+    "needsReview": false,
+    "context": "4,7 % obj.",
+    "url": "http://www.kozel.cz/cs/nase-piva"
+   },
+   {
+    "name": "≤ .",
+    "plato": null,
+    "abv": "0.5",
+    "needsReview": false,
+    "context": "≤ 0.5% obj.",
+    "url": "http://www.kozel.cz/cs/nase-piva"
+   }
+  ]
+ },
+ {
+  "breweryId": "pivovar-gambrinus-plzen",
+  "brewery": "Pivovar Gambrinus Plzeň",
+  "site": "http://www.gambrinus.cz/cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.gambrinus.cz/cz/"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "pivovary-staropramen",
+  "brewery": "Pivovary Staropramen",
+  "site": "https://staropramen.cz",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "https://staropramen.cz"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "pivovar-svijany",
+  "brewery": "Pivovar Svijany",
+  "site": "http://www.pivovarsvijany.cz/index.php",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.pivovarsvijany.cz/index.php",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/baron-15",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/dux",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/kvasnicak-13",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/pivo-cecilia",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/pivo-primo-ze-sklepa",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/premiovy-lezak-450",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/shine",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/slik",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svatek-za-studena-chmleny",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanela-citron",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanela-hrozno",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanela-kola-s-bylinkami",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanela-malina",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanela-mango",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanela-pomeranc",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-desitka-10",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-knezna-13",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-fanda-11",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-knize-13",
+   "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-maz-11"
+  ],
+  "beers": [
+   {
+    "name": "Svijanský Máz",
+    "plato": "11",
+    "abv": "4.8",
+    "needsReview": false,
+    "context": "Svijanský Máz 11 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Svijanská Desítka",
+    "plato": "10",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanská Desítka 10 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Zámek",
+    "plato": "11",
+    "abv": null,
+    "needsReview": true,
+    "context": "Zámek 11 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Svijanský fanda",
+    "plato": "11",
+    "abv": "4.8",
+    "needsReview": false,
+    "context": "Svijanský fanda 11 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Svijanský Rytíř",
+    "plato": "12",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanský Rytíř 12 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Kvasničák",
+    "plato": "13",
+    "abv": null,
+    "needsReview": true,
+    "context": "Kvasničák 13 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Svijanský Kníže",
+    "plato": "13",
+    "abv": "5.6",
+    "needsReview": false,
+    "context": "Svijanský Kníže 13 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Svijanská Kněžna",
+    "plato": "13",
+    "abv": "5.2",
+    "needsReview": false,
+    "context": "Svijanská Kněžna 13 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Baron",
+    "plato": "15",
+    "abv": "6.5",
+    "needsReview": false,
+    "context": "Baron 15 %",
+    "url": "http://www.pivovarsvijany.cz/index.php"
+   },
+   {
+    "name": "Baron - nejsilnější svijanský speciál",
+    "plato": "15",
+    "abv": null,
+    "needsReview": true,
+    "context": "Baron 15 % - nejsilnější svijanský speciál",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/baron-15"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "6.5",
+    "needsReview": false,
+    "context": "Obsah alkoholu: 6,5 %",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/baron-15"
+   },
+   {
+    "name": "DUX",
+    "plato": null,
+    "abv": "5.5",
+    "needsReview": false,
+    "context": "DUX",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/dux"
+   },
+   {
+    "name": "Kvasničák - nefiltrované pivo Svijany",
+    "plato": "13",
+    "abv": null,
+    "needsReview": true,
+    "context": "Kvasničák 13 % - nefiltrované pivo Svijany",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/kvasnicak-13"
+   },
+   {
+    "name": "Pivo Cecilia",
+    "plato": null,
+    "abv": "4.8",
+    "needsReview": false,
+    "context": "Pivo Cecilia",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/pivo-cecilia"
+   },
+   {
+    "name": "Pivo přímo ze sklepa",
+    "plato": null,
+    "abv": "4.9",
+    "needsReview": false,
+    "context": "Pivo přímo ze sklepa",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/pivo-primo-ze-sklepa"
+   },
+   {
+    "name": "Prémiový ležák 450",
+    "plato": null,
+    "abv": "4.6",
+    "needsReview": false,
+    "context": "Prémiový ležák 450",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/premiovy-lezak-450"
+   },
+   {
+    "name": "Shine",
+    "plato": null,
+    "abv": "2.9",
+    "needsReview": false,
+    "context": "Shine",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/shine"
+   },
+   {
+    "name": "ŠLIK",
+    "plato": null,
+    "abv": "4.4",
+    "needsReview": false,
+    "context": "ŠLIK",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/slik"
+   },
+   {
+    "name": "EPM",
+    "plato": null,
+    "abv": "12.2",
+    "needsReview": false,
+    "context": "EPM: 12,2 %",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka"
+   },
+   {
+    "name": "Svijanská Desítka - vše o pivu",
+    "plato": "10",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanská Desítka 10 % - vše o pivu",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-desitka-10"
+   },
+   {
+    "name": "Svijanská Kněžna - pivo, tmavý speciál",
+    "plato": "13",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanská Kněžna 13 % - pivo, tmavý speciál",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-knezna-13"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "5.2",
+    "needsReview": false,
+    "context": "Obsah alkoholu: 5,2 %",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-knezna-13"
+   },
+   {
+    "name": "Svijanský Fanda - řezané pivo",
+    "plato": "11",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanský Fanda 11 % - řezané pivo",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-fanda-11"
+   },
+   {
+    "name": "Svijanský Kníže - sváteční pivo, světlý speciál",
+    "plato": "13",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanský Kníže 13 % - sváteční pivo, světlý speciál",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-knize-13"
+   },
+   {
+    "name": "",
+    "plato": null,
+    "abv": "5.6",
+    "needsReview": false,
+    "context": "Obsah alkoholu: 5,6 %",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-knize-13"
+   },
+   {
+    "name": "Svijanský Máz - nejprodávanější svijanské pivo",
+    "plato": "11",
+    "abv": null,
+    "needsReview": true,
+    "context": "Svijanský Máz 11 % - nejprodávanější svijanské pivo",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-maz-11"
+   },
+   {
+    "name": "Kategorie piv – Sdružení přátel piva, Litoměřice",
+    "plato": "11",
+    "abv": null,
+    "needsReview": false,
+    "context": "Kategorie 11° piv – Sdružení přátel piva, Litoměřice",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svijansky-maz-11"
+   }
+  ]
+ },
+ {
+  "breweryId": "uneticky-pivovar",
+  "brewery": "Únětický pivovar",
+  "site": "http://www.unetickypivovar.cz/o-pivovaru",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.unetickypivovar.cz/o-pivovaru",
+   "http://www.unetickypivovar.cz/nase-piva",
+   "http://www.unetickypivovar.cz/stala-nabidka"
+  ],
+  "beers": [
+   {
+    "name": "naše piva",
+    "plato": "10",
+    "abv": null,
+    "needsReview": false,
+    "context": "naše piva",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětické pivo",
+    "plato": "10",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětické pivo 10°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětický speciál Letní",
+    "plato": "8",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětický speciál Letní 8°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětický speciál Masopustní bock",
+    "plato": "16",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětický speciál Masopustní bock 16°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětický speciál Vánoční",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětický speciál Vánoční 13°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětický speciál Svatováclavská",
+    "plato": "14",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětický speciál Svatováclavská 14°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětický speciál Žitný",
+    "plato": "11.5",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětický speciál Žitný 11,5°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Únětický speciál Jarní Petrklíč",
+    "plato": "11",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětický speciál Jarní Petrklíč 11°",
+    "url": "http://www.unetickypivovar.cz/nase-piva"
+   },
+   {
+    "name": "Stálá nabídka",
+    "plato": "10",
+    "abv": "6.2",
+    "needsReview": false,
+    "context": "Stálá nabídka",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Únětické pivo , nefiltrované, alk. (1)",
+    "plato": "10",
+    "abv": "4.0",
+    "needsReview": false,
+    "context": "Únětické pivo 10°, nefiltrované, 4,0% alk. (1)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Únětické pivo , filtrované, alk. (1)",
+    "plato": "10.7",
+    "abv": "4.2",
+    "needsReview": false,
+    "context": "Únětické pivo 10,7°, filtrované, 4,2% alk. (1)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Tuplák , nefiltrované, alk. (1)",
+    "plato": "10",
+    "abv": "4.0",
+    "needsReview": false,
+    "context": "Tuplák 10°, nefiltrované, 4,0% alk. (1)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Tuplák , filtrované, alk. (1)",
+    "plato": "10.7",
+    "abv": "4.2",
+    "needsReview": false,
+    "context": "Tuplák 10,7°, filtrované, 4,2% alk. (1)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Cider Tátův sad – suchý (jablečný alkoholický nápoj) alk. (12)",
+    "plato": null,
+    "abv": "6.2",
+    "needsReview": false,
+    "context": "Cider Tátův sad – suchý (jablečný alkoholický nápoj) 6,2% alk. (12)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Červené Fangalo (Jihoafrická republika) alk. (12)",
+    "plato": null,
+    "abv": "12.8",
+    "needsReview": false,
+    "context": "Červené Fangalo (Jihoafrická republika) 12,8% alk. (12)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Bílé Fangalo (Jihoafrická republika) alk. (12)",
+    "plato": null,
+    "abv": "12.2",
+    "needsReview": false,
+    "context": "Bílé Fangalo (Jihoafrická republika) 12,2% alk. (12)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": ") alk. (12)",
+    "plato": "13",
+    "abv": null,
+    "needsReview": true,
+    "context": ") 13% alk. (12)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Riesling — Weingut Familie Rauen (Německo) alk. (12)",
+    "plato": null,
+    "abv": "11.5",
+    "needsReview": false,
+    "context": "Riesling — Weingut Familie Rauen (Německo) 11,5% alk. (12)",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "cena 0,5l Únětické",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "cena 0,5l Únětické 12°",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "Pohlednice, „Posílám ti jedno Únětické pivo “",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "Pohlednice, „Posílám ti jedno Únětické pivo 12°“",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   },
+   {
+    "name": "",
+    "plato": "10",
+    "abv": null,
+    "needsReview": false,
+    "context": "Únětická 10°cenu jako nejlepší pivo ve své kategorii, v anketě zabodovala opět i Únětická 12° a i samotný Únětický pivovar.",
+    "url": "http://www.unetickypivovar.cz/stala-nabidka"
+   }
+  ]
+ },
+ {
+  "breweryId": "pivovar-radegast",
+  "brewery": "Pivovar Radegast",
+  "site": "https://www.radegast.cz",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "https://www.radegast.cz"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "budejovicky-budvar",
+  "brewery": "Budějovický Budvar",
+  "site": "http://www.budvar.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.budvar.cz/",
+   "http://www.budvar.cz/pivovar/",
+   "http://www.budvar.cz/pivovar/jak-varime-pivo",
+   "http://www.budvar.cz/pivovar/vsechna-oceneni"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "brewery": "Královský pivovar Krušovice",
+  "site": "http://www.krusovice.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.krusovice.cz/",
+   "http://www.krusovice.cz/cs/nase-piva/",
+   "http://www.krusovice.cz/cs/nase-piva/nealko"
+  ],
+  "beers": [
+   {
+    "name": "Nealko",
+    "plato": null,
+    "abv": "0.5",
+    "needsReview": false,
+    "context": "Nealko",
+    "url": "http://www.krusovice.cz/cs/nase-piva/nealko"
+   },
+   {
+    "name": "max .",
+    "plato": null,
+    "abv": "0.5",
+    "needsReview": false,
+    "context": "max 0,5% obj.",
+    "url": "http://www.krusovice.cz/cs/nase-piva/nealko"
+   }
+  ]
+ },
+ {
+  "breweryId": "pivovar-cvikov",
+  "brewery": "Pivovar Cvikov",
+  "site": "https://www.pivovarcvikov.cz",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "https://www.pivovarcvikov.cz",
+   "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "https://www.pivovarcvikov.cz/cs/nase-piva/hvozd-11",
+   "https://www.pivovarcvikov.cz/cs/nase-piva/klic-12",
+   "https://www.pivovarcvikov.cz/cs/nase-piva/luz-10",
+   "https://www.pivovarcvikov.cz/cs/nase-piva/sklar-8",
+   "https://www.pivovarcvikov.cz/cs/nase-piva/svatecni-13"
+  ],
+  "beers": [
+   {
+    "name": "Klíč",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "Klíč 12°",
+    "url": "https://www.pivovarcvikov.cz"
+   },
+   {
+    "name": "Hvozd",
+    "plato": "11",
+    "abv": null,
+    "needsReview": false,
+    "context": "Hvozd 11°",
+    "url": "https://www.pivovarcvikov.cz"
+   },
+   {
+    "name": "Sklář",
+    "plato": "8",
+    "abv": null,
+    "needsReview": false,
+    "context": "Sklář 8°",
+    "url": "https://www.pivovarcvikov.cz"
+   },
+   {
+    "name": "Sváteční",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Sváteční 13°",
+    "url": "https://www.pivovarcvikov.cz"
+   },
+   {
+    "name": "Naše piva",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Naše piva",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Výroční",
+    "plato": "14",
+    "abv": null,
+    "needsReview": false,
+    "context": "Výroční 14°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Kleis",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Kleis 13°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Žitný speciál",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Žitný speciál 13°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Stovka",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Stovka 13°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Královské",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "Královské 12°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Zimní ležák",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "Zimní ležák 12°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Lužická Mozaika",
+    "plato": "11",
+    "abv": null,
+    "needsReview": false,
+    "context": "Lužická Mozaika 11°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/"
+   },
+   {
+    "name": "Naše piva / Hvozd",
+    "plato": "11",
+    "abv": "4.5",
+    "needsReview": false,
+    "context": "Naše piva / Hvozd 11°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/hvozd-11"
+   },
+   {
+    "name": "Hvozd | Naše piva | Pivovar Cvikov",
+    "plato": "11",
+    "abv": null,
+    "needsReview": false,
+    "context": "Hvozd 11° | Naše piva | Pivovar Cvikov",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/hvozd-11"
+   },
+   {
+    "name": "Naše piva / Klíč",
+    "plato": "12",
+    "abv": "4.8",
+    "needsReview": false,
+    "context": "Naše piva / Klíč 12°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/klic-12"
+   },
+   {
+    "name": "Klíč | Naše piva | Pivovar Cvikov",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "Klíč 12° | Naše piva | Pivovar Cvikov",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/klic-12"
+   },
+   {
+    "name": "Naše piva / Luž",
+    "plato": "10",
+    "abv": "4.2",
+    "needsReview": false,
+    "context": "Naše piva / Luž 10°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/luz-10"
+   },
+   {
+    "name": "Luž | Naše piva | Pivovar Cvikov",
+    "plato": "10",
+    "abv": null,
+    "needsReview": false,
+    "context": "Luž 10° | Naše piva | Pivovar Cvikov",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/luz-10"
+   },
+   {
+    "name": "Naše piva / Sklář",
+    "plato": "8",
+    "abv": "3.5",
+    "needsReview": false,
+    "context": "Naše piva / Sklář 8°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/sklar-8"
+   },
+   {
+    "name": "Sklář | Naše piva | Pivovar Cvikov",
+    "plato": "8",
+    "abv": null,
+    "needsReview": false,
+    "context": "Sklář 8° | Naše piva | Pivovar Cvikov",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/sklar-8"
+   },
+   {
+    "name": "Naše piva / Sváteční",
+    "plato": "13",
+    "abv": "5.6",
+    "needsReview": false,
+    "context": "Naše piva / Sváteční 13°",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/svatecni-13"
+   },
+   {
+    "name": "Sváteční | Naše piva | Pivovar Cvikov",
+    "plato": "13",
+    "abv": null,
+    "needsReview": false,
+    "context": "Sváteční 13° | Naše piva | Pivovar Cvikov",
+    "url": "https://www.pivovarcvikov.cz/cs/nase-piva/svatecni-13"
+   }
+  ]
+ },
+ {
+  "breweryId": "pivovar-rychtar",
+  "brewery": "Pivovar Rychtář",
+  "site": "http://www.rychtar.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.rychtar.cz/"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "pivovar-zichovec",
+  "brewery": "Pivovar Zichovec",
+  "site": "https://pivovarzichovec.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "https://pivovarzichovec.cz/",
+   "https://pivovarzichovec.cz/nase-piva/",
+   "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=novinky-limitovana-piva",
+   "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=stala-nabidka",
+   "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=barelova-piva",
+   "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=degustacni-sady",
+   "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=kooperace",
+   "http://pivovarzichovec.cz/nase-piva/"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "pivovar-cerna-hora",
+  "brewery": "Pivovar Černá Hora",
+  "site": "http://www.pivovarcernahora.cz",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.pivovarcernahora.cz"
+  ],
+  "beers": []
+ },
+ {
+  "breweryId": "restaurace-a-pivovar-beer-factory",
+  "brewery": "Restaurace a pivovar Beer Factory",
+  "site": "http://www.beerfactoryplzen.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "http://www.beerfactoryplzen.cz/"
+  ],
+  "beers": [
+   {
+    "name": "Světlý ležák",
+    "plato": "12",
+    "abv": null,
+    "needsReview": false,
+    "context": "Světlý ležák 12°",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 35 IBU, Barva: 15 EBC",
+    "plato": null,
+    "abv": "4.5",
+    "needsReview": false,
+    "context": "Stupňovitost: 12%, Alkohol: 4,5%, Hořkost: 35 IBU, Barva: 15 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 27 IBU, Barva: 35 EBC",
+    "plato": null,
+    "abv": "4.5",
+    "needsReview": false,
+    "context": "Stupňovitost: 12%, Alkohol: 4,5%, Hořkost: 27 IBU, Barva: 35 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 20 IBU, Barva: 80 EBC",
+    "plato": "15",
+    "abv": null,
+    "needsReview": true,
+    "context": "Stupňovitost: 15%, Alkohol: 5%, Hořkost: 20 IBU, Barva: 80 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 50 IBU, Barva: 25 EBC",
+    "plato": null,
+    "abv": "5.3",
+    "needsReview": false,
+    "context": "Stupňovitost: 14%, Alkohol: 5,3%, Hořkost: 50 IBU, Barva: 25 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 33 IBU, Barva: 4 EBC",
+    "plato": null,
+    "abv": "3.5",
+    "needsReview": false,
+    "context": "Stupňovitost: 10%, Alkohol: 3,5%, Hořkost: 33 IBU, Barva: 4 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 33 IBU, Barva: 15 EBC",
+    "plato": null,
+    "abv": "3.9",
+    "needsReview": false,
+    "context": "Stupňovitost: 11%, Alkohol: 3,9%, Hořkost: 33 IBU, Barva: 15 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 30 IBU, Barva: 10 EBC",
+    "plato": "12",
+    "abv": null,
+    "needsReview": true,
+    "context": "Stupňovitost: 12%, Alkohol: 5%, Hořkost: 30 IBU, Barva: 10 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   },
+   {
+    "name": ", : , Hořkost: 55 IBU, Barva: 20 EBC",
+    "plato": null,
+    "abv": "6.5",
+    "needsReview": false,
+    "context": "Stupňovitost: 16%, Alkohol: 6,5%, Hořkost: 55 IBU, Barva: 20 EBC",
+    "url": "http://www.beerfactoryplzen.cz/"
+   }
+  ]
+ },
+ {
+  "breweryId": "vinohradsky-pivovar",
+  "brewery": "Vinohradský pivovar",
+  "site": "https://www.vinohradskypivovar.cz/",
+  "fetchedAt": "2026-08-30",
+  "pages": [
+   "https://www.vinohradskypivovar.cz/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/aleien/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/black-panda/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/karanska-9/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/less-sugars-more-fun/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/london-calling/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/pop-roll/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/seaman/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/summer-krush/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/vinohradska-11/",
+   "https://www.vinohradskypivovar.cz/cs/pivo/yes/"
+  ],
+  "beers": [
+   {
+    "name": "Aleien",
+    "plato": null,
+    "abv": "5.9",
+    "needsReview": false,
+    "context": "Aleien",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/aleien/"
+   },
+   {
+    "name": "Black Panda",
+    "plato": null,
+    "abv": "5.4",
+    "needsReview": false,
+    "context": "Black Panda",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/black-panda/"
+   },
+   {
+    "name": "Káranská 9",
+    "plato": null,
+    "abv": "3.9",
+    "needsReview": false,
+    "context": "Káranská 9",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/karanska-9/"
+   },
+   {
+    "name": "Less Sugars More Fun",
+    "plato": null,
+    "abv": "6.2",
+    "needsReview": false,
+    "context": "Less Sugars More Fun",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/less-sugars-more-fun/"
+   },
+   {
+    "name": "London Calling",
+    "plato": null,
+    "abv": "5.9",
+    "needsReview": false,
+    "context": "London Calling",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/london-calling/"
+   },
+   {
+    "name": "Pop & Roll",
+    "plato": null,
+    "abv": "5.2",
+    "needsReview": false,
+    "context": "Pop & Roll",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/pop-roll/"
+   },
+   {
+    "name": "Seaman",
+    "plato": null,
+    "abv": "3.9",
+    "needsReview": false,
+    "context": "Seaman",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/seaman/"
+   },
+   {
+    "name": "Summer Krush",
+    "plato": null,
+    "abv": "3.9",
+    "needsReview": false,
+    "context": "Summer Krush",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/summer-krush/"
+   },
+   {
+    "name": "Vinohradská 11",
+    "plato": null,
+    "abv": "4.5",
+    "needsReview": false,
+    "context": "Vinohradská 11",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/vinohradska-11/"
+   },
+   {
+    "name": "Yes!",
+    "plato": null,
+    "abv": "4.2",
+    "needsReview": false,
+    "context": "Yes!",
+    "url": "https://www.vinohradskypivovar.cz/cs/pivo/yes/"
+   }
+  ]
+ }
+]

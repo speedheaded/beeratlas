@@ -1,0 +1,604 @@
+<title>Пивной атлас Праги</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#EAE1CC;
+  --panel:#F4EEDD;
+  --raise:#F4EEDD;
+  --ink:#17190F;
+  --body:#35382A;
+  --muted:#6F6B57;
+  --line:#CFC5A9;
+  --rule:#1C3A29;
+  --accent:#8A5E15;
+  --accent-soft:#A89A72;
+  --good:#1C3A29;
+  --gold:#B8862B;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#12160F;
+    --panel:#1B2117;
+    --raise:#1B2117;
+    --ink:#EFE7D0;
+    --body:#D0C9B1;
+    --muted:#8E8A72;
+    --line:#2F3728;
+    --rule:#5F7E6B;
+    --accent:#D9A03C;
+    --accent-soft:#7A6C48;
+    --good:#8FAE7C;
+    --gold:#B8862B;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12160F;
+  --panel:#1B2117;
+  --raise:#1B2117;
+  --ink:#EFE7D0;
+  --body:#D0C9B1;
+  --muted:#8E8A72;
+  --line:#2F3728;
+  --rule:#5F7E6B;
+  --accent:#D9A03C;
+  --accent-soft:#7A6C48;
+  --good:#8FAE7C;
+  --gold:#B8862B;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 30px 96px}
+.prose{max-width:66ch}
+p{margin:0 0 1.1em;color:var(--body)}
+strong,b{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.mono{font-family:"Archivo",system-ui,sans-serif;font-weight:600}
+
+header.masthead{padding:66px 0 38px;border-bottom:4px solid var(--gold)}
+.kicker{
+  font-family:"Archivo",system-ui,sans-serif;font-weight:700;
+  font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:24px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+}
+.kicker span:not(:first-child)::before{content:"\00B7";margin-right:14px;color:var(--muted)}
+h1{
+  font-family:"Abril Fatface",Georgia,serif;font-weight:400;
+  font-size:clamp(42px,7vw,66px);line-height:1.02;letter-spacing:-.018em;
+  margin:0 0 18px;text-wrap:balance;
+}
+.standfirst{font-size:19.5px;line-height:1.55;color:var(--body);max-width:60ch;margin:0}
+.standfirst b{color:var(--ink);font-weight:600}
+
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.eyebrow{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px;
+}
+h2{
+  font-family:"Abril Fatface",Georgia,serif;font-weight:400;
+  font-size:clamp(26px,3.4vw,34px);line-height:1.14;letter-spacing:-.012em;
+  margin:0 0 20px;text-wrap:balance;
+}
+h3{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:20px;line-height:1.3;margin:32px 0 10px}
+
+.scroller{overflow-x:auto;margin:26px 0 8px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15.5px;background:var(--raise)}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--body)}
+thead th{
+  font-family:"Archivo",system-ui,sans-serif;font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;color:#F4EEDD;font-weight:700;
+  background:var(--rule);border-bottom:0;white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:0}
+td b,th b{color:var(--ink)}
+td.num{font-family:"Archivo",system-ui,sans-serif;font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.est{color:var(--muted);border-bottom:1px dotted var(--accent-soft)}
+.tag{
+  font-family:"Archivo",system-ui,sans-serif;font-size:10px;letter-spacing:.09em;
+  text-transform:uppercase;padding:2.5px 7px;border:1px solid currentColor;white-space:nowrap;display:inline-block;
+}
+.tag.no{color:var(--accent)}
+.tag.later{color:var(--muted)}
+.tag.yes{color:var(--good)}
+
+.callout{background:var(--panel);border:2px solid var(--rule);border-left:6px solid var(--gold);padding:24px 28px;margin:28px 0}
+.callout .lead{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:22px;line-height:1.4;margin:0 0 12px;color:var(--ink)}
+.callout p:last-child{margin-bottom:0}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--line);margin:26px 0 8px;border:1px solid var(--line)}
+.col{background:var(--raise);padding:22px}
+.col h4{font-family:"Archivo",system-ui,sans-serif;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;font-weight:500}
+.col .t{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:18px;margin:0 0 10px;line-height:1.3;color:var(--ink)}
+.col ul{list-style:none;margin:0;padding:0;font-size:14px;line-height:1.5}
+.col li{padding:4px 0;border-bottom:1px solid var(--line);color:var(--body)}
+.col li:last-child{border-bottom:0}
+.col code{font-family:"Archivo",system-ui,sans-serif;font-size:12.5px;color:var(--ink)}
+
+.tl{display:grid;gap:1px;background:var(--line);margin:28px 0 8px;border:1px solid var(--line)}
+.tl-row{background:var(--raise);padding:22px 24px;display:grid;grid-template-columns:158px 1fr;gap:22px;align-items:start}
+.tl-row .per{font-family:"Archivo",system-ui,sans-serif;font-size:12px;color:var(--accent);letter-spacing:.04em;padding-top:3px}
+.tl-row .per em{display:block;font-style:normal;color:var(--muted);font-size:10.5px;margin-top:4px;letter-spacing:.13em;text-transform:uppercase}
+.tl-row h4{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:19px;margin:0 0 8px;color:var(--ink)}
+.tl-row ul{margin:0;padding-left:1.1em;font-size:15.5px}
+.tl-row li{margin-bottom:.35em;color:var(--body)}
+.tl-row li::marker{color:var(--accent)}
+
+ul.kill{list-style:none;margin:26px 0 0;padding:0;border:1px solid var(--line)}
+ul.kill li{display:grid;grid-template-columns:124px 1fr;gap:20px;padding:16px 18px;border-bottom:1px solid var(--line);background:var(--raise);font-size:15.5px}
+ul.kill li:last-child{border-bottom:0}
+ul.kill .date{font-family:"Archivo",system-ui,sans-serif;font-size:11.5px;color:var(--accent);letter-spacing:.05em;padding-top:3px}
+ul.kill b{display:block;margin-bottom:3px}
+ul.kill span{color:var(--body)}
+
+ul.plain{margin:0 0 1.1em;padding-left:1.15em}
+ul.plain li{margin-bottom:.45em;color:var(--body)}
+ul.plain li::marker{color:var(--accent)}
+
+.flow{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;background:var(--panel);border:2px solid var(--rule);
+  padding:18px 20px;margin:24px 0;overflow-x:auto;white-space:pre;color:var(--body);line-height:1.75;
+}
+.flow b{color:var(--accent);font-weight:500}
+
+.note{font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:15px;margin-top:28px;max-width:68ch;line-height:1.6}
+.note b{color:var(--body)}
+
+footer{padding:46px 0 0;border-top:4px solid var(--gold);margin-top:22px;font-size:14.5px;color:var(--muted);max-width:68ch}
+
+@media (max-width:640px){
+  .wrap{padding:0 20px 64px}
+  header.masthead{padding:50px 0 32px}
+  .tl-row,ul.kill li{grid-template-columns:1fr;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="kicker"><span>Бриф v4</span><span>29 августа 2026</span><span>beeratlas.eu</span><span>Сезон — март 2027</span></div>
+  <h1>Пивной атлас Праги</h1>
+  <p class="standfirst">Англоязычный справочник чешского пива, где каждый сорт описан через расстояние до пива, которое читатель уже пробовал, и где каждая страница заканчивается ответом «где это выпить, почём и когда мы это проверяли». <b>Сначала база, монетизация потом.</b></p>
+</header>
+
+<section>
+  <p class="eyebrow">Ядро</p>
+  <h2>Одна идея, из которой выводится всё остальное</h2>
+  <div class="prose">
+    <p>Пивные параметры мертвы. «12°, 4,4%, около 35 IBU» не говорит человеку ничего, потому что у него нет шкалы в голове. Зато <b>«как Pilsner Urquell, только менее горькое и суше»</b> понимает каждый — этот вкус у него откалиброван во рту.</p>
+    <p>Продукт измеряет не пиво, а <em>расстояние от знакомого</em>. Одна операция обслуживает четыре разных экрана:</p>
+  </div>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Где</th><th>Как звучит</th><th>Кому</th></tr></thead>
+      <tbody>
+        <tr><td><b>Страница сорта</b></td><td>Модуль сравнения с якорем по четырём осям</td><td>Поиск и цитирование в AI-ответах</td></tr>
+        <tr><td><b>Страница стиля</b></td><td>Шкала с расставленными известными сортами</td><td>Длинный хвост: «is 12° stronger than 10°»</td></tr>
+        <tr><td><b>Телефон в пабе</b></td><td>«Покажите это в меню» + чешское название крупно</td><td>Турист, у которого ждёт официант</td></tr>
+        <tr><td><b>Подбор замены</b></td><td>«Понравилось в Таллине — вот ближайшее здесь»</td><td>Гость и уехавший домой</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Техническая оговорка, которую нельзя забыть.</b> «Менее горькое» — это не просто меньше IBU: воспринимаемая горечь зависит от сорта хмеля, момента внесения и остаточной сладости. Сравнение ведётся и в цифрах, и в сенсорных словах, иначе обещание разойдётся со вкусом с первого глотка.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Структура</p>
+  <h2>Пять типов страниц</h2>
+  <div class="prose"><p>Направление выбрано: энциклопедия — основная поверхность продукта. Инструмент гида и карта отложены как режимы поверх тех же данных; сценарий «турист в пабе» поглощён мобильной версией страницы сорта, отдельного приложения не нужно.</p></div>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Тип</th><th>Объём</th><th>Запросы</th><th>Роль</th></tr></thead>
+      <tbody>
+        <tr><td><b>Сорт</b></td><td class="num">300–800</td><td>Kozel 11 ABV · Matuška Raptor IPA</td><td>Хвост, покрытие темы, основной шаблон</td></tr>
+        <tr><td><b>Пивоварня</b></td><td class="num">40–60</td><td>Svijany beer · Zichovec brewery</td><td>Вероятно, самая сильная по трафику. Хаб для сортов и заведений</td></tr>
+        <tr><td><b>Стиль</b></td><td class="num">10–15</td><td>what does 12 degrees mean · světlý ležák</td><td>Слабая конкуренция, лучший вход</td></tr>
+        <tr><td><b>Заведение</b></td><td class="num">150–250</td><td>beer bars in Žižkov</td><td>Локальный интент, карты</td></tr>
+        <tr><td><b>Хабы и поперечные</b></td><td class="num">15–25</td><td>best beer bars in Prague · beers similar to Guinness</td><td>Пишутся руками. Лицо проекта</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Не берём:</b> головные брендовые запросы вроде «pilsner urquell» — там сам бренд и Wikipedia. И чистые определения — их съедает AI Overviews. Заходим только туда, где ответ требует местного знания и сегодняшних данных.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Данные</p>
+  <h2>Три сущности и одна связь</h2>
+  <div class="prose">
+    <p>Ключевое решение: <b>сорт привязывается к заведению не напрямую, а через пивоварню.</b> В Чехии заведение принадлежит бренду — Svijanská hospoda, Kozlovna, сертифицированные заведения Pilsner Urquell. Эта связь живёт годами, статус конкретной кеги живёт три дня.</p>
+    <p>Отсюда главное для скорости: граф бутстрапится из официальных списков партнёрских заведений, которые пивоварни публикуют сами. Ногами обходятся не 250 адресов, а 50–60 лучших.</p>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <h4>Пивоварня</h4>
+      <p class="t">Хаб</p>
+      <ul>
+        <li><code>name, city, founded, kind</code></li>
+        <li><code>venueListUrl</code> — источник бутстрапа</li>
+        <li><code>storyEn</code> — три абзаца</li>
+        <li><code>coreRange[]</code></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Заведение</h4>
+      <p class="t">Ось схемы</p>
+      <ul>
+        <li><code>breweryIds[]</code> ← связь</li>
+        <li><code>groups</code> — данные обзвона</li>
+        <li><code>price05, tankBeer, englishMenu</code></li>
+        <li><code>touristTrap</code> — честный флаг</li>
+        <li><code>verifiedAt</code> — публичная дата</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Сорт</h4>
+      <p class="t">Хвост</p>
+      <ul>
+        <li><code>plato, abv, ibu, ebc</code></li>
+        <li><code>flavour[9]</code> — обычный массив</li>
+        <li><code>tastesLike[]</code> — якоря</li>
+        <li><code>availability</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Девять осей вкуса</h3>
+  <div class="prose">
+    <p>Заполняются не как абсолютные оценки, а как позиция относительно центроида стиля — иначе у всех hazy IPA получится один вектор, потому что маркетинговые описания у них написаны одинаково.</p>
+    <p>Девятая ось специфична для Чехии: <code class="mono">hopProfile</code>, где 0 — классический жатецкий травяно-пряный, 10 — новосветский цитрусово-тропический. Здесь главный вопрос не «сколько хмеля», а «какой».</p>
+  </div>
+  <div class="flow">bitterness · maltSweetness · body · dryness · roast
+fruitEster · sourness · hopAroma · <b>hopProfile</b></div>
+</section>
+
+<section>
+  <p class="eyebrow">Граф и AI</p>
+  <h2>Что здесь граф и что здесь AI-native</h2>
+
+  <div class="prose">
+    <p>Две вещи, которые легко потерять за разговорами о контенте. Граф в проекте несущий, но невидимый; AI до этого раздела строил продукт, но не работал внутри него.</p>
+  </div>
+
+  <h3>Граф — это модель, а не инфраструктура</h3>
+  <div class="prose">
+    <p>Три сущности — не три таблицы, а граф со списками смежности. Несущее ребро — <b>«заведение → пивоварня», а не «заведение → сорт»</b>.</p>
+  </div>
+
+  <div class="flow">   Brewery ──brews──► Beer ──style──► Style
+      ▲                 │  ▲
+      │                 │  └── anchor-delta ──► <b>Anchor</b>  (Guinness, Corona, Urquell)
+   pours                │
+      │                 └───── vector-distance ──► Beer   (вычисляется, не хранится)
+    Venue ──confirmed (редко, с датой)──► Beer</div>
+
+  <div class="prose">
+    <p>Ценность создают обходы, а не узлы:</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Обход</th><th>Что даёт</th><th>Хопов</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">Beer → Brewery → Venue</td><td><b>«Где это выпить»</b> — весь моат</td><td class="num">2</td></tr>
+        <tr><td class="mono">Anchor + Δ → вектор → Beer → Venue</td><td>Подбор замены</td><td class="num">3</td></tr>
+        <tr><td class="mono">Beer → Style → соседи → фильтр</td><td>«Если вам это нравится»</td><td class="num">3</td></tr>
+        <tr><td class="mono">Иностранный сорт → вектор → Beer → Venue</td><td>Случай с таллинским пейл-элем</td><td class="num">4</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p class="lead">Внутренняя перелинковка для поиска — это буквально перечисление рёбер графа.</p>
+    <p>Сорт ссылается на пивоварню, пивоварня на заведения, заведение обратно на сорта. Плотный граф ссылок и есть то, за что поиск даёт тематический авторитет. Граф здесь не метафора, он и есть SEO-структура — и это его главное коммерческое оправдание.</p>
+  </div>
+
+  <p class="note"><b>Почему не графовая СУБД.</b> 400 сортов, 250 заведений, 60 пивоварен — порядка семисот узлов, и весь граф помещается в память браузера. Neo4j окупается на миллионах узлов и обходах неизвестной глубины; здесь глубина известна и не превышает четырёх. Списки смежности в JSON — полноценное представление графа.</p>
+
+  <h3>Честный аудит: где AI на самом деле</h3>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Что</th><th>AI внутри</th><th>AI-native продукт?</th></tr></thead>
+      <tbody>
+        <tr><td>Пайплайн извлечения данных</td><td>Да, агенты</td><td>Нет — инструмент сборки</td></tr>
+        <tr><td>Вывод вектора вкуса</td><td>Да, модель</td><td>Наполовину — производит данные</td></tr>
+        <tr><td>Подбор по якорю</td><td><b>Нет</b>, арифметика</td><td>Нет</td></tr>
+        <tr><td>Объяснения и страницы</td><td><b>Нет</b>, шаблон и статика</td><td>Нет</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p style="margin-top:1.1em">Вывод неприятный, но верный: <b>пользователь не взаимодействует ни с одной моделью.</b> Ниже — три вещи, которые без AI не делаются, и они возвращаются в план.</p>
+  </div>
+
+  <div class="cols">
+    <div class="col">
+      <h4>1 · Продукт</h4>
+      <p class="t">Свободный запрос по графу</p>
+      <ul>
+        <li>«что-нибудь тёмное, но не тяжёлое, рядом с Жижковом, до 60 крон»</li>
+        <li>Турист не станет пользоваться фасетными фильтрами. Такую фразу напишет</li>
+        <li>Модель разбирает фразу в структуру, дальше обычный обход графа</li>
+        <li>Здесь появляется pgvector — для текстовых эмбеддингов, и здесь же в проекте впервые появляется Postgres</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>2 · Продукт</h4>
+      <p class="t">Фотография меню</p>
+      <ul>
+        <li>Снял чешское меню — получил по-английски, что заказать и почему</li>
+        <li>Невозможно до мультимодальных моделей</li>
+        <li>Живёт на мобильной странице сорта, отдельного приложения не нужно</li>
+        <li>Побочный эффект важнее фичи: каждое меню сообщает, что налито сегодня</li>
+        <li>Уровень достоверности ниже телефонного звонка — помечать отдельно</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>3 · Операции</h4>
+      <p class="t">Контур поддержания данных</p>
+      <ul>
+        <li>Раз в месяц агенты обходят источники и сравнивают с сохранённым</li>
+        <li>Расхождения идут в очередь на проверку, <b>не переписываются молча</b></li>
+        <li>Свежесть данных — заявленный моат проекта</li>
+        <li>Раньше её поддержание стоило дороже, чем приносило. Агенты меняют именно эту экономику</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Где AI отсутствует намеренно</h3>
+  <div class="prose"><p>Это тоже архитектурное решение, и оно объясняет, почему продукт будет вызывать доверие там, где сгенерированные конкуренты не будут.</p></div>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Место</th><th>Почему без модели</th></tr></thead>
+      <tbody>
+        <tr><td><b>Функция подбора</b></td><td>Арифметика детерминирована, объяснима, бесплатна и одинакова при каждом запуске. Модель добавит сюда только недостоверность</td></tr>
+        <tr><td><b>Текст объяснения</b></td><td>Шаблон из двух-трёх крупнейших отклонений. Модель может выдумать вкусовое утверждение — ровно та ошибка, после которой не возвращаются</td></tr>
+        <tr><td><b>Хабовые страницы</b></td><td>Пишутся руками. Сгенерированные — это и есть тот тонкий контент, который поиск выбрасывает</td></tr>
+        <tr><td><b>Оценка вкуса</b></td><td>Вывод модели никогда не помечается <span class="mono">official</span>. Только <span class="mono">inferred</span> и только с пунктиром</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note"><b>Про название — решено.</b> <b>beeratlas.eu</b>, и продукт всё это время сам себя так называл: в шапке каждого макета стоит «Prague Beer Atlas». «Atlas» — слово потребителя, «graph» — слово разработчика; свободный запрос и обход графа это внутреннее устройство, а не то, что человек набирает в поиске. Домен не привязан к Праге и обещает больше, чем есть, — снимается заголовками: город несут title и H1. BeerGraph.eu остаётся редиректом; BrewGraph.eu не нужен. Доступность проверить в момент регистрации. Адреса страниц — с ключевыми словами: <span class="mono">/beer/kozel-cerny</span>, <span class="mono">/prague/tank-beer</span>.</p>
+
+  <p class="note"><b>Чешская версия — не перевод, а другой продукт.</b> Машинное зеркало английского сайта было бы худшим вариантом: оно конкурирует с укоренившимися чешскими порталами на их поле, не несёт собственной ценности и удваивает нагрузку по проверке данных. По-чешски нужны те страницы, где аудитория действительно чешская, — опрос о коллективной варке, обращение к барам и пивоварням. Туристические объяснялки по-чешски не нужны никому: чех знает, что такое hladinka. <b>Сейчас и бесплатно:</b> текстовые поля схемы держать ключами по языку, чтобы потом не мигрировать.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Правила</p>
+  <h2>Четыре вещи, которые не обсуждаются</h2>
+
+  <div class="callout">
+    <p class="lead">1 · Нет привязанного заведения — нет страницы сорта.</p>
+    <p>Страница со стилем, крепостью и сгенерированным описанием — тот самый тонкий контент, который Google давит с 2023 года и на который AI Overviews отвечает прямо в выдаче, не отдавая клик. Сорта без пражского наличия живут строкой в линейке на странице пивоварни.</p>
+  </div>
+
+  <div class="callout">
+    <p class="lead">2 · Каждое значение несёт источник, метод и дату.</p>
+    <p>Шесть уровней: с этикетки, увидено лично, спрошено по телефону, <span class="est">оценено</span>, протухло, не проверено. Последний уровень существует в датасете и <b>заблокирован для публикации</b>. Оценка никогда не стоит рядом с измеренным значением без пометки — читатель, однажды поймавший выдуманную цифру, дальше считает выдумкой всю страницу.</p>
+  </div>
+
+  <div class="callout">
+    <p class="lead">3 · Обещаем пивоварню, а не позицию.</p>
+    <p>«Здесь держат линейку Svijany, что налито сегодня — спрашивайте у бара» — можно. «Здесь наливают Svijanský Máz 11°» — нельзя, если этого не проверяли на этой неделе. Турист, который пришёл и не нашёл, не возвращается, а отзыв пишет.</p>
+  </div>
+
+  <div class="callout">
+    <p class="lead">4 · Каталог — не преимущество.</p>
+    <p>Его сгенерирует кто угодно за выходные, включая будущих конкурентов: <b>AI обрушил стоимость производства у всех сразу.</b> Защищает только то, что нельзя сгенерировать — своя фотография, сегодняшняя цена, групповая проходимость, дата проверки.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Дизайн-система</p>
+  <h2>Эмалевая вывеска и пивной картон</h2>
+  <div class="prose">
+    <p>Взят конкретный материальный мир чешской пивной, а не абстрактный «крафтовый» стиль: бутылочная зелень эмалевых вывесок на фасадах хосподы, золото пивной этикетки, кремовый картон подставки-тачка. Нейтральная редакционная подача была отвергнута — она читается как что угодно. Макеты — <a href="https://claude.ai/code/artifact/d3f60601-5bf2-4819-b168-941f84803940">на отдельном холсте</a>.</p>
+  </div>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Элемент</th><th>Решение</th></tr></thead>
+      <tbody>
+        <tr><td>Шрифты</td><td><b>Abril Fatface</b> — жирная антиква-дидон, та самая, которой набирали пивные этикетки и афиши XIX века. <b>Archivo</b> — гротеск для всего остального, как в чешской печатной продукции</td></tr>
+        <tr><td>Картон и чернила</td><td class="num">#EAE1CC · #17190F</td></tr>
+        <tr><td>Зелень и золото</td><td class="num">#1C3A29 · #B8862B</td></tr>
+        <tr><td>Опознаваемые приёмы</td><td>Шапка-вывеска с золотой линией снизу · пенная кромка под ней · градусы штампом с двойным кольцом, как оттиск на этикетке · трактирные палочки-чярки вместо цифры при счёте заведений · ключевые блоки в двойной рамке, как поле этикетки</td></tr>
+        <tr><td>Оценочные значения</td><td>Приглушённый цвет, пунктирное подчёркивание, слово <em>est.</em></td></tr>
+        <tr><td>Протухшее</td><td>Акцентным цветом словами «needs re-check», без числа</td></tr>
+        <tr><td>Мобильная</td><td>Рамка «покажите это в меню» вверху; оси сравнения вертикально и подписаны словами</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Техника</p>
+  <h2>Скучный стек, пока это возможно</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Решение</th><th>Почему</th></tr></thead>
+      <tbody>
+        <tr><td><b>Файлы вместо базы</b></td><td>400 сортов и 250 заведений — несколько сотен килобайт JSON. Фильтрация на клиенте, а git даёт ревью сгенерированных данных в диффах</td></tr>
+        <tr><td><b>Next.js, статическая генерация</b></td><td>Всё содержимое известно на сборке. Скорость и разметка schema.org важнее интерактивности</td></tr>
+        <tr><td><b>Без векторного индекса на вкус</b></td><td>9 измерений на 5 тыс. строк — полный скан быстрее HNSW. pgvector понадобится только для текстовых эмбеддингов описаний</td></tr>
+        <tr><td><b>Подбор — чистая функция</b></td><td>Якорь + сдвиги, взвешенное расстояние (тронутые оси весят больше), объяснение генерируется из двух-трёх крупнейших отличий</td></tr>
+        <tr><td><b>Postgres — потом</b></td><td>Когда появятся правки гидов, опрос и пользователи. Не раньше</td></tr>
+        <tr><td><b>Карта — Leaflet поверх OSM</b></td><td>Без платных ключей. Отложена до сотни заведений</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flow">findMatches(anchor, deltas, beers, venues)  <b>→</b>  ранжированные сорта + где налито
+describeSpec(anchor, deltas)                <b>→</b>  бюллетень для опроса о варке</div>
+</section>
+
+<section>
+  <p class="eyebrow">План</p>
+  <h2>Шесть месяцев до сезона</h2>
+  <div class="prose">
+    <p>Сезон 2026 закончился. Планирование поездок на 2027-й начинается в марте, за две-восемь недель до приезда. Спешить с сырым запуском смысла нет — новый домен всё равно не ранжируется мгновенно. Растянуть тоже нельзя: пропустив март, ждать придётся год.</p>
+  </div>
+  <div class="tl">
+    <div class="tl-row">
+      <div class="per">Сентябрь<em>Данные</em></div>
+      <div>
+        <h4>Два независимых фронта</h4>
+        <ul>
+          <li><b>Ногами:</b> обзвон 50–60 заведений — групповая проходимость, бронь, отдельный зал, отвечают ли на телефон. Этих данных нет ни у кого</li>
+          <li><b>Агентами:</b> 40–60 пивоварен и их линейки из официальных источников; граф «пивоварня ↔ заведение»; гео из Google Places</li>
+          <li>Домен и название</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="per">Октябрь<em>Шаблоны</em></div>
+      <div>
+        <h4>Три типа страниц на реальных данных</h4>
+        <ul>
+          <li>Сорт, пивоварня, стиль — статическая генерация, schema.org, мобильная вёрстка сразу</li>
+          <li>Модуль сравнения с якорем как отдельный компонент; 50 международных якорей размечены вручную</li>
+          <li>Провенанс в интерфейсе: пунктир, даты, «needs re-check». Правило публикации в сборке</li>
+          <li><b>Контур перепроверки:</b> агенты сравнивают источники с сохранённым, расхождения — в очередь, не в автоправку</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="per">Ноябрь<em>Содержание</em></div>
+      <div>
+        <h4>Наполнение и то, что пишется руками</h4>
+        <ul>
+          <li>Каталог до 300–400 сортов; выборочная проверка того, что помечено оценкой</li>
+          <li>10–12 хабовых и поперечных страниц — это лицо проекта, генерации не подлежат</li>
+          <li>60 заведений с фотографиями и проверенными ценами</li>
+          <li><b>Свободный запрос по графу:</b> модель разбирает фразу в структуру, дальше обход. Здесь впервые появляются Postgres и pgvector для текстовых эмбеддингов</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="per">Декабрь<em>Посев</em></div>
+      <div>
+        <h4>Первые внешние сигналы</h4>
+        <ul>
+          <li>Sitemap, Search Console, внутренняя перелинковка сорт → пивоварня → заведение</li>
+          <li>Reddit и Reels: типы налива, «как не попасть в ловушку». Быстрый канал, пока SEO молчит</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="per">Янв — фев<em>Отлёживание</em></div>
+      <div>
+        <h4>Возраст домена и решение</h4>
+        <ul>
+          <li>Еженедельный контент — к марту нужен возраст, история публикаций и десяток внешних ссылок</li>
+          <li>Проверка партнёрских программ: берут ли новый сайт, ставка, cookie-окно</li>
+          <li><b>Февраль: решение по монетизации</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="note"><b>Весной, после запуска</b> — разбор фотографии меню и сбор наличия из неё. В шесть месяцев до сезона это не влезает, и туда оно не ставится: сначала данные и страницы, мультимодальная часть следующим этапом.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Стоп-сигналы</p>
+  <h2>Даты, на которых отвечают «да» или «нет»</h2>
+  <ul class="kill">
+    <li><span class="date">30 сентября</span><div><b>Обзвон 50+ заведений сделан</b><span>Если нет — проект не про данные, и всё дальнейшее строится на песке.</span></div></li>
+    <li><span class="date">31 октября</span><div><b>Три шаблона работают на реальных данных</b><span>И хотя бы 30 страниц сортов проходят правило публикации: есть привязанное заведение, плотность и крепость из источника.</span></div></li>
+    <li><span class="date">15 декабря</span><div><b>150+ страниц в индексе</b><span>Не «сгенерировано», а проиндексировано. Иначе проблема в качестве, а не в объёме.</span></div></li>
+    <li><span class="date">31 января</span><div><b>Органические заходы не равны нулю</b><span>Пусть десятки. Ноль в конце января означает, что к марту трафика не будет.</span></div></li>
+    <li><span class="date">1 марта</span><div><b>Монетизация выбрана и подключена</b><span>Пропущенный март — потерянный год. Промежуточных вариантов у сезона нет.</span></div></li>
+  </ul>
+</section>
+
+<section>
+  <p class="eyebrow">Отложено</p>
+  <h2>Монетизация — и почему она не сейчас</h2>
+  <div class="prose">
+    <p>Решение сознательное: сначала база, деньги потом. Но форма известна заранее, и план не должен ей противоречить.</p>
+  </div>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Канал</th><th>Доход с конверсии</th><th>Когда</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Пивной спа, туры, Пльзень</td><td class="num">€4–7</td><td>Февраль, до сезона</td><td><span class="tag yes">Ядро</span></td></tr>
+        <tr><td>Экскурсии, pub crawl</td><td class="num">€2–4</td><td>Февраль</td><td><span class="tag yes">Ядро</span></td></tr>
+        <tr><td>Свои туры с гидами-подрядчиками</td><td class="num">€125–150</td><td>После 15–20 тыс. сессий</td><td><span class="tag later">Этап 2</span></td></tr>
+        <tr><td>Инструмент для баров, живые краны</td><td class="num">≈ €25/мес</td><td>Когда есть чем доказать трафик</td><td><span class="tag later">Этап 2</span></td></tr>
+        <tr><td>Коллективная варка, кеги по барам</td><td class="num">€800–1 600 с партии</td><td>Второй год, к пику сезона</td><td><span class="tag later">Этап 2</span></td></tr>
+        <tr><td>Продажа бутылок в любом виде</td><td class="num">≈ €2,5</td><td>—</td><td><span class="tag no">Нет</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Два ограничения, которые не изменятся.</b> Акциз при дистанционной продаже алкоголя платится в стране назначения — рассеянной по ЕС аудитории физический товар не продать. И реклама алкоголя в Google и Meta закрыта: платного трафика нет, только органика и сарафан.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Границы</p>
+  <h2>Вне периметра</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Идея</th><th>Причина</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Партнёрка e-shopов на продаже пива</td><td>€2,50 с заказа против потребности в 100 тыс. сессий</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>Rohlík, Košík, доставка по ЕС</td><td>CPA за нового клиента, а не процент; плюс акцизная стена</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>Живой статус кег через API пивоварен</td><td>Таких API не существует</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>Квиз со шкалами вкуса на входе</td><td>Никто не умеет отвечать «сухость: 6». Заменено якорем</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>pgvector с HNSW под вектор вкуса</td><td>Полный скан быстрее. Для текстовых эмбеддингов оставлен</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>Два домена, BeerGraph и BrewGraph</td><td>Дробят SEO-вес, адресуют не ту аудиторию</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>Подписка €29/мес для пивоварен</td><td>Спрос нельзя продать раньше самого спроса</td><td><span class="tag no">Нет</span></td></tr>
+        <tr><td>Инструмент гида как основной продукт</td><td>Отложен: закрытый раздел, если гиды подтвердят интерес</td><td><span class="tag later">Позже</span></td></tr>
+        <tr><td>Карта как главный экран</td><td>Вернётся режимом поверх тех же данных после сотни заведений</td><td><span class="tag later">Позже</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Риски</p>
+  <h2>Что может сломаться</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Риск</th><th>Вероятность</th><th>Что делаем</th></tr></thead>
+      <tbody>
+        <tr><td>AI Overviews забирают клики со справочных страниц</td><td>Высокая</td><td>Всё строится вокруг того, что нейросеть не сочинит: цена, адрес, своё фото, дата</td></tr>
+        <tr><td>Не хватает воли обойти 60 заведений ногами</td><td>Высокая</td><td>Это и есть моат. Без него проект — перепост TripAdvisor</td></tr>
+        <tr><td>Соблазн генерировать каталог вместо хабов</td><td>Высокая</td><td>800 карточек дают меньше одной хорошей хабовой. Пропорция усилий закреплена планом</td></tr>
+        <tr><td>Оценки протекают в публикацию как факты</td><td>Средняя</td><td>Уровень <em>unverified</em> заблокирован сборкой, а не дисциплиной</td></tr>
+        <tr><td>Органика не разгоняется к марту</td><td>Средняя</td><td>Reels и Reddit как быстрый канал; SEO — вторая ступень</td></tr>
+        <tr><td>Проект окажется медиа, а не софтом</td><td>Определённая</td><td>Принято на входе. Успех измеряется числом обойдённых баров, а не архитектурой</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Понедельник</p>
+  <h2>Первое действие</h2>
+  <div class="prose">
+    <p>Не схема базы — она уже написана. <b>Список из шестидесяти пивных заведений Праги и телефонная трубка.</b></p>
+    <p>Один вопрос: «берёте группу из десяти человек в будний вечер, нужна ли бронь, есть ли отдельный зал». Два-три дня работы. Этих данных нет ни у Untappd, ни у Google, ни у TripAdvisor — потому что их нельзя сгенерировать, только собрать.</p>
+  </div>
+  <div class="flow"><b>обзвон 60 заведений</b>
+   → шаблоны страниц (октябрь)
+      → каталог наполняется агентами, оценки помечены
+         → <b>единственный справочник с актуальным наличием в Праге</b>
+            → поиск и AI-ответы приводят людей
+               → монетизация подключается в феврале, к сезону</div>
+</section>
+
+<footer>
+  <p>Версия 4, 29 августа 2026. Заменяет бриф v3. Направление продукта выбрано, дизайн-система и модель данных зафиксированы. Все числа по ставкам, чекам и марже — допущения, подлежащие замене фактическими котировками. Ближайшая контрольная точка — 30 сентября.</p>
+</footer>
+
+</div>

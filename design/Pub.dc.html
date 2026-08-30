@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; font-family: "Archivo", system-ui, sans-serif; background: #0B0D07; color: #F2EFE4; }
+    a { color: #F0B23F; text-decoration: none; }
+    a:hover { color: #FFC864; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="width: 390px; min-height: 844px; background: #0B0D07; color: #F2EFE4; display: flex; flex-direction: column; padding: 0 0 28px;">
+
+  <!-- context strip -->
+  <div style="display: flex; align-items: center; gap: 9px; padding: 20px 22px 16px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F0B23F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+    <span style="font-size: 13px; color: #8B9179; letter-spacing: 0.01em;">You're at</span>
+    <span style="font-size: 13px; font-weight: 600; color: #F2EFE4;">Lokál Dlouhá</span>
+  </div>
+
+  <!-- step 1 -->
+  <div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 13px;">
+    <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6E7460;">A beer you know</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+      <div style="padding: 13px 18px; background: #F0B23F; color: #0B0D07; font-size: 15px; font-weight: 600;">Pilsner Urquell</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Guinness</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Corona</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Heineken</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Any IPA</div>
+    </div>
+  </div>
+
+  <!-- step 2 -->
+  <div style="padding: 0 22px 26px; display: flex; flex-direction: column; gap: 13px;">
+    <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6E7460;">But make it</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+      <div style="padding: 13px 18px; background: #F0B23F; color: #0B0D07; font-size: 15px; font-weight: 600;">Less bitter</div>
+      <div style="padding: 13px 18px; background: #F0B23F; color: #0B0D07; font-size: 15px; font-weight: 600;">Darker</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Lighter</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Stronger</div>
+      <div style="padding: 13px 18px; border: 1px solid #333A26; color: #C6CBB6; font-size: 15px;">Fruity</div>
+    </div>
+  </div>
+
+  <!-- the answer -->
+  <div style="margin: 0 22px; background: #F2EFE4; color: #0B0D07; padding: 24px 22px 22px; display: flex; flex-direction: column; gap: 0;">
+    <div style="font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #7A6A3E; margin-bottom: 14px;">Point at this on the menu</div>
+
+    <div style="font-family: 'Archivo Black', 'Archivo', sans-serif; font-size: 40px; line-height: 0.98; letter-spacing: -0.02em; margin-bottom: 6px;">Kozel<br>Černý 10°</div>
+
+    <div style="font-size: 15px; line-height: 1.45; color: #3A3A2C; margin: 12px 0 18px;">Like Pilsner Urquell, but <strong style="color: #0B0D07;">sweeter</strong> and <strong style="color: #0B0D07;">roasted</strong> — closest thing here to a dark ale.</div>
+
+    <div style="display: flex; gap: 0; border-top: 1px solid #D6D2C2; border-bottom: 1px solid #D6D2C2;">
+      <div style="flex-grow: 1; padding: 12px 0; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #7A6A3E;">Gravity</span>
+        <span style="font-size: 19px; font-weight: 600;">10°</span>
+      </div>
+      <div style="flex-grow: 1; padding: 12px 0; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #7A6A3E;">Alcohol</span>
+        <span style="font-size: 19px; font-weight: 600;">3.8%</span>
+      </div>
+      <div style="flex-grow: 1; padding: 12px 0; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #7A6A3E;">Here</span>
+        <span style="font-size: 19px; font-weight: 600;">45 Kč</span>
+      </div>
+    </div>
+
+    <div style="font-size: 12.5px; color: #6B6B58; padding-top: 13px; line-height: 1.5;">10° is not the alcohol — it's how much malt went in. This one is weaker than the 12° next to it on the menu.</div>
+  </div>
+
+  <!-- alternatives -->
+  <div style="padding: 24px 22px 0; display: flex; flex-direction: column; gap: 11px;">
+    <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6E7460;">Not it?</div>
+
+    <div style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border: 1px solid #333A26;">
+      <div style="width: 34px; height: 34px; background: #6B4A1E; flex-shrink: 0;"></div>
+      <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+        <span style="font-size: 16px; font-weight: 600;">Bernard 12° polotmavý</span>
+        <span style="font-size: 12.5px; color: #8B9179;">Halfway dark, still crisp</span>
+      </div>
+      <span style="font-size: 12px; color: #F0B23F; white-space: nowrap;">3 min</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border: 1px solid #333A26;">
+      <div style="width: 34px; height: 34px; background: #C9922F; flex-shrink: 0;"></div>
+      <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+        <span style="font-size: 16px; font-weight: 600;">Svijanský Máz 11°</span>
+        <span style="font-size: 12.5px; color: #8B9179;">Softer than Urquell, same family</span>
+      </div>
+      <span style="font-size: 12px; color: #F0B23F; white-space: nowrap;">here</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

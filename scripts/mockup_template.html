@@ -1,0 +1,1184 @@
+<title>Prague Beer Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --card:#EAE1CC; --card-light:#F4EEDD; --foam:#FBF8EF;
+  --ink:#17190F; --body:#35382A; --muted:#6F6B57;
+  --line:#CFC5A9; --line-soft:#DCD2B6;
+  --green:#1C3A29; --green-light:#7E9A88; --green-pale:#C4D2C8;
+  --gold:#B8862B; --gold-bright:#D9A03C;
+  --accent:#8A5E15; --dotted:#A89A72; --stale:#8E2318;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --card:#12160F; --card-light:#1B2117; --foam:#E8E2CE;
+  --ink:#EFE7D0; --body:#D0C9B1; --muted:#8E8A72;
+  --line:#2F3728; --line-soft:#333B2B;
+  --green:#24422F; --green-light:#5F7E6B; --green-pale:#B6C7BB;
+  --accent:#D9A03C; --dotted:#7A6C48; --stale:#D4796A;
+}}
+:root[data-theme="dark"]{
+  --card:#12160F; --card-light:#1B2117; --foam:#E8E2CE;
+  --ink:#EFE7D0; --body:#D0C9B1; --muted:#8E8A72;
+  --line:#2F3728; --line-soft:#333B2B;
+  --green:#24422F; --green-light:#5F7E6B; --green-pale:#B6C7BB;
+  --accent:#D9A03C; --dotted:#7A6C48; --stale:#D4796A;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--card);color:var(--ink);
+  font-family:"Archivo",system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+
+/* ── enamel sign ── */
+.sign{background:var(--green);border-bottom:5px solid var(--gold)}
+.sign-in{max-width:1180px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.wordmark{font-weight:700;font-size:15px;letter-spacing:.19em;text-transform:uppercase;color:var(--foam)}
+.nav{display:flex;gap:22px;flex-wrap:wrap}
+.nav button{font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:var(--green-pale);font-weight:500}
+.nav button:hover,.nav button[aria-current="page"]{color:var(--foam)}
+.langsw{margin-left:auto;display:flex;border:1.5px solid var(--gold)}
+.langsw button{font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 11px;color:var(--green-pale)}
+.langsw button[aria-current]{background:var(--gold);color:#17190F}
+.cta{margin-left:14px;font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-bright);
+  font-weight:600;border:1.5px solid var(--gold);padding:7px 14px}
+.cta:hover{background:var(--gold);color:#17190F}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 80px}
+
+/* ── beer page ── */
+.crumb{font-size:12.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:38px 0 16px}
+.crumb a{color:var(--muted)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 176px;gap:40px;align-items:start}
+h1{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:clamp(40px,6vw,66px);
+  line-height:.98;letter-spacing:-.012em;margin:0 0 12px}
+.rule{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.rule i{height:3px;width:46px;background:var(--gold);display:block}
+.rule em{font-style:normal;font-size:14.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}
+.lead{font-size:19px;line-height:1.6;color:var(--body);max-width:56ch;margin:0}
+
+.stamp{width:176px;height:176px;border-radius:50%;background:var(--green);
+  box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 6px var(--gold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--foam)}
+.stamp .fig{font-family:"Abril Fatface",Georgia,serif;font-size:52px;line-height:1}
+.stamp .cap{font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin-top:6px}
+.stamp .hr{width:34px;height:1.5px;background:#4C6A57;margin:9px 0}
+.stamp .alc{font-size:16px;font-weight:600}
+
+/* label frame */
+.frame{margin:40px 0 0;border:3px solid var(--green);padding:5px;background:var(--green)}
+.frame-in{border:1px solid var(--green-light);background:var(--card-light);padding:26px 30px 28px}
+.frame h2{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:27px;margin:0 0 3px}
+.frame .sub{font-size:15.5px;color:var(--muted);margin:0 0 26px}
+
+.axes{display:flex;flex-direction:column;gap:15px;max-width:830px}
+.ax{display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:center}
+.ax .name{font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);text-align:right}
+.ax .track{position:relative;height:22px}
+.ax .track .base{position:absolute;top:10px;left:0;right:0;height:2px;background:var(--line-soft)}
+.ax .track .a{position:absolute;top:5px;width:3px;height:12px;background:#8F8B72}
+.ax .track .c{position:absolute;top:4px;width:14px;height:14px;margin-left:-7px;background:var(--gold);
+  border:2px solid var(--ink);border-radius:50%}
+.ax .word{font-size:16.5px;font-weight:600;color:var(--green)}
+.legend{display:flex;gap:26px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line-soft);
+  font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend .k1{width:3px;height:12px;background:#8F8B72}
+.legend .k2{width:12px;height:12px;background:var(--gold);border:2px solid var(--ink);border-radius:50%}
+
+/* body columns */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 322px;gap:52px;padding:42px 0 0}
+.cols h2{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:30px;margin:0 0 12px}
+.cols h2+p{margin-top:0}
+.cols section+section{margin-top:32px}
+.cols p{font-size:18px;line-height:1.66;color:var(--body);margin:0 0 16px}
+
+.where-h{display:flex;align-items:center;gap:16px;margin:34px 0 4px}
+.where-h h2{margin:0}
+.tally{display:inline-flex;gap:3px;align-items:flex-end;margin-bottom:4px}
+.tally i{display:block;width:2.5px;height:17px;background:var(--accent);transform:skewX(-9deg)}
+.tally i.five{width:19px;height:2.5px;transform:rotate(-26deg) translateY(-8px) translateX(-18px);margin-right:-18px}
+.vlist{border-top:3px solid var(--green);margin-top:12px}
+.v{display:grid;grid-template-columns:minmax(0,1fr) 190px 120px;gap:16px;padding:13px 0;
+  border-bottom:1px solid var(--line);align-items:baseline}
+.v .n{font-size:18.5px;font-weight:600}
+.v .d{font-size:15px;color:var(--muted)}
+.v .p{font-size:15px;font-weight:600}
+.v .h{font-size:13px;color:var(--muted);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.miss{color:var(--muted);font-weight:400;border-bottom:1px dotted var(--dotted)}
+
+/* čárka — лайк как отметка на подставке */
+.coaster{border:2px solid var(--ink);background:var(--card-light);padding:18px 20px 20px;
+  display:flex;flex-direction:column;gap:14px}
+.coaster .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.coaster .ttl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.coaster .cnt{font-family:"Abril Fatface",Georgia,serif;font-size:28px;line-height:1}
+
+/* поле для палочек — как настоящий тácek */
+.marks{min-height:46px;display:flex;align-items:flex-end;gap:5px;flex-wrap:wrap;
+  border:1px dashed var(--line);padding:10px 12px;background:var(--card)}
+.marks i{display:block;width:3px;height:26px;background:var(--accent);transform:skewX(-9deg)}
+.marks i.five{width:28px;height:3px;transform:rotate(-26deg) translateY(-12px) translateX(-27px);margin-right:-27px}
+.marks i.fresh{animation:draw .34s ease-out}
+@keyframes draw{from{height:0;opacity:0}to{opacity:1}}
+.marks .none{font-size:13.5px;color:var(--muted);font-style:italic;line-height:1.4}
+
+/* приглашение — оно и объясняет, зачем нажимать */
+.prompt{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:19px;
+  line-height:1.25;margin:0;color:var(--ink)}
+.prompt em{font-style:normal;color:var(--accent)}
+
+/* клавиша: золото, борт снизу, настоящий ход при нажатии */
+.carka{display:flex;align-items:center;gap:14px;width:100%;
+  background:var(--gold);color:#17190F;border:2px solid var(--ink);
+  box-shadow:0 5px 0 var(--ink);padding:13px 16px;transition:transform .06s,box-shadow .06s}
+.carka:hover{background:var(--gold-bright)}
+.carka:active{transform:translateY(5px);box-shadow:0 0 0 var(--ink)}
+.carka .lab{display:flex;flex-direction:column;gap:1px;text-align:left}
+.carka .lab b{font-size:16.5px;font-weight:700;letter-spacing:.01em}
+.carka .lab span{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;opacity:.72}
+.carka .glass{flex-shrink:0}
+.carka .beer{transition:transform .3s ease-out;transform-origin:bottom}
+
+/* отрицание — тихой ссылкой, а не второй кнопкой */
+.notme{align-self:flex-start;font-size:13.5px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:1px}
+.notme:hover{color:var(--ink)}
+.notme[aria-pressed="true"]{color:var(--stale);border-bottom-color:var(--stale)}
+.coaster .hint{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0}
+@media (prefers-reduced-motion:reduce){.marks i.fresh{animation:none}.carka .beer{transition:none}}
+
+/* how it is made — варочный цех */
+.att{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--ink);
+  border:2px solid var(--ink);margin:20px 0 30px}
+.att div{background:var(--card-light);padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.att b{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:30px;line-height:1}
+.att span{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.att em{font-style:normal;font-size:13px;color:var(--muted)}
+
+/* шкала времени: неделя брожения против полутора месяцев лежания */
+.tl-wrap{border:2px solid var(--ink);background:var(--card-light);padding:18px 20px 20px;margin:0 0 34px}
+.tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+.tl-head .t{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.tl-head .tot{font-family:"Abril Fatface",Georgia,serif;font-size:22px}
+.tl-bar{display:flex;height:26px;border:1.5px solid var(--ink);overflow:hidden}
+.tl-bar span{display:block;height:100%}
+.tl-bar .b0{background:var(--gold)}
+.tl-bar .b1{background:var(--green-light)}
+.tl-bar .b2{background:var(--green)}
+.tl-key{display:flex;gap:22px;margin-top:11px;flex-wrap:wrap;font-size:13px;color:var(--body)}
+.tl-key span{display:flex;align-items:center;gap:7px}
+.tl-key i{width:13px;height:13px;display:block;border:1px solid var(--ink)}
+
+/* что кладут */
+.ing{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2px;
+  background:var(--line);border:2px solid var(--ink);margin:14px 0 34px}
+.ing-c{background:var(--card-light);padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+.ing-c svg{flex-shrink:0;margin-top:1px}
+.ing-c .txt{min-width:0}
+.ing-c .k{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.ing-c .val{font-size:15.5px;line-height:1.55;color:var(--body)}
+.ing-c .val em{font-style:italic;color:var(--ink)}
+
+/* этапы */
+.stages{position:relative;margin:14px 0 26px}
+.stages::before{content:"";position:absolute;left:33px;top:30px;bottom:30px;width:2px;
+  background:var(--line);z-index:0}
+.stg{position:relative;display:grid;grid-template-columns:68px minmax(0,1fr);gap:24px;
+  padding:0 0 26px;z-index:1}
+.stg .ves{width:68px;height:68px;background:var(--card-light);border:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:center}
+.stg h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:22px;margin:0 0 2px;line-height:1.15}
+.stg .what{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 9px}
+.stg .body{font-size:16px;line-height:1.6;color:var(--muted);margin:0 0 12px;max-width:62ch}
+.stg .note{font-size:16.5px;line-height:1.6;color:var(--body);margin:0 0 12px;max-width:62ch}
+.stg .prm{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:8px}
+.prm-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:start}
+.prm-k{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.prm-v{font-size:15.5px;line-height:1.55;color:var(--body)}
+.prm-v em{font-style:italic;color:var(--ink)}
+.stg .dur{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--green);border:1.5px solid var(--green);padding:2px 8px;margin-left:10px;
+  vertical-align:3px}
+.lvl{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid currentColor;padding:1px 5px;vertical-align:1px;margin-left:6px}
+.lvl.b{color:var(--green)}
+.lvl.s{color:var(--muted)}
+.conf{font-size:14.5px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.decl{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 2px;max-width:74ch}
+
+/* sidebar */
+.panel{border:2px solid var(--ink);background:var(--card-light)}
+.panel .head{background:var(--ink);color:var(--card);padding:9px 16px;
+  font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.panel .in{padding:16px 18px 18px}
+.kv{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line-soft)}
+.kv:last-of-type{border-bottom:0}
+.kv span:first-child{font-size:15.5px;color:var(--body)}
+.kv b{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+.panel .foot{margin-top:13px;padding-top:12px;border-top:1px solid var(--line-soft);
+  font-size:13px;line-height:1.5;color:var(--muted)}
+.side-h{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.sidebar{display:flex;flex-direction:column;gap:26px}
+.like{display:flex;flex-direction:column;gap:14px}
+.like button{display:block;width:100%}
+.like .n{font-size:16.5px;font-weight:600}
+.like .w{font-size:14.5px;color:var(--body);display:block}
+.like .w2{font-size:13px;color:var(--muted);display:block;margin-top:1px}
+.like button{padding:2px 0}
+.promo{background:var(--green);color:var(--foam);padding:20px 20px 18px;border-bottom:5px solid var(--gold)}
+.promo p{font-size:17px;line-height:1.5;margin:0 0 14px;color:var(--foam)}
+.promo b{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)}
+
+/* finder */
+.finder{display:grid;grid-template-columns:360px minmax(0,1fr);gap:2px;background:var(--line);border:2px solid var(--ink);margin-top:24px}
+.fcol{background:var(--card-light);padding:24px 26px}
+.step{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+  margin:0 0 13px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.step.next{margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 13px;border:2px solid var(--line);font-size:14.5px;font-weight:600;color:var(--body)}
+.chip:hover{border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--ink);color:#17190F}
+.sl{margin:16px 0 0}
+.sl .lab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:5px}
+.sl .lab b{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sl .lab i{font-style:normal;font-size:13.5px;font-weight:600;color:var(--green);text-align:right}
+.sl input[type=range]{width:100%;accent-color:var(--gold);height:22px;margin:0}
+.sl .poles{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.reset{margin-top:24px;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);border-bottom:1px solid var(--line)}
+.res{padding:17px 0;border-bottom:1px solid var(--line-soft);display:block;width:100%}
+.res-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.res h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:24px;margin:0;line-height:1.1}
+.res .cs{font-size:14px;color:var(--muted)}
+.res .exp{font-size:16px;color:var(--body);margin:7px 0 0}
+.res .exp b{color:var(--green)}
+.res .meta{font-size:13.5px;color:var(--muted);margin-top:6px}
+
+/* index lists */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:2px;background:var(--line);border:2px solid var(--ink);margin-top:24px}
+.cell{background:var(--card-light);padding:16px 18px;display:block}
+.cell .n{font-size:17.5px;font-weight:600}
+.cell .m{font-size:13.5px;color:var(--muted)}
+.pours{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px}
+.pour{border:2px solid var(--ink);background:var(--card-light);padding:20px;display:flex;gap:18px;
+  align-items:flex-start;flex:1 1 300px}
+.pour h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:24px;margin:0 0 6px}
+.pour p{font-size:15.5px;line-height:1.5;color:var(--body);margin:0}
+
+.note{font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:15px;margin-top:34px;line-height:1.6;max-width:74ch}
+.note b{color:var(--body)}
+footer{margin-top:40px;padding-top:22px;border-top:4px solid var(--gold);font-size:12.5px;color:var(--muted);line-height:1.8}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:24px}
+  .cols{grid-template-columns:1fr;gap:34px}
+  .finder{grid-template-columns:1fr}
+  .v{grid-template-columns:1fr;gap:2px}
+}
+/* узкий экран: ось и вывод остаются одной строкой, шкала уходит под них */
+@media (max-width:620px){
+  .axes{gap:19px}
+  .ax{grid-template-columns:minmax(0,1fr) auto;gap:5px 14px}
+  .ax .name{grid-area:1/1;text-align:left;align-self:baseline}
+  .ax .word{grid-area:1/2;text-align:right;align-self:baseline;font-size:15.5px}
+  .ax .track{grid-area:2/1/3/3}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ── главная ── */
+.wordmark{cursor:pointer}
+.home-hero{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:56px;
+  padding:56px 0 8px;align-items:start}
+.home-hero .kick{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 20px}
+.home-hero h1{font-size:clamp(44px,5.6vw,74px);line-height:.96;margin:0 0 22px;text-wrap:balance}
+.home-hero .say{font-size:21px;line-height:1.5;color:var(--body);max-width:30ch;margin:0 0 30px}
+.home-hero .say b{color:var(--ink)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:2px solid var(--ink);padding:13px 20px;font-size:14px;font-weight:700;
+  letter-spacing:.11em;text-transform:uppercase}
+.btn.p{background:var(--green);border-color:var(--green);color:var(--foam);
+  border-bottom:5px solid var(--gold)}
+.btn.p:hover{background:var(--ink);border-color:var(--ink)}
+.btn.s:hover{background:var(--card-light)}
+
+/* пример-витрина */
+.demo{border:3px solid var(--green);padding:5px;background:var(--green)}
+.demo-in{border:1px solid var(--green-light);background:var(--card-light);padding:22px 24px 24px}
+.demo .lbl{font-size:10.5px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 8px}
+.demo .anchor{font-family:"Abril Fatface",Georgia,serif;font-size:26px;line-height:1.1;margin:0 0 18px}
+.demo .knobs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.demo .knob{background:var(--gold);color:#17190F;font-size:13.5px;font-weight:600;padding:7px 12px}
+.demo .arrow{height:26px;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.demo .out{border-top:2px solid var(--ink);padding-top:16px}
+.demo .out h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:30px;margin:0 0 4px;line-height:1.05}
+.demo .out .cs{font-size:14px;color:var(--muted)}
+.demo .out .why{font-size:16px;line-height:1.5;color:var(--body);margin:10px 0 12px}
+.demo .out .why b{color:var(--green)}
+.demo .out .at{font-size:13.5px;color:var(--muted)}
+
+/* числа */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2px;
+  background:var(--ink);border:2px solid var(--ink);margin:46px 0 0}
+.figs .fig{background:var(--card-light);padding:18px 20px}
+.figs .fig b{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:34px;line-height:1;display:block}
+.figs .fig span{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);display:block;margin-top:7px}
+.figs .fig em{font-style:normal;font-size:13px;color:var(--muted);display:block;margin-top:2px}
+
+/* три вещи */
+.does{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;
+  background:var(--line);border:2px solid var(--ink);margin:14px 0 0}
+.do{background:var(--card-light);padding:26px 26px 28px}
+.do .ic{width:60px;height:60px;border:2px solid var(--ink);background:var(--card);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.do h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:23px;margin:0 0 9px;line-height:1.15}
+.do p{font-size:16px;line-height:1.6;color:var(--body);margin:0}
+.do p+p{margin-top:10px}
+
+.band{background:var(--green);color:var(--foam);border-bottom:5px solid var(--gold);
+  padding:38px 40px;margin:52px 0 0}
+.band h2{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:clamp(26px,3.2vw,34px);
+  margin:0 0 16px;color:var(--foam);max-width:24ch}
+.band p{font-size:17.5px;line-height:1.62;color:var(--green-pale);margin:0 0 14px;max-width:66ch}
+.band p:last-child{margin-bottom:0}
+.band b{color:var(--foam)}
+.band .dot{color:var(--foam);border-bottom:1px dotted var(--gold)}
+
+.nots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin:20px 0 0}
+.not h4{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--stale);margin:0 0 7px}
+.not p{font-size:16px;line-height:1.55;color:var(--body);margin:0}
+
+.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;
+  background:var(--line);border:2px solid var(--ink);margin:16px 0 0}
+.door{background:var(--card-light);padding:20px 22px;display:block}
+.door b{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:21px;display:block;margin-bottom:5px}
+.door span{font-size:14.5px;color:var(--muted)}
+.door:hover{background:var(--card)}
+
+@media (max-width:900px){.home-hero{grid-template-columns:1fr;gap:34px}
+  .doors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.doors{grid-template-columns:1fr}}
+</style>
+
+<div class="sign">
+  <div class="sign-in">
+    <button class="wordmark" data-go="#/">Prague Beer Atlas</button>
+    <nav class="nav">
+      <button data-go="#/breweries" data-i18n="Pivovary">Pivovary</button>
+      <button data-go="#/beers" data-i18n="Beers">Beers</button>
+      <button data-go="#/venues" data-i18n="Where to drink">Where to drink</button>
+      <button data-go="#/brewing" data-i18n="How it is made">How it is made</button>
+      <button data-go="#/ordering" data-i18n="Ordering in Czech">Ordering in Czech</button>
+    </nav>
+    <span class="langsw"><button data-lang="en">EN</button><button data-lang="cs">CS</button></span>
+    <button class="cta" data-go="#/find" data-i18n="Find your beer">Find your beer</button>
+  </div>
+</div>
+<svg width="100%" height="15" viewBox="0 0 1080 15" preserveAspectRatio="none" style="display:block">
+  <path d="M0 0 H1080 V7 C1050 7 1050 14 1020 14 C990 14 990 6 960 6 C930 6 930 13 900 13 C870 13 870 5 840 5 C810 5 810 14 780 14 C750 14 750 6 720 6 C690 6 690 13 660 13 C630 13 630 5 600 5 C570 5 570 14 540 14 C510 14 510 6 480 6 C450 6 450 13 420 13 C390 13 390 5 360 5 C330 5 330 14 300 14 C270 14 270 6 240 6 C210 6 210 13 180 13 C150 13 150 5 120 5 C90 5 90 14 60 14 C30 14 30 6 0 6 Z" fill="var(--foam)"/>
+</svg>
+
+<div class="wrap" id="view"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const UI_CS = {"open around the clock": "otevřeno nonstop", "closed today": "dnes zavřeno", "today from %s": "dnes od %s", "today %s": "dnes %s", "%s Czech beers": "%s českých piv", "about the same": "zhruba stejné", "%s with a Prague venue": "%s s pražským podnikem", "%s pubs with a phone": "%s hospod s telefonem", "and %s more": "a dalších %s", "not Czech": "není české", "not in Wikidata": "není ve Wikidatech", "Brewery site:": "Web pivovaru:", "%s pubs with a phone number": "%s hospod s telefonním číslem", "Of %s named Prague pubs and bars in OpenStreetMap. This list is the September call sheet — one question: will ten of us fit on a Thursday.": "Z %s pojmenovaných pražských hospod a barů v OpenStreetMap. Tenhle seznam je zářijový obvolávací arch — jedna otázka: vejde se nás tam ve čtvrtek deset?", "Showing 120 of %s.": "Zobrazeno 120 z %s.", "Grain to glass": "Od zrna do sklenice", "Unless marked %s, everything below is known for this brewery.": "Pokud není označeno %s, všechno níže je pro tenhle pivovar potvrzené.", "Unless marked %s, everything below is what beers of this style normally do, and is not confirmed for this beer.": "Pokud není označeno %s, všechno níže je to, co piva tohohle stylu obvykle dělají, a u tohohle piva to potvrzené není.", "Everything below is known for this brewery.": "Všechno níže je pro tenhle pivovar potvrzené.", "Nothing below is confirmed for this beer — it is what beers of this style normally do.": "Níže není u tohohle piva potvrzené nic — je to popis toho, co piva tohohle stylu obvykle dělají.", "The three figures at the top are computed from this beer's own gravity and strength. Where we do not know what a brewery does, we say what the style normally does rather than invent a mash schedule.": "Tři čísla nahoře jsou spočítaná ze stupňovitosti a alkoholu tohohle piva. Když nevíme, co dělá konkrétní pivovar, řekneme, co obvykle dělá styl — místo abychom si vymysleli rmutovací schéma.", "Pivovary": "Pivovary", "Beers": "Piva", "Where to drink": "Kam na pivo", "How it is made": "Jak se to vaří", "Ordering in Czech": "Jak si objednat", "Find your beer": "Najděte si pivo", "Czech beer · Prague · in English": "České pivo · Praha · česky", "You already know one Czech beer.": "Jedno české pivo už znáte.", "That is all we need. Name a beer you have had, say how you want it changed,\n          and the atlas tells you": "Víc nepotřebujeme. Jmenujte pivo, které jste pili, řekněte, jak ho chcete jinak,\n          a atlas vám poví,", "what to order here": "co si objednat tady", "and": "a", "where it is poured": "kde to čepují", "Browse the beers": "Projít piva", "You know": "Znáte", "But make it": "Ale chtěli byste", "less bitter": "míň hořké", "darker": "tmavší", "Czech beers": "českých piv", "each with somewhere to drink it": "u každého je kde ho vypít", "Breweries": "pivovarů", "Prague pubs and bars": "pražských hospod a barů", "with addresses and hours": "s adresami a otevírací dobou", "With a phone number": "s telefonem", "so you can ask before you walk": "aby se dalo zavolat dřív, než tam dojdete", "What the atlas does": "Co atlas dělá", "Three things, and it refuses to do the rest.": "Tři věci, a zbytek dělat odmítá.", "Measures beer from what you have tasted": "Měří pivo od toho, co jste už ochutnali", "Every beer here is described as a distance from something already in your memory.": "Každé pivo je tu popsané jako vzdálenost od něčeho, co už máte v paměti.", "Ends every page with where to drink it": "Každou stránku končí tím, kde to vypít", "Shows how it was made and what that did": "Ukazuje, jak se to vařilo a co to udělalo", "We mark what we are not sure about": "Označujeme, čím si nejsme jistí", "estimated": "odhad", "Anything we have not checked at all is": "Cokoli, co jsme vůbec neověřili, je", "blocked from publication by the build": "sestavením zablokováno pro publikaci", "What this is not": "Čím tohle není", "Not a rating site": "Není to hodnoticí web", "Not a shop": "Není to obchod", "Not a review aggregator": "Není to agregátor recenzí", "Where to start": "Kde začít", "Anchor, two knobs, an answer": "Kotva, dva knoflíky, odpověď", "The beers": "Piva", "Who brews what, and where it lands": "Kdo co vaří a kde to končí", "Malt, water, hops, time": "Slad, voda, chmel, čas", "Hladinka, šnyt, mlíko": "Hladinka, šnyt, mlíko", "Brewery: something wrong here? →": "Pivovare, je tu chyba? →", "the beer you have probably already had": "pivo, které jste nejspíš už pili", "Positions are estimates derived from style and gravity, not measurements.": "Polohy jsou odhady odvozené ze stylu a stupňovitosti, ne měření.", "Where to drink it": "Kde ho vypít", "no phone in source": "ve zdroji není telefon", "hours unknown": "otevírací doba neznámá", "Price per half litre is not here, and that is the point.": "Cena za půl litru tu není, a to je ten smysl.", "Na etiketě": "Na etiketě", "Gravity": "Stupňovitost", "Alcohol": "Alkohol", "Style": "Styl", "Brewery": "Pivovar", "Every dotted value is": "Každá tečkovaná hodnota je", "unverified": "neověřená", "Vaše čárky": "Vaše čárky", "Liked it?": "Chutnalo?", "Mark it down.": "Udělejte čárku.", "Přidat čárku": "Přidat čárku", "mark one down": "jednu si připsat", "Not for me": "Není to pro mě", "&ldquo;Not for me&rdquo; is never shown publicly": "„Není to pro mě“ se nikdy nezveřejňuje", "your strokes go here": "sem přijdou vaše čárky", "If you like this": "Když vám chutná tohle", "Half-day trip to the brewery that started all of this.": "Půldenní výlet do pivovaru, kterým to všechno začalo.", "Pilsen tours from 1 400 Kč →": "Zájezdy do Plzně od 1 400 Kč →", "Description not written yet.": "Text zatím nenapsaný.", "Wort gravity": "Stupňovitost mladiny", "before fermentation": "před kvašením", "Left in the glass": "Zbylo ve sklenici", "residual extract": "zbytkový extrakt", "Fermented out": "Prokvašeno", "apparent attenuation": "zdánlivý stupeň prokvašení", "Brew day — one shift": "Varný den — jedna směna", "What goes in": "Co se do toho dává", "Then, in order": "A pak, popořadě", "not confirmed for this beer": "u tohohle piva nepotvrzené", "How Czech lager is made →": "Jak se vaří český ležák →", "Everything above is confirmed for this brewery.": "Všechno výše je pro tenhle pivovar potvrzené.", "Start from a beer you know": "Začněte od piva, které znáte", "1 · A beer you know": "1 · Pivo, které znáte", "2 · But make it": "2 · Ale chtěli byste", "Reset all": "Vynulovat", "Closest, and where to drink it": "Nejbližší, a kde to vypít", "Weighting is deliberate.": "Vážení je záměrné.", "Breweries poured in Prague": "Pivovary čepované v Praze", "From Wikidata, joined to OpenStreetMap venue tags. Strokes count the venues.": "Z Wikidat, spojeno s tagy podniků v OpenStreetMap. Čárky počítají podniky.", "The range": "Sortiment", "Poured in Prague": "Čepuje se v Praze", "no phone": "bez telefonu", "Brewery level, not SKU.": "Na úrovni pivovaru, ne konkrétního piva.", "Source": "Zdroj", "Wikidata": "Wikidata", "Founded": "Založeno", "City": "Město", "Prague venues": "Podniků v Praze", "Official site": "Oficiální web", "not in source": "ve zdroji není", "Nothing matches.": "Nic neodpovídá.", "Corrections": "Opravy", "If we got your beer wrong": "Když jsme vaše pivo popsali špatně", "What we most likely have wrong": "Co máme nejspíš špatně", "What happens to a correction": "Co se s opravou stane", "or unverified to": "nebo neověřené na", "What we will not do": "Co neuděláme", "Not built yet": "Zatím nepostavené", "style": "styl", "brewery": "pivovar", "How Czech lager is made": "Jak se vaří český ležák", "Why it matters": "Proč na tom záleží", "See a beer →": "Podívat se na pivo →", "Three ways to have it poured": "Tři způsoby, jak si nechat natočit", "Ask by name and you will be served like a regular, not like a tourist.": "Řekněte si jménem a obslouží vás jako štamgasta, ne jako turistu.", "Hladinka": "Hladinka", "Šnyt": "Šnyt", "The default. Three fingers of dense foam over full beer. Say nothing and this is what arrives.": "Výchozí volba. Tři prsty husté pěny nad plným pivem. Když nic neřeknete, přijde tohle.", "Less beer, more foam, same glass. For when you want one more but not a whole one. Costs less.": "Míň piva, víc pěny, stejná sklenice. Když chcete ještě jedno, ale ne celé. Stojí míň.", "Almost all foam — sweet, creamy, drunk in one go at the end. Not a mistake by the bartender.": "Skoro samá pěna — sladká, krémová, pije se na konci naráz. Není to omyl výčepního.", "Say it out loud": "Řekněte to nahlas", "Jedno dvanáctku, prosím": "Jedno dvanáctku, prosím", "yed-no dva-NATS-ku, pro-seem": "výslovnost pro cizince: yed-no dva-NATS-ku, pro-seem", "One 12°, please": "Jedna dvanáctka", "Ještě jedno": "Ještě jedno", "yesh-tye yed-no": "výslovnost pro cizince: yesh-tye yed-no", "One more": "Ještě jedno pivo", "The number on the menu is malt, not alcohol. A 12° is about 4.4 %.": "Číslo na lístku je slad, ne alkohol. Dvanáctka má okolo 4,4 %.", "Read the style page →": "Přečíst o stylu →", "Beer parameters and descriptions are unverified working content for this mockup, not published facts.": "Parametry a texty piv jsou neověřený pracovní obsah pro tento prototyp, ne publikovaná fakta.", "Nobody can answer &ldquo;dryness, 1 to 10&rdquo;. So the atlas never asks. Pick a beer\n          you know — Urquell, Guinness, Corona — and push it: less bitter, darker, fuller.": "Na otázku „suchost, 1 až 10“ nikdo neodpoví. Atlas se tak neptá. Vyberte pivo, které znáte — Prazdroj, Guinness, Corona — a posuňte ho: míň hořké, tmavší, plnější.", "A beer you cannot find is trivia. Each page finishes with Prague venues that carry the\n          brewery, their phone number and their hours.": "Pivo, které nemůžete sehnat, je jen zajímavost. Každá stránka končí pražskými podniky, které daný pivovar čepují, jejich telefonem a otevírací dobou.", "We promise the brewery, not the tap. Which of its beers is on tonight is a question for\n          the bar, and we say so rather than guess.": "Slibujeme pivovar, ne pípu. Které z jeho piv je dnes večer na čepu, je otázka na hospodu, a my to raději řekneme, než abychom hádali.", "Decoction mashing, open fermenters, six weeks cold in a horizontal tank. Not trivia —\n          it is why the beer in front of you tastes the way it does.": "Rmutování, otevřené spilky, šest týdnů v chladu ve vodorovném tanku. Ne zajímavost — je to důvod, proč pivo před vámi chutná tak, jak chutná.", "Each page works out how much of the wort actually fermented, which is the difference\n          between a beer that drinks light and one that drinks full.": "Každá stránka spočítá, kolik mladiny doopravdy prokvasilo, a v tom je rozdíl mezi pivem, které se pije lehce, a tím, které se pije plně.", "Most beer sites state a number and move on. Ours shows its hand: every value carries how we\n        got it. Read from a label, seen in the pub, asked by phone, or": "Většina pivních webů uvede číslo a jde dál. Náš ukazuje karty: u každé hodnoty je, jak jsme k ní přišli. Z etikety, viděno v hospodě, zjištěno telefonem, nebo", "— and estimates are drawn dotted and muted so you can tell at a glance.": "— a odhady jsou tečkované a ztlumené, aby se poznaly na první pohled.", ", not by\n        good intentions. A reader who catches one invented number stops believing the whole page,\n        and they are right to.": ", ne dobrým úmyslem. Čtenář, který přistihne jedno vymyšlené číslo, přestane věřit celé stránce, a má pravdu.", "No scores out of five, no leaderboard of the worst Czech beer. Breweries are people we\n          want to talk to, not targets.": "Žádné známky z pěti, žádný žebříček nejhoršího českého piva. Pivovary jsou lidé, se kterými chceme mluvit, ne terče.", "Nothing is for sale here. Beer is heavy, excise duty is paid in the country it lands in,\n          and a bottle posted across Europe costs more than the beer.": "Nic tu není na prodej. Pivo je těžké, spotřební daň se platí v zemi určení a láhev poslaná přes Evropu stojí víc než pivo samo.", "We do not average strangers' opinions. We describe how a beer differs from one you have\n          had, and let you decide.": "Neprůměrujeme názory cizích lidí. Popisujeme, čím se pivo liší od toho, které jste už pili, a rozhodnutí necháváme vám.", "Everything above is built from two free sources — OpenStreetMap for the venues,\n      Wikidata for the breweries — plus beer data typed for this demo and marked unverified\n      throughout.": "Všechno výše je postavené ze dvou volných zdrojů — OpenStreetMap pro podniky, Wikidata pro pivovary — plus data o pivech napsaná pro tento prototyp a všude označená jako neověřená.", "Degrees on a Czech menu are degrees Plato — how much malt sugar was in the wort before\n          fermentation. Roughly, the alcohol lands near a third of the number: a 10° is about 3.8 %,\n          a 12° about 4.4 %.": "Stupně na českém lístku jsou stupně Plato — kolik sladového cukru bylo v mladině před kvašením. Zhruba platí, že alkohol vyjde okolo třetiny toho čísla: desítka má asi 3,8 %, dvanáctka okolo 4,4 %.", "No open source carries it — it has to be seen in the pub and dated. That column, and\n            &ldquo;will ten of us fit&rdquo;, are what the September phone survey collects.": "Žádný volný zdroj ji nemá — musí se vidět v hospodě a opatřit datem. Právě tenhle sloupec a „vejde se nás tam deset?“ sbírá zářijový telefonický průzkum.", "No Prague venue in OpenStreetMap carries this brewery yet. Under the\n            publishing rule this beer would live as a line on the brewery page, not as a page of\n            its own.": "Zatím žádný pražský podnik v OpenStreetMap tenhle pivovar nečepuje. Podle pravidla publikace by tohle pivo žilo jako řádek na stránce pivovaru, ne jako vlastní stránka.", "— typed from knowledge for this\n              demo, not read off a label. Before launch each is confirmed or deleted.": "— napsaná ze znalosti pro tento prototyp, ne opsaná z etikety. Před spuštěním se každá potvrdí, nebo smaže.", "A stroke is how a Czech waiter counts what you have drunk. Yours stay in\n            this browser — the shared count starts when the site is live.": "Čárka je způsob, jakým český výčepní počítá, co jste vypili. Vaše zůstávají v tomhle prohlížeči — společné počítání začne, až bude web živý.", ": it only sharpens what the atlas\n            suggests you next.": ": jen to zpřesňuje, co vám atlas navrhne příště.", "Nobody can answer &ldquo;dryness, 1 to 10&rdquo;. Everybody can name\n      a beer they have had. Pick one, push it around, and the atlas walks the graph to what is\n      poured in Prague.": "Na otázku „suchost, 1 až 10“ nikdo neodpoví. Ale pivo, které pil, umí jmenovat každý. Vyberte jedno, posuňte ho, a atlas projde grafem k tomu, co se čepuje v Praze.", "Axes you actually moved count for more than the\n      ones you left alone — asking for less bitterness makes a bitterness miss cost more. The match\n      is plain arithmetic, not a model: same input, same answer, every time, and it cannot invent\n      a taste claim.": "Osy, se kterými jste opravdu hnuli, váží víc než ty, které jste nechali být — když si řeknete o menší hořkost, promáchnutí v hořkosti stojí víc. Shoda je čistá aritmetika, ne model: stejný vstup, stejná odpověď, pokaždé, a nemůže si vymyslet tvrzení o chuti.", "Every one belongs to a brewery with at least one Prague venue. That is the\n      publishing rule: no venue, no page.": "Každé patří pivovaru, který má aspoň jeden pražský podnik. To je pravidlo publikace: bez podniku není stránka.", "These venues carry this brewery. Which beer is\n        on the tap tonight is a different question, and open data cannot answer it.": "Tyhle podniky vedou tenhle pivovar. Které z jeho piv je dnes na čepu, je jiná otázka a otevřená data na ni neodpovědí.", "Most numbers on this site are marked unverified, and we\n      would rather be corrected than be polite about it. If you brew the beer, you outrank us.": "Většina čísel na tomhle webu je označená jako neověřená a raději se necháme opravit, než abychom byli zdvořilí. Kdo pivo vaří, má nad námi navrch.", "Original gravity and alcohol, taken from knowledge rather than from your label. Whether\n        the beer is filtered, pasteurised, or neither. Mash schedule, fermentation vessel and\n        lagering time — anything marked": "Stupňovitost a alkohol, vzaté ze znalosti místo z vaší etikety. Jestli je pivo filtrované, pasterizované, nebo ani jedno. Postup rmutování, kvasná nádoba a doba ležení — cokoli označeného jako", "is a guess about your\n        category, not about you.": "je odhad o vaší kategorii, ne o vás.", "It goes into a review queue, not straight onto the page. Once applied, the value changes\n        from": "Půjde do fronty ke kontrole, ne rovnou na stránku. Po zapracování se hodnota změní z", ",\n        carries your name as the source and the date it was confirmed. Nothing is published in your\n        name that you did not send us.": ", ponese vaše jméno jako zdroj a datum potvrzení. Nic se ve vašem jménu nezveřejní, co jste nám neposlali.", "We will not remove an honest description because it is unflattering, and we will not\n        publish marketing copy. Facts about your beer are yours; the opinion about how it tastes\n        stays ours.": "Nesmažeme poctivý popis proto, že je nelichotivý, a nezveřejníme marketingový text. Fakta o vašem pivu jsou vaše; názor na to, jak chutná, zůstává náš.", "This page describes the\n        intended flow. In the mockup there is no form behind it — the first fifty corrections will\n        arrive by email and live in a spreadsheet, which is the right amount of software for fifty\n        of anything.": "Tahle stránka popisuje zamýšlený postup. V prototypu za ní není formulář — prvních padesát oprav přijde e-mailem a bude bydlet v tabulce, což je správné množství softwaru na padesát čehokoli.", "The same seven steps stand behind almost every beer on\n      this site. What changes from brewery to brewery is how long each one is allowed to take.": "Za skoro každým pivem na tomhle webu stojí týchž sedm kroků. Co se pivovar od pivovaru mění, je to, kolik času každý z nich dostane.", "Decoction mashing and\n        a month of cold lagering are expensive. They are also the whole reason Czech lager tastes\n        the way it does, and the first thing an industrial process cuts.": "Rmutování a měsíc studeného ležení jsou drahé. Jsou také celý důvod, proč český ležák chutná tak, jak chutná, a první věc, kterou průmyslový postup škrtne.", "Every beer page shows what is known for that brewery and what is only\n        typical for the style.": "Každá stránka piva ukazuje, co je o pivovaru známo a co je jen typické pro styl."};
+const AXNAME_CS = {"Bitterness": "Hořkost", "Malt sweetness": "Sladová sladkost", "Body": "Plnost", "Dry finish": "Suchý závěr", "Roast": "Praženost", "Fruit": "Ovocnost", "Tartness": "Kyselost", "Hop aroma": "Chmelové aroma", "Hop character": "Charakter chmele"};
+const POLE_CS = {"bitterness": ["měkčí", "hořčejší"], "maltSweetness": ["méně sladové", "sladší"], "body": ["lehčí", "plnější"], "dryness": ["kulatější", "sušší závěr"], "roast": ["méně pražené", "káva, karamel"], "fruitEster": ["čistší", "ovocnější"], "sourness": ["méně kyselé", "kyselejší"], "hopAroma": ["tišší aroma", "výraznější chmelové aroma"], "hopProfile": ["žatecký, bylinný", "citrus, tropy"]};
+let LANG = (() => {
+  const m = (location.hash || "").match(/^#\/(en|cs)\b/);
+  if (m) return m[1];
+  try { return localStorage.getItem("pba.lang") || "en"; } catch (e) { return "en"; }
+})();
+const STYLE_CS = {"Czech pale lager": "světlý ležák", "Czech pale lager, unfiltered": "světlý ležák, nefiltrovaný", "Czech dark lager": "tmavý ležák", "Czech amber lager": "polotmavý ležák", "Czech pale special": "světlý speciál", "American IPA": "americká IPA", "American pale ale": "americký pale ale", "Irish dry stout": "irský suchý stout", "Euro pale lager": "evropský světlý ležák", "Pale lager": "světlý ležák", "Witbier": "belgické bílé", "German wheat beer": "německé pšeničné"};
+function ST(s){ return LANG==="cs" && STYLE_CS[s] ? STYLE_CS[s] : s; }
+function T(s){ return LANG === "cs" && UI_CS[s] ? UI_CS[s] : s; }
+
+/* Чешский различает три формы числа: 1 den, 2–4 dny, 5+ dní. Английскому
+   хватает двух. Для диапазона форму задаёт последнее число: «6–10 dní». */
+function num(n, en1, en2, cs1, cs2, cs5){
+  const k = Math.abs(Number(n)) % 100;
+  if (LANG !== "cs") return n === 1 ? en1 : en2;
+  return k === 1 ? cs1 : (k >= 2 && k <= 4 ? cs2 : cs5);
+}
+const daysWord = n => num(n, "day", "days", "den", "dny", "dní");
+
+/* Часы в OpenStreetMap записаны машинным синтаксисом: "Mo-We 11:00-23:30;
+   Su 12:00-22:00". Раньше строка резалась по 22 символам и превращалась в
+   мусор — «Mo-We 11:00-23:30; Su». Разбираем то, что разбирается уверенно,
+   и отвечаем на вопрос, который человек на самом деле задаёт: открыто ли
+   сегодня. Всё, в чём не уверены, показываем как есть — не притворяемся,
+   что поняли. */
+const OSM_DAY = { Su:0, Mo:1, Tu:2, We:3, Th:4, Fr:5, Sa:6 };
+
+function hoursToday(spec){
+  if (!spec) return null;
+  const s = String(spec).trim();
+  if (s === "24/7") return T("open around the clock");
+  /* сезонные и астрономические правила не трогаем: Apr-Oct, sunset, week 1-52 */
+  if (/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|sunset|sunrise|dawn|dusk|week|easter)\b/i.test(s)) return null;
+
+  const rules = s.split(";")
+    .reduce((acc, part) => acc.concat(part.split(/(?<=\d)\s*,\s*(?=[A-Za-z])/)), [])
+    .map(x => x.trim()).filter(Boolean);
+
+  const today = new Date().getDay();
+  let hit = null;                       /* последнее правило про сегодня побеждает */
+  const selRe = /^((?:(?:Mo|Tu|We|Th|Fr|Sa|Su)(?:\s*-\s*(?:Mo|Tu|We|Th|Fr|Sa|Su))?|PH)(?:\s*,\s*(?:(?:Mo|Tu|We|Th|Fr|Sa|Su)(?:\s*-\s*(?:Mo|Tu|We|Th|Fr|Sa|Su))?|PH))*)\s+(.+)$/;
+
+  for (const rule of rules) {
+    let days = null, rest = rule;
+    const m = rule.match(selRe);
+    if (m) { days = m[1]; rest = m[2].trim(); }
+
+    let set;
+    if (days === null) {
+      set = [0,1,2,3,4,5,6];           /* без селектора — правило на всю неделю */
+    } else {
+      set = [];
+      for (const tok of days.split(",").map(x => x.trim())) {
+        if (tok === "PH") continue;    /* праздники не выдумываем */
+        const r = tok.split("-").map(x => x.trim());
+        if (r.length === 1) { set.push(OSM_DAY[r[0]]); continue; }
+        let a = OSM_DAY[r[0]], b = OSM_DAY[r[1]];
+        if (a === undefined || b === undefined) return null;
+        for (let i = a; ; i = (i + 1) % 7) { set.push(i); if (i === b) break; }
+      }
+      if (!set.length) continue;       /* правило было только про PH */
+    }
+    if (!set.includes(today)) continue;
+
+    if (/^(?:off|closed)$/i.test(rest)) { hit = { closed: true }; continue; }
+
+    const open = rest.match(/^(\d{1,2})\s*:\s*(\d{2})\s*\+$/);
+    if (open) { hit = { from: open[1].padStart(2,"0") + ":" + open[2] }; continue; }
+
+    const spans = rest.split(",").map(x => x.trim());
+    const out = [];
+    for (const sp of spans) {
+      const t = sp.match(/^(\d{1,2})\s*:\s*(\d{2})\s*-\s*(\d{1,2})\s*:\s*(\d{2})$/);
+      if (!t) return null;             /* синтаксис не наш — отдаём строку как есть */
+      out.push(t[1].padStart(2,"0") + ":" + t[2] + "–" + t[3].padStart(2,"0") + ":" + t[4]);
+    }
+    hit = { spans: out };
+  }
+
+  if (!hit) return T("closed today");
+  if (hit.closed) return T("closed today");
+  if (hit.from) return T("today from %s").replace("%s", hit.from);
+  return T("today %s").replace("%s", hit.spans.join(", "));
+}
+
+/* короткая строка для списка: разобранное «сегодня», иначе исходный текст */
+function hoursCell(spec){
+  if (!spec) return '<span class="h">' + T("hours unknown") + '</span>';
+  const t = hoursToday(spec);
+  return '<span class="h"' + (t ? ' title="' + esc(spec) + '"' : '') + '>' +
+         (t ? esc(t) : esc(spec)) + '</span>';
+}
+function L(o){ return (o && (o[LANG] || o.en)) || ""; }
+function setLang(l){
+  LANG = l;
+  try { localStorage.setItem("pba.lang", l); } catch (e) {}
+  const rest = (location.hash || "#/home").replace(/^#\/(en|cs)\b/, "#");
+  location.hash = "/" + l + (rest.startsWith("#/") ? rest.slice(1) : "/home");
+  route();
+}
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const AX = ["bitterness","maltSweetness","body","dryness","roast","fruitEster","sourness","hopAroma","hopProfile"];
+const AXNAME_EN = {bitterness:"Bitterness",maltSweetness:"Malt sweetness",body:"Body",dryness:"Dry finish",
+  roast:"Roast",fruitEster:"Fruit",sourness:"Tartness",hopAroma:"Hop aroma",hopProfile:"Hop character"};
+const POLE_EN = {
+  bitterness:["softer","more bitter"], maltSweetness:["drier malt","sweeter"],
+  body:["lighter","fuller"], dryness:["rounder","drier finish"],
+  roast:["less roast","coffee, caramel"], fruitEster:["cleaner","fruitier"],
+  sourness:["less tart","tarter"], hopAroma:["quieter aroma","bigger hop aroma"],
+  hopProfile:["Saaz, herbal","citrus, tropical"]
+};
+
+function host(u){ try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } }
+const beerById = Object.fromEntries(DATA.beers.map(b => [b.id, b]));
+const brById = Object.fromEntries(DATA.breweries.map(b => [b.id, b]));
+const pourable = DATA.beers.filter(b => !b.anchor && b.venues > 0);
+const venuesFor = bid => DATA.venues.filter(v => v.b.indexOf(bid) >= 0);
+
+/* ── shared bits ─────────────────────────────────────────────────────── */
+function tally(n){
+  let h = '<span class="tally" aria-hidden="true">';
+  for (let i = 0; i < Math.min(n, 20); i++) h += '<i' + ((i + 1) % 5 === 0 ? ' class="five"' : "") + "></i>";
+  return h + "</span>" + (n > 20 ? ' <span style="color:var(--muted);font-size:14px">' + n + "</span>" : "");
+}
+
+const NOUNY = new Set(["coffee, caramel", "Saaz, herbal", "citrus, tropical",
+  "káva, karamel", "žatecký, bylinný", "citrus, tropy"]);
+function deltaWord(ax, d, strong){
+  const w = POLE[ax][d > 0 ? 1 : 0];
+  if (Math.abs(d) < (strong || 4) || NOUNY.has(w)) return w;
+  return (w.startsWith("more ") || w.startsWith("less ") ? (LANG==="cs"?"mnohem ":"much ") : (LANG==="cs"?"mnohem ":"far more ")) + w;
+}
+function explain(a, c){
+  const diffs = AX.map((ax,i)=>({ax,d:c.f[i]-a.f[i]})).filter(x=>Math.abs(x.d)>=1.5)
+    .sort((x,y)=>Math.abs(y.d)-Math.abs(x.d)).slice(0,3);
+  if(!diffs.length) return (LANG==="cs"?"velmi blízko ":"very close to ")+"<b>"+esc(a.name)+"</b>";
+  return (LANG==="cs"?"jako <b>":"like <b>")+esc(a.name)+"</b>"+(LANG==="cs"?", ale ":", but ")+diffs.map(x=>deltaWord(x.ax,x.d)).join(", ");
+}
+function nearest(b, n){
+  return pourable.filter(x=>x.id!==b.id).map(x=>{
+    let s=0; for(let i=0;i<AX.length;i++){const d=b.f[i]-x.f[i]; s+=d*d;}
+    return {x, d:Math.sqrt(s)};
+  }).sort((p,q)=>p.d-q.d).slice(0,n);
+}
+
+
+/* ── варочный цех: посуда, поток, время ──────────────────────────────── */
+const VESSEL = {
+  mash: '<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="var(--green)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15h28v17a5 5 0 0 1-5 5H13a5 5 0 0 1-5-5z"/><line x1="5" y1="15" x2="39" y2="15"/><line x1="22" y1="5" x2="22" y2="24"/><path d="M14 21h16M16 27h12" stroke="var(--gold)"/></svg>',
+  boil: '<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="var(--green)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20h26v13a5 5 0 0 1-5 5H14a5 5 0 0 1-5-5z"/><path d="M13 20a9 9 0 0 1 18 0"/><path d="M15 12c0-3 3-3 3-6M22 10c0-3 3-3 3-6M29 12c0-3 3-3 3-6" stroke="var(--gold)"/></svg>',
+  ferment: '<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="var(--green)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 16v18a4 4 0 0 0 4 4h18a4 4 0 0 0 4-4V16"/><line x1="6" y1="16" x2="38" y2="16"/><path d="M11 23c2.5 0 2.5-3 5-3s2.5 3 5 3 2.5-3 5-3 2.5 3 5 3 2-1.5 2-1.5" stroke="var(--gold)"/></svg>',
+  lager: '<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="var(--green)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="13" width="34" height="17" rx="8.5"/><line x1="13" y1="30" x2="13" y2="37"/><line x1="31" y1="30" x2="31" y2="37"/><path d="M31 18v7" stroke="var(--gold)"/><circle cx="14" cy="21.5" r="2" stroke="var(--gold)"/></svg>',
+  finish: '<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="var(--green)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h14l-2.5 30a2.5 2.5 0 0 1-2.5 2.5h-4A2.5 2.5 0 0 1 17.5 37z"/><path d="M15.4 16h13.2" stroke="var(--gold)"/><path d="M8 11l4 3M36 11l-4 3"/></svg>',
+};
+const ICON = {
+  drop: '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"><path d="M13 3c4.5 5.5 6.5 8.2 6.5 11.5A6.5 6.5 0 0 1 6.5 14.5C6.5 11.2 8.5 8.5 13 3z"/></svg>',
+  grain: '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="13" y1="3" x2="13" y2="23"/><path d="M13 6.5c2.2-2.4 4.6-2.4 5.7-1.2.1 2.3-1.1 4.7-5.7 4.7M13 6.5c-2.2-2.4-4.6-2.4-5.7-1.2-.1 2.3 1.1 4.7 5.7 4.7M13 13c2.2-2.4 4.6-2.4 5.7-1.2.1 2.3-1.1 4.7-5.7 4.7M13 13c-2.2-2.4-4.6-2.4-5.7-1.2-.1 2.3 1.1 4.7 5.7 4.7"/></svg>',
+  hop: '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linejoin="round"><path d="M13 3.5c3.4 2.3 5.5 5.6 5.5 9s-2.1 6.7-5.5 9c-3.4-2.3-5.5-5.6-5.5-9s2.1-6.7 5.5-9z"/><path d="M13 7c1.9 1.2 3 3 3 5M13 12c1.9 1.2 3 3 3 5M13 7c-1.9 1.2-3 3-3 5M13 12c-1.9 1.2-3 3-3 5"/></svg>',
+  sugar: '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="10" width="8" height="6.5"/><rect x="14" y="13.5" width="8" height="6.5"/><rect x="10" y="4" width="8" height="6.5"/></svg>',
+};
+
+function lvlTag(l){ return '<span class="lvl ' + (l === "brewery" ? "b" : "s") + '">' + T(l === "brewery" ? "brewery" : "style") + "</span>"; }
+
+function brewhouse(pr){
+  const a = pr.attenuation, tl = pr.timeline;
+
+  /* метка полезна, только пока она про меньшинство: если все строки одного
+     уровня, значок на каждой ничего не сообщает. Считаем по всей секции,
+     большинство объявляем строкой под заголовком, помечаем только остаток. */
+  const lv = [tl.lvl].concat(pr.ingredients.map(x => x.lvl),
+    pr.stages.reduce((acc, st) => acc.concat(st.params.map(x => x.lvl)), []));
+  const nB = lv.filter(l => l === "brewery").length, nS = lv.length - nB;
+  const major = nB >= nS ? "brewery" : "style";
+  const tag = l => l === major ? "" : lvlTag(l);
+  const decl = (nB && nS)
+    ? (major === "brewery"
+        ? T("Unless marked %s, everything below is known for this brewery.")
+            .replace("%s", lvlTag("style"))
+        : T("Unless marked %s, everything below is what beers of this style normally do, and is not confirmed for this beer.")
+            .replace("%s", lvlTag("brewery")))
+    : (nB ? T("Everything below is known for this brewery.")
+          : T("Nothing below is confirmed for this beer — it is what beers of this style normally do."));
+  const tot = tl.brew + tl.ferment + tl.lager;
+  const pc = n => (n / tot * 100).toFixed(1) + "%";
+
+  const stats = a ? `<div class="att">
+    <div><b>${a.oe}°</b><span>${T("Wort gravity")}</span><em>${T("before fermentation")}</em></div>
+    <div><b>${a.ae}°</b><span>${T("Left in the glass")}</span><em>${T("residual extract")}</em></div>
+    <div><b>${a.adf} %</b><span>${T("Fermented out")}</span><em>${T("apparent attenuation")}</em></div>
+  </div>` : "";
+
+  const timeline = `<div class="tl-wrap">
+    <div class="tl-head"><span class="t">${T("Grain to glass")} ${tag(tl.lvl)}</span>
+      <span class="tot">≈ ${tl.total} ${daysWord(tl.total)}</span></div>
+    <div class="tl-bar">
+      <span class="b0" style="width:${pc(tl.brew)}"></span>
+      <span class="b1" style="width:${pc(tl.ferment)}"></span>
+      <span class="b2" style="width:${pc(tl.lager)}"></span>
+    </div>
+    <div class="tl-key">
+      <span><i style="background:var(--gold)"></i>${T("Brew day — one shift")}</span>
+      <span><i style="background:var(--green-light)"></i>${LANG==="cs"?"Kvašení":"Fermentation"} — ${tl.fermentLabel}</span>
+      <span><i style="background:var(--green)"></i>${LANG==="cs"?"Ležení":"Lagering"} — ${tl.lagerLabel}</span>
+    </div>
+  </div>`;
+
+  const ing = pr.ingredients.length ? `<div class="ing">${pr.ingredients.map(x=>`
+    <div class="ing-c">${ICON[x.icon] || ""}<div class="txt">
+      <div class="k">${esc(x.k)}${tag(x.lvl)}</div><div class="val">${x.v}</div></div></div>`).join("")}
+  </div>` : "";
+
+  const stages = `<div class="stages">${pr.stages.map(s=>`
+    <div class="stg">
+      <div class="ves">${VESSEL[s.id] || ""}</div>
+      <div>
+        <h3>${esc(s.name)}${s.days ? `<span class="dur">${s.days[0]===s.days[1] ? s.days[0] : s.days[0]+"–"+s.days[1]} ${daysWord(s.days[1])}</span>` : ""}</h3>
+        <p class="what">${esc(s.what)}</p>
+        <p class="body">${s.body}</p>
+        ${s.note ? `<p class="note">${s.note}</p>` : ""}
+        ${s.params.length ? `<div class="prm">${s.params.map(p=>`
+          <div class="prm-row"><div class="prm-k">${esc(p.k)}${tag(p.lvl)}</div>
+          <div class="prm-v">${p.v}</div></div>`).join("")}</div>` : ""}
+      </div>
+    </div>`).join("")}</div>`;
+
+  return `<section style="margin-top:36px">
+    <h2>${T("How it is made")}</h2>
+    <p class="decl">${decl}</p>
+    ${stats}
+    ${timeline}
+    <h3 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:24px;margin:0 0 4px">${T("What goes in")}</h3>
+    <p style="font-size:16px;color:var(--muted);margin:0 0 4px;max-width:62ch">${pr.maltLine}</p>
+    ${ing}
+    <h3 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:24px;margin:0 0 14px">${T("Then, in order")}</h3>
+    ${stages}
+    ${pr.note ? `<p style="font-size:16.5px;line-height:1.6;color:var(--body);max-width:64ch">${pr.note}</p>` : ""}
+    <p class="conf">${T("The three figures at the top are computed from this beer's own gravity and strength. Where we do not know what a brewery does, we say what the style normally does rather than invent a mash schedule.")}
+      <a href="#/${LANG}/brewing">${T("How Czech lager is made →")}</a></p>
+  </section>`;
+}
+
+/* ── beer page ───────────────────────────────────────────────────────── */
+
+function homePage(){
+  const anchor = beerById["pilsner-urquell"];
+  const out = beerById["kozel-cerny"];
+  const outVs = venuesFor(out.breweryId).slice(0, 2);
+  const S = DATA.stats;
+
+  $("#view").innerHTML = `
+    <section class="home-hero">
+      <div>
+        <p class="kick">${T("Czech beer · Prague · in English")}</p>
+        <h1>${T("You already know one Czech beer.")}</h1>
+        <p class="say">${T("That is all we need. Name a beer you have had, say how you want it changed,\n          and the atlas tells you")} <b>${T("what to order here")}</b> ${T("and")} <b>${T("where it is poured")}</b>.</p>
+        <div class="btns">
+          <button class="btn p" data-go="#/find">${T("Find your beer")}</button>
+          <button class="btn s" data-go="#/beers">${T("Browse the beers")}</button>
+        </div>
+      </div>
+
+      <div class="demo"><div class="demo-in">
+        <p class="lbl">${T("You know")}</p>
+        <p class="anchor">${esc(anchor.name)}</p>
+        <p class="lbl">${T("But make it")}</p>
+        <div class="knobs"><span class="knob">${T("less bitter")}</span><span class="knob">${T("darker")}</span></div>
+        <div class="arrow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="19"/><polyline points="6 13 12 19 18 13"/></svg>
+        </div>
+        <div class="out">
+          <h3>${esc(out.name)}</h3>
+          <p class="cs">${esc(out.cs)} · ${out.plato}° · ${out.abv} %</p>
+          <p class="why">${explain(anchor, out)}</p>
+          <p class="at">${LANG==="cs"?"Čepují:":"Poured at"} ${outVs.map(v => esc(v.n)).join(", ")}${out.venues > 2 ? (LANG==="cs"?" a dalších "+(out.venues-2):" and "+(out.venues-2)+" more") : ""}</p>
+        </div>
+      </div></div>
+    </section>
+
+    <div class="figs">
+      <div class="fig"><b>${S.beersTotal}</b><span>${T("Czech beers")}</span><em>${T("each with somewhere to drink it")}</em></div>
+      <div class="fig"><b>${S.breweriesTotal}</b><span>${T("Breweries")}</span><em>${DATA.breweries.filter(x=>x.venues>0).length} ${LANG==="cs"?"čepovaných v Praze":"poured in Prague"}</em></div>
+      <div class="fig"><b>${S.venuesTotal}</b><span>${T("Prague pubs and bars")}</span><em>${T("with addresses and hours")}</em></div>
+      <div class="fig"><b>${S.venuesWithPhone}</b><span>${T("With a phone number")}</span><em>${T("so you can ask before you walk")}</em></div>
+    </div>
+
+    <h2 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:34px;margin:52px 0 6px">${T("What the atlas does")}</h2>
+    <p style="font-size:17px;color:var(--muted);margin:0 0 4px;max-width:62ch">${T("Three things, and it refuses to do the rest.")}</p>
+
+    <div class="does">
+      <div class="do">
+        <div class="ic">${ICON.hop}</div>
+        <h3>${T("Measures beer from what you have tasted")}</h3>
+        <p>${T("Nobody can answer &ldquo;dryness, 1 to 10&rdquo;. So the atlas never asks. Pick a beer\n          you know — Urquell, Guinness, Corona — and push it: less bitter, darker, fuller.")}</p>
+        <p>${T("Every beer here is described as a distance from something already in your memory.")}</p>
+      </div>
+      <div class="do">
+        <div class="ic">${VESSEL.finish}</div>
+        <h3>${T("Ends every page with where to drink it")}</h3>
+        <p>${T("A beer you cannot find is trivia. Each page finishes with Prague venues that carry the\n          brewery, their phone number and their hours.")}</p>
+        <p>${T("We promise the brewery, not the tap. Which of its beers is on tonight is a question for\n          the bar, and we say so rather than guess.")}</p>
+      </div>
+      <div class="do">
+        <div class="ic">${VESSEL.lager}</div>
+        <h3>${T("Shows how it was made and what that did")}</h3>
+        <p>${T("Decoction mashing, open fermenters, six weeks cold in a horizontal tank. Not trivia —\n          it is why the beer in front of you tastes the way it does.")}</p>
+        <p>${T("Each page works out how much of the wort actually fermented, which is the difference\n          between a beer that drinks light and one that drinks full.")}</p>
+      </div>
+    </div>
+
+    <div class="band">
+      <h2>${T("We mark what we are not sure about")}</h2>
+      <p>${T("Most beer sites state a number and move on. Ours shows its hand: every value carries how we\n        got it. Read from a label, seen in the pub, asked by phone, or")} <span class="dot"> ${T("estimated")} </span> ${T("— and estimates are drawn dotted and muted so you can tell at a glance.")}</p>
+      <p>${T("Anything we have not checked at all is")} <b>${T("blocked from publication by the build")}</b> ${T(", not by\n        good intentions. A reader who catches one invented number stops believing the whole page,\n        and they are right to.")}</p>
+    </div>
+
+    <h2 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:30px;margin:48px 0 4px">${T("What this is not")}</h2>
+    <div class="nots">
+      <div class="not"><h4>${T("Not a rating site")}</h4>
+        <p>${T("No scores out of five, no leaderboard of the worst Czech beer. Breweries are people we\n          want to talk to, not targets.")}</p></div>
+      <div class="not"><h4>${T("Not a shop")}</h4>
+        <p>${T("Nothing is for sale here. Beer is heavy, excise duty is paid in the country it lands in,\n          and a bottle posted across Europe costs more than the beer.")}</p></div>
+      <div class="not"><h4>${T("Not a review aggregator")}</h4>
+        <p>${T("We do not average strangers' opinions. We describe how a beer differs from one you have\n          had, and let you decide.")}</p></div>
+    </div>
+
+    <h2 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:30px;margin:48px 0 4px">${T("Where to start")}</h2>
+    <div class="doors">
+      <button class="door" data-go="#/find"><b>${T("Find your beer")}</b><span>${T("Anchor, two knobs, an answer")}</span></button>
+      <button class="door" data-go="#/beers"><b>${T("The beers")}</b><span>${T("%s with a Prague venue").replace("%s", S.beersTotal)}</span></button>
+      <button class="door" data-go="#/breweries"><b>${T("Pivovary")}</b><span>${T("Who brews what, and where it lands")}</span></button>
+      <button class="door" data-go="#/brewing"><b>${T("How it is made")}</b><span>${T("Malt, water, hops, time")}</span></button>
+      <button class="door" data-go="#/ordering"><b>${T("Ordering in Czech")}</b><span>${T("Hladinka, šnyt, mlíko")}</span></button>
+      <button class="door" data-go="#/venues"><b>${T("Where to drink")}</b><span>${T("%s pubs with a phone").replace("%s", S.venuesWithPhone)}</span></button>
+    </div>
+
+    <p class="note">${T("Everything above is built from two free sources — OpenStreetMap for the venues,\n      Wikidata for the breweries — plus beer data typed for this demo and marked unverified\n      throughout.")} <a href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></p>`;
+}
+
+const PLATO_EN = "It is not the alcohol. Degrees on a Czech menu are degrees Plato — how much "
+  + "malt sugar was in the wort before fermentation. Roughly, the alcohol lands near a third of "
+  + "the number: a 10° is about 3.8 %, a 12° about 4.4 %.";
+const PLATO_CS = "Není to alkohol. Stupně na českém lístku jsou stupně Plato — kolik sladového "
+  + "cukru bylo v mladině před kvašením. Zhruba platí, že alkohol vyjde okolo třetiny toho čísla: "
+  + "desítka má asi 3,8 %, dvanáctka okolo 4,4 %.";
+
+function beerPage(id){
+  const b = beerById[id] || pourable[0];
+  const br = brById[b.breweryId] || {};
+  const anchor = beerById[b.id === "pilsner-urquell" ? "heineken" : "pilsner-urquell"];
+  const vs = venuesFor(b.breweryId);
+
+  const diffs = AX.map((ax,i)=>({ax,i,d:b.f[i]-anchor.f[i]}))
+    .sort((x,y)=>Math.abs(y.d)-Math.abs(x.d)).slice(0,4);
+
+  const axesHtml = diffs.map(({ax,i,d})=>`
+    <div class="ax">
+      <div class="name">${AXNAME[ax]}</div>
+      <div class="track"><div class="base"></div>
+        <div class="a" style="left:${anchor.f[i]*10}%"></div>
+        <div class="c" style="left:${b.f[i]*10}%"></div></div>
+      <div class="word">${Math.abs(d) < 1 ? T("about the same") : deltaWord(ax, d, 3.5)}</div>
+    </div>`).join("");
+
+  const likes = nearest(b, 3).map(({x})=>{
+    const ds = AX.map((ax,i)=>({ax,d:x.f[i]-b.f[i]}))
+      .sort((p,q)=>Math.abs(q.d)-Math.abs(p.d));
+    const top = ds[0];
+    const xbr = brById[x.breweryId] || {};
+    const a = Math.abs(top ? top.d : 0);
+    let w;
+    if (a >= 2)        w = (LANG==="cs"?"mnohem ":"much ") + POLE[top.ax][top.d > 0 ? 1 : 0];
+    else if (a >= 1.2) w = POLE[top.ax][top.d > 0 ? 1 : 0];
+    else if (a >= 0.4) w = (LANG==="cs"?"trochu ":"a touch ") + POLE[top.ax][top.d > 0 ? 1 : 0];
+    else if (x.plato && b.plato && x.plato !== b.plato)
+                       w = (LANG==="cs"?"totéž o "+x.plato+" stupních":"the same idea at "+x.plato+"°");
+    else               w = (LANG==="cs"?"totéž pivo od jiného pivovaru":"another brewery's version of the same beer");
+    return `<button data-go="#/beer/${x.id}">
+      <span class="n">${esc(x.name)}</span>
+      <span class="w">${esc(w)}</span>
+      <span class="w2">${esc(xbr.name || "")}${x.plato ? " · " + x.plato + "°" : ""}${x.abv ? " · " + x.abv + " %" : ""}</span>
+    </button>`;
+  }).join("");
+
+  $("#view").innerHTML = `
+    <p class="crumb"><a href="#/${LANG}/breweries">${esc(br.name || "Brewery")}</a> · ${esc(b.name)}</p>
+    <div class="hero">
+      <div>
+        <h1>${esc(b.name)}</h1>
+        <div class="rule"><i></i><em>${esc(b.cs)} · ${esc(ST(b.style))}</em></div>
+        <p class="lead">${b.lead ? esc(L(b.lead)) : "Description not written yet."}</p>
+      </div>
+      <div class="stamp">
+        <span class="fig">${b.plato ? b.plato + "°" : (b.abv ? b.abv + "%" : "—")}</span>
+        <span class="cap">${b.plato ? "Plato" : "Alcohol"}</span>
+        <span class="hr"></span>
+        <span class="alc">${b.abv ? b.abv + " % alk." : "&nbsp;"}</span>
+      </div>
+    </div>
+
+    <div class="frame"><div class="frame-in">
+      <h2>${LANG==="cs"?"Srovnáno s ":"Compared with "}${esc(anchor.name)}</h2>
+      <p class="sub">${T("the beer you have probably already had")}</p>
+      <div class="axes">${axesHtml}</div>
+      <div class="legend">
+        <span><i class="k1"></i>${esc(anchor.name)}</span>
+        <span><i class="k2"></i>${esc(b.name)}</span>
+        <span style="margin-left:auto;text-transform:none;letter-spacing:0;font-size:12.5px">${T("Positions are estimates derived from style and gravity, not measurements.")}</span>
+      </div>
+    </div></div>
+
+    <div class="cols">
+      <div>
+        ${(b.notes||[]).map(n=>`<section><h2>${esc(L(n.h))}</h2><p>${L(n.b)}</p></section>`).join("")}
+        ${b.plato ? `<section><h2>${LANG==="cs"?"Co znamená "+b.plato+"°":"What the "+b.plato+"° means"}</h2><p>${LANG==="cs"?PLATO_CS:PLATO_EN}</p></section>` : ""}
+        ${false ? `<p>${T("Degrees on a Czech menu are degrees Plato — how much malt sugar was in the wort before\n          fermentation. Roughly, the alcohol lands near a third of the number: a 10° is about 3.8 %,\n          a 12° about 4.4 %.")}</p></section>` : ""}
+
+        ${b.prod ? brewhouse(b.prod[LANG] || b.prod.en) : ""}
+
+        <div class="where-h"><h2>${T("Where to drink it")}</h2>${tally(vs.length)}</div>
+        ${vs.length ? `<div class="vlist">${vs.slice(0,8).map(v=>`
+          <div class="v">
+            <span><span class="n">${esc(v.n)}</span> <span class="d">${esc(v.d || v.st || (LANG==="cs"?"Praha":"Prague"))}</span></span>
+            <span class="p">${v.p ? `<a href="tel:${esc(v.p.replace(/\s/g,""))}">${esc(v.p)}</a>`
+              : `<span class="miss">${T("no phone in source")}</span>`}</span>
+            ${hoursCell(v.h)}
+          </div>`).join("")}</div>
+          ${vs.length > 8 ? `<p class="note" style="margin-top:14px">${T("and %s more").replace("%s", vs.length-8)}</p>` : ""}
+          <p class="note"><b>${T("Price per half litre is not here, and that is the point.")}</b> ${T("No open source carries it — it has to be seen in the pub and dated. That column, and\n            &ldquo;will ten of us fit&rdquo;, are what the September phone survey collects.")}</p>`
+        : `<p class="note">${T("No Prague venue in OpenStreetMap carries this brewery yet. Under the\n            publishing rule this beer would live as a line on the brewery page, not as a page of\n            its own.")}</p>`}
+      </div>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <div class="head">${T("Na etiketě")}</div>
+          <div class="in">
+            <div class="kv"><span>${T("Gravity")}</span>${b.plato ? `<b class="miss">${b.plato} °P</b>` : `<b class="miss">—</b>`}</div>
+            <div class="kv"><span>${T("Alcohol")}</span>${b.abv ? `<b class="miss">${b.abv} %</b>` : `<b class="miss">—</b>`}</div>
+            <div class="kv"><span>${T("Style")}</span><b style="font-size:14.5px;font-weight:600">${esc(ST(b.style))}</b></div>
+            <div class="kv"><span>${T("Brewery")}</span><b style="font-size:14.5px;font-weight:600">${
+              br.id ? `<button data-go="#/brewery/${br.id}" style="color:var(--accent);font-weight:600">${esc(br.name)}</button>` : "—"}</b></div>
+            <div class="foot">${T("Every dotted value is")} <b> ${T("unverified")} </b> ${T("— typed from knowledge for this\n              demo, not read off a label. Before launch each is confirmed or deleted.")} <a class="fixlink" href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></div>
+          </div>
+        </div>
+
+        <div class="coaster" data-beer="${b.id}">
+          <div class="top"><span class="ttl">${T("Vaše čárky")}</span><span class="cnt" data-cnt>0</span></div>
+          <div class="marks" data-marks></div>
+          <p class="prompt" data-prompt>${T("Liked it?")} <em>${T("Mark it down.")}</em></p>
+          <button class="carka" data-vote="up">
+            <span class="glass">
+              <svg width="30" height="46" viewBox="0 0 30 46" fill="none">
+                <clipPath id="gclip-${b.id}"><path d="M5 4h20l-2.6 36a3 3 0 0 1-3 2.8h-8.8a3 3 0 0 1-3-2.8z"/></clipPath>
+                <g clip-path="url(#gclip-${b.id})">
+                  <rect class="beer" data-beer-fill x="0" y="0" width="30" height="46" fill="#17190F" opacity=".34"
+                        style="transform:scaleY(0.12)"/>
+                </g>
+                <path d="M5 4h20l-2.6 36a3 3 0 0 1-3 2.8h-8.8a3 3 0 0 1-3-2.8z" stroke="#17190F" stroke-width="2.4" stroke-linejoin="round"/>
+                <path d="M5.6 12h18.8" stroke="#17190F" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="lab"><b>${T("Přidat čárku")}</b><span>${T("mark one down")}</span></span>
+          </button>
+          <button class="notme" data-vote="down" aria-pressed="false">${T("Not for me")}</button>
+          <p class="hint">${T("A stroke is how a Czech waiter counts what you have drunk. Yours stay in\n            this browser — the shared count starts when the site is live.")} <b>${T("&ldquo;Not for me&rdquo; is never shown publicly")}</b> ${T(": it only sharpens what the atlas\n            suggests you next.")}</p>
+        </div>
+
+        <div>
+          <p class="side-h">${T("If you like this")}</p>
+          <div class="like">${likes}</div>
+        </div>
+
+        <div class="promo">
+          <p>${T("Half-day trip to the brewery that started all of this.")}</p>
+          <b>${T("Pilsen tours from 1 400 Kč →")}</b>
+        </div>
+      </aside>
+    </div>`;
+}
+
+/* ── finder ──────────────────────────────────────────────────────────── */
+const AXNAME = new Proxy({}, {get:(_,k)=>LANG==="cs"?(AXNAME_CS[AXNAME_EN[k]]||AXNAME_EN[k]):AXNAME_EN[k]});
+const POLE = new Proxy({}, {get:(_,k)=>LANG==="cs"?(POLE_CS[k]||POLE_EN[k]):POLE_EN[k]});
+const SLIDER_AX = ["bitterness","maltSweetness","body","roast","hopProfile"];
+const ANCHOR_IDS = ["pilsner-urquell","kozel-cerny","budweiser-budvar-original",
+  "guinness-draught","corona-extra","brewdog-punk-ipa","hoegaarden","matuska-raptor"];
+let anchorId = "pilsner-urquell", deltas = {};
+
+function finderPage(){
+  $("#view").innerHTML = `
+    <p class="crumb">${T("Find your beer")}</p>
+    <h1 style="font-size:44px;margin-bottom:8px">${T("Start from a beer you know")}</h1>
+    <p class="lead" style="max-width:64ch">${T("Nobody can answer &ldquo;dryness, 1 to 10&rdquo;. Everybody can name\n      a beer they have had. Pick one, push it around, and the atlas walks the graph to what is\n      poured in Prague.")}</p>
+    <div class="finder">
+      <div class="fcol">
+        <p class="step">${T("1 · A beer you know")}</p>
+        <div class="chips" id="anchors"></div>
+        <p class="step next">${T("2 · But make it")}</p>
+        <div id="sliders"></div>
+        <button class="reset" id="reset">${T("Reset all")}</button>
+      </div>
+      <div class="fcol">
+        <p class="step" id="resHead">${T("Closest, and where to drink it")}</p>
+        <div id="results"></div>
+      </div>
+    </div>
+    <p class="note"><b>${T("Weighting is deliberate.")}</b> ${T("Axes you actually moved count for more than the\n      ones you left alone — asking for less bitterness makes a bitterness miss cost more. The match\n      is plain arithmetic, not a model: same input, same answer, every time, and it cannot invent\n      a taste claim.")}</p>`;
+
+  $("#anchors").innerHTML = ANCHOR_IDS.filter(i=>beerById[i]).map(i=>
+    `<button class="chip" data-anchor="${i}" aria-pressed="${i===anchorId}">${esc(beerById[i].name)}</button>`).join("");
+  $("#sliders").innerHTML = SLIDER_AX.map(ax=>{ const label = AXNAME[ax]; return `
+    <div class="sl">
+      <div class="lab"><b>${label}</b><i id="v-${ax}">${deltas[ax] ? esc(deltaWord(ax,deltas[ax],3)) : (LANG==="cs"?"beze změny":"unchanged")}</i></div>
+      <input type="range" min="-4" max="4" step="1" value="${deltas[ax]||0}" data-ax="${ax}" aria-label="${label}">
+      <div class="poles"><span>${POLE[ax][0]}</span><span>${POLE[ax][1]}</span></div>
+    </div>`; }).join("");
+  runMatch();
+}
+
+function runMatch(){
+  const a = beerById[anchorId];
+  const target = a.f.map((v,i)=>Math.max(0,Math.min(10, v + (deltas[AX[i]]||0))));
+  const scored = pourable.filter(b=>b.id!==anchorId).map(b=>{
+    let s=0;
+    for(let i=0;i<AX.length;i++){
+      const w = 1 + Math.abs(deltas[AX[i]]||0)*0.6;
+      const d = target[i]-b.f[i];
+      s += w*d*d;
+    }
+    return {b, dist:Math.sqrt(s)};
+  }).sort((x,y)=>x.dist-y.dist).slice(0,6);
+
+  const moved = AX.filter(ax=>deltas[ax]).map(ax=>deltaWord(ax,deltas[ax],3));
+  $("#resHead").textContent = moved.length ? a.name+" — "+moved.join(", ")
+    : (LANG==="cs" ? "Nejblíž k "+a.name+", a kde to vypít"
+                   : "Closest to "+a.name+", and where to drink it");
+
+  $("#results").innerHTML = scored.map(({b})=>{
+    const vs = venuesFor(b.breweryId).slice(0,3);
+    return `<button class="res" data-go="#/beer/${b.id}">
+      <span class="res-h"><h3>${esc(b.name)}</h3><span class="cs">${esc(b.cs)}</span></span>
+      <span class="exp">${explain(a,b)}</span>
+      <span class="meta">${b.plato ? b.plato+"° · " : ""}${b.abv ? b.abv+" % · " : ""}${esc(ST(b.style))}
+        — ${LANG==="cs"?"čepují:":"poured at"} ${vs.map(v=>esc(v.n)).join(", ")}${b.venues>3 ? " " + T("and %s more").replace("%s", b.venues-3) : ""}</span>
+    </button>`;
+  }).join("");
+}
+
+/* ── index pages ─────────────────────────────────────────────────────── */
+function beersPage(){
+  const rows = DATA.beers.filter(b=>!b.anchor).sort((a,b)=>a.name.localeCompare(b.name));
+  $("#view").innerHTML = `<p class="crumb">${T("Beers")}</p>
+    <h1 style="font-size:44px;margin-bottom:8px">${T("%s Czech beers").replace("%s", rows.length)}</h1>
+    <p class="lead">${T("Every one belongs to a brewery with at least one Prague venue. That is the\n      publishing rule: no venue, no page.")}</p>
+    <div class="grid">${rows.map(b=>`<button class="cell" data-go="#/beer/${b.id}">
+      <span class="n">${esc(b.name)}</span>
+      <span class="m">${esc(b.cs)} · ${b.plato ? b.plato+"°" : ""} ${b.abv ? b.abv+" %" : ""}</span></button>`).join("")}</div>`;
+}
+
+function breweriesPage(){
+  const rows = DATA.breweries.filter(b=>b.venues>0).sort((a,b)=>b.venues-a.venues);
+  $("#view").innerHTML = `<p class="crumb">${T("Pivovary")}</p>
+    <h1 style="font-size:44px;margin-bottom:8px">${T("Breweries poured in Prague")}</h1>
+    <p class="lead">${T("From Wikidata, joined to OpenStreetMap venue tags. Strokes count the venues.")}</p>
+    <div class="grid">${rows.map(b=>`<button class="cell" data-go="#/brewery/${b.id}">
+      <span class="n">${esc(b.name)}</span>
+      <span class="m">${b.foreign ? T("not Czech")+" · " : b.city ? esc(b.city)+" · " : b.stub ? T("not in Wikidata")+" · " : ""}${b.venues} ${num(b.venues, "venue", "venues", "podnik", "podniky", "podniků")}${b.site ? " · " + esc(host(b.site)) : ""}</span></button>`).join("")}</div>`;
+}
+
+function breweryPage(id){
+  const b = brById[id]; if(!b) return breweriesPage();
+  const vs = venuesFor(id), beers = DATA.beers.filter(x=>x.breweryId===id);
+  $("#view").innerHTML = `
+    <p class="crumb"><a href="#/${LANG}/breweries">${T("Pivovary")}</a> · ${esc(b.name)}</p>
+    <div class="hero">
+      <div>
+        <h1>${esc(b.name)}</h1>
+        <div class="rule"><i></i><em>${b.foreign ? "Not a Czech brewery" :
+          (b.city ? esc(b.city) : "city not in source")}${b.stub && !b.foreign ? " · no Wikidata entry" : ""}
+          ${vs.length ? " · " + vs.length + (LANG==="cs"?" pražských podniků":" Prague venue"+(vs.length>1?"s":"")) : ""}</em></div>
+        <p class="lead">${b.story ? esc(L(b.story)) : "Description not written yet."}</p>
+        ${b.site ? `<p style="margin-top:16px"><a href="${esc(b.site)}" target="_blank" rel="noopener"
+          style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+          border:2px solid var(--ink);padding:9px 15px;display:inline-block">${T("Brewery site:")} ${esc(host(b.site))} ↗</a></p>` : ""}
+      </div>
+      ${b.founded ? `<div class="stamp"><span class="cap">Vaříme od</span>
+        <span class="fig" style="font-size:42px">${b.founded}</span><span class="hr"></span>
+        <span class="alc">${vs.length} v Praze</span></div>` : ""}
+    </div>
+    <div class="cols"><div>
+      ${(b.notes || []).map(n => `<section><h2>${esc(L(n.h))}</h2><p>${L(n.b)}</p></section>`).join("")}
+      ${beers.length ? `<h2 style="margin-top:32px">${T("The range")}</h2><div class="vlist">${beers.map(x=>`
+        <div class="v" style="grid-template-columns:minmax(0,1fr) 120px">
+          <span><button data-go="#/beer/${x.id}" class="n">${esc(x.name)}</button>
+            <span class="d">${esc(x.cs)}</span></span>
+          <span class="p miss">${x.plato?x.plato+"° · ":""}${x.abv?x.abv+" %":""}</span>
+        </div>`).join("")}</div>` : ""}
+      <div class="where-h"><h2>${T("Poured in Prague")}</h2>${tally(vs.length)}</div>
+      <div class="vlist">${vs.map(v=>`<div class="v">
+        <span><span class="n">${esc(v.n)}</span> <span class="d">${esc(v.d||v.st||(LANG==="cs"?"Praha":"Prague"))}</span></span>
+        <span class="p">${v.p?`<a href="tel:${esc(v.p.replace(/\s/g,""))}">${esc(v.p)}</a>`:`<span class="miss">${T("no phone")}</span>`}</span>
+        ${hoursCell(v.h)}</div>`).join("")}</div>
+      <p class="note"><b>${T("Brewery level, not SKU.")}</b> ${T("These venues carry this brewery. Which beer is\n        on the tap tonight is a different question, and open data cannot answer it.")}</p>
+    </div><aside class="sidebar">
+      <div class="panel"><div class="head">${T("Source")}</div><div class="in">
+        <div class="kv"><span>${T("Wikidata")}</span><b style="font-size:14px">${b.wikidata||"—"}</b></div>
+        <div class="kv"><span>${T("Founded")}</span><b${(b.curated||[]).indexOf("founded")>=0?' class="miss" title="curated: Wikidata gives the current legal entity"':""}>${b.founded||"—"}</b></div>
+        <div class="kv"><span>${T("City")}</span><b style="font-size:14.5px;font-weight:600"${(b.curated||[]).indexOf("city")>=0?' class="miss"':""}>${esc(b.city||"—")}</b></div>
+        <div class="kv"><span>${T("Prague venues")}</span><b>${b.venues}</b></div>
+        <div class="kv"><span>${T("Official site")}</span><b style="font-size:14px;font-weight:600">${
+          b.site ? `<a href="${esc(b.site)}" target="_blank" rel="noopener">${esc(host(b.site))} ↗</a>`
+                 : `<span class="miss">${T("not in source")}</span>`}</b></div>
+      </div></div>
+    </aside></div>`;
+}
+
+function venuesPage(){
+  const vs = DATA.venues.filter(v=>v.p).sort((a,b)=>a.n.localeCompare(b.n));
+  $("#view").innerHTML = `<p class="crumb">${T("Where to drink")}</p>
+    <h1 style="font-size:44px;margin-bottom:8px">${T("%s pubs with a phone number").replace("%s", vs.length)}</h1>
+    <p class="lead">${T("Of %s named Prague pubs and bars in OpenStreetMap. This list is the September call sheet — one question: will ten of us fit on a Thursday.").replace("%s", DATA.stats.venuesTotal)}</p>
+    <div class="vlist" style="margin-top:26px">${vs.slice(0,120).map(v=>`<div class="v">
+      <span><span class="n">${esc(v.n)}</span> <span class="d">${esc([v.st,v.d].filter(Boolean).join(" · ")||(LANG==="cs"?"bez adresy":"no address"))}</span></span>
+      <span class="p"><a href="tel:${esc(v.p.replace(/\s/g,""))}">${esc(v.p)}</a></span>
+      ${hoursCell(v.h)}</div>`).join("")}</div>
+    <p class="note">${T("Showing 120 of %s.").replace("%s", vs.length)}</p>`;
+}
+
+function correctPage(){
+  $("#view").innerHTML = `<p class="crumb">${T("Corrections")}</p>
+    <h1 style="font-size:46px;margin-bottom:10px">${T("If we got your beer wrong")}</h1>
+    <p class="lead" style="max-width:62ch">${T("Most numbers on this site are marked unverified, and we\n      would rather be corrected than be polite about it. If you brew the beer, you outrank us.")}</p>
+    <div class="cols" style="padding-top:34px"><div>
+      <section><h2>${T("What we most likely have wrong")}</h2>
+        <p>${T("Original gravity and alcohol, taken from knowledge rather than from your label. Whether\n        the beer is filtered, pasteurised, or neither. Mash schedule, fermentation vessel and\n        lagering time — anything marked")} <span class="lvl s"> ${T("style")} </span> ${T("is a guess about your\n        category, not about you.")}</p></section>
+      <section><h2>${T("What happens to a correction")}</h2>
+        <p>${T("It goes into a review queue, not straight onto the page. Once applied, the value changes\n        from")} <span class="lvl s"> ${T("style")} </span> ${T("or unverified to")} <span class="lvl b"> ${T("brewery")} </span> ${T(",\n        carries your name as the source and the date it was confirmed. Nothing is published in your\n        name that you did not send us.")}</p></section>
+      <section><h2>${T("What we will not do")}</h2>
+        <p>${T("We will not remove an honest description because it is unflattering, and we will not\n        publish marketing copy. Facts about your beer are yours; the opinion about how it tastes\n        stays ours.")}</p></section>
+    </div><aside class="sidebar">
+      <div class="panel"><div class="head">${T("Not built yet")}</div><div class="in">
+        <p style="font-size:15.5px;line-height:1.55;margin:0;color:var(--body)">${T("This page describes the\n        intended flow. In the mockup there is no form behind it — the first fifty corrections will\n        arrive by email and live in a spreadsheet, which is the right amount of software for fifty\n        of anything.")}</p></div></div>
+    </aside></div>`;
+}
+
+function brewingPage(){
+  $("#view").innerHTML = `<p class="crumb">${T("How Czech lager is made")}</p>
+    <h1 style="font-size:46px;margin-bottom:10px">${T("Malt, water, hops, time")}</h1>
+    <p class="lead" style="max-width:64ch">${T("The same seven steps stand behind almost every beer on\n      this site. What changes from brewery to brewery is how long each one is allowed to take.")}</p>
+    <div class="cols" style="padding-top:34px"><div>
+      ${DATA.process.map((s,i)=>`<section><h2>${i+1} · ${esc(L(s.h))}</h2><p>${L(s.b)}</p></section>`).join("")}
+    </div><aside class="sidebar">
+      <div class="panel"><div class="head">${T("Why it matters")}</div><div class="in">
+        <p style="font-size:15.5px;line-height:1.55;margin:0;color:var(--body)">${T("Decoction mashing and\n        a month of cold lagering are expensive. They are also the whole reason Czech lager tastes\n        the way it does, and the first thing an industrial process cuts.")}</p>
+      </div></div>
+      <div class="promo"><p>${T("Every beer page shows what is known for that brewery and what is only\n        typical for the style.")}</p><b>${T("See a beer →")}</b></div>
+    </aside></div>`;
+}
+
+function orderingPage(){
+  const g = (foam, beer) => `<svg width="58" height="104" viewBox="0 0 62 112" fill="none" style="flex-shrink:0">
+    <path d="M8 4 h46 l-5 100 a4 4 0 0 1 -4 4 h-28 a4 4 0 0 1 -4 -4 z" fill="var(--card)" stroke="var(--ink)" stroke-width="2.4"/>
+    ${beer}<path d="M8.7 12 h44.6 ${foam}" fill="var(--foam)"/></svg>`;
+  $("#view").innerHTML = `<p class="crumb">${T("Ordering in Czech")}</p>
+    <h1 style="font-size:44px;margin-bottom:8px">${T("Three ways to have it poured")}</h1>
+    <p class="lead">${T("Ask by name and you will be served like a regular, not like a tourist.")}</p>
+    <div class="pours">
+      <div class="pour">${g("l-0.85 18 h-42.9 z", '<path d="M9.5 30 h43 l-4.5 74 a4 4 0 0 1 -4 4 h-26 a4 4 0 0 1 -4 -4 z" fill="#C9922F"/>')}
+        <div><h3>${T("Hladinka")}</h3><p>${T("The default. Three fingers of dense foam over full beer. Say nothing and this is what arrives.")}</p></div></div>
+      <div class="pour">${g("l-2.3 48 h-40 z", '<path d="M11.6 60 h38.8 l-2.4 44 a4 4 0 0 1 -4 4 h-26 a4 4 0 0 1 -4 -4 z" fill="#C9922F"/>')}
+        <div><h3>${T("Šnyt")}</h3><p>${T("Less beer, more foam, same glass. For when you want one more but not a whole one. Costs less.")}</p></div></div>
+      <div class="pour">${g("l-4.7 92 a4 4 0 0 1 -4 4 h-27 a4 4 0 0 1 -4 -4 z", "")}
+        <div><h3>Mlíko</h3><p>${T("Almost all foam — sweet, creamy, drunk in one go at the end. Not a mistake by the bartender.")}</p></div></div>
+    </div>
+    <div class="cols" style="padding-top:38px"><div>
+      <h2>${T("Say it out loud")}</h2>
+      <p><b style="font-size:20px">${T("Jedno dvanáctku, prosím")}</b><br>
+        <span style="color:var(--accent);font-weight:600">${T("yed-no dva-NATS-ku, pro-seem")}</span><br>${T("One 12°, please")}</p>
+      <p><b style="font-size:20px">${T("Ještě jedno")}</b><br>
+        <span style="color:var(--accent);font-weight:600">${T("yesh-tye yed-no")}</span><br>${T("One more")}</p>
+    </div><aside class="sidebar"><div class="promo">
+      <p>${T("The number on the menu is malt, not alcohol. A 12° is about 4.4 %.")}</p>
+      <b>${T("Read the style page →")}</b></div></aside></div>`;
+}
+
+/* ── router ──────────────────────────────────────────────────────────── */
+function route(){
+  let h = location.hash && location.hash !== "#/" ? location.hash : "#/home";
+  const lm = h.match(/^#\/(en|cs)\b(.*)$/);
+  if (lm) { LANG = lm[1]; h = "#" + (lm[2] || "/home"); }
+  document.querySelectorAll("[data-lang]").forEach(x =>
+    x.toggleAttribute("aria-current", x.dataset.lang === LANG));
+  document.querySelectorAll("[data-i18n]").forEach(x => x.textContent = T(x.dataset.i18n));
+  document.documentElement.lang = LANG;
+  const [, kind, id] = h.split("/");
+  document.querySelectorAll(".nav button").forEach(b =>
+    b.toggleAttribute("aria-current", b.dataset.go === "#/" + kind + "s" || b.dataset.go === h));
+  if (kind === "home" || !kind) homePage();
+  else if (kind === "find") finderPage();
+  else if (kind === "beers") beersPage();
+  else if (kind === "breweries") breweriesPage();
+  else if (kind === "brewery") breweryPage(id);
+  else if (kind === "venues") venuesPage();
+  else if (kind === "ordering") orderingPage();
+  else if (kind === "brewing") brewingPage();
+  else if (kind === "correct") correctPage();
+  else beerPage(id);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", route);
+
+document.addEventListener("click", e => {
+  const go = e.target.closest("[data-go]");
+  if (go) { location.hash = "/" + LANG + go.dataset.go.slice(1); return; }
+  const lg = e.target.closest("[data-lang]");
+  if (lg) { setLang(lg.dataset.lang); return; }
+  const a = e.target.closest("[data-anchor]");
+  if (a) {
+    anchorId = a.dataset.anchor;
+    document.querySelectorAll("[data-anchor]").forEach(x => x.setAttribute("aria-pressed", x === a));
+    runMatch();
+  }
+  if (e.target.id === "reset") {
+    deltas = {};
+    document.querySelectorAll("#sliders input").forEach(i => {
+      i.value = 0; $("#v-" + i.dataset.ax).textContent = (LANG==="cs"?"beze změny":"unchanged");
+    });
+    runMatch();
+  }
+});
+document.addEventListener("input", e => {
+  const ax = e.target.dataset && e.target.dataset.ax;
+  if (!ax) return;
+  deltas[ax] = +e.target.value;
+  $("#v-" + ax).textContent = deltas[ax] ? deltaWord(ax, deltas[ax], 3) : (LANG==="cs"?"beze změny":"unchanged");
+  runMatch();
+});
+
+/* ── čárky: локально в браузере, без выдуманных общих счётчиков ────── */
+const VOTES = (() => {
+  try { return JSON.parse(localStorage.getItem("pba.votes") || "{}"); } catch (e) { return {}; }
+})();
+function saveVotes(){ try { localStorage.setItem("pba.votes", JSON.stringify(VOTES)); } catch (e) {} }
+
+function paintCoaster(fresh){
+  const c = document.querySelector(".coaster"); if(!c) return;
+  const id = c.dataset.beer, v = VOTES[id] || {};
+  const n = v.up || 0;
+  c.querySelector("[data-cnt]").textContent = n;
+  let h = "";
+  for (let i = 0; i < Math.min(n, 25); i++) {
+    const cls = [(i + 1) % 5 === 0 ? "five" : "", fresh && i === n - 1 ? "fresh" : ""].filter(Boolean).join(" ");
+    h += "<i" + (cls ? ' class="' + cls + '"' : "") + "></i>";
+  }
+  c.querySelector("[data-marks]").innerHTML = h ||
+    '<span class="none">' + T("your strokes go here") + '</span>';
+  const pr = c.querySelector("[data-prompt]");
+  if (pr) pr.innerHTML = n === 0
+        ? (LANG === "cs" ? 'Chutnalo? <em>Udělejte čárku.</em>' : 'Liked it? <em>${T("Mark it down.")}</em>')
+        : n === 1
+        ? (LANG === "cs" ? 'Jedna je doma. <em>Dáte další?</em>' : 'One down. <em>Had another?</em>')
+        : (LANG === "cs" ? 'To je ' + n + '. <em>Počítáme dál.</em>'
+                         : 'That is ' + n + '. <em>Keep counting.</em>');
+  const fill = c.querySelector("[data-beer-fill]");
+  if (fill) fill.style.transform = "scaleY(" + Math.min(0.1 + n * 0.075, 1) + ")";
+  c.querySelector('[data-vote="down"]').setAttribute("aria-pressed", !!v.down);
+}
+
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-vote]"); if(!btn) return;
+  const c = btn.closest(".coaster"), id = c.dataset.beer;
+  const v = VOTES[id] = VOTES[id] || {};
+  if (btn.dataset.vote === "up") { v.up = (v.up || 0) + 1; v.down = 0; }
+  else { v.down = v.down ? 0 : 1; if (v.down) v.up = 0; }
+  saveVotes(); paintCoaster(btn.dataset.vote === "up");
+});
+
+const _route = route;
+route = function(){ _route(); paintCoaster(); };
+addEventListener("hashchange", paintCoaster);
+
+route();
+
+document.body.insertAdjacentHTML("beforeend", `<div class="wrap"><footer>
+  Venue data © OpenStreetMap contributors, ODbL · Brewery data from Wikidata, CC0 · collected ${DATA.generatedAt}<br>${T("Beer parameters and descriptions are unverified working content for this mockup, not published facts.")}</footer></div>`);
+</script>

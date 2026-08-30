@@ -1,0 +1,60 @@
+{
+ "generatedAt": "2026-08-30",
+ "sources": {
+  "wikidata": {
+   "license": "CC0",
+   "breweries": 255
+  },
+  "openstreetmap": {
+   "license": "ODbL",
+   "attribution": "© OpenStreetMap contributors",
+   "venues": 912
+  }
+ },
+ "venuesWithPhone": 228,
+ "venuesWithBrewery": 45,
+ "osmBrands": {
+  "Pilsner Urquell": 10,
+  "Velkopopovický Kozel": 9,
+  "Gambrinus": 4,
+  "Staropramen": 4,
+  "Únětický pivovar": 3,
+  "gambrinus": 3,
+  "Svijany": 2,
+  "Březňák": 2,
+  "Bad Flash": 1,
+  "Hubertus": 1,
+  "Stella Artois": 1,
+  "Vinohradský pivovar": 1,
+  "arpus": 1,
+  "nozib": 1,
+  "falkon": 1,
+  "chroust": 1,
+  "matuška": 1,
+  "zichovec": 1,
+  "Guinness": 1,
+  "Konrád": 1,
+  "Klášter": 1,
+  "staropramen": 1,
+  "Černá Hora": 1,
+  "Rychtář": 1,
+  "Krušovice": 1,
+  "argus": 1,
+  "craft_beer": 1,
+  "Radegast": 1,
+  "Molson Coors": 1,
+  "budvar": 1,
+  "maisel's._weisse": 1,
+  "Postřižiny": 1,
+  "Pivovar_Prokopák": 1,
+  "Slavkov": 1,
+  "Branik": 1,
+  "březňák": 1,
+  "cvikov": 1,
+  "radegast": 1,
+  "AB InBev": 1,
+  "Kout": 1,
+  "svijany": 1,
+  "more": 1
+ }
+}

@@ -1,0 +1,125 @@
+/*
+ * Пивной атлас Праги — дизайн-система «эмалевая вывеска и пивной картон»
+ * Утверждена 29 августа 2026. Источник истины для вёрстки.
+ *
+ * Взят материальный мир чешской пивной: бутылочная зелень эмалевых вывесок на
+ * фасадах хосподы, золото пивной этикетки, кремовый картон подставки-тачка.
+ */
+
+:root {
+  /* ── основа ─────────────────────────────────────── */
+  --card:        #EAE1CC;  /* картон подставки — фон страницы */
+  --card-light:  #F4EEDD;  /* панели, врезки, поля этикетки */
+  --foam:        #FBF8EF;  /* пена — кромка под шапкой */
+  --ink:         #17190F;  /* чернила */
+  --body:        #35382A;  /* основной текст */
+  --muted:       #6F6B57;  /* подписи, второстепенное */
+  --line:        #CFC5A9;  /* разделители на картоне */
+  --line-soft:   #DCD2B6;  /* разделители на светлой панели */
+
+  /* ── эмаль и золото ─────────────────────────────── */
+  --green:       #1C3A29;  /* эмалевая вывеска, рамки, шапка */
+  --green-light: #7E9A88;  /* внутренняя линия двойной рамки */
+  --green-pale:  #C4D2C8;  /* текст на зелёном */
+  --gold:        #B8862B;  /* золото этикетки — линия под шапкой, точки */
+  --gold-bright: #D9A03C;  /* золото на тёмном */
+
+  /* ── смысловые ──────────────────────────────────── */
+  --accent:      #8A5E15;  /* ссылки, акценты на светлом */
+  --dotted:      #A89A72;  /* пунктир под оценочным значением */
+  --stale:       #8E2318;  /* «needs re-check» */
+
+  /* ── типографика ────────────────────────────────── */
+  --font-display: "Abril Fatface", Georgia, serif;   /* только названия и крупные заголовки */
+  --font-text:    "Archivo", system-ui, sans-serif;  /* всё остальное, включая h3 */
+}
+
+/* Тёмная тема. Зелень светлеет, золото остаётся золотом. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --card:        #12160F;
+    --card-light:  #1B2117;
+    --foam:        #E8E2CE;
+    --ink:         #EFE7D0;
+    --body:        #D0C9B1;
+    --muted:       #8E8A72;
+    --line:        #2F3728;
+    --line-soft:   #333B2B;
+    --green:       #24422F;
+    --green-light: #5F7E6B;
+    --green-pale:  #B6C7BB;
+    --accent:      #D9A03C;
+    --dotted:      #7A6C48;
+    --stale:       #D4796A;
+  }
+}
+:root[data-theme="dark"] {
+  --card:        #12160F;
+  --card-light:  #1B2117;
+  --foam:        #E8E2CE;
+  --ink:         #EFE7D0;
+  --body:        #D0C9B1;
+  --muted:       #8E8A72;
+  --line:        #2F3728;
+  --line-soft:   #333B2B;
+  --green:       #24422F;
+  --green-light: #5F7E6B;
+  --green-pale:  #B6C7BB;
+  --accent:      #D9A03C;
+  --dotted:      #7A6C48;
+  --stale:       #D4796A;
+}
+
+/* ─────────────────────────────────────────────────────
+ * Опознаваемые приёмы. Пять штук, больше не нужно.
+ * ───────────────────────────────────────────────────── */
+
+/* 1. Шапка-вывеска: зелёная эмаль с золотой линией снизу */
+.sign {
+  background: var(--green);
+  border-bottom: 5px solid var(--gold);
+  color: var(--card-light);
+}
+
+/* 2. Пенная кромка — SVG-полоса сразу под шапкой.
+      Путь с неровным низом, заливка var(--foam). См. design/Main.dc.html */
+
+/* 3. Штамп: градусы или год основания в двойном кольце, как оттиск на этикетке */
+.stamp {
+  width: 168px; height: 168px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: inset 0 0 0 4px var(--card), inset 0 0 0 6px var(--gold);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--card-light);
+}
+.stamp-figure { font-family: var(--font-display); font-size: 52px; line-height: 1; }
+
+/* 4. Поле этикетки: толстая зелёная рамка плюс тонкая внутренняя */
+.label-frame { border: 3px solid var(--green); padding: 5px; background: var(--green); }
+.label-frame > * { border: 1px solid var(--green-light); background: var(--card-light); }
+
+/* 5. Трактирные чярки вместо цифры при счёте заведений — inline SVG,
+      четыре палочки и диагональ на каждую пятёрку. См. design/Brewery.dc.html */
+
+/* ─────────────────────────────────────────────────────
+ * Достоверность данных. Оформление обязательное, не декоративное.
+ * ───────────────────────────────────────────────────── */
+
+/* официальное значение — без пометок, это база */
+.v-official { font-weight: 700; }
+
+/* увиденное лично — всегда рядом с датой */
+.v-seen { font-weight: 700; color: var(--green); }
+
+/* оценка — приглушённая, пунктиром, со словом est. */
+.v-estimated { color: var(--muted); border-bottom: 1px dotted var(--dotted); }
+
+/* протухшее — словами, без числа */
+.v-stale {
+  color: var(--stale); font-weight: 600;
+  font-size: .82em; letter-spacing: .08em; text-transform: uppercase;
+}
+
+/* uncertified в публикацию не попадает — блокируется сборкой, класса нет */

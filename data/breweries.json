@@ -1,0 +1,3780 @@
+[
+ {
+  "id": "akciovy-pivovar-libertas",
+  "wikidata": "Q106622489",
+  "name": "Akciový pivovar Libertas",
+  "nameEn": null,
+  "city": "Úvaly",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q106622489",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivovar-libertas.cz/",
+  "lng": 14.7321428,
+  "lat": 50.0705308
+ },
+ {
+  "id": "anglicky-pivovar",
+  "wikidata": "Q119150204",
+  "name": "Anglický pivovar",
+  "nameEn": "Libeň Brewery",
+  "city": "Libeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q119150204",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.4761664,
+  "lat": 50.1067456
+ },
+ {
+  "id": "berounsky-medved",
+  "wikidata": "Q11452227",
+  "name": "Berounský medvěd",
+  "nameEn": "Berounský medvěd",
+  "city": "Beroun",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11452227",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.berounskymedved.com/",
+  "founded": 1998,
+  "lng": 14.0717676,
+  "lat": 49.9565131
+ },
+ {
+  "id": "budejovicky-budvar",
+  "wikidata": "Q1001644",
+  "name": "Budějovický Budvar",
+  "nameEn": "Budweiser Budvar",
+  "city": "České Budějovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q1001644",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.budvar.cz/",
+  "founded": 1895,
+  "story": {
+   "en": "From České Budějovice — Budweis in German — and one of the last large Czech breweries still owned by the state. Rounder and slower than a Plzeň lager, with a long malty finish rather than a sharp one.",
+   "cs": "Z Českých Budějovic, německy Budweis, a jeden z posledních velkých českých pivovarů v rukou státu. Kulatější a pomalejší než plzeňský ležák, s dlouhým sladovým závěrem místo ostrého."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "The Budweiser name",
+     "cs": "Proč se nejmenuje Budweiser všude"
+    },
+    "body": {
+     "en": "The brewery has been in a trademark fight with the American Anheuser-Busch brand for over a century. In much of Europe the Czech beer is Budweiser; in the United States it is sold as Czechvar. The two beers have nothing in common but the name.",
+     "cs": "Pivovar vede spor o ochrannou známku s americkou značkou Anheuser-Busch přes sto let. Ve velké části Evropy je Budweiser české pivo, ve Spojených státech se prodává jako Czechvar. Kromě jména nemají obě piva společného nic."
+    }
+   }
+  ]
+ },
+ {
+  "id": "byvaly-petrovicky-pivovar-praha",
+  "wikidata": "Q110948019",
+  "name": "Bývalý Petrovický pivovar - Praha",
+  "nameEn": "Brewery in Petrovice (Prague)",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q110948019",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.554138888,
+  "lat": 50.034194444
+ },
+ {
+  "id": "byvaly-pivovar-a-mincovna",
+  "wikidata": "Q108805877",
+  "name": "Bývalý pivovar a mincovna",
+  "nameEn": null,
+  "city": "Planá",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q108805877",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 12.736402777,
+  "lat": 49.868988888
+ },
+ {
+  "id": "brevnovsky-klasterni-pivovar",
+  "wikidata": "Q11706909",
+  "name": "Břevnovský klášterní pivovar",
+  "nameEn": "Břevnovský monastic brewery",
+  "city": "Břevnov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11706909",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://brevnovskypivovar.cz/",
+  "founded": 2010,
+  "lng": 14.3571319,
+  "lat": 50.0840464
+ },
+ {
+  "id": "dolnopocernicky-pivovar",
+  "wikidata": "Q119397323",
+  "name": "Dolnopočernický pivovar",
+  "nameEn": "Castle brewery in Dolní Počernice",
+  "city": "Dolní Počernice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q119397323",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.5807753,
+  "lat": 50.0883597
+ },
+ {
+  "id": "druzstevni-pivovar-kbely",
+  "wikidata": "Q119267509",
+  "name": "Družstevní pivovar Kbely",
+  "nameEn": "Former brewery in Kbely",
+  "city": "Kbely",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q119267509",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.5498064,
+  "lat": 50.1329658
+ },
+ {
+  "id": "dekansky-pivovar-tachov",
+  "wikidata": "Q11863025",
+  "name": "Děkanský pivovar Tachov",
+  "nameEn": null,
+  "city": "Tachov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11863025",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "dul-stelcoves",
+  "wikidata": "Q106034318",
+  "name": "Důl Stelčoves",
+  "nameEn": null,
+  "city": "Stehelčeves",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q106034318",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1871,
+  "lng": 14.1722311,
+  "lat": 50.1761828
+ },
+ {
+  "id": "franz-wanka",
+  "wikidata": "Q1449380",
+  "name": "Franz Wanka",
+  "nameEn": "Franz Wanka",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q1449380",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1805
+ },
+ {
+  "id": "heineken-ceska-republika",
+  "wikidata": "Q33046790",
+  "name": "Heineken Česká republika",
+  "nameEn": "Heineken Česká republika",
+  "city": "Krušovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q33046790",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.heinekenceskarepublika.cz/",
+  "founded": 1992
+ },
+ {
+  "id": "historicky-pivovar-cesky-krumlov",
+  "wikidata": "Q137773753",
+  "name": "Historický pivovar Český Krumlov",
+  "nameEn": null,
+  "city": "Český Krumlov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q137773753",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarceskykrumlov.cz/",
+  "founded": 2015
+ },
+ {
+  "id": "hostinsky-pivovar-moritz",
+  "wikidata": "Q12020377",
+  "name": "Hostinský pivovar Moritz",
+  "nameEn": null,
+  "city": "Olomouc",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12020377",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://hostinec-moritz.cz/",
+  "founded": 2006,
+  "lng": 17.249722222,
+  "lat": 49.590555555
+ },
+ {
+  "id": "hotel-galant-mikulov",
+  "wikidata": "Q122681853",
+  "name": "Hotel Galant Mikulov",
+  "nameEn": null,
+  "city": "Mikulov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q122681853",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://galant.cz/hotel-galant-mikulov/",
+  "lng": 16.6407344,
+  "lat": 48.8078519
+ },
+ {
+  "id": "hotel-u-medvidku",
+  "wikidata": "Q111412292",
+  "name": "Hotel U Medvídků",
+  "nameEn": "U Medvidku Restaurant, Brewery and Hotel",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q111412292",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.41885,
+  "lat": 50.0828
+ },
+ {
+  "id": "hradni-pivovar-libstejn",
+  "wikidata": "Q12020617",
+  "name": "Hradní pivovar Libštejn",
+  "nameEn": null,
+  "city": "Libštejn",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12020617",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "jarosovsky-pivovar",
+  "wikidata": "Q115948749",
+  "name": "Jarošovský pivovar",
+  "nameEn": "Jarošovský pivovar",
+  "city": "Jarošov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q115948749",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 2017
+ },
+ {
+  "id": "jarosovsky-pivovar",
+  "wikidata": "Q12024231",
+  "name": "Jarošovský pivovar",
+  "nameEn": "Jarošovský pivovar",
+  "city": "Jarošov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12024231",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1688,
+  "lng": 17.4982045,
+  "lat": 49.087171
+ },
+ {
+  "id": "kbelsky-pivovar",
+  "wikidata": "Q80160987",
+  "name": "Kbelský pivovar",
+  "nameEn": null,
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q80160987",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://kbelskypivovar.cz",
+  "founded": 2016,
+  "lng": 14.5480278,
+  "lat": 50.1305739
+ },
+ {
+  "id": "klub-stary-pivovar",
+  "wikidata": "Q46123560",
+  "name": "Klub Starý pivovar",
+  "nameEn": "Klub Starý pivovar",
+  "city": "Kroměříž",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q46123560",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.mojekromeriz.cz/mista/22/klub-stary-pivovar"
+ },
+ {
+  "id": "klasterni-pivovar-doksany",
+  "wikidata": "Q128775580",
+  "name": "Klášterní pivovar Doksany",
+  "nameEn": null,
+  "city": "Doksany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q128775580",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.1601797,
+  "lat": 50.4543744
+ },
+ {
+  "id": "klasterni-pivovar-tachov",
+  "wikidata": "Q12029573",
+  "name": "Klášterní pivovar Tachov",
+  "nameEn": null,
+  "city": "Tachov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12029573",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "knizeci-pivovar-plasy",
+  "wikidata": "Q21995022",
+  "name": "Knížecí pivovar Plasy",
+  "nameEn": "Knížecí pivovar Plasy",
+  "city": "Plasy",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q21995022",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarplasy.cz/",
+  "founded": 2012
+ },
+ {
+  "id": "kralovsky-pivovar-krusovice",
+  "wikidata": "Q1796123",
+  "name": "Královský pivovar Krušovice",
+  "nameEn": "Royal Brewery of Krušovice",
+  "city": "Krušovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q1796123",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.krusovice.cz/",
+  "founded": 1581,
+  "story": {
+   "en": "A royal brewery by charter — Rudolf II bought it in 1583 — and a mass-market lager in practice. Soft and sweetish, and more common in tourist-facing places in the centre than in neighbourhood pubs.",
+   "cs": "Královský pivovar podle listiny — Rudolf II. ho koupil roku 1583 — a masový ležák v praxi. Měkký a nasládlý, a v turistických podnicích v centru častější než v hospodách po sídlištích."
+  }
+ },
+ {
+  "id": "lorec",
+  "wikidata": "Q12033929",
+  "name": "Lorec",
+  "nameEn": null,
+  "city": "Šipší",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12033929",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.270950739,
+  "lat": 49.956698896
+ },
+ {
+  "id": "lod-pivovar",
+  "wikidata": "Q28949044",
+  "name": "Loď Pivovar",
+  "nameEn": "Loď Pivovar",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q28949044",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.426536111,
+  "lat": 50.093458333
+ },
+ {
+  "id": "mmx-pivovar",
+  "wikidata": "Q19941790",
+  "name": "MMX Pivovar",
+  "nameEn": null,
+  "city": "Lety",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q19941790",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://mmxpivo.com",
+  "lng": 14.2586325,
+  "lat": 49.92318
+ },
+ {
+  "id": "malesicky-mikropivovar",
+  "wikidata": "Q110287870",
+  "name": "Malešický mikropivovar",
+  "nameEn": "Malešický mikropivovar",
+  "city": "Praha 10",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q110287870",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.malesickymikropivovar.cz",
+  "lng": 14.5076578,
+  "lat": 50.0845981
+ },
+ {
+  "id": "minipivovar-bilovec",
+  "wikidata": "Q18042846",
+  "name": "Minipivovar Bílovec",
+  "nameEn": null,
+  "city": "Bílovec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042846",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://pivovarzobak.cz/",
+  "lng": 18.0194722,
+  "lat": 49.7601111
+ },
+ {
+  "id": "minipivovar-detenice",
+  "wikidata": "Q11452139",
+  "name": "Minipivovar Dětenice",
+  "nameEn": "Dětenice Brewery",
+  "city": "Dětenice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11452139",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "minipivovar-hukvaldy",
+  "wikidata": "Q12037721",
+  "name": "Minipivovar Hukvaldy",
+  "nameEn": null,
+  "city": "Dolní Sklenov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12037721",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-hukvaldy.cz",
+  "lng": 18.2166389,
+  "lat": 49.6341944
+ },
+ {
+  "id": "minipivovar-medlesice",
+  "wikidata": "Q12037722",
+  "name": "Minipivovar Medlešice",
+  "nameEn": null,
+  "city": "Medlešice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12037722",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.medlesice.cz",
+  "founded": 1673
+ },
+ {
+  "id": "minipivovar-pegas",
+  "wikidata": "Q12037724",
+  "name": "Minipivovar Pegas",
+  "nameEn": "Minipivovar Pegas",
+  "city": "Brno-město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12037724",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://brnopivovar.hotelpegas.cz/",
+  "founded": 1992
+ },
+ {
+  "id": "minipivovar-prisov",
+  "wikidata": "Q81614422",
+  "name": "Minipivovar Příšov",
+  "nameEn": "Příšov microbrewery",
+  "city": "Příšov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q81614422",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.prisov.cz/",
+  "lng": 13.3038711,
+  "lat": 49.811905
+ },
+ {
+  "id": "minipivovar-rohov",
+  "wikidata": "Q18042847",
+  "name": "Minipivovar Rohov",
+  "nameEn": null,
+  "city": "Rohov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042847",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.ukomarku.cz/hlavni-strana/",
+  "lng": 18.073,
+  "lat": 50.0154167
+ },
+ {
+  "id": "minipivovar-skreconsky-zabak-bohumin",
+  "wikidata": "Q18042849",
+  "name": "Minipivovar Skřečoňský žabák Bohumín",
+  "nameEn": "Skřečoňský žabák",
+  "city": "Bohumín",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042849",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.skreconskyzabak.cz/",
+  "founded": 2011,
+  "lng": 18.3737442,
+  "lat": 49.8991578
+ },
+ {
+  "id": "minipivovar-slezan",
+  "wikidata": "Q18113985",
+  "name": "Minipivovar Slezan",
+  "nameEn": null,
+  "city": "Leskovec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18113985",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarslezan.cz/",
+  "lng": 17.9132742,
+  "lat": 49.7843058
+ },
+ {
+  "id": "minipivovar-vrchlabi",
+  "wikidata": "Q11452173",
+  "name": "Minipivovar Vrchlabí",
+  "nameEn": "Pivovarská bašta",
+  "city": "Vrchlabí",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11452173",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarskabasta.cz",
+  "founded": 1997
+ },
+ {
+  "id": "minipivovar-cerny-orel",
+  "wikidata": "Q64851131",
+  "name": "Minipivovar Černý orel",
+  "nameEn": null,
+  "city": "Kroměříž",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q64851131",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 2013,
+  "lng": 17.392333,
+  "lat": 49.298402
+ },
+ {
+  "id": "minipivovar-zamberk",
+  "wikidata": "Q12037728",
+  "name": "Minipivovar Žamberk",
+  "nameEn": null,
+  "city": null,
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12037728",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarzamberk.cz/"
+ },
+ {
+  "id": "modra-hvezda-dobrany",
+  "wikidata": "Q6889581",
+  "name": "Modrá Hvězda Dobřany",
+  "nameEn": "Modra Hvezda Dobrany",
+  "city": "Dobřany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q6889581",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.2900819,
+  "lat": 49.6554275
+ },
+ {
+  "id": "mestsky-pivovar-tachov",
+  "wikidata": "Q12039426",
+  "name": "Městský pivovar Tachov",
+  "nameEn": null,
+  "city": "Tachov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12039426",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "mestsky-zamecky-pivovar-oslavany",
+  "wikidata": "Q15652099",
+  "name": "Městský zámecký pivovar Oslavany",
+  "nameEn": null,
+  "city": "Oslavany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q15652099",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivo-oslavany.cz/",
+  "lng": 16.3337,
+  "lat": 49.1268
+ },
+ {
+  "id": "netopyrka-pivovar",
+  "wikidata": "Q116520568",
+  "name": "Netopýrka pivovar",
+  "nameEn": null,
+  "city": "Česko",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116520568",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://netopyrka.cz/"
+ },
+ {
+  "id": "nova-varna",
+  "wikidata": "Q123893874",
+  "name": "Nová varna",
+  "nameEn": null,
+  "city": "Dalešice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q123893874",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.07954332,
+  "lat": 49.1311435
+ },
+ {
+  "id": "novy-pivovar-krimice",
+  "wikidata": "Q12041435",
+  "name": "Nový pivovar Křimice",
+  "nameEn": null,
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12041435",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.3104075,
+  "lat": 49.7580749
+ },
+ {
+  "id": "pansky-pivovar-hostinne",
+  "wikidata": "Q116280795",
+  "name": "Panský pivovar Hostinné",
+  "nameEn": "Panský pivovar Hostinné",
+  "city": "Hostinné",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116280795",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1507,
+  "lng": 15.7192436,
+  "lat": 50.5411094
+ },
+ {
+  "id": "pansky-pivovar-v-paskove",
+  "wikidata": "Q117818075",
+  "name": "Panský pivovar v Paskově",
+  "nameEn": "Panský pivovar v Paskově",
+  "city": "Paskov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q117818075",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarpaskov.cz/",
+  "founded": 1518,
+  "lng": 18.2971256,
+  "lat": 49.7320806
+ },
+ {
+  "id": "parni-pivovar-a-sladovna-v-kosirich",
+  "wikidata": "Q98442792",
+  "name": "Parní pivovar a sladovna v Košířích",
+  "nameEn": "Košíře Brewery",
+  "city": "Košíře",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q98442792",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1896,
+  "lng": 14.3851294,
+  "lat": 50.0697169
+ },
+ {
+  "id": "petr-hauskrecht-parni-pivovar",
+  "wikidata": "Q134505013",
+  "name": "Petr Hauskrecht - Parní pivovar",
+  "nameEn": null,
+  "city": "Trnitá",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q134505013",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.hauskrecht.cz/",
+  "founded": 2014,
+  "lng": 16.6282817,
+  "lat": 49.1875767
+ },
+ {
+  "id": "pikopivovar-letohradek",
+  "wikidata": "Q18042791",
+  "name": "Pikopivovar Letohrádek",
+  "nameEn": null,
+  "city": "Frýdlant",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042791",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 18.35061073,
+  "lat": 49.58469391
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q70085624",
+  "name": "Pivovar",
+  "nameEn": "Pivovar Nasavrky",
+  "city": "Nasavrky",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q70085624",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.8068761,
+  "lat": 49.8446792
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q38140548",
+  "name": "Pivovar",
+  "nameEn": null,
+  "city": "Sušice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q38140548",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q60487410",
+  "name": "Pivovar",
+  "nameEn": null,
+  "city": "Teplá",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q60487410",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 12.8633169,
+  "lat": 49.9773908
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q116056803",
+  "name": "Pivovar",
+  "nameEn": null,
+  "city": "Černá Hora",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116056803",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.5812717,
+  "lat": 49.4147922
+ },
+ {
+  "id": "pivovar-rajec-jestrebi",
+  "wikidata": "Q12045377",
+  "name": "Pivovar (Rájec-Jestřebí)",
+  "nameEn": null,
+  "city": "Rájec-Jestřebí",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045377",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-beznoska",
+  "wikidata": "Q101246551",
+  "name": "Pivovar Beznoska",
+  "nameEn": "Pivovar Beznoska",
+  "city": "Prosek",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q101246551",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.skolicka.cz/",
+  "lng": 14.5071328,
+  "lat": 50.11765
+ },
+ {
+  "id": "pivovar-bizon",
+  "wikidata": "Q133861939",
+  "name": "Pivovar Bizon",
+  "nameEn": "Pivovar Bizon",
+  "city": "Čižice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q133861939",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://ubizona.eu/",
+  "founded": 2011,
+  "lng": 13.3991422,
+  "lat": 49.64984
+ },
+ {
+  "id": "pivovar-branik",
+  "wikidata": "Q12045379",
+  "name": "Pivovar Braník",
+  "nameEn": "Braník Brewery",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045379",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "founded": 1898,
+  "lng": 14.409942,
+  "lat": 50.029215,
+  "story": {
+   "en": "Once Prague's own brewery on the right bank of the Vltava, opened in 1900 and closed as a working site in 2007. The brand survived and is still poured in the city, carrying more local sentiment than the beer itself strictly earns.",
+   "cs": "Kdysi vlastní pražský pivovar na pravém břehu Vltavy, otevřený roku 1900 a jako provoz zavřený v roce 2007. Značka přežila a v městě se pořád čepuje, nese víc místního sentimentu, než si samo pivo přísně vzato zaslouží."
+  },
+  "curated": [
+   "city"
+  ]
+ },
+ {
+  "id": "pivovar-broumov",
+  "wikidata": "Q12045380",
+  "name": "Pivovar Broumov",
+  "nameEn": "Pivovar Broumov",
+  "city": "Broumov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045380",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarbroumov.cz/",
+  "founded": 1997
+ },
+ {
+  "id": "pivovar-bruntal",
+  "wikidata": "Q18042743",
+  "name": "Pivovar Bruntál",
+  "nameEn": null,
+  "city": "Bruntál",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042743",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-bystre",
+  "wikidata": "Q12045381",
+  "name": "Pivovar Bystré",
+  "nameEn": null,
+  "city": "Bystré",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045381",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-bela-nad-radbuzou",
+  "wikidata": "Q12045382",
+  "name": "Pivovar Bělá nad Radbuzou",
+  "nameEn": null,
+  "city": "Bělá nad Radbuzou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045382",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-breznice",
+  "wikidata": "Q12045384",
+  "name": "Pivovar Březnice",
+  "nameEn": "Herold Březnice Brewery",
+  "city": "Březnice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045384",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-herold.cz/",
+  "founded": 1999
+ },
+ {
+  "id": "pivovar-chodovar",
+  "wikidata": "Q12045383",
+  "name": "Pivovar Chodovar",
+  "nameEn": null,
+  "city": "Chodová Planá",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045383",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.chodovar.cz/",
+  "founded": 1991
+ },
+ {
+  "id": "pivovar-clock",
+  "wikidata": "Q54967316",
+  "name": "Pivovar Clock",
+  "nameEn": "Pivovar Clock",
+  "city": "Potštejn",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q54967316",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarclock.cz/",
+  "founded": 2012
+ },
+ {
+  "id": "pivovar-cobolis",
+  "wikidata": "Q56597912",
+  "name": "Pivovar Cobolis",
+  "nameEn": "Pivovar Cobolis",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q56597912",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarcobolis.cz",
+  "lng": 14.470121,
+  "lat": 50.126875
+ },
+ {
+  "id": "pivovar-cvikov",
+  "wikidata": "Q15269165",
+  "name": "Pivovar Cvikov",
+  "nameEn": "Pivovar Cvikov",
+  "city": "Liberec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q15269165",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarcvikov.cz",
+  "founded": 2014,
+  "story": {
+   "en": "A small North Bohemian brewery near the glassworks its beers are named after. Dry, firmly hopped, and a good example of what a regional 11° is supposed to taste like.",
+   "cs": "Malý severočeský pivovar u sklárny, po níž se jeho piva jmenují. Suché, pevně chmelené, a dobrý příklad toho, jak má chutnat regionální jedenáctka."
+  }
+ },
+ {
+  "id": "pivovar-dalesice",
+  "wikidata": "Q12045385",
+  "name": "Pivovar Dalešice",
+  "nameEn": "Pivovar Dalešice",
+  "city": "Dalešice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045385",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovar-dalesice.cz",
+  "founded": 1600,
+  "lng": 16.0798111,
+  "lat": 49.13098907
+ },
+ {
+  "id": "pivovar-dolejsi-kuncice",
+  "wikidata": "Q17626388",
+  "name": "Pivovar Dolejší Kunčice",
+  "nameEn": null,
+  "city": "Fulnek",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q17626388",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-dolni-bela",
+  "wikidata": "Q12045387",
+  "name": "Pivovar Dolní Bělá",
+  "nameEn": null,
+  "city": "Dolní Bělá",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045387",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-dolni-litvinov",
+  "wikidata": "Q12045388",
+  "name": "Pivovar Dolní Litvínov",
+  "nameEn": null,
+  "city": "Dolní Litvínov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045388",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-doubravnik",
+  "wikidata": "Q51525868",
+  "name": "Pivovar Doubravník",
+  "nameEn": null,
+  "city": "Doubravník",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q51525868",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 2018
+ },
+ {
+  "id": "pivovar-ervenice",
+  "wikidata": "Q12045391",
+  "name": "Pivovar Ervěnice",
+  "nameEn": null,
+  "city": "Ervěnice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045391",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-falkenstejn",
+  "wikidata": "Q52376920",
+  "name": "Pivovar Falkenštejn",
+  "nameEn": "Pivovar Falkenštejn",
+  "city": "Krásná Lípa",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q52376920",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivofalkenstejn.cz",
+  "founded": 2010,
+  "lng": 14.5075756,
+  "lat": 50.9139694
+ },
+ {
+  "id": "pivovar-ferdinand",
+  "wikidata": "Q15809498",
+  "name": "Pivovar Ferdinand",
+  "nameEn": "Pivovar Ferdinand",
+  "city": "Benešov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q15809498",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarferdinand.cz",
+  "founded": 1897
+ },
+ {
+  "id": "pivovar-gambrinus-plzen",
+  "wikidata": "Q18042636",
+  "name": "Pivovar Gambrinus Plzeň",
+  "nameEn": "Gambrinus",
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042636",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.gambrinus.cz/cz/",
+  "lng": 13.3863,
+  "lat": 49.7465,
+  "story": {
+   "en": "Brewed alongside Pilsner Urquell in Plzeň and, by volume, the beer Czechs actually drink. Unfashionable and everywhere — the pour you get in an ordinary neighbourhood pub when you just ask for beer.",
+   "cs": "Vaří se v Plzni vedle Prazdroje a objemem je to pivo, které Češi opravdu pijí. Nemoderní a všude — to, co dostanete v obyčejné hospodě, když si řeknete jen o pivo."
+  }
+ },
+ {
+  "id": "pivovar-grafenried",
+  "wikidata": "Q12045393",
+  "name": "Pivovar Grafenried",
+  "nameEn": null,
+  "city": "Lučina",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045393",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-gwern",
+  "wikidata": "Q61528381",
+  "name": "Pivovar Gwern",
+  "nameEn": null,
+  "city": "Nupaky",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q61528381",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.60318566,
+  "lat": 49.995520094
+ },
+ {
+  "id": "pivovar-havlickuv-brod",
+  "wikidata": "Q5684002",
+  "name": "Pivovar Havlíčkův Brod",
+  "nameEn": "Havlíčkův Brod Brewery",
+  "city": "Havlíčkův Brod",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q5684002",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.hbrebel.cz",
+  "founded": 1995
+ },
+ {
+  "id": "pivovar-holba",
+  "wikidata": "Q5878569",
+  "name": "Pivovar Holba",
+  "nameEn": "Holba Brewery",
+  "city": null,
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q5878569",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.holba.cz/",
+  "founded": 1874
+ },
+ {
+  "id": "pivovar-holendr",
+  "wikidata": "Q92604653",
+  "name": "Pivovar Holendr",
+  "nameEn": null,
+  "city": "Krásno nad Bečvou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q92604653",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.holendr.cz",
+  "lng": 17.9670203,
+  "lat": 49.4816289
+ },
+ {
+  "id": "pivovar-hostoun",
+  "wikidata": "Q12045394",
+  "name": "Pivovar Hostouň",
+  "nameEn": null,
+  "city": "Hostouň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045394",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-hradec-nad-moravici",
+  "wikidata": "Q12045396",
+  "name": "Pivovar Hradec nad Moravicí",
+  "nameEn": null,
+  "city": "Hradec nad Moravicí",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045396",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-janov",
+  "wikidata": "Q12045397",
+  "name": "Pivovar Janov",
+  "nameEn": null,
+  "city": "Janov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045397",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-jihlava",
+  "wikidata": "Q12045399",
+  "name": "Pivovar Jihlava",
+  "nameEn": "Jihlava Brewery",
+  "city": "Jihlava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045399",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivo-jezek.cz/",
+  "founded": 1994
+ },
+ {
+  "id": "pivovar-jimramov",
+  "wikidata": "Q12045398",
+  "name": "Pivovar Jimramov",
+  "nameEn": "Pivovar Jimramov",
+  "city": "Jimramov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045398",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-jindrichov-ve-slezsku",
+  "wikidata": "Q63860198",
+  "name": "Pivovar Jindřichov ve Slezsku",
+  "nameEn": null,
+  "city": null,
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q63860198",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 17.537364,
+  "lat": 50.2528003
+ },
+ {
+  "id": "pivovar-jachymov",
+  "wikidata": "Q44100306",
+  "name": "Pivovar Jáchymov",
+  "nameEn": null,
+  "city": "Jáchymov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q44100306",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-kacerov",
+  "wikidata": "Q12045400",
+  "name": "Pivovar Kaceřov",
+  "nameEn": null,
+  "city": "Kaceřov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045400",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-kamenice",
+  "wikidata": "Q67804698",
+  "name": "Pivovar Kamenice",
+  "nameEn": "Pivovar Kamenice",
+  "city": "Kamenice nad Lipou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q67804698",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovar-kamenice.cz",
+  "founded": 2016,
+  "lng": 15.0783992,
+  "lat": 49.3018422
+ },
+ {
+  "id": "pivovar-klaster",
+  "wikidata": "Q12045402",
+  "name": "Pivovar Klášter",
+  "nameEn": "Pivovar Klášter",
+  "city": "Klášter Hradiště nad Jizerou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045402",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1997,
+  "story": {
+   "en": "A monastery brewery at Klášter Hradiště nad Jizerou, founded by Cistercians and brewing in one form or another since the sixteenth century. Soft, malt-forward beer that pubs keep when they want something other than the big four.",
+   "cs": "Klášterní pivovar v Klášteře Hradišti nad Jizerou, založený cisterciáky a vařící v nějaké podobě od šestnáctého století. Měkké, sladové pivo, které si hospody drží, když chtějí něco jiného než velkou čtyřku."
+  }
+ },
+ {
+  "id": "pivovar-kocour",
+  "wikidata": "Q7199669",
+  "name": "Pivovar Kocour",
+  "nameEn": "Kocour Brewery",
+  "city": "Varnsdorf",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q7199669",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovar-kocour.cz/cz/",
+  "founded": 2008,
+  "lng": 14.604337777,
+  "lat": 50.918550555
+ },
+ {
+  "id": "pivovar-kolcavka",
+  "wikidata": "Q123046935",
+  "name": "Pivovar Kolčavka",
+  "nameEn": "Pivovar Kolčavka",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q123046935",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarkolcavka.cz/",
+  "founded": 2014,
+  "lng": 14.48632,
+  "lat": 50.1050033
+ },
+ {
+  "id": "pivovar-kozolupy",
+  "wikidata": "Q12045401",
+  "name": "Pivovar Kozolupy",
+  "nameEn": null,
+  "city": "Kozolupy",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045401",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-krakonos",
+  "wikidata": "Q11688903",
+  "name": "Pivovar Krakonoš",
+  "nameEn": "Brewery Krakonoš",
+  "city": "Trutnov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11688903",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-krakonos.cz/index.htm",
+  "founded": 1582
+ },
+ {
+  "id": "pivovar-krasovice",
+  "wikidata": "Q12045404",
+  "name": "Pivovar Krašovice",
+  "nameEn": null,
+  "city": "Krašovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045404",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-krsy",
+  "wikidata": "Q12045403",
+  "name": "Pivovar Krsy",
+  "nameEn": null,
+  "city": "Krsy",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045403",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-krucemburk",
+  "wikidata": "Q12045405",
+  "name": "Pivovar Krucemburk",
+  "nameEn": null,
+  "city": "Krucemburk",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045405",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-krasne-brezno",
+  "wikidata": "Q12045406",
+  "name": "Pivovar Krásné Březno",
+  "nameEn": "Pivovar Krásné Březno",
+  "city": "Ústí nad Labem-Neštěmice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045406",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.zlatopramen.cz",
+  "lng": 14.07616,
+  "lat": 50.66529
+ },
+ {
+  "id": "pivovar-kunratice",
+  "wikidata": "Q56380003",
+  "name": "Pivovar Kunratice",
+  "nameEn": "Pivovar Kunratice",
+  "city": "Kunratice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q56380003",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.4804757,
+  "lat": 50.0072508
+ },
+ {
+  "id": "pivovar-kutna-hora",
+  "wikidata": "Q12045407",
+  "name": "Pivovar Kutná Hora",
+  "nameEn": "Kutná Hora brewery",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045407",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 2011,
+  "lng": 15.27,
+  "lat": 49.96
+ },
+ {
+  "id": "pivovar-kytin",
+  "wikidata": "Q61349533",
+  "name": "Pivovar Kytín",
+  "nameEn": null,
+  "city": "Kytín",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q61349533",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1994
+ },
+ {
+  "id": "pivovar-kacov",
+  "wikidata": "Q12045408",
+  "name": "Pivovar Kácov",
+  "nameEn": "Kácov Brewery",
+  "city": "Kácov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045408",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivovarkacov.cz/pivovar/",
+  "founded": 1993,
+  "lng": 15.0291975,
+  "lat": 49.7767447
+ },
+ {
+  "id": "pivovar-kretin",
+  "wikidata": "Q12045410",
+  "name": "Pivovar Křetín",
+  "nameEn": null,
+  "city": "Křetín",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045410",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-libesice",
+  "wikidata": "Q122311057",
+  "name": "Pivovar Liběšice",
+  "nameEn": null,
+  "city": "Liběšice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q122311057",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1738,
+  "lng": 14.2876406,
+  "lat": 50.5690153
+ },
+ {
+  "id": "pivovar-litomerice",
+  "wikidata": "Q12045412",
+  "name": "Pivovar Litoměřice",
+  "nameEn": null,
+  "city": "Litoměřice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045412",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-litovel",
+  "wikidata": "Q12045411",
+  "name": "Pivovar Litovel",
+  "nameEn": "Litovel Brewery",
+  "city": "Litovel",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045411",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.litovel.cz",
+  "founded": 1994
+ },
+ {
+  "id": "pivovar-louny",
+  "wikidata": "Q1338310",
+  "name": "Pivovar Louny",
+  "nameEn": "Pivovar Louny",
+  "city": "Louny",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q1338310",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1892,
+  "lng": 13.829,
+  "lat": 50.361
+ },
+ {
+  "id": "pivovar-luka-nad-jihlavou",
+  "wikidata": "Q12045413",
+  "name": "Pivovar Luka nad Jihlavou",
+  "nameEn": null,
+  "city": "Luka nad Jihlavou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045413",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-lukavec",
+  "wikidata": "Q18042673",
+  "name": "Pivovar Lukavec",
+  "nameEn": null,
+  "city": "Fulnek",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042673",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-lipak",
+  "wikidata": "Q124977499",
+  "name": "Pivovar Lípák",
+  "nameEn": null,
+  "city": "Česká Lípa",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124977499",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivovarlipak.cz/",
+  "lng": 14.5337717,
+  "lat": 50.6855419
+ },
+ {
+  "id": "pivovar-malesice",
+  "wikidata": "Q12045414",
+  "name": "Pivovar Malesice",
+  "nameEn": null,
+  "city": "Malesice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045414",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-marina",
+  "wikidata": "Q56661862",
+  "name": "Pivovar Marina",
+  "nameEn": "Pivovar Marina",
+  "city": "Holešovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q56661862",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarmarina.cz",
+  "founded": 2014,
+  "lng": 14.4565011,
+  "lat": 50.1062086
+ },
+ {
+  "id": "pivovar-melicharek",
+  "wikidata": "Q14094362",
+  "name": "Pivovar Melichárek",
+  "nameEn": null,
+  "city": "Horka nad Moravou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q14094362",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarekmelicharek.cz/",
+  "founded": 2010,
+  "lng": 17.2114719,
+  "lat": 49.6391411
+ },
+ {
+  "id": "pivovar-most",
+  "wikidata": "Q17626356",
+  "name": "Pivovar Most",
+  "nameEn": null,
+  "city": "Sedlec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q17626356",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.7155967,
+  "lat": 50.4842272
+ },
+ {
+  "id": "pivovar-mutenin",
+  "wikidata": "Q12045415",
+  "name": "Pivovar Mutěnín",
+  "nameEn": null,
+  "city": "Mutěnín",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045415",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-mesto-touskov",
+  "wikidata": "Q12045416",
+  "name": "Pivovar Město Touškov",
+  "nameEn": null,
+  "city": "Město Touškov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045416",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-nectiny-preitenstein",
+  "wikidata": "Q12045417",
+  "name": "Pivovar Nečtiny-Preitenstein",
+  "nameEn": null,
+  "city": "Nečtiny",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045417",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-nova-paka",
+  "wikidata": "Q7065147",
+  "name": "Pivovar Nová Paka",
+  "nameEn": "Pivovar Nová Paka",
+  "city": "Nová Paka",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q7065147",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.novopackepivo.cz",
+  "founded": 1993
+ },
+ {
+  "id": "pivovar-nova-sladovna",
+  "wikidata": "Q18042852",
+  "name": "Pivovar Nová Sladovna",
+  "nameEn": null,
+  "city": "Opava-Město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042852",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.nova-sladovna.cz/",
+  "lng": 17.9004444,
+  "lat": 49.9406944
+ },
+ {
+  "id": "pivovar-nymburk",
+  "wikidata": "Q12045418",
+  "name": "Pivovar Nymburk",
+  "nameEn": "Pivovar Nymburk",
+  "city": "Nymburk",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045418",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.postriziny.cz",
+  "founded": 1993
+ },
+ {
+  "id": "pivovar-narodni",
+  "wikidata": "Q102175093",
+  "name": "Pivovar Národní",
+  "nameEn": "Pivovar Národní",
+  "city": "Nové Město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q102175093",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarnarodni.cz/",
+  "founded": 2015,
+  "lng": 14.4153014,
+  "lat": 50.0812925
+ },
+ {
+  "id": "pivovar-olesnice",
+  "wikidata": "Q18346833",
+  "name": "Pivovar Olešnice",
+  "nameEn": null,
+  "city": "Olešnice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18346833",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-olovnice",
+  "wikidata": "Q137396767",
+  "name": "Pivovar Olovnice",
+  "nameEn": null,
+  "city": "Olovnice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q137396767",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1898,
+  "lng": 14.2397122,
+  "lat": 50.2369828
+ },
+ {
+  "id": "pivovar-opava",
+  "wikidata": "Q17573617",
+  "name": "Pivovar Opava",
+  "nameEn": "Pivovar Opava",
+  "city": "Opava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q17573617",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.zlatovar.cz/",
+  "founded": 2014
+ },
+ {
+  "id": "pivovar-osojno",
+  "wikidata": "Q12045419",
+  "name": "Pivovar Osojno",
+  "nameEn": null,
+  "city": "Osojno",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045419",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-ossegg",
+  "wikidata": "Q124215031",
+  "name": "Pivovar Ossegg",
+  "nameEn": null,
+  "city": "Osek",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124215031",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://ossegg.cz/",
+  "founded": 1701,
+  "lng": 13.6953414,
+  "lat": 50.6217392
+ },
+ {
+  "id": "pivovar-ostravar",
+  "wikidata": "Q15880777",
+  "name": "Pivovar Ostravar",
+  "nameEn": "Pivovar Ostravar",
+  "city": "Ostrava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q15880777",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.ostravar.cz/",
+  "founded": 1897
+ },
+ {
+  "id": "pivovar-pardubice",
+  "wikidata": "Q12045420",
+  "name": "Pivovar Pardubice",
+  "nameEn": "Pardubický pivovar",
+  "city": "Pardubice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045420",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pardubickypivovar.cz/",
+  "founded": 1993
+ },
+ {
+  "id": "pivovar-pelhrimov",
+  "wikidata": "Q12045421",
+  "name": "Pivovar Pelhřimov",
+  "nameEn": "Poutník Brewery",
+  "city": "Pelhřimov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045421",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarpoutnik.cz",
+  "founded": 1988,
+  "lng": 15.2204667,
+  "lat": 49.4306611
+ },
+ {
+  "id": "pivovar-platan",
+  "wikidata": "Q11819459",
+  "name": "Pivovar Platan",
+  "nameEn": "Platan brewery",
+  "city": "Brno",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11819459",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivo-platan.cz",
+  "founded": 2008
+ },
+ {
+  "id": "pivovar-plzensky-prazdroj",
+  "wikidata": "Q26958672",
+  "name": "Pivovar Plzeňský Prazdroj",
+  "nameEn": "Brewery Plzeňský Prazdroj",
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q26958672",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.387241666,
+  "lat": 49.746758333
+ },
+ {
+  "id": "pivovar-podkovan",
+  "wikidata": "Q12045424",
+  "name": "Pivovar Podkováň",
+  "nameEn": null,
+  "city": "Niměřice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045424",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.podkovan.cz",
+  "founded": 1993
+ },
+ {
+  "id": "pivovar-podlesi",
+  "wikidata": "Q96375872",
+  "name": "Pivovar Podlesí",
+  "nameEn": "Pivovar Podlesí",
+  "city": "Podlesí",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q96375872",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivozpodlesi.cz",
+  "founded": 2013,
+  "lng": 13.9820383,
+  "lat": 49.6898264
+ },
+ {
+  "id": "pivovar-podmokly",
+  "wikidata": "Q12045423",
+  "name": "Pivovar Podmokly",
+  "nameEn": null,
+  "city": "Podmokly",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045423",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-policka",
+  "wikidata": "Q12045425",
+  "name": "Pivovar Polička",
+  "nameEn": "Pivovar Polička",
+  "city": "Polička-Město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045425",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-policka.cz/",
+  "founded": 1517,
+  "lng": 16.2601,
+  "lat": 49.7107
+ },
+ {
+  "id": "pivovar-pragovar",
+  "wikidata": "Q119267860",
+  "name": "Pivovar Pragovar",
+  "nameEn": "Pragovar Brewery",
+  "city": "Krč",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q119267860",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.4555858,
+  "lat": 50.0374692
+ },
+ {
+  "id": "pivovar-prior",
+  "wikidata": "Q54180670",
+  "name": "Pivovar Prior",
+  "nameEn": "Pivovar Prior",
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q54180670",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.4060714,
+  "lat": 49.7688003
+ },
+ {
+  "id": "pivovar-prokopak",
+  "wikidata": "Q105393405",
+  "name": "Pivovar Prokopák",
+  "nameEn": "Pivovar Prokopák",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q105393405",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "lng": 14.360579,
+  "lat": 50.036407,
+  "story": {
+   "en": "A small Prague brewpub in Nové Butovice, brewing for its own tables. Local in the most literal sense — the beer exists mainly where it is made.",
+   "cs": "Malý pražský pivovar v Nových Butovicích, vaří pro vlastní stoly. Místní v nejdoslovnějším smyslu — pivo existuje hlavně tam, kde se dělá."
+  },
+  "curated": [
+   "city"
+  ]
+ },
+ {
+  "id": "pivovar-puklice",
+  "wikidata": "Q33112908",
+  "name": "Pivovar Puklice",
+  "nameEn": null,
+  "city": "Puklice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q33112908",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-prerov",
+  "wikidata": "Q12045426",
+  "name": "Pivovar Přerov",
+  "nameEn": "Přerov Brewery",
+  "city": "Přerov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045426",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.zubr.cz",
+  "lng": 17.4477733,
+  "lat": 49.4502931
+ },
+ {
+  "id": "pivovar-radegast",
+  "wikidata": "Q12045427",
+  "name": "Pivovar Radegast",
+  "nameEn": "Pivovar Radegast",
+  "city": "Nošovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045427",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.radegast.cz",
+  "story": {
+   "en": "From Nošovice in Moravian Silesia, named after a Slavic god and marketed on bitterness in a country that markets everything else on smoothness. The driest of the big Czech lagers, and the one to reach for if Pilsner Urquell felt too soft.",
+   "cs": "Z Nošovic ve Slezsku, pojmenovaný po slovanském bohu, a prodávaný na hořkosti v zemi, kde se všechno ostatní prodává na jemnosti. Nejsušší z velkých českých ležáků a ten, po kterém sáhnout, když vám Prazdroj přišel příliš měkký."
+  }
+ },
+ {
+  "id": "pivovar-rakovnik",
+  "wikidata": "Q18042610",
+  "name": "Pivovar Rakovník",
+  "nameEn": null,
+  "city": "Rakovník I",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042610",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivobakalar.cz/",
+  "founded": 1993,
+  "lng": 13.7262961,
+  "lat": 50.1059806
+ },
+ {
+  "id": "pivovar-rantirov",
+  "wikidata": "Q18915571",
+  "name": "Pivovar Rantířov",
+  "nameEn": null,
+  "city": "Rantířov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18915571",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-rochlov",
+  "wikidata": "Q12045429",
+  "name": "Pivovar Rochlov",
+  "nameEn": null,
+  "city": "Rochlov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045429",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-rohozec",
+  "wikidata": "Q58280022",
+  "name": "Pivovar Rohozec",
+  "nameEn": "Pivovar Rohozec",
+  "city": "Turnov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q58280022",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivorohozec.cz/",
+  "founded": 1850
+ },
+ {
+  "id": "pivovar-rychtar",
+  "wikidata": "Q18114144",
+  "name": "Pivovar Rychtář",
+  "nameEn": null,
+  "city": "Hlinsko",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18114144",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.rychtar.cz/",
+  "lng": 15.9146,
+  "lat": 49.7599,
+  "story": {
+   "en": "From Hlinsko in the Bohemian-Moravian highlands. A regional name that Prague pubs put on the tap when they want something recognisably not corporate.",
+   "cs": "Z Hlinska na Českomoravské vrchovině. Regionální jméno, které pražské hospody dávají na pípu, když chtějí něco rozpoznatelně nekorporátního."
+  }
+ },
+ {
+  "id": "pivovar-spojovna",
+  "wikidata": "Q56332693",
+  "name": "Pivovar Spojovna",
+  "nameEn": "Pivovar Spojovna",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q56332693",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivovarspojovna.cz/",
+  "founded": 2016,
+  "lng": 14.4991475,
+  "lat": 50.0200461
+ },
+ {
+  "id": "pivovar-starobrno",
+  "wikidata": "Q12221",
+  "name": "Pivovar Starobrno",
+  "nameEn": "Starobrno Brewery",
+  "city": "Brno",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12221",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.starobrno.com",
+  "founded": 1872
+ },
+ {
+  "id": "pivovar-stare-sedliste",
+  "wikidata": "Q12045431",
+  "name": "Pivovar Staré Sedliště",
+  "nameEn": null,
+  "city": "Staré Sedliště",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045431",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-strakonice",
+  "wikidata": "Q12045433",
+  "name": "Pivovar Strakonice",
+  "nameEn": "Pivovar Strakonice",
+  "city": "Strakonice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045433",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-strakonice.cz",
+  "founded": 2003
+ },
+ {
+  "id": "pivovar-stritez",
+  "wikidata": "Q12045435",
+  "name": "Pivovar Střítež",
+  "nameEn": "Brewery Střítež",
+  "city": "Střítež",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045435",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1536
+ },
+ {
+  "id": "pivovar-svijany",
+  "wikidata": "Q3508302",
+  "name": "Pivovar Svijany",
+  "nameEn": "Svijany Brewery",
+  "city": "Svijany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q3508302",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarsvijany.cz/index.php",
+  "founded": 1564,
+  "story": {
+   "en": "A regional brewery in a village in the Liberec region, brewing on and off since 1564 and in its current form since the 1990s. It occupies the middle ground of Czech beer: never went industrial, never went craft, and built a tied network of pubs across Bohemia — a dozen of them in Prague.",
+   "cs": "Regionální pivovar ve vsi na Liberecku, vaří s přestávkami od roku 1564 a v dnešní podobě od devadesátých let. Obsazuje střed českého piva: nikdy nešel do průmyslu, nikdy do řemesla, a vybudoval síť smluvních hospod po Čechách — tucet z nich v Praze."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "Why Czechs are loyal to it",
+     "cs": "Proč mu Češi zůstávají věrní"
+    },
+    "body": {
+     "en": "Svijany is the beer a Czech names when asked what they drink instead of the big three. Cheap enough for an everyday pub, small enough to feel local, and it avoided the ownership churn Czechs hold against the industrial brands.",
+     "cs": "Svijany jsou pivo, které Čech jmenuje, když se ho zeptáte, co pije místo velké trojky. Dost levné na každodenní hospodu, dost malé na to, aby působilo místně, a vyhnulo se změnám vlastníků, které Češi průmyslovým značkám vyčítají."
+    }
+   }
+  ]
+ },
+ {
+  "id": "pivovar-svetce",
+  "wikidata": "Q12045434",
+  "name": "Pivovar Světce",
+  "nameEn": null,
+  "city": "Tachov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045434",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-tachov",
+  "wikidata": "Q12045436",
+  "name": "Pivovar Tachov",
+  "nameEn": null,
+  "city": "Tachov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045436",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-troubsko",
+  "wikidata": "Q12045437",
+  "name": "Pivovar Troubsko",
+  "nameEn": null,
+  "city": "Troubsko",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045437",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-trebon",
+  "wikidata": "Q3931690",
+  "name": "Pivovar Třeboň",
+  "nameEn": "Třeboň Brewery",
+  "city": "Třeboň I",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q3931690",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-regent.cz/",
+  "founded": 1379
+ },
+ {
+  "id": "pivovar-trest",
+  "wikidata": "Q18915572",
+  "name": "Pivovar Třešť",
+  "nameEn": null,
+  "city": "Třešť",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18915572",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1600
+ },
+ {
+  "id": "pivovar-u-bulovky",
+  "wikidata": "Q61624221",
+  "name": "Pivovar U Bulovky",
+  "nameEn": "Richter Brewery",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q61624221",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarubulovky.cz",
+  "lng": 14.4662803,
+  "lat": 50.115275
+ },
+ {
+  "id": "pivovar-u-fleku",
+  "wikidata": "Q1581385",
+  "name": "Pivovar U Fleků",
+  "nameEn": "U Fleků",
+  "city": "Nové Město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q1581385",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.ufleku.cz/",
+  "founded": 2000,
+  "lng": 14.4172,
+  "lat": 50.0788
+ },
+ {
+  "id": "pivovar-u-tri-ruzi",
+  "wikidata": "Q112075654",
+  "name": "Pivovar U Tří růží",
+  "nameEn": "Pivovar U Tří růží",
+  "city": "Staré Město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q112075654",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.u3r.cz/cz/",
+  "lng": 14.4183297,
+  "lat": 50.0856169
+ },
+ {
+  "id": "pivovar-uhersky-brod",
+  "wikidata": "Q12045438",
+  "name": "Pivovar Uherský Brod",
+  "nameEn": "Pivovar Uherský Brod",
+  "city": "Uherský Brod",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045438",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovar-uherskybrod.cz/",
+  "founded": 1995
+ },
+ {
+  "id": "pivovar-unhost",
+  "wikidata": "Q12045440",
+  "name": "Pivovar Unhošť",
+  "nameEn": null,
+  "city": "Unhošť",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045440",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.1136111,
+  "lat": 50.0813889
+ },
+ {
+  "id": "pivovar-velka-bites",
+  "wikidata": "Q12045439",
+  "name": "Pivovar Velká Bíteš",
+  "nameEn": null,
+  "city": "Velká Bíteš",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045439",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-velke-brezno",
+  "wikidata": "Q126456367",
+  "name": "Pivovar Velké Březno",
+  "nameEn": "Pivovar Velké Březno",
+  "city": "Velké Březno",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q126456367",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.breznak.cz",
+  "lng": 14.1389122,
+  "lat": 50.6648344
+ },
+ {
+  "id": "pivovar-velke-popovice",
+  "wikidata": "Q12045442",
+  "name": "Pivovar Velké Popovice",
+  "nameEn": "Velké Popovice Brewery",
+  "city": "Velké Popovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045442",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "site": "http://www.kozel.cz/",
+  "founded": 1874,
+  "lng": 14.6361,
+  "lat": 49.92259,
+  "story": {
+   "en": "The goat brewery, twenty minutes south-east of Prague, brewing since 1874. Owned by the same group as Pilsner Urquell and deliberately positioned as its opposite: softer, sweeter, easier, with the bitterness turned down.",
+   "cs": "Kozlí pivovar dvacet minut jihovýchodně od Prahy, vaří od roku 1874. Patří stejné skupině jako Prazdroj a je záměrně stavěný jako jeho protiklad: měkčí, sladší, snadnější, s hořkostí staženou dolů."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "The dark one is the famous one",
+     "cs": "Slavné je to tmavé"
+    },
+    "body": {
+     "en": "Kozel Černý is the dark beer most visitors to Prague meet first, and the one most often mistaken for a stout. It is a sweet, low-alcohol lager — good on its own terms, and nothing like Guinness.",
+     "cs": "Kozel Černý je tmavé pivo, se kterým se většina návštěvníků Prahy potká jako s prvním, a nejčastěji zaměňované za stout. Je to sladký slabý ležák — dobrý sám o sobě a Guinnessu nepodobný."
+    }
+   }
+  ]
+ },
+ {
+  "id": "pivovar-velky-beranov",
+  "wikidata": "Q19602563",
+  "name": "Pivovar Velký Beranov",
+  "nameEn": null,
+  "city": "Velký Beranov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q19602563",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-veverska-bityska",
+  "wikidata": "Q12045441",
+  "name": "Pivovar Veverská Bitýška",
+  "nameEn": null,
+  "city": "Veverská Bítýška",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045441",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-vilem",
+  "wikidata": "Q28734630",
+  "name": "Pivovar Vilém",
+  "nameEn": null,
+  "city": "Jince",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q28734630",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.9777288,
+  "lat": 49.7911002
+ },
+ {
+  "id": "pivovar-volt",
+  "wikidata": "Q60486911",
+  "name": "Pivovar Volt",
+  "nameEn": "Pivovar Volt",
+  "city": "Jablonec nad Nisou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q60486911",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://pivovarvolt.cz",
+  "founded": 2017
+ },
+ {
+  "id": "pivovar-vratislavice-nad-nisou",
+  "wikidata": "Q17416431",
+  "name": "Pivovar Vratislavice nad Nisou",
+  "nameEn": "Vratislavice brewery",
+  "city": "Vratislavice nad Nisou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q17416431",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivo-konrad.cz/"
+ },
+ {
+  "id": "pivovar-vrchlabi",
+  "wikidata": "Q12045445",
+  "name": "Pivovar Vrchlabí",
+  "nameEn": "Vrchlabí brewery",
+  "city": "Vrchlabí",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045445",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1901
+ },
+ {
+  "id": "pivovar-vysoky-chlumec",
+  "wikidata": "Q12045444",
+  "name": "Pivovar Vysoký Chlumec",
+  "nameEn": "Pivovar Vysoký Chlumec",
+  "city": "Vysoký Chlumec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045444",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1992
+ },
+ {
+  "id": "pivovar-vyskov",
+  "wikidata": "Q12045446",
+  "name": "Pivovar Vyškov",
+  "nameEn": "Pivovar Vyškov",
+  "city": "Vyškov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045446",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovyskov.cz"
+ },
+ {
+  "id": "pivovar-zeleny-dul",
+  "wikidata": "Q12045448",
+  "name": "Pivovar Zelený Důl",
+  "nameEn": null,
+  "city": "Zelený Důl",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045448",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-zhurak",
+  "wikidata": "Q136540249",
+  "name": "Pivovar Zhůřák",
+  "nameEn": "Pivovar Zhůřák",
+  "city": "Zhůř",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q136540249",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.51573,
+  "lat": 49.53764
+ },
+ {
+  "id": "pivovar-zichovec",
+  "wikidata": "Q120871109",
+  "name": "Pivovar Zichovec",
+  "nameEn": "Pivovar Zichovec",
+  "city": "Louny",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q120871109",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivovarzichovec.cz/",
+  "founded": 2012,
+  "story": {
+   "en": "A revived village brewery in central Bohemia that became one of the loudest names in Czech craft — heavy on collaborations, sours and one-offs alongside a straight lager.",
+   "cs": "Obnovený vesnický pivovar ve středních Čechách, který se stal jedním z nejhlasitějších jmen českého řemesla — hodně spoluprací, kyselých piv a jednorázovek vedle přímočarého ležáku."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "Nothing listed here yet",
+     "cs": "Zatím tu nic není"
+    },
+    "body": {
+     "en": "We have not collected this brewery's range. Under the publishing rule the brewery gets a page and its beers do not, until each one has a source and somewhere in Prague to drink it.",
+     "cs": "Sortiment tohoto pivovaru jsme nesebrali. Podle pravidla publikace dostane pivovar stránku a jeho piva ne, dokud každé nebude mít zdroj a místo v Praze, kde se dá vypít."
+    }
+   }
+  ]
+ },
+ {
+  "id": "pivovar-zaluzi",
+  "wikidata": "Q12045450",
+  "name": "Pivovar Záluží",
+  "nameEn": null,
+  "city": "Záluží",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045450",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-utery",
+  "wikidata": "Q12045449",
+  "name": "Pivovar Úterý",
+  "nameEn": null,
+  "city": "Úterý",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045449",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-ceminy",
+  "wikidata": "Q12045451",
+  "name": "Pivovar Čeminy",
+  "nameEn": null,
+  "city": "Čeminy",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045451",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-cerna-hora",
+  "wikidata": "Q12045453",
+  "name": "Pivovar Černá Hora",
+  "nameEn": "Černá Hora Brewery",
+  "city": "Černá Hora",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045453",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarcernahora.cz",
+  "founded": 2008,
+  "story": {
+   "en": "One of the older Moravian breweries, documented from the sixteenth century, in a village north of Brno. Dependable middle-of-the-road lagers, increasingly poured in Prague.",
+   "cs": "Jeden ze starších moravských pivovarů, doložený od šestnáctého století, ve vsi severně od Brna. Spolehlivé ležáky středního proudu, čím dál častěji čepované i v Praze."
+  }
+ },
+ {
+  "id": "pivovar-cerveny-vlk",
+  "wikidata": "Q124101828",
+  "name": "Pivovar Červený Vlk",
+  "nameEn": null,
+  "city": "Boží Dar",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124101828",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://cervenyvlk.cz/",
+  "lng": 12.9263767,
+  "lat": 50.4093272
+ },
+ {
+  "id": "pivovar-cecovice",
+  "wikidata": "Q12045454",
+  "name": "Pivovar Čečovice",
+  "nameEn": null,
+  "city": "Čečovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045454",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-ricany",
+  "wikidata": "Q12045456",
+  "name": "Pivovar Říčany",
+  "nameEn": null,
+  "city": "Říčany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045456",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "pivovar-zatec",
+  "wikidata": "Q12045455",
+  "name": "Pivovar Žatec",
+  "nameEn": "Pivovar Žatec",
+  "city": "Žatec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045455",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.zateckypivovar.cz",
+  "founded": 1997
+ },
+ {
+  "id": "pivovar-zidlochovice",
+  "wikidata": "Q12045457",
+  "name": "Pivovar Židlochovice",
+  "nameEn": null,
+  "city": "Židlochovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045457",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.6142,
+  "lat": 49.0368
+ },
+ {
+  "id": "pivovarske-muzeum-kostelec-nad-cernymi-lesy",
+  "wikidata": "Q12045458",
+  "name": "Pivovarské muzeum Kostelec nad Černými lesy",
+  "nameEn": "Brewery museum in Kostelec nad Černými lesy",
+  "city": "Kostelec nad Černými lesy",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045458",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.865331,
+  "lat": 49.997752
+ },
+ {
+  "id": "pivovary-lobkowicz",
+  "wikidata": "Q12045461",
+  "name": "Pivovary Lobkowicz",
+  "nameEn": null,
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045461",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovary-lobkowicz.cz/",
+  "founded": 2008
+ },
+ {
+  "id": "pivovary-staropramen",
+  "wikidata": "Q12045462",
+  "name": "Pivovary Staropramen",
+  "nameEn": "Pivovary Staropramen",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045462",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "site": "https://staropramen.cz",
+  "founded": 1869,
+  "story": {
+   "en": "Prague's own big brewery, on the Smíchov bank of the Vltava since 1869. The name means &ldquo;old spring&rdquo;. It is the beer of the city in the plainest sense: brewed here, drunk here, and rarely thought about by anyone who lives here.",
+   "cs": "Vlastní velký pivovar Prahy, na smíchovském břehu Vltavy od roku 1869. Je to pivo města v nejprostším smyslu: vařené tady, pité tady, a málokdo z místních nad ním přemýšlí."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "What to order",
+     "cs": "Co si objednat"
+    },
+    "body": {
+     "en": "If a pub carries both the 10° and the 12°, take the 12° — the extra malt is where the beer becomes interesting. The amber Granát is the best answer to &ldquo;something darker but not heavy&rdquo;.",
+     "cs": "Pokud hospoda čepuje desítku i dvanáctku, berte dvanáctku — ten slad navíc je místo, kde pivo začíná být zajímavé. Polotmavý Granát je nejlepší odpověď na „něco tmavšího, ale ne těžkého“."
+    }
+   }
+  ],
+  "curated": [
+   "founded"
+  ]
+ },
+ {
+  "id": "pivovarek-morava",
+  "wikidata": "Q18042804",
+  "name": "Pivovárek Morava",
+  "nameEn": "Pivovárek Morava",
+  "city": "Místek",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042804",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarekmorava.cz/",
+  "lng": 18.3330278,
+  "lat": 49.6767222
+ },
+ {
+  "id": "plzensky-prazdroj",
+  "wikidata": "Q948831",
+  "name": "Plzeňský Prazdroj",
+  "nameEn": "Plzeňský Prazdroj",
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q948831",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pilsnerurquell.com/",
+  "founded": 1842,
+  "lng": 13.387356,
+  "lat": 49.7476944,
+  "story": {
+   "en": "The brewery that invented pale lager. In 1842 the burghers of Plzeň, fed up with undrinkable beer, hired a Bavarian brewer, dug cellars into sandstone and produced the first golden bottom-fermented beer anyone had seen. Every lager on earth is descended from what came out of those cellars.",
+   "cs": "Pivovar, který vynalezl světlý ležák. Roku 1842 měli plzeňští měšťané dost nepitelného piva, najali bavorského sládka, vyhloubili sklepy do pískovce a uvařili první zlatavé spodně kvašené pivo, jaké kdo viděl. Každý ležák na světě je potomkem toho, co vyšlo z těch sklepů."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "Why it still matters to a visitor",
+     "cs": "Proč to dnes zajímá návštěvníka"
+    },
+    "body": {
+     "en": "Almost every Czech pale lager you will be offered defines itself against this one — softer than it, maltier than it, more bitter than it. Drink it early in the trip and the rest of the menu becomes readable.",
+     "cs": "Skoro každý český světlý ležák, který vám nabídnou, se vůči tomuhle vymezuje — měkčí než on, sladovější než on, hořčejší než on. Vypijte ho na začátku cesty a zbytek jídelního lístku začne dávat smysl."
+    }
+   },
+   {
+    "heading": {
+     "en": "Tank pubs are worth seeking out",
+     "cs": "Za tankovými hospodami stojí za to jít"
+    },
+    "body": {
+     "en": "Unpasteurised tank beer is a different, fuller drink than the bottled version, and pubs that pour it say so on the door. It usually costs the same.",
+     "cs": "Nepasterizované tankové pivo je jiný, plnější nápoj než to lahvové, a hospody, které ho čepují, to dávají na dveře. Obvykle stojí stejně."
+    }
+   }
+  ]
+ },
+ {
+  "id": "podklasterni-pivovar-trebic",
+  "wikidata": "Q66825494",
+  "name": "Podklášterní Pivovar Třebíč",
+  "nameEn": "Podklášterní Pivovar Trebíč",
+  "city": "Centrum Lihovar",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q66825494",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovar-trebic.cz/"
+ },
+ {
+  "id": "pocernicky-pivovar",
+  "wikidata": "Q56649747",
+  "name": "Počernický pivovar",
+  "nameEn": "Počernický pivovar",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q56649747",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pddp.cz/pocernicky-pivovar/",
+  "founded": 2006
+ },
+ {
+  "id": "primator",
+  "wikidata": "Q3501860",
+  "name": "Primátor",
+  "nameEn": "Primátor",
+  "city": "Náchod",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q3501860",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.primator.cz",
+  "founded": 1872
+ },
+ {
+  "id": "prvni-prazsky-mestansky-pivovar",
+  "wikidata": "Q102869222",
+  "name": "První pražský měšťanský pivovar",
+  "nameEn": null,
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q102869222",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "radnicni-pivovar-jihlava",
+  "wikidata": "Q13411270",
+  "name": "Radniční pivovar Jihlava",
+  "nameEn": null,
+  "city": "Jihlava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q13411270",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.radnicni-jihlava.cz/",
+  "founded": 2011
+ },
+ {
+  "id": "restaurace-a-pivovar-beer-factory",
+  "wikidata": "Q27918397",
+  "name": "Restaurace a pivovar Beer Factory",
+  "nameEn": "Beer Factory Brewery",
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q27918397",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.beerfactoryplzen.cz/",
+  "founded": 2016,
+  "lng": 13.377286111,
+  "lat": 49.748866666,
+  "story": {
+   "en": "A Prague brewpub brewing on the premises. Worth knowing that it exists rather than planning an evening around it.",
+   "cs": "Pražský podnik vařící na místě. Stojí za to vědět, že existuje, spíš než kolem něj plánovat večer."
+  }
+ },
+ {
+  "id": "richtruv-pivovar-bubny",
+  "wikidata": "Q121255220",
+  "name": "Richtrův pivovar Bubny",
+  "nameEn": "Richter's brewery",
+  "city": "Holešovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q121255220",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.4350617,
+  "lat": 50.0974625
+ },
+ {
+  "id": "rodinny-pivovar-bernard",
+  "wikidata": "Q12045395",
+  "name": "Rodinný pivovar Bernard",
+  "nameEn": "Family Brewery Bernard",
+  "city": "Humpolec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045395",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://bernardpivo.si",
+  "founded": 2000
+ },
+ {
+  "id": "sklarna-a-minipivovar-novosad-syn-harrachov-s-r-o-czech-republic",
+  "wikidata": "Q101014729",
+  "name": "SKLÁRNA A MINIPIVOVAR NOVOSAD & SYN HARRACHOV s.r.o. CZECH REPUBLIC",
+  "nameEn": null,
+  "city": "Harrachov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q101014729",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1993
+ },
+ {
+  "id": "safari-pivovar",
+  "wikidata": "Q78506000",
+  "name": "Safari pivovar",
+  "nameEn": "Safari Brewery",
+  "city": "Dvůr Králové nad Labem",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q78506000",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.safarigastro.cz/safari-pivovar/",
+  "founded": 2018,
+  "lng": 15.7984703,
+  "lat": 50.4348433
+ },
+ {
+  "id": "sokolnice-pivovar",
+  "wikidata": "Q26774544",
+  "name": "Sokolnice - pivovar",
+  "nameEn": null,
+  "city": "Sokolnice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q26774544",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.72747,
+  "lat": 49.11881
+ },
+ {
+  "id": "starokladno",
+  "wikidata": "Q66382923",
+  "name": "Starokladno",
+  "nameEn": null,
+  "city": "Kladno",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q66382923",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.starokladno.cz",
+  "founded": 2009,
+  "lng": 14.092383755,
+  "lat": 50.145023536
+ },
+ {
+  "id": "staromestsky-pivovar-u-supa",
+  "wikidata": "Q56701953",
+  "name": "Staroměstský pivovar U Supa",
+  "nameEn": "Staroměstský pivovar U Supa",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q56701953",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarusupa.cz/",
+  "lng": 14.4244167,
+  "lat": 50.0870997
+ },
+ {
+  "id": "starozamecky-pivovar-votice",
+  "wikidata": "Q124975088",
+  "name": "Starozámecký pivovar Votice",
+  "nameEn": null,
+  "city": "Votice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124975088",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.6439486,
+  "lat": 49.6384028
+ },
+ {
+  "id": "stara-varna",
+  "wikidata": "Q123893880",
+  "name": "Stará varna",
+  "nameEn": null,
+  "city": "Dalešice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q123893880",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.07974006,
+  "lat": 49.13096035
+ },
+ {
+  "id": "stary-pivovar-krimice",
+  "wikidata": "Q12056271",
+  "name": "Starý pivovar Křimice",
+  "nameEn": null,
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12056271",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.3073686,
+  "lat": 49.7589414
+ },
+ {
+  "id": "strahovsky-klasterni-pivovar",
+  "wikidata": "Q116149583",
+  "name": "Strahovský klášterní pivovar",
+  "nameEn": "Strahov Monastery Brewery",
+  "city": "Hradčany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116149583",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://cs.klasterni-pivovar.cz/",
+  "founded": 1500,
+  "lng": 14.3885033,
+  "lat": 50.0868797
+ },
+ {
+  "id": "strassmannuv-pivovar",
+  "wikidata": "Q18042795",
+  "name": "Strassmannův pivovar",
+  "nameEn": null,
+  "city": "Moravská Ostrava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18042795",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 18.29175,
+  "lat": 49.8366667
+ },
+ {
+  "id": "trautenberk-brewery",
+  "wikidata": "Q140999122",
+  "name": "Trautenberk Brewery",
+  "nameEn": "Trautenberk Brewery",
+  "city": null,
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q140999122",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://pivovartrautenberk.cz/"
+ },
+ {
+  "id": "uhrinevesky-pivovar",
+  "wikidata": "Q119518021",
+  "name": "Uhříněveský pivovar",
+  "nameEn": "Uhříněves Brewery",
+  "city": "Uhříněves",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q119518021",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.6072661,
+  "lat": 50.0277992
+ },
+ {
+  "id": "vinohradsky-pivovar",
+  "wikidata": "Q116891142",
+  "name": "Vinohradský pivovar",
+  "nameEn": "Vinohradský pivovar",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116891142",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "site": "https://www.vinohradskypivovar.cz/",
+  "founded": 2013,
+  "lng": 14.4564167,
+  "lat": 50.0750194,
+  "story": {
+   "en": "A Prague brewpub in Vinohrady, brewing on site since 2014 in a neighbourhood that had lost its brewery a century earlier. The kind of place where the beer travels ten metres from tank to glass.",
+   "cs": "Pražský pivovarský podnik na Vinohradech, vaří na místě od roku 2014 ve čtvrti, která o svůj pivovar přišla o století dřív. Místo, kde pivo urazí z tanku do sklenice deset metrů."
+  }
+ },
+ {
+  "id": "vojanuv-dvur",
+  "wikidata": "Q131108825",
+  "name": "Vojanův dvůr",
+  "nameEn": "Vojanův dvůr",
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q131108825",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.vojanuvdvur.cz/",
+  "lng": 14.4095133,
+  "lat": 50.0897325
+ },
+ {
+  "id": "vrsovicky-pivovar",
+  "wikidata": "Q121255420",
+  "name": "Vršovický pivovar",
+  "nameEn": "Vršovický pivovar",
+  "city": "Vršovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q121255420",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.4523672,
+  "lat": 50.0662994
+ },
+ {
+  "id": "vysocansky-pivovar",
+  "wikidata": "Q119267391",
+  "name": "Vysočanský pivovar",
+  "nameEn": "Vysočany Brewery",
+  "city": "Vysočany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q119267391",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.5028567,
+  "lat": 50.1075969
+ },
+ {
+  "id": "zemsky-akciovy-pivovar",
+  "wikidata": "Q18361882",
+  "name": "Zemský akciový pivovar",
+  "nameEn": null,
+  "city": "Praha",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q18361882",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.zemskypivovar.cz/",
+  "founded": 2013
+ },
+ {
+  "id": "znojemsky-mestsky-pivovar",
+  "wikidata": "Q900251",
+  "name": "Znojemský městský pivovar",
+  "nameEn": "Znojemský městský pivovar",
+  "city": "Znojmo",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q900251",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.pivovarznojmo.cz/",
+  "founded": 1900,
+  "lng": 16.04494444,
+  "lat": 48.85594444
+ },
+ {
+  "id": "zabreh-na-morave-pivovar",
+  "wikidata": "Q26774553",
+  "name": "Zábřeh na Moravě - pivovar",
+  "nameEn": null,
+  "city": "Zábřeh",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q26774553",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.87319,
+  "lat": 49.88083
+ },
+ {
+  "id": "zamecky-pivovar-chyse",
+  "wikidata": "Q10937725",
+  "name": "Zámecký pivovar Chyše",
+  "nameEn": null,
+  "city": "Chyše",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q10937725",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.chyse.com/pivovar.aspx",
+  "lng": 13.246436111,
+  "lat": 50.105494444
+ },
+ {
+  "id": "zamecky-pivovar-frydlant",
+  "wikidata": "Q15618229",
+  "name": "Zámecký pivovar Frýdlant",
+  "nameEn": "Castle Brewery Frýdlant",
+  "city": "Liberec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q15618229",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://pivovar-albrecht.com/"
+ },
+ {
+  "id": "zamecky-pivovar-rozmital",
+  "wikidata": "Q140450975",
+  "name": "Zámecký pivovar Rožmitál",
+  "nameEn": null,
+  "city": "Rožmitál pod Třemšínem",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q140450975",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "zamecky-pivovar-slezska-ostrava",
+  "wikidata": "Q10937738",
+  "name": "Zámecký pivovar Slezská Ostrava",
+  "nameEn": null,
+  "city": "Slezská Ostrava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q10937738",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "id": "areal-vitek-z-prcice",
+  "wikidata": "Q124606412",
+  "name": "areál Vítek z Prčice",
+  "nameEn": null,
+  "city": "Sedlec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124606412",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 2010,
+  "lng": 14.5286083,
+  "lat": 49.5741578
+ },
+ {
+  "id": "barokni-sladovna-pivovar-embe",
+  "wikidata": "Q111810279",
+  "name": "barokní sladovna - pivovar eMBe",
+  "nameEn": null,
+  "city": "Mladá Boleslav III",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q111810279",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://embepivovar.cz/",
+  "lng": 14.9049792,
+  "lat": 50.4095864
+ },
+ {
+  "id": "byvaly-pivovar-a-lihovar-v-uhricich",
+  "wikidata": "Q124614875",
+  "name": "bývalý pivovar a lihovar v Uhřicích",
+  "nameEn": null,
+  "city": "Uhřice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124614875",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.5264733,
+  "lat": 49.5633281
+ },
+ {
+  "id": "byvaly-pivovar-v-lounovicich-pod-blanikem",
+  "wikidata": "Q124357435",
+  "name": "bývalý pivovar v Louňovicích pod Blaníkem",
+  "nameEn": null,
+  "city": "Louňovice pod Blaníkem",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124357435",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.8470783,
+  "lat": 49.6364508
+ },
+ {
+  "id": "minipivovar-kahan",
+  "wikidata": "Q17626370",
+  "name": "minipivovar Kahan",
+  "nameEn": "Mostecký Kahan minibrewery",
+  "city": "Most",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q17626370",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.mosteckykahan.cz/",
+  "founded": 2009,
+  "lng": 13.640833333,
+  "lat": 50.497222222
+ },
+ {
+  "id": "minipivovar-a-pivnice-u-stocesu",
+  "wikidata": "Q132172113",
+  "name": "minipivovar a pivnice U Stočesů",
+  "nameEn": null,
+  "city": "Plzeňské Předměstí",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q132172113",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.ustocesu.cz/",
+  "lng": 13.5850586,
+  "lat": 49.7380567
+ },
+ {
+  "id": "pansky-pivovar-v-kunstatu",
+  "wikidata": "Q124361334",
+  "name": "panský pivovar v Kunštátu",
+  "nameEn": "manor brewery in Kunštát",
+  "city": "Kunštát",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q124361334",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.5141161,
+  "lat": 49.5024631
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q114862988",
+  "name": "pivovar",
+  "nameEn": "Košumberk brewery",
+  "city": "Košumberk",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q114862988",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.0359861,
+  "lat": 49.8842792
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q114435911",
+  "name": "pivovar",
+  "nameEn": null,
+  "city": "Golčův Jeníkov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q114435911",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.4792486,
+  "lat": 49.8145619
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q114554635",
+  "name": "pivovar",
+  "nameEn": null,
+  "city": "Miletín",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q114554635",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.6763319,
+  "lat": 50.4062675
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q116974426",
+  "name": "pivovar",
+  "nameEn": null,
+  "city": "Nový Bydžov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116974426",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.5044333,
+  "lat": 50.2411575
+ },
+ {
+  "id": "pivovar-dasice",
+  "wikidata": "Q103822151",
+  "name": "pivovar Dašice",
+  "nameEn": "Brewery in Dašice",
+  "city": "Dašice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q103822151",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.9152439,
+  "lat": 50.0287892
+ },
+ {
+  "id": "pivovar-podebrady",
+  "wikidata": "Q129266319",
+  "name": "pivovar Poděbrady",
+  "nameEn": "Poděbrady Brewery",
+  "city": "Poděbrady I",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q129266319",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.1158519,
+  "lat": 50.142835
+ },
+ {
+  "id": "pivovar-proud",
+  "wikidata": "Q123163929",
+  "name": "pivovar Proud",
+  "nameEn": null,
+  "city": "Plzeň",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q123163929",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.pivovarproud.cz/"
+ },
+ {
+  "id": "pivovar-rokycany",
+  "wikidata": "Q132568559",
+  "name": "pivovar Rokycany",
+  "nameEn": null,
+  "city": "Nové Město",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q132568559",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1901,
+  "lng": 13.6048108,
+  "lat": 49.7417447
+ },
+ {
+  "id": "pivovar-zvikovec",
+  "wikidata": "Q12045447",
+  "name": "pivovar Zvíkovec",
+  "nameEn": null,
+  "city": "Zvíkovec",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q12045447",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 13.6890008,
+  "lat": 49.9542258
+ },
+ {
+  "id": "pivovar-cista-u-rakovnika",
+  "wikidata": "Q134568481",
+  "name": "pivovar Čistá u Rakovníka",
+  "nameEn": null,
+  "city": "Čistá",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q134568481",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 1806,
+  "lng": 13.5703439,
+  "lat": 50.0277061
+ },
+ {
+  "id": "radnice-v-ledenicich-byvaly-pivovar",
+  "wikidata": "Q116873387",
+  "name": "radnice v Ledenicích - bývalý pivovar",
+  "nameEn": null,
+  "city": "Ledenice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116873387",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.61865,
+  "lat": 48.9334467
+ },
+ {
+  "id": "zamecky-pivovar-vlkava",
+  "wikidata": "Q131317926",
+  "name": "zámecký pivovar Vlkava",
+  "nameEn": null,
+  "city": "Vlkava",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q131317926",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 14.9602072,
+  "lat": 50.2711425
+ },
+ {
+  "id": "uneticky-pivovar",
+  "wikidata": "Q11086998",
+  "name": "Únětický pivovar",
+  "nameEn": "Únětický pivovar",
+  "city": "Únětice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q11086998",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "http://www.unetickypivovar.cz/o-pivovaru",
+  "founded": 2010,
+  "story": {
+   "en": "A village brewery eight kilometres outside Prague, closed under communism and restarted in 2011 by locals who wanted their beer back. Unfiltered, unpasteurised and quietly revered — the beer Prague beer people name when they want to sound unpretentious.",
+   "cs": "Vesnický pivovar osm kilometrů za Prahou, za socialismu zavřený a v roce 2011 znovu spuštěný místními, kteří chtěli své pivo zpátky. Nefiltrované, nepasterizované a tiše uctívané — pivo, které pražští pivní lidé jmenují, když nechtějí působit nafoukaně."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "Worth the trip",
+     "cs": "Stojí to za výlet"
+    },
+    "body": {
+     "en": "The brewery pub in Únětice is a bus ride from Dejvická and a genuinely local afternoon. In Prague itself the beer turns up in a handful of pubs that take beer seriously.",
+     "cs": "Pivovarská hospoda v Úněticích je autobusem od Dejvické a je to opravdové místní odpoledne. V Praze samotné se pivo objevuje v hrstce hospod, které to s pivem myslí vážně."
+    }
+   }
+  ]
+ },
+ {
+  "id": "remeslny-pivovar-lomnice-nad-popelkou",
+  "wikidata": "Q104804030",
+  "name": "Řemeslný pivovar Lomnice nad Popelkou",
+  "nameEn": "Řemeslný pivovar Lomnice nad Popelkou",
+  "city": "Lomnice nad Popelkou",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q104804030",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.lomnickepivo.cz/",
+  "founded": 2019
+ },
+ {
+  "id": "remeslny-pivovar-rojc",
+  "wikidata": "Q134440234",
+  "name": "Řemeslný pivovar Rojc",
+  "nameEn": null,
+  "city": "Rozdrojovice",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q134440234",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.rojc.cz/",
+  "lng": 16.51335,
+  "lat": 49.2563222
+ },
+ {
+  "id": "ricansky-pivovar",
+  "wikidata": "Q59660455",
+  "name": "Říčanský pivovar",
+  "nameEn": "Říčanský pivovar",
+  "city": "Říčany",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q59660455",
+   "checkedAt": "2026-08-30"
+  },
+  "site": "https://www.ricanskypivovar.cz",
+  "founded": 2018
+ },
+ {
+  "id": "zelivsky-klasterni-pivovar",
+  "wikidata": "Q22035589",
+  "name": "Želivský klášterní pivovar",
+  "nameEn": "Želivský klášterní pivovar",
+  "city": "Želiv",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q22035589",
+   "checkedAt": "2026-08-30"
+  },
+  "founded": 2010
+ },
+ {
+  "id": "guinness",
+  "name": "Guinness",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + иностранная марка-якорь, нужна для сравнения",
+   "checkedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": true,
+  "story": {
+   "en": "Not a Czech brewery. Guinness appears here because a Prague venue pours it, and because it is the reference point almost every visitor uses when ordering a dark beer — usually to their disappointment, since Czech dark lager is a different drink entirely.",
+   "cs": "Není to český pivovar. Guinness je tu proto, že ho jeden pražský podnik čepuje, a proto, že je to bod srovnání, který skoro každý návštěvník používá při objednávání tmavého piva — obvykle ke svému zklamání, protože český tmavý ležák je docela jiný nápoj."
+  }
+ },
+ {
+  "id": "hubertus",
+  "name": "Hubertus",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + марку держит курируемый сорт Hubertus Premium",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": false,
+  "story": {
+   "en": "From Kácov on the Sázava, in a valley of weekend cottages. Soft, malty beer for a long evening rather than for study.",
+   "cs": "Z Kácova na Sázavě, v údolí chat. Měkké sladové pivo na dlouhý večer, ne ke studiu."
+  },
+  "city": "Kácov",
+  "curated": [
+   "city"
+  ]
+ },
+ {
+  "id": "konrad",
+  "name": "Konrád",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + марку держит курируемый сорт Konrád 12",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": false,
+  "story": {
+   "en": "From Vratislavice nad Nisou near Liberec. Balanced lagers that lean neither sweet nor aggressively bitter — the sort a pub keeps because regulars never complain.",
+   "cs": "Z Vratislavic nad Nisou u Liberce. Vyvážené ležáky, které netíhnou ke sladkosti ani k agresivní hořkosti — takové, jaké si hospoda drží, protože si na ně štamgasti nestěžují."
+  },
+  "city": "Vratislavice nad Nisou",
+  "curated": [
+   "city"
+  ]
+ },
+ {
+  "id": "stella-artois",
+  "name": "Stella Artois",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + иностранная марка-якорь, нужна для сравнения",
+   "checkedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": true,
+  "story": {
+   "en": "Not a Czech brewery. Listed because a Prague venue pours it and because it is a useful yardstick: everything Czech here is maltier, and above the 10° mark considerably more bitter.",
+   "cs": "Není to český pivovar. Uvedena proto, že ji jeden pražský podnik čepuje, a jako užitečné měřítko: všechno české tady je sladovější a nad desítkou i podstatně hořčejší."
+  }
+ },
+ {
+  "id": "breznak",
+  "name": "březňák",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + марку держит курируемый сорт Březňák Světlý ležák",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": false,
+  "story": {
+   "en": "A North Bohemian brand from Velké Březno with a working-town reputation the brewery has never tried to shake. Firm, dry bitterness and no pretence.",
+   "cs": "Severočeská značka z Velkého Března s pověstí dělnického města, které se pivovar nikdy nesnažil zbavit. Pevná suchá hořkost a žádné pózy."
+  },
+  "city": "Velké Březno",
+  "curated": [
+   "city"
+  ]
+ },
+ {
+  "id": "matuska",
+  "name": "matuška",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + марку держат курируемые сорта Matuška Raptor и Zlatá Raketa",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": false,
+  "story": {
+   "en": "The brewery that started Czech craft. Founded in Broumy in 2009 by a father and son who had been brewing at home, and the first to show Czech drinkers what American hops do to a beer.",
+   "cs": "Pivovar, kterým začalo české řemeslné pivo. Založený v Broumech roku 2009 otcem a synem, kteří do té doby vařili doma, a první, který českým pijákům ukázal, co s pivem dělá americký chmel."
+  },
+  "notes": [
+   {
+    "heading": {
+     "en": "Where to start",
+     "cs": "Čím začít"
+    },
+    "body": {
+     "en": "Raptor is the reference Czech IPA and hits hard after a week of lager. Zlatá raketa is the same hop character turned down enough to have two.",
+     "cs": "Raptor je referenční česká IPA a po týdnu ležáků udeří. Zlatá raketa je stejný chmelový charakter ztlumený natolik, aby se dala dát dvě."
+    }
+   }
+  ],
+  "city": "Broumy",
+  "curated": [
+   "city"
+  ]
+ }
+]
