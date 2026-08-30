@@ -98,6 +98,16 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "Venue data © OpenStreetMap contributors, ODbL":
+   "Data podniků © přispěvatelé OpenStreetMap, ODbL",
+ "bottle data and label photographs © Open Food Facts contributors, ODbL":
+   "data o lahvích a fotografie etiket © přispěvatelé Open Food Facts, ODbL",
+ "brewery data from Wikidata, CC0":
+   "data o pivovarech z Wikidat, CC0",
+ "beer parameters read from the breweries' own pages, each with its source":
+   "parametry piv sejmuté z vlastních stránek pivovarů, u každého je zdroj",
+ "collected":
+   "sebráno",
  "Also brewed":
    "Ještě vaří",
  "These we know about but have not described. The numbers come from the brewery, with the page they were read from.":
