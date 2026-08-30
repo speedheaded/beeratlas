@@ -98,6 +98,18 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "Marks we have not confirmed":
+   "Značky, které jsme nepotvrdili",
+ "A Prague venue names these on its taps, and that is all we know. No entry in Wikidata, no lineup on a site of their own. Some are real breweries we have not caught up with; some are a brand, a parent company, or the name of a single beer. Until one of those is settled they get no page here, because a page would assert something we cannot back.":
+   "Nějaký pražský podnik je uvádí na pípě, a to je všechno, co víme. Ani záznam ve Wikidatech, ani sortiment na vlastních stránkách. Některé jsou opravdové pivovary, ke kterým jsme se zatím nedostali; jiné jsou značka, mateřská firma nebo název jednoho piva. Dokud to není jasné, stránku tu nedostanou — stránka by tvrdila něco, co nemáme čím podložit.",
+ "named at":
+   "uvádí",
+ "Know one of these? A brewery's own page listing its beers is enough to move it up.":
+   "Znáte některou z nich? Stačí vlastní stránka pivovaru se seznamem piv a posuneme ji nahoru.",
+ "also lists":
+   "uvádí také",
+ "not confirmed as breweries":
+   "jako pivovary nepotvrzeno",
  "Venue data © OpenStreetMap contributors, ODbL":
    "Data podniků © přispěvatelé OpenStreetMap, ODbL",
  "bottle data and label photographs © Open Food Facts contributors, ODbL":

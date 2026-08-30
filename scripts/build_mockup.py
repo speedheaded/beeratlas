@@ -58,6 +58,8 @@ for v in venues:
         "d": v.get("district") or v.get("city"), "st": v.get("street"),
         "p": v.get("phone"), "h": v.get("openingHours"), "w": v.get("website"),
         "b": v.get("breweryIds", []), "bp": bool(v.get("brewpub")),
+        # марки, которые заведение называет, но подтверждения им нет
+        "bh": v.get("brandHints") or [],
         "dg": v.get("districtFrom") == "geometry",
         "lat": v["lat"], "lng": v["lng"],
     })
@@ -106,7 +108,18 @@ if listed_path.exists():
             "venues": counts.get(r["breweryId"], 0),
         })
 
+# марки, которые заведения называют, но подтверждения им нет: ни записи в
+# Wikidata, ни линейки с сайта. Пивоварнями они не считаются (см. решение 13),
+# но и молчать о них нечестно — заведение их действительно наливает.
+hints = {}
+for v in venues:
+    for b in v.get("brandHints") or []:
+        hints.setdefault(b, []).append(v["name"])
+slim_hints = [{"brand": b, "venues": sorted(vs)} for b, vs in
+              sorted(hints.items(), key=lambda kv: (-len(kv[1]), kv[0].lower()))]
+
 payload = {
+    "hints": slim_hints,
     "generatedAt": stats["generatedAt"],
     "listed": slim_listed,
     "process": [{"h": {"en": h, "cs": hc}, "b": {"en": b, "cs": bc}}
