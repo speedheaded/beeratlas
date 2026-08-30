@@ -1,0 +1,2643 @@
+[
+ {
+  "ean": "8594003352188",
+  "name": "Bezlepkový ležák 12",
+  "brands": "Bernard",
+  "breweryId": "rodinny-pivovar-bernard",
+  "matchedBy": "exact",
+  "quantity": "1/2 l",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/335/2188/front_cs.16.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594003352188",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594003351402",
+  "name": "Bohemian lager",
+  "brands": "Bernard",
+  "breweryId": "rodinny-pivovar-bernard",
+  "matchedBy": "exact",
+  "quantity": "0.33 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/335/1402/front_cs.30.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594003351402",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594003352331",
+  "name": "Jantarový Ležák 12",
+  "brands": "Bernard",
+  "breweryId": "rodinny-pivovar-bernard",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 5.0,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/335/2331/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594003352331",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594003352614",
+  "name": "Sváteční ležák 12",
+  "brands": "Bernard",
+  "breweryId": "rodinny-pivovar-bernard",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/335/2614/front_cs.12.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594003352614",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404001302",
+  "name": "Světlý - nealkoholické pivo",
+  "brands": "BIRELL, Birell, Plzeňský  prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "500 g",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/1302/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404001302",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586001761994",
+  "name": "Pivo Birell Nealko Polotmavý Citrón 0,5L Plech",
+  "brands": "Birell, Pivovar Šariš",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "500ml",
+  "abv": 0.03,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/176/1994/front_cs.19.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586001761994",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404020457",
+  "name": "Višeň & Ostružina",
+  "brands": "Birell, Plzeňský  prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 0.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/0457/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404020457",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868003396",
+  "name": "světlý ležák 11",
+  "brands": "Braník",
+  "breweryId": "pivovar-branik",
+  "matchedBy": "exact",
+  "quantity": "2 l",
+  "abv": null,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868003396",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8591036551502",
+  "name": "Tmavý",
+  "brands": "Breznak",
+  "breweryId": "breznak",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/1502/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036551502",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403704761",
+  "name": "",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0.5l",
+  "abv": 2.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/4761/front_de.18.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403704761",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403706871",
+  "name": "33",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403706871",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403706864",
+  "name": "33 ležák",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 4.6,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/6864/front_cs.26.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403706864",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403707663",
+  "name": "Budvar Nealko",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 0.5,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/7663/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403707663",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403110517",
+  "name": "Nealko",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/311/0517/front_en.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403110517",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403707724",
+  "name": "Nealkoholické pivo",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403707724",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403150827",
+  "name": "Tmavý ležák",
+  "brands": "Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/315/0827/front_lt.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403150827",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403707731",
+  "name": "czech lager",
+  "brands": "Budvar, budweiser",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/7731/front_lt.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403707731",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403707687",
+  "name": "czech lager",
+  "brands": "Budvar, budweiser",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/7687/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403707687",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403310115",
+  "name": "Budvar Czech Lager",
+  "brands": "Budweiser",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 5.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/331/0115/front_en.51.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403310115",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403709841",
+  "name": "Original Czech Lager",
+  "brands": "Budweiser Budvar",
+  "breweryId": "budejovicky-budvar",
+  "matchedBy": "exact",
+  "quantity": "0.5 L",
+  "abv": 5.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/9841/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403709841",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8591036551007",
+  "name": "Original",
+  "brands": "Březňák",
+  "breweryId": "breznak",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 5.1,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/1007/front_cs.23.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036551007",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8591036550376",
+  "name": "Premium Pils",
+  "brands": "Březňák",
+  "breweryId": "breznak",
+  "matchedBy": "exact",
+  "quantity": "2 l",
+  "abv": 5.1,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/0376/front_de.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036550376",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8595028226133",
+  "name": "černý",
+  "brands": "Chodovar",
+  "breweryId": "pivovar-chodovar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/502/822/6133/front_cs.12.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8595028226133",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594177840313",
+  "name": "12° APA",
+  "brands": "Clock",
+  "breweryId": "pivovar-clock",
+  "matchedBy": "exact",
+  "quantity": "0,75 l",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/417/784/0313/front_cs.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594177840313",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404008639",
+  "name": "pivo 10",
+  "brands": "Gambrinus",
+  "breweryId": "pivovar-gambrinus-plzen",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/8639/front_cs.37.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404008639",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404012094",
+  "name": "Premium 12",
+  "brands": "GAMBRINUS, Gambrinus",
+  "breweryId": "pivovar-gambrinus-plzen",
+  "matchedBy": "exact",
+  "quantity": "500 g",
+  "abv": 5.2,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/2094/front_cs.27.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404012094",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8591036551441",
+  "name": "Březňák",
+  "brands": "Heineken",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "1,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/1441/front_en.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036551441",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000987746",
+  "name": "Desperados Mojito",
+  "brands": "Heineken",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/098/7746/front_cs.16.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000987746",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009924129",
+  "name": "Desperados Original",
+  "brands": "Heineken",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 5.9,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/4129/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009924129",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000988927",
+  "name": "Desperados Strawberry Margarita",
+  "brands": "Heineken",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/098/8927/front_cs.11.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000988927",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009921487",
+  "name": "Černé",
+  "brands": "Heineken, Krušovice",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 3.8,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/1487/front_hu.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009921487",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000982710",
+  "name": "gold apple",
+  "brands": "heineken, strongbow",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "400 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/098/2710/front_en.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000982710",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8591036550154",
+  "name": "jedenáctka",
+  "brands": "Heineken, Zlatopramen",
+  "breweryId": "heineken-ceska-republika",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 4.9,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/0154/front_cs.12.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036550154",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404011783",
+  "name": "Kozel řezaný",
+  "brands": "kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/1783/front_en.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404011783",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404005782",
+  "name": "Lager Premium",
+  "brands": "Kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 4.6,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/5782/front_hr.40.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404005782",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404011271",
+  "name": "světlý",
+  "brands": "Kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "matchedBy": "exact",
+  "quantity": "500ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/1271/front_cs.10.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404011271",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404000572",
+  "name": "Velkopopovicky Kozel Svetly",
+  "brands": "Kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 4.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/0572/front_cs.12.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404000572",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009920046",
+  "name": "Krušovice 10",
+  "brands": "Krušovice",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 4.2,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/0046/front_en.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009920046",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009923382",
+  "name": "Krušovice královský original 10",
+  "brands": "Krušovice",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "matchedBy": "exact",
+  "quantity": "0.5 l",
+  "abv": 4.2,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/3382/front_en.17.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009923382",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009924778",
+  "name": "Krušovice ležák PET 1,5l",
+  "brands": "Krušovice",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "matchedBy": "exact",
+  "quantity": "1,5 l",
+  "abv": 5.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/4778/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009924778",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009921562",
+  "name": "Královská 12",
+  "brands": "Krušovice",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "matchedBy": "exact",
+  "quantity": "1,5 l",
+  "abv": 5.0,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/1562/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009921562",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009922408",
+  "name": "Královský Ležák 12",
+  "brands": "Krušovice",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 5.0,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/2408/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009922408",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594009923436",
+  "name": "Ležák 12",
+  "brands": "KRUŠOVICE, Krušovice",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "matchedBy": "exact",
+  "quantity": "500 g",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/3436/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009923436",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594202260024",
+  "name": "12° California APA",
+  "brands": "Matuška",
+  "breweryId": "matuska",
+  "matchedBy": "exact",
+  "quantity": "5",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/420/226/0024/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594202260024",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594202260048",
+  "name": "15° Raptor",
+  "brands": "Matuška",
+  "breweryId": "matuska",
+  "matchedBy": "exact",
+  "quantity": "0,75 l",
+  "abv": null,
+  "plato": "15",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/420/226/0048/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594202260048",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594202260017",
+  "name": "Apollo galaxy 13°",
+  "brands": "Matuška",
+  "breweryId": "matuska",
+  "matchedBy": "exact",
+  "quantity": "0,7 l",
+  "abv": null,
+  "plato": "13",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/420/226/0017/front_cs.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594202260017",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594044191289",
+  "name": "Bohemian Premium Lager",
+  "brands": "Old Prague",
+  "breweryId": "byvaly-petrovicky-pivovar-praha",
+  "matchedBy": "token",
+  "quantity": "0.5 l",
+  "abv": 4.8,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/404/419/1289/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594044191289",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868006588",
+  "name": "Černá Barbora",
+  "brands": "Ostravar, Pivovary Saropramen",
+  "breweryId": "pivovar-ostravar",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868006588",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404115115",
+  "name": "",
+  "brands": "Pilsner Urquell",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 4.4,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/411/5115/front_en.57.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404115115",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404110110",
+  "name": "Pilsner Urquell",
+  "brands": "PILSNER URQUELL",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "500 g",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/411/0110/front_en.7.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404110110",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404005829",
+  "name": "Světlé  12",
+  "brands": "Pilsner Urquell",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/5829/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404005829",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404115122",
+  "name": "Světlé 12",
+  "brands": "Pilsner Urquell",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "330 ml",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/411/5122/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404115122",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8590421053652",
+  "name": "Karolína Světlá",
+  "brands": "Pivovar Bizon",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/042/105/3652/front_cs.10.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8590421053652",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594194360160",
+  "name": "IPA Kamenice",
+  "brands": "Pivovar Kamenice",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/419/436/0160/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594194360160",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594194360030",
+  "name": "Kamenická 10",
+  "brands": "Pivovar Kamenice",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/419/436/0030/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594194360030",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594194360092",
+  "name": "Kamenická 12",
+  "brands": "Pivovar Kamenice",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/419/436/0092/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594194360092",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594193462377",
+  "name": "Vídeňská 15",
+  "brands": "Pivovar Krumlov",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "1 l",
+  "abv": null,
+  "plato": "15",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/419/346/2377/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594193462377",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594022250021",
+  "name": "Krakonoš 11°",
+  "brands": "Pivovar Kutná Hora",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/402/225/0021/front_en.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594022250021",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593875510511",
+  "name": "Litovel Moravan",
+  "brands": "Pivovar Litovel",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0.5 l",
+  "abv": 4.6,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/387/551/0511/front_cs.19.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593875510511",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594048890249",
+  "name": "Nealko",
+  "brands": "Pivovar Nymburk, Staročech",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/404/889/0249/front_cs.11.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594048890249",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594208760047",
+  "name": "Strážská Ema",
+  "brands": "Pivovar Stráž nad Nežárkou",
+  "breweryId": "akciovy-pivovar-libertas",
+  "matchedBy": "token",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/420/876/0047/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594208760047",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594044362061",
+  "name": "Desítka světlé výčepní",
+  "brands": "Platan",
+  "breweryId": "pivovar-platan",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/404/436/2061/front_en.11.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594044362061",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594044360029",
+  "name": "Jedenáctka",
+  "brands": "Platan",
+  "breweryId": "pivovar-platan",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/404/436/0029/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594044360029",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404008806",
+  "name": "Excelent",
+  "brands": "Plzeňský  prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/8806/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404008806",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404014623",
+  "name": "Pilsner Urquell",
+  "brands": "Plzeňský  prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/4623/front_cs.10.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404014623",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404005096",
+  "name": "Kozel 11*",
+  "brands": "Plzeňský prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 4.6,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/5096/front_en.23.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404005096",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586001763998",
+  "name": "Pilsner Urquell světlý ležák 12%",
+  "brands": "Plzeňský Prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/176/3998/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586001763998",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404023212",
+  "name": "Pivo Proud",
+  "brands": "Plzeňský prazdroj",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/3212/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404023212",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404001418",
+  "name": "Tmavý velkopopovický kozel",
+  "brands": "Plzeňský Prazdroj, kozel",
+  "breweryId": "plzensky-prazdroj",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 3.8,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/1418/front_cs.16.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404001418",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594006931755",
+  "name": "Stout",
+  "brands": "Primátor",
+  "breweryId": "primator",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/693/1755/front_cs.18.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594006931755",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594006932998",
+  "name": "Tchyně",
+  "brands": "Primátor",
+  "breweryId": "primator",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/693/2998/front_cs.10.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594006932998",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404023168",
+  "name": "Ležák",
+  "brands": "Proud",
+  "breweryId": "pivovar-proud",
+  "matchedBy": "exact",
+  "quantity": "0.33l",
+  "abv": 3.9,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/3168/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404023168",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404010304",
+  "name": "",
+  "brands": "Radegast",
+  "breweryId": "pivovar-radegast",
+  "matchedBy": "exact",
+  "quantity": "500ml",
+  "abv": 5.1,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/0304/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404010304",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404019840",
+  "name": "Ratar",
+  "brands": "Radegast",
+  "breweryId": "pivovar-radegast",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 4.3,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/9840/front_cs.10.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404019840",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404023502",
+  "name": "Ratar",
+  "brands": "Radegast",
+  "breweryId": "pivovar-radegast",
+  "matchedBy": "exact",
+  "quantity": "500ml",
+  "abv": 4.5,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/3502/front_cs.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404023502",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404010328",
+  "name": "Ryze hořká 12",
+  "brands": "Radegast",
+  "breweryId": "pivovar-radegast",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 5.1,
+  "plato": "12",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/0328/front_cs.10.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404010328",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404012674",
+  "name": "Rázná desítka",
+  "brands": "RADEGAST, Radegast",
+  "breweryId": "pivovar-radegast",
+  "matchedBy": "exact",
+  "quantity": "500 g",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/2674/front_cs.17.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404012674",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594011530011",
+  "name": "Podskalák",
+  "brands": "Rohozec",
+  "breweryId": "pivovar-rohozec",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/401/153/0011/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594011530011",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594001052578",
+  "name": "Medium ležák",
+  "brands": "Starobrno",
+  "breweryId": "pivovar-starobrno",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 4.7,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/105/2578/front_cs.13.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594001052578",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "5942070001073",
+  "name": "",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 5.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/594/207/000/1073/front_en.7.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/5942070001073",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868110193",
+  "name": "150",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0,33 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/811/0193/front_cs.16.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868110193",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868002665",
+  "name": "Cool Grep",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "500ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/2665/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868002665",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868006472",
+  "name": "Cool tmavá švestka",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 0.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/6472/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868006472",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868000869",
+  "name": "Granát",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/0869/front_cs.28.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868000869",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868004768",
+  "name": "Nealko",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0,33 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868004768",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868002580",
+  "name": "Nealko pivo nealkoholické světlé",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0.5 l",
+  "abv": 0.5,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/2580/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868002580",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868002832",
+  "name": "Non-alcoholic beer",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "330ml",
+  "abv": 0.5,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/2832/front_cs.31.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868002832",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868110445",
+  "name": "Smíchov",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 4.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/811/0445/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868110445",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868110117",
+  "name": "Staropramen",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": 5.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/811/0117/front_de.24.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868110117",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868001422",
+  "name": "Staropramen",
+  "brands": "Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "33 cl",
+  "abv": 3.5,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/1422/front_cs.12.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868001422",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868000050",
+  "name": "staropramen",
+  "brands": "staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/0050/front_lt.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868000050",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868005222",
+  "name": "staropramen nefiltruotas",
+  "brands": "staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/5222/front_lt.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868005222",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868000302",
+  "name": "světlý",
+  "brands": "staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/0302/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868000302",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868006403",
+  "name": "legendární Smíchov",
+  "brands": "STAROPRAMEN, Staropramen",
+  "breweryId": "pivovary-staropramen",
+  "matchedBy": "exact",
+  "quantity": "500 g",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/6403/front_cs.15.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868006403",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868001743",
+  "name": "",
+  "brands": "Stella Artois",
+  "breweryId": "stella-artois",
+  "matchedBy": "exact",
+  "quantity": "0,33 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868001743",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594030010044",
+  "name": "Svijanský máz",
+  "brands": "Svijany",
+  "breweryId": "pivovar-svijany",
+  "matchedBy": "exact",
+  "quantity": "500 ml",
+  "abv": 4.8,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/403/001/0044/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594030010044",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594030013168",
+  "name": "Svijanský Máz",
+  "brands": "Svijany",
+  "breweryId": "pivovar-svijany",
+  "matchedBy": "exact",
+  "quantity": "0.5 l",
+  "abv": 4.8,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/403/001/3168/front_cs.13.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594030013168",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594030010013",
+  "name": "Svijanský máz 11",
+  "brands": "Svijany",
+  "breweryId": "pivovar-svijany",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/403/001/0013/front_cs.11.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594030010013",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404015521",
+  "name": "světlá 10",
+  "brands": "Velkopopovický Kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "matchedBy": "exact",
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/5521/front_cs.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404015521",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404001401",
+  "name": "Kozel",
+  "brands": "Velkopopovický kozel, kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "matchedBy": "exact",
+  "quantity": "0.5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/1401/front_cs.7.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404001401",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594030010020",
+  "name": "",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/403/001/0020/front_uk.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594030010020",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868007356",
+  "name": "",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/7356/front_en.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868007356",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "5029788180075",
+  "name": "",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/502/978/818/0075/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/5029788180075",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404022765",
+  "name": "Birell",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/2765/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404022765",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "0859604004323",
+  "name": "Breakside Wanderlust IPA",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/085/960/400/4323/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/0859604004323",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404020358",
+  "name": "KOZEL Velkopopovický nealko",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/0358/front_cs.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404020358",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868006410",
+  "name": "Staropramen",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868006410",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8595618001058",
+  "name": "Tambor",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/561/800/1058/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8595618001058",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594166371668",
+  "name": "Zlatá Praha",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/416/637/1668/front_cs.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594166371668",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594012822436",
+  "name": "Zlaté české pivo",
+  "brands": "",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/401/282/2436/front_cs.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594012822436",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "4056489580751",
+  "name": "Argus 10 Pils",
+  "brands": "Argus",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500ml",
+  "abv": 4.0,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/405/648/958/0751/front_hr.20.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/4056489580751",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "4304493257245",
+  "name": "světlé výčepní pivo 10",
+  "brands": "Argus",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": "10",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/430/449/325/7245/front_cs.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/4304493257245",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594053490823",
+  "name": "Nealkoholický, za studena chmelený",
+  "brands": "Bakalář",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/405/349/0823/front_cs.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594053490823",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594053490762",
+  "name": "Tmavá desítka",
+  "brands": "Bakalář",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/405/349/0762/front_cs.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594053490762",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404008332",
+  "name": "Malina & Limetka",
+  "brands": "Birell",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 ml",
+  "abv": 0.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/8332/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404008332",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594404006413",
+  "name": "Světlý nealkoholické pivo",
+  "brands": "Birell",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500ml",
+  "abv": 0.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/6413/front_sk.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404006413",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "4102430069599",
+  "name": "Bitburger ladler btl",
+  "brands": "Bitburger",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "330ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/410/243/006/9599/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/4102430069599",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594007310368",
+  "name": "prémiový světlý ležák",
+  "brands": "CELIA",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/731/0368/front_cs.8.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594007310368",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "5900535005066",
+  "name": "",
+  "brands": "Edelmeister",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 ml",
+  "abv": 2.0,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/590/053/500/5066/front_it.24.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/5900535005066",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8595034015028",
+  "name": "Pivo",
+  "brands": "Hostan",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5l",
+  "abv": 4.7,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/503/401/5028/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8595034015028",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593868006618",
+  "name": "",
+  "brands": "Mustang",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/6618/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868006618",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594191470350",
+  "name": "Goséčko 11°",
+  "brands": "Nachmelená opice",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,75 l",
+  "abv": null,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/419/147/0350/front_cs.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594191470350",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594403703344",
+  "name": "Echt světlý ležák",
+  "brands": "Pardál",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/3344/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403703344",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "4066600392811",
+  "name": "Weissbier",
+  "brands": "Paulaner",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 mL",
+  "abv": 5.5,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/406/660/039/2811/front_en.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/4066600392811",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593870000949",
+  "name": "1796",
+  "brands": "Samson",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/387/000/0949/front_cs.15.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593870000949",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593870002578",
+  "name": "Světlý ležák 11%",
+  "brands": "Samson",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,33 l",
+  "abv": null,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/387/000/2578/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593870002578",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "4054500140335",
+  "name": "Steam Brew Wheat Pale Ale",
+  "brands": "Steam Brew",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0.5l",
+  "abv": 5.6,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/405/450/014/0335/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/4054500140335",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000987791",
+  "name": "citrus",
+  "brands": "Strongbow",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/098/7791/front_sk.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000987791",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000984516",
+  "name": "Red Berries 4,5%",
+  "brands": "Strongbow",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "440 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": null,
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000984516",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "4100770018819",
+  "name": "TH. König Zwickel Kellerbier",
+  "brands": "TH. König",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,33 l",
+  "abv": 5.3,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/410/077/001/8819/front_de.22.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/4100770018819",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594044191487",
+  "name": "Ležák",
+  "brands": "Zelena Koruna",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": 4.8,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/404/419/1487/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594044191487",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594044191494",
+  "name": "Černé",
+  "brands": "Zelena Koruna",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0.5 l",
+  "abv": 4.4,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/404/419/1494/front_en.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594044191494",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8591036550918",
+  "name": "11",
+  "brands": "Zlatopramen",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "1,5 l",
+  "abv": 4.9,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/0918/front_cs.9.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036550918",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000988606",
+  "name": "Hurbanovská IPA",
+  "brands": "Zlatý bažant",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 ml",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/098/8606/front_sk.4.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000988606",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8594001050741",
+  "name": "Prémiový ležák",
+  "brands": "Zlatý Bažant",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/400/105/0741/front_cs.5.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594001050741",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8586000987517",
+  "name": "Lager",
+  "brands": "ZLATÝ BAŽANT, Zlatý Bažant",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "500 g",
+  "abv": 4.7,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/858/600/098/7517/front_sk.17.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8586000987517",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593875213016",
+  "name": "Grand 11",
+  "brands": "Zubr",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": "11",
+  "needsReview": true,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/387/521/3016/front_cs.6.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593875213016",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593875715213",
+  "name": "Zubr yuzu",
+  "brands": "Zubr",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "0,5 l",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": true,
+  "image": "https://images.openfoodfacts.org/images/products/859/387/571/5213/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593875715213",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ },
+ {
+  "ean": "8593875713790",
+  "name": "Zubr Octagon limitovaná edice",
+  "brands": "Zubr, Zubr Octagon",
+  "breweryId": null,
+  "matchedBy": null,
+  "quantity": "",
+  "abv": null,
+  "plato": null,
+  "needsReview": false,
+  "nonAlcoholic": false,
+  "image": "https://images.openfoodfacts.org/images/products/859/387/571/3790/front_cs.3.400.jpg",
+  "source": {
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593875713790",
+   "licence": "ODbL, Open Food Facts",
+   "checkedAt": "2026-08-30"
+  }
+ }
+]
