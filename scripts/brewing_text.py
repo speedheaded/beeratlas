@@ -107,7 +107,7 @@ P["svijansky-maz"] = dict(
          "the bready, faintly honeyed base comes from.",
     adjuncts="A small amount of sugar in the boil. Not for sweetness — the yeast eats it "
              "almost entirely, so it raises alcohol while keeping the body light. It is why an "
-             "11.2° wort finishes at 4.8 % and still drinks easily.",
+             "11° wort finishes at 4.8 % and still drinks easily.",
     hops="Saaz from the brewery's own hop gardens in the Polepské blaty, plus hop extract for "
          "precise control of bitterness.",
     mash="Double decoction.",

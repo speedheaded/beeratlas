@@ -107,7 +107,7 @@ P["svijansky-maz"] = dict(
          "Moravě. Humnové sladování je pomalá tradiční metoda a je zdrojem chlebového, "
          "lehce medového základu.",
     adjuncts="Trocha cukru do varny. Ne kvůli sladkosti — kvasnice ho téměř celý sežerou, "
-             "takže zvedá alkohol a přitom drží plnost nízko. Proto mladina o 11,2 % "
+             "takže zvedá alkohol a přitom drží plnost nízko. Proto mladina o 11 % "
              "skončí na 4,8 % a pivo se pořád pije snadno.",
     hops="Žatecký chmel z vlastních chmelnic pivovaru v Polepských blatech, plus chmelový "
          "extrakt pro přesné řízení hořkosti.",

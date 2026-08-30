@@ -112,8 +112,8 @@ UI = {
    "nebo opište číslice",
  "Look up":
    "Najít",
- "The prototype reads barcodes for real. Reading the name off a label is the next rung and needs a server, so here it is shown, not done.":
-   "Prototyp čte čárové kódy doopravdy. Přečíst název z etikety je další stupeň, na ten je potřeba server — tady je ukázaný, ne provedený.",
+ "The barcode is on the back of the bottle — turn it round. That one the prototype reads for real. The front, with the name on it, is the next rung, and that one needs a server: here it is shown, not done.":
+   "Čárový kód je na zadní straně láhve — otočte ji. Ten prototyp čte doopravdy. Přední strana s názvem je další stupeň, a na ten je potřeba server: tady je ukázaný, ne provedený.",
  "Or take one of these ten":
    "Nebo si vezměte jednu z těchhle deseti",
  "Real barcodes of bottles sold in Czech shops, chosen to land on each of the four rungs — including the two that miss.":
