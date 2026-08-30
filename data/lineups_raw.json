@@ -265,9 +265,17 @@
     "url": "http://www.pivovarsvijany.cz/svijanske-pivo/slik"
    },
    {
+    "name": "Sváteční Bidlovka",
+    "plato": "12.2",
+    "abv": null,
+    "needsReview": false,
+    "context": "Sváteční Bidlovka",
+    "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka"
+   },
+   {
     "name": "EPM",
-    "plato": null,
-    "abv": "12.2",
+    "plato": "12.2",
+    "abv": null,
     "needsReview": false,
     "context": "EPM: 12,2 %",
     "url": "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka"
@@ -787,7 +795,10 @@
    "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=barelova-piva",
    "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=degustacni-sady",
    "https://pivovarzichovec.cz/nase-piva/?pa_kategorie=kooperace",
-   "http://pivovarzichovec.cz/nase-piva/"
+   "https://pivovarzichovec.cz/piva-hoste/",
+   "https://pivovarzichovec.cz/piva-hoste/?pa_kategorie=pivo",
+   "https://pivovarzichovec.cz/piva-hoste/?pa_kategorie=naturalni-vina",
+   "https://pivovarzichovec.cz/piva-hoste/?pa_kategorie=Winter-affair"
   ],
   "beers": []
  },
@@ -820,7 +831,7 @@
    },
    {
     "name": ", : , Hořkost: 35 IBU, Barva: 15 EBC",
-    "plato": null,
+    "plato": "12",
     "abv": "4.5",
     "needsReview": false,
     "context": "Stupňovitost: 12%, Alkohol: 4,5%, Hořkost: 35 IBU, Barva: 15 EBC",
@@ -828,7 +839,7 @@
    },
    {
     "name": ", : , Hořkost: 27 IBU, Barva: 35 EBC",
-    "plato": null,
+    "plato": "12",
     "abv": "4.5",
     "needsReview": false,
     "context": "Stupňovitost: 12%, Alkohol: 4,5%, Hořkost: 27 IBU, Barva: 35 EBC",
@@ -838,13 +849,13 @@
     "name": ", : , Hořkost: 20 IBU, Barva: 80 EBC",
     "plato": "15",
     "abv": null,
-    "needsReview": true,
+    "needsReview": false,
     "context": "Stupňovitost: 15%, Alkohol: 5%, Hořkost: 20 IBU, Barva: 80 EBC",
     "url": "http://www.beerfactoryplzen.cz/"
    },
    {
     "name": ", : , Hořkost: 50 IBU, Barva: 25 EBC",
-    "plato": null,
+    "plato": "14",
     "abv": "5.3",
     "needsReview": false,
     "context": "Stupňovitost: 14%, Alkohol: 5,3%, Hořkost: 50 IBU, Barva: 25 EBC",
@@ -852,7 +863,7 @@
    },
    {
     "name": ", : , Hořkost: 33 IBU, Barva: 4 EBC",
-    "plato": null,
+    "plato": "10",
     "abv": "3.5",
     "needsReview": false,
     "context": "Stupňovitost: 10%, Alkohol: 3,5%, Hořkost: 33 IBU, Barva: 4 EBC",
@@ -860,7 +871,7 @@
    },
    {
     "name": ", : , Hořkost: 33 IBU, Barva: 15 EBC",
-    "plato": null,
+    "plato": "11",
     "abv": "3.9",
     "needsReview": false,
     "context": "Stupňovitost: 11%, Alkohol: 3,9%, Hořkost: 33 IBU, Barva: 15 EBC",
@@ -870,13 +881,13 @@
     "name": ", : , Hořkost: 30 IBU, Barva: 10 EBC",
     "plato": "12",
     "abv": null,
-    "needsReview": true,
+    "needsReview": false,
     "context": "Stupňovitost: 12%, Alkohol: 5%, Hořkost: 30 IBU, Barva: 10 EBC",
     "url": "http://www.beerfactoryplzen.cz/"
    },
    {
     "name": ", : , Hořkost: 55 IBU, Barva: 20 EBC",
-    "plato": null,
+    "plato": "16",
     "abv": "6.5",
     "needsReview": false,
     "context": "Stupňovitost: 16%, Alkohol: 6,5%, Hořkost: 55 IBU, Barva: 20 EBC",

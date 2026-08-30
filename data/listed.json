@@ -1,0 +1,1082 @@
+[
+ {
+  "id": "budejovicky-budvar-33-lezak",
+  "breweryId": "budejovicky-budvar",
+  "name": "33 ležák",
+  "menuNameCs": "33 ležák",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.6,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403706864",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594403706864",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/6864/front_cs.26.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "budejovicky-budvar-budvar-czech-lager",
+  "breweryId": "budejovicky-budvar",
+  "name": "Budvar Czech Lager",
+  "menuNameCs": "Budvar Czech Lager",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403310115",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594403310115",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/331/0115/front_en.51.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "budejovicky-budvar-original-czech-lager",
+  "breweryId": "budejovicky-budvar",
+  "name": "Original Czech Lager",
+  "menuNameCs": "Original Czech Lager",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403709841",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594403709841",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/370/9841/front_en.3.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "kralovsky-pivovar-krusovice-krusovice-lezak-pet-1-5l",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "name": "Krušovice ležák PET 1,5l",
+  "menuNameCs": "Krušovice ležák PET 1,5l",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594009924778",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594009924778",
+  "image": "https://images.openfoodfacts.org/images/products/859/400/992/4778/front_cs.3.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "kralovsky-pivovar-krusovice-nealko",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "name": "Nealko",
+  "menuNameCs": "Nealko",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 0.5,
+   "method": "official",
+   "source": "http://www.krusovice.cz/cs/nase-piva/nealko",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "kralovsky-pivovar-krusovice-max",
+  "breweryId": "kralovsky-pivovar-krusovice",
+  "name": "max .",
+  "menuNameCs": "max .",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 0.5,
+   "method": "official",
+   "source": "http://www.krusovice.cz/cs/nase-piva/nealko",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-hvozd",
+  "breweryId": "pivovar-cvikov",
+  "name": "Hvozd",
+  "menuNameCs": "Hvozd",
+  "tier": "listed",
+  "plato": {
+   "value": 11,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-kleis",
+  "breweryId": "pivovar-cvikov",
+  "name": "Kleis",
+  "menuNameCs": "Kleis",
+  "tier": "listed",
+  "plato": {
+   "value": 13,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-klic",
+  "breweryId": "pivovar-cvikov",
+  "name": "Klíč",
+  "menuNameCs": "Klíč",
+  "tier": "listed",
+  "plato": {
+   "value": 12,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-kralovske",
+  "breweryId": "pivovar-cvikov",
+  "name": "Královské",
+  "menuNameCs": "Královské",
+  "tier": "listed",
+  "plato": {
+   "value": 12,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-luz",
+  "breweryId": "pivovar-cvikov",
+  "name": "Luž",
+  "menuNameCs": "Luž",
+  "tier": "listed",
+  "plato": {
+   "value": 10,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/luz-10",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-luzicka-mozaika",
+  "breweryId": "pivovar-cvikov",
+  "name": "Lužická Mozaika",
+  "menuNameCs": "Lužická Mozaika",
+  "tier": "listed",
+  "plato": {
+   "value": 11,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-sklar",
+  "breweryId": "pivovar-cvikov",
+  "name": "Sklář",
+  "menuNameCs": "Sklář",
+  "tier": "listed",
+  "plato": {
+   "value": 8,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-stovka",
+  "breweryId": "pivovar-cvikov",
+  "name": "Stovka",
+  "menuNameCs": "Stovka",
+  "tier": "listed",
+  "plato": {
+   "value": 13,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-svatecni",
+  "breweryId": "pivovar-cvikov",
+  "name": "Sváteční",
+  "menuNameCs": "Sváteční",
+  "tier": "listed",
+  "plato": {
+   "value": 13,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-vyrocni",
+  "breweryId": "pivovar-cvikov",
+  "name": "Výroční",
+  "menuNameCs": "Výroční",
+  "tier": "listed",
+  "plato": {
+   "value": 14,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-zimni-lezak",
+  "breweryId": "pivovar-cvikov",
+  "name": "Zimní ležák",
+  "menuNameCs": "Zimní ležák",
+  "tier": "listed",
+  "plato": {
+   "value": 12,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-cvikov-zitny-special",
+  "breweryId": "pivovar-cvikov",
+  "name": "Žitný speciál",
+  "menuNameCs": "Žitný speciál",
+  "tier": "listed",
+  "plato": {
+   "value": 13,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-radegast-ratar",
+  "breweryId": "pivovar-radegast",
+  "name": "Ratar",
+  "menuNameCs": "Ratar",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.3,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404019840",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594404019840",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/401/9840/front_cs.10.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-baron",
+  "breweryId": "pivovar-svijany",
+  "name": "Baron",
+  "menuNameCs": "Baron",
+  "tier": "listed",
+  "plato": {
+   "value": 15,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": {
+   "value": 6.5,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-dux",
+  "breweryId": "pivovar-svijany",
+  "name": "DUX",
+  "menuNameCs": "DUX",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.5,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/dux",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-epm",
+  "breweryId": "pivovar-svijany",
+  "name": "EPM",
+  "menuNameCs": "EPM",
+  "tier": "listed",
+  "plato": {
+   "value": 12.2,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-pivo-cecilia",
+  "breweryId": "pivovar-svijany",
+  "name": "Pivo Cecilia",
+  "menuNameCs": "Pivo Cecilia",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.8,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/pivo-cecilia",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-pivo-primo-ze-sklepa",
+  "breweryId": "pivovar-svijany",
+  "name": "Pivo přímo ze sklepa",
+  "menuNameCs": "Pivo přímo ze sklepa",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.9,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/pivo-primo-ze-sklepa",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-premiovy-lezak-450",
+  "breweryId": "pivovar-svijany",
+  "name": "Prémiový ležák 450",
+  "menuNameCs": "Prémiový ležák 450",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.6,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/premiovy-lezak-450",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-shine",
+  "breweryId": "pivovar-svijany",
+  "name": "Shine",
+  "menuNameCs": "Shine",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 2.9,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/shine",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-svijansky-knize",
+  "breweryId": "pivovar-svijany",
+  "name": "Svijanský Kníže",
+  "menuNameCs": "Svijanský Kníže",
+  "tier": "listed",
+  "plato": {
+   "value": 13,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": {
+   "value": 5.6,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-svijansky-fanda",
+  "breweryId": "pivovar-svijany",
+  "name": "Svijanský fanda",
+  "menuNameCs": "Svijanský fanda",
+  "tier": "listed",
+  "plato": {
+   "value": 11,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": {
+   "value": 4.8,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-svatecni-bidlovka",
+  "breweryId": "pivovar-svijany",
+  "name": "Sváteční Bidlovka",
+  "menuNameCs": "Sváteční Bidlovka",
+  "tier": "listed",
+  "plato": {
+   "value": 12.2,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-svijany-slik",
+  "breweryId": "pivovar-svijany",
+  "name": "ŠLIK",
+  "menuNameCs": "ŠLIK",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.4,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/slik",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-velke-popovice-lager-premium",
+  "breweryId": "pivovar-velke-popovice",
+  "name": "Lager Premium",
+  "menuNameCs": "Lager Premium",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.6,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404005782",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594404005782",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/5782/front_hr.40.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-velke-popovice-tmavy-velkopopovicky-kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "name": "Tmavý velkopopovický kozel",
+  "menuNameCs": "Tmavý velkopopovický kozel",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 3.8,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404001418",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594404001418",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/1418/front_cs.16.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-velke-popovice-velkopopovicky-kozel-svetly",
+  "breweryId": "pivovar-velke-popovice",
+  "name": "Velkopopovicky Kozel Svetly",
+  "menuNameCs": "Velkopopovicky Kozel Svetly",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404000572",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594404000572",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/400/0572/front_cs.12.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-velke-popovice-velkopopovicky-kozel",
+  "breweryId": "pivovar-velke-popovice",
+  "name": "Velkopopovický Kozel",
+  "menuNameCs": "Velkopopovický Kozel",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.2,
+   "method": "official",
+   "source": "http://www.kozel.cz/cs/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovar-velke-popovice",
+  "breweryId": "pivovar-velke-popovice",
+  "name": "≤ .",
+  "menuNameCs": "≤ .",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 0.5,
+   "method": "official",
+   "source": "http://www.kozel.cz/cs/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovary-staropramen-cool-tmava-svestka",
+  "breweryId": "pivovary-staropramen",
+  "name": "Cool tmavá švestka",
+  "menuNameCs": "Cool tmavá švestka",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 0,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868006472",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8593868006472",
+  "image": "https://images.openfoodfacts.org/images/products/859/386/800/6472/front_cs.3.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovary-staropramen-smichov",
+  "breweryId": "pivovary-staropramen",
+  "name": "Smíchov",
+  "menuNameCs": "Smíchov",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868110445",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8593868110445",
+  "image": "https://images.openfoodfacts.org/images/products/859/386/811/0445/front_cs.8.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "pivovary-staropramen-staropramen",
+  "breweryId": "pivovary-staropramen",
+  "name": "Staropramen",
+  "menuNameCs": "Staropramen",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8593868110117",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8593868110117",
+  "image": "https://images.openfoodfacts.org/images/products/859/386/811/0117/front_de.24.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "plzensky-prazdroj-visen-ostruzina",
+  "breweryId": "plzensky-prazdroj",
+  "name": "Višeň & Ostružina",
+  "menuNameCs": "Višeň & Ostružina",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 0,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404020457",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8594404020457",
+  "image": "https://images.openfoodfacts.org/images/products/859/440/402/0457/front_en.4.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "restaurace-a-pivovar-beer-factory-svetly-lezak",
+  "breweryId": "restaurace-a-pivovar-beer-factory",
+  "name": "Světlý ležák",
+  "menuNameCs": "Světlý ležák",
+  "tier": "listed",
+  "plato": {
+   "value": 12,
+   "method": "official",
+   "source": "http://www.beerfactoryplzen.cz/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-aleien",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Aleien",
+  "menuNameCs": "Aleien",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.9,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/aleien/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-black-panda",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Black Panda",
+  "menuNameCs": "Black Panda",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.4,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/black-panda/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-karanska-9",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Káranská 9",
+  "menuNameCs": "Káranská 9",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 3.9,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/karanska-9/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-less-sugars-more-fun",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Less Sugars More Fun",
+  "menuNameCs": "Less Sugars More Fun",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 6.2,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/less-sugars-more-fun/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-london-calling",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "London Calling",
+  "menuNameCs": "London Calling",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.9,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/london-calling/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-pop-roll",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Pop & Roll",
+  "menuNameCs": "Pop & Roll",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.2,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/pop-roll/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-seaman",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Seaman",
+  "menuNameCs": "Seaman",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 3.9,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/seaman/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-summer-krush",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Summer Krush",
+  "menuNameCs": "Summer Krush",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 3.9,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/summer-krush/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-vinohradska-11",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Vinohradská 11",
+  "menuNameCs": "Vinohradská 11",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.5,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/vinohradska-11/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "vinohradsky-pivovar-yes",
+  "breweryId": "vinohradsky-pivovar",
+  "name": "Yes!",
+  "menuNameCs": "Yes!",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 4.2,
+   "method": "official",
+   "source": "https://www.vinohradskypivovar.cz/cs/pivo/yes/",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "breznak-original",
+  "breweryId": "breznak",
+  "name": "Original",
+  "menuNameCs": "Original",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.1,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036551007",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8591036551007",
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/1007/front_cs.23.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "breznak-premium-pils",
+  "breweryId": "breznak",
+  "name": "Premium Pils",
+  "menuNameCs": "Premium Pils",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.1,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036550376",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8591036550376",
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/0376/front_de.6.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticke-pivo",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětické pivo",
+  "menuNameCs": "Únětické pivo",
+  "tier": "listed",
+  "plato": {
+   "value": 10,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticky-special-jarni-petrklic",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětický speciál Jarní Petrklíč",
+  "menuNameCs": "Únětický speciál Jarní Petrklíč",
+  "tier": "listed",
+  "plato": {
+   "value": 11,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticky-special-letni",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětický speciál Letní",
+  "menuNameCs": "Únětický speciál Letní",
+  "tier": "listed",
+  "plato": {
+   "value": 8,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticky-special-masopustni-bock",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětický speciál Masopustní bock",
+  "menuNameCs": "Únětický speciál Masopustní bock",
+  "tier": "listed",
+  "plato": {
+   "value": 16,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticky-special-svatovaclavska",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětický speciál Svatováclavská",
+  "menuNameCs": "Únětický speciál Svatováclavská",
+  "tier": "listed",
+  "plato": {
+   "value": 14,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticky-special-vanocni",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětický speciál Vánoční",
+  "menuNameCs": "Únětický speciál Vánoční",
+  "tier": "listed",
+  "plato": {
+   "value": 13,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ },
+ {
+  "id": "uneticky-pivovar-uneticky-special-zitny",
+  "breweryId": "uneticky-pivovar",
+  "name": "Únětický speciál Žitný",
+  "menuNameCs": "Únětický speciál Žitný",
+  "tier": "listed",
+  "plato": {
+   "value": 11.5,
+   "method": "official",
+   "source": "http://www.unetickypivovar.cz/nase-piva",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-08-30"
+  },
+  "abv": null,
+  "ean": null,
+  "image": null,
+  "nonAlcoholic": false
+ }
+]

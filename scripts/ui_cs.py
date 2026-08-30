@@ -98,6 +98,22 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "Also brewed":
+   "Ještě vaří",
+ "These we know about but have not described. The numbers come from the brewery, with the page they were read from.":
+   "O těchhle víme, ale nepopsali jsme je. Čísla jsou od pivovaru, i s adresou stránky, ze které jsou vzatá.",
+ "We know this beer is brewed and where to drink it. We have not tasted it, so there is no description here and it does not take part in the anchor match. That is the honest state, not an oversight.":
+   "Víme, že se tohle pivo vaří, a víme, kde ho vypít. Neochutnali jsme ho, takže tu není popis a neúčastní se hledání podle kotvy. Tak to poctivě je, není to opomenutí.",
+ "Where the numbers come from":
+   "Odkud jsou ta čísla",
+ "Barcode":
+   "Čárový kód",
+ "source →":
+   "zdroj →",
+ "Known, not yet described":
+   "Známe, ale nepopsali jsme",
+ "Read off the brewery's own pages and off labels, with the source kept. No tasting notes, so they stay out of the anchor match until someone drinks them.":
+   "Sejmuto z vlastních stránek pivovarů a z etiket, se zachovaným zdrojem. Bez chuťového popisu, takže do hledání podle kotvy nevstupují, dokud je někdo nevypije.",
  "open around the clock":
    "otevřeno nonstop",
  "closed today":

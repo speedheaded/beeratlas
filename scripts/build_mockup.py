@@ -86,8 +86,29 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from brewing_text import PROCESS  # noqa: E402
 from brewing_text_cs import PROCESS as PROCESS_CS  # noqa: E402
 
+# второй уровень каталога: сорта, которые мы знаем, но не описали.
+# Без вкусового профиля — значит, в подборе по якорю не участвуют.
+listed_path = DATA / "listed.json"
+slim_listed = []
+if listed_path.exists():
+    for r in json.loads(listed_path.read_text(encoding="utf-8")):
+        if r["breweryId"] not in keep:
+            continue
+        slim_listed.append({
+            "id": r["id"], "breweryId": r["breweryId"], "name": r["name"],
+            "cs": r.get("menuNameCs") or r["name"],
+            "plato": (r.get("plato") or {}).get("value"),
+            "abv": (r.get("abv") or {}).get("value"),
+            "src": (r.get("plato") or r.get("abv") or {}).get("source"),
+            "origin": (r.get("plato") or r.get("abv") or {}).get("origin"),
+            "at": (r.get("plato") or r.get("abv") or {}).get("checkedAt"),
+            "ean": r.get("ean"),
+            "venues": counts.get(r["breweryId"], 0),
+        })
+
 payload = {
     "generatedAt": stats["generatedAt"],
+    "listed": slim_listed,
     "process": [{"h": {"en": h, "cs": hc}, "b": {"en": b, "cs": bc}}
                 for (h, b), (hc, bc) in zip(PROCESS, PROCESS_CS)],
     "breweries": slim_br,
@@ -109,4 +130,4 @@ html = TPL.replace("/*__DATA__*/null", json.dumps(payload, ensure_ascii=False, s
 OUT.parent.mkdir(exist_ok=True)
 OUT.write_text(html, encoding="utf-8")
 print(f"записано: {OUT.relative_to(ROOT)}  ({len(html) // 1024} КБ)")
-print(f"  пивоварен в макете: {len(slim_br)}   заведений: {len(slim_ve)}   сортов: {len(slim_beer)}")
+print(f"  пивоварен в макете: {len(slim_br)}   заведений: {len(slim_ve)}   сортов: {len(slim_beer)} полных + {len(slim_listed)} строк")

@@ -35,15 +35,18 @@ TODAY = date.today().isoformat()
 
 # сильный признак раздела линейки против слабого: слово «pivo» есть
 # и в адресе отдельного сорта, а «naše piva» — только у раздела
-LINEUP_STRONG = re.compile(r"(?i)(nase-?piva|nase_piva|/piva|sortiment|produkty|"
-                           r"produkce|nabidka|our-beers|beers|vyrabime)")
-LINEUP_WEAK = re.compile(r"(?i)(piv[ao]|beer)")
+LINEUP_STRONG = re.compile(r"(?i)(nase-?piva|nase_piva|/piva\b|sortiment|produkty|"
+                           r"produkce|nabidka|our-beers|\bbeers\b|vyrabime)")
+LINEUP_WEAK = re.compile(r"(?i)(piv[ao]|\bbeer\b)")
 SKIP_LINK = re.compile(r"(?i)(eshop|e-shop|obchod|kosik|cart|facebook|instagram|youtube|"
                        r"\.pdf$|\.jpg$|\.png$|mailto:|tel:|/kontakt|/o-nas|/historie)")
 
 PLATO_DEG = re.compile(r"(\d{1,2}(?:[.,]\d)?)\s*°")
 ABV_LABEL = re.compile(r"(?i)(?:obsah\s+alkoholu|alkohol|alc\.?|abv)[^0-9]{0,12}(\d{1,2}[.,]\d{1,2})\s*%")
 ABV_OBJ = re.compile(r"(\d{1,2}[.,]\d{1,2})\s*%\s*obj")
+# EPM (extrakt puvodni mladiny) и stupnovitost — это СТЕПЕНЬ, хотя пишутся
+# с процентом и с десятичной частью. Без этого «EPM 12,2 %» уходит в ABV.
+PLATO_LABEL = re.compile(r"(?i)\b(?:EPM|stupnovitost|stupňovitost|extrakt\s+p[uů]vodn[ií])[^0-9]{0,14}(\d{1,2}(?:[.,]\d)?)\s*%")
 PCT_ANY = re.compile(r"(\d{1,2}(?:[.,]\d{1,2})?)\s*%")
 NOISE = re.compile(r"(?i)(cookie|souhlas|přihlá|registr|copyright|všechna práva|menu|"
                    r"newsletter|odběr|mladistv|18 let)")
@@ -92,7 +95,7 @@ def classify(line):
     plato = abv = None
     review = False
 
-    m = PLATO_DEG.search(line)
+    m = PLATO_DEG.search(line) or PLATO_LABEL.search(line)
     if m:
         plato = m.group(1).replace(",", ".")
 
@@ -100,7 +103,7 @@ def classify(line):
     if m:
         abv = m.group(1).replace(",", ".")
 
-    if abv is None:
+    if abv is None and PLATO_LABEL.search(line) is None:
         for raw in PCT_ANY.findall(line):
             val = float(raw.replace(",", "."))
             if "." in raw or "," in raw:
@@ -162,7 +165,7 @@ def page_record(dom, url):
     text = to_text(dom)
     plato = abv = None
     review = False
-    pm = PLATO_DEG.search(text)
+    pm = PLATO_DEG.search(text) or PLATO_LABEL.search(text)
     if pm:
         plato = pm.group(1).replace(",", ".")
     am = ABV_LABEL.search(text) or ABV_OBJ.search(text)
@@ -202,6 +205,29 @@ def merge(beers):
         if len(x["name"]) > len(cur["name"]):
             cur["name"] = x["name"]
     return [out[k] for k in order]
+
+
+def resolve_review(beers):
+    """Снимает пометку «проверить» там, где её снимает арифметика.
+
+    Svijany пишет степень через процент: «Svijanský Máz 11 %». Само по себе
+    число 11 двусмысленно. Но если у того же сорта есть настоящая крепость со
+    страницы сорта, двусмысленности нет: у пива крепость составляет примерно
+    треть степени. 15° и 6,5 % — согласованная пара, 11 % крепости при
+    отсутствии степени — невозможная. Считаем, а не спрашиваем человека.
+    """
+    for x in beers:
+        if not (x["needsReview"] and x["plato"] and x["abv"]):
+            continue
+        try:
+            ratio = float(x["abv"]) / float(x["plato"])
+        except (TypeError, ValueError, ZeroDivisionError):
+            continue
+        if 0.30 <= ratio <= 0.50:
+            x["needsReview"] = False
+            x["resolvedBy"] = "крепость %s к степени %s даёт %.2f — пара согласована" % (
+                x["abv"], x["plato"], ratio)
+    return beers
 
 
 def crawl(b, max_pages=22):
@@ -261,7 +287,7 @@ def crawl(b, max_pages=22):
             beers.append(rec)
         beers += beer_lines(to_text(dom), u)
 
-    out = merge(beers)
+    out = resolve_review(merge(beers))
     # безымянная запись — это та же строка со страницы сорта, где имя дал
     # заголовок: если такое число уже есть у названного сорта, дубль убираем
     named = {(x["plato"], x["abv"], x["url"]) for x in out if x["name"]}

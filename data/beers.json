@@ -4402,8 +4402,10 @@
    "method": "unverified"
   },
   "abv": {
-   "value": 5.6,
-   "method": "unverified"
+   "value": 5.2,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-knezna-13",
+   "checkedAt": "2026-08-30"
   },
   "flavour": {
    "value": {
@@ -4432,8 +4434,8 @@
    "en": {
     "attenuation": {
      "oe": 13,
-     "ae": 2.2,
-     "adf": 83
+     "ae": 2.9,
+     "adf": 77
     },
     "ingredients": [
      {
@@ -4493,7 +4495,7 @@
         "lvl": "brewery"
        }
       ],
-      "note": "The yeast took it a long way down — about <b>83&nbsp;%</b> of the wort fermented out, leaving roughly <b>2.2°</b> in the glass. That is why it drinks lighter than its gravity suggests: the alcohol is there, the body is not.",
+      "note": "Fermentation ran to about <b>77&nbsp;%</b>, leaving around <b>2.9°</b> of residual extract — the ordinary Czech balance, enough malt left to carry the beer without weighing it down.",
       "days": [
        6,
        8
@@ -4554,8 +4556,8 @@
    "cs": {
     "attenuation": {
      "oe": 13,
-     "ae": 2.2,
-     "adf": 83
+     "ae": 2.9,
+     "adf": 77
     },
     "ingredients": [
      {
@@ -4615,7 +4617,7 @@
         "lvl": "brewery"
        }
       ],
-      "note": "Kvasnice to dotáhly hodně nízko — prokvasilo zhruba <b>83&nbsp;%</b> mladiny a ve sklenici zůstalo asi <b>2.2°</b> extraktu. Proto se pivo pije lehčeji, než jeho stupňovitost napovídá: alkohol tu je, plnost ne.",
+      "note": "Kvašení došlo zhruba k <b>77&nbsp;%</b> a zůstalo kolem <b>2.9°</b> zbytkového extraktu — běžná česká rovnováha, dost sladu na to, aby pivo neslo, a ne tolik, aby tížilo.",
       "days": [
        6,
        8

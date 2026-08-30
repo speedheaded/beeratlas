@@ -131,6 +131,38 @@ def brewery_index(breweries):
     return idx
 
 
+def brand_only_index(breweries):
+    """Только марки, без имён компаний.
+
+    В Open Food Facts поле brands заполняют люди, и у части банок Kozel там
+    стоит «Plzensky Prazdroj» — владелец, а не пивоварня. Марка в НАЗВАНИИ
+    товара точнее: варит Kozel велкопоповицкий завод, а не плзеньский.
+    """
+    have = {b["id"] for b in breweries}
+    out = {}
+    for brand, company in BRAND_TO_COMPANY.items():
+        if company in have:
+            out[slug(brand)] = company
+            tail = slug(brand).split("-")[-1]
+            if len(tail) >= 5:
+                out.setdefault(tail, company)
+    for written, canonical in SPELLING.items():
+        company = BRAND_TO_COMPANY.get(canonical)
+        if company in have:
+            out.setdefault(written, company)
+    return out
+
+
+def match_by_name(name, brand_idx):
+    k = slug(name)
+    if not k:
+        return None
+    for brand, company in sorted(brand_idx.items(), key=lambda x: -len(x[0])):
+        if brand in k:
+            return company
+    return None
+
+
 def match_brewery(brands, idx):
     for part in re.split(r"[,;/]", brands or ""):
         k = slug(part)
@@ -147,6 +179,7 @@ def match_brewery(brands, idx):
 def main():
     breweries = json.loads((DATA / "breweries.json").read_text(encoding="utf-8"))
     idx = brewery_index(breweries)
+    brand_idx = brand_only_index(breweries)
 
     print("Open Food Facts: чешское пиво…", flush=True)
     prods = fetch_all()
@@ -163,7 +196,11 @@ def main():
                 abv = None
         plato, review = degree_from(name or p.get("generic_name"), abv)
 
-        bid, how = match_brewery(brands, idx)
+        # марка в названии товара главнее компании в поле brands
+        bid = match_by_name(name, brand_idx)
+        how = "brand-in-name" if bid else None
+        if bid is None:
+            bid, how = match_brewery(brands, idx)
         if bid is None and brands:
             unmatched[brands] = unmatched.get(brands, 0) + 1
 

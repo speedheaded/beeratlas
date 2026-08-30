@@ -140,7 +140,21 @@ def flavour(vals):
             "source": "выведено из стиля и параметров", "checkedAt": TODAY}
 
 
-def num(v):
+# Значения, снятые с первичного источника. Перебивают уровень unverified,
+# который таблица ROWS назначает всему подряд, и несут адрес и дату.
+# Пополняется при вычитке: сайт пивоварни, этикетка, телефонный ответ.
+CONFIRMED = {
+    ("svijanska-knezna", "abv"): (
+        5.2, "official",
+        "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-knezna-13", "2026-08-30"),
+}
+
+
+def num(v, bid=None, field=None):
+    conf = CONFIRMED.get((bid, field))
+    if conf:
+        val, method, src, when = conf
+        return {"value": val, "method": method, "source": src, "checkedAt": when}
     return None if v is None else {"value": v, "method": "unverified"}
 
 
@@ -170,7 +184,8 @@ def main():
     for name, bid, cs, style, plato, abv, vals, likes in ROWS:
         beers.append({
             "id": slug(name), "breweryId": bid, "name": name, "menuNameCs": cs,
-            "style": style, "plato": num(plato), "abv": num(abv),
+            "style": style,
+            "plato": num(plato, slug(name), "plato"), "abv": num(abv, slug(name), "abv"),
             "flavour": flavour(vals), "tastesLike": likes,
             "availability": "core", "isAnchor": False,
             **text(slug(name)),
