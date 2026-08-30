@@ -98,6 +98,24 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "The name on the front. You can type it; having the camera read it needs a server.":
+   "Název na přední straně. Můžete ho napsat; aby ho přečetla kamera, je potřeba server.",
+ "Or read the front and type it":
+   "Nebo si přečtěte přední stranu a napište to",
+ "Whatever is written largest on the label will do — the brewery name usually is. This searches what the atlas already holds, with nothing sent anywhere, and answers even when the bottle has no barcode we know.":
+   "Stačí to, co je na etiketě napsané největším písmem — obvykle jméno pivovaru. Hledá se v tom, co atlas už má, nikam se nic neposílá, a odpověď přijde i u láhve, jejíž čárový kód neznáme.",
+ "Svijany, Kozel, Únětický…":
+   "Svijany, Kozel, Únětický…",
+ "Nothing in the atlas reads like that. Try the brewery name instead — it is usually the biggest word on the label.":
+   "Nic takového v atlasu není. Zkuste jméno pivovaru — bývá na etiketě největší.",
+ "full page":
+   "celá stránka",
+ "catalogue line":
+   "řádek katalogu",
+ "unconfirmed mark":
+   "nepotvrzená značka",
+ "We have not confirmed this as a brewery — it is a name on a tap, and nothing more. But we know who puts it there, and that is still an answer:":
+   "Jako pivovar jsme to nepotvrdili — je to jméno na pípě a nic víc. Víme ale, kdo ho tam dal, a to je pořád odpověď:",
  "Scan a bottle":
    "Načíst láhev",
  "Photograph the bottle":

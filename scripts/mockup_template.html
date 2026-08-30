@@ -1066,7 +1066,7 @@ function listedPage(id){
 
 const RUNGS = [
   ["barcode", "Barcode", "Read by the phone itself. Exact when it hits."],
-  ["label",   "Label",   "Reading the name off the label. Needs a server — not built yet."],
+  ["label",   "Label",   "The name on the front. You can type it; having the camera read it needs a server."],
   ["brewery", "Brewery", "Beer unknown, brewery known. Enough to say where it is poured."],
   ["anchor",  "Anchor",  "Nothing known. We take what the label says into the finder."]
 ];
@@ -1081,18 +1081,11 @@ function rungList(hit){
   }).join("")}</div>`;
 }
 
-function scanAnswer(ean){
-  const r = (DATA.scan || {})[ean];
+/* Три входа — штрихкод, чтение этикетки и набор руками — сходятся сюда.
+   Разница принципиальная и её видно на экране: штрихкод даёт ОТВЕТ, а
+   название с этикетки даёт КАНДИДАТОВ, потому что это всегда догадка. */
+function renderAnswer(r, hit){
   const el = $("#scan-out");
-  if (!r) {
-    el.innerHTML = `<div class="answer"><div class="answer-in">
-      <h3>${T("Not a barcode we know")}</h3>
-      <p>${T("The atlas holds 139 Czech bottles with a barcode. This is not one of them — which is the honest answer, not a failure of the phone.")}</p>
-      <button class="btn-alt" data-go="#/find">${T("Find your beer")}</button>
-    </div></div>`;
-    return;
-  }
-  const hit = r.kind === "none" ? "anchor" : (r.kind === "brewery" ? "brewery" : "barcode");
   const br = r.brewery ? brById[r.brewery] : null;
   let body = "";
   if (r.kind === "beer") {
@@ -1109,6 +1102,11 @@ function scanAnswer(ean){
     body = `<h3>${esc(br ? br.name : r.brand)}</h3>
       <p>${T("This exact beer is not in the atlas. The brewery is, and that answers the question you actually asked: where it is poured in Prague.")}</p>
       <button class="btn-go" data-go="#/brewery/${r.id}">${T("Where the brewery is poured")}</button>`;
+  } else if (r.kind === "hint") {
+    body = `<h3>${esc(r.label)}</h3>
+      <p>${T("We have not confirmed this as a brewery — it is a name on a tap, and nothing more. But we know who puts it there, and that is still an answer:")}
+        <b>${esc((r.venues || []).join(", "))}</b>.</p>
+      <button class="btn-alt" data-go="#/breweries">${T("Marks we have not confirmed")}</button>`;
   } else {
     const read = [r.label, r.brand, r.abv ? r.abv + " %" : null, r.plato ? r.plato + "°" : null]
       .filter(Boolean).join(" · ");
@@ -1119,6 +1117,84 @@ function scanAnswer(ean){
   }
   el.innerHTML = rungList(hit) + `<div class="answer"><div class="answer-in">${body}</div></div>`;
   el.scrollIntoView({block: "nearest"});
+}
+
+function scanAnswer(ean){
+  const r = (DATA.scan || {})[ean];
+  if (!r) {
+    $("#scan-out").innerHTML = `<div class="answer"><div class="answer-in">
+      <h3>${T("Not a barcode we know")}</h3>
+      <p>${T("The atlas holds 139 Czech bottles with a barcode. This is not one of them — which is the honest answer, not a failure of the phone.")}</p>
+      <button class="btn-alt" data-go="#/find">${T("Find your beer")}</button>
+    </div></div>`;
+    return;
+  }
+  renderAnswer(r, r.kind === "none" ? "anchor" : (r.kind === "brewery" ? "brewery" : "barcode"));
+}
+
+/* Набор с этикетки. Работает для ЛЮБОЙ бутылки, включая те, у которых нет
+   ни штрихкода в нашей таблице, ни фотографии: человек и так читает
+   название глазами, здесь он просто набирает три буквы. Ноль вызовов
+   наружу — ищем по тому, что уже лежит в странице. */
+const fold = s => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+let LABEL_IDX = null;
+function labelIndex(){
+  if (LABEL_IDX) return LABEL_IDX;
+  const idx = [];
+  const add = (kind, id, name, extra, brewery, venues) => {
+    if (name) idx.push({kind, id, label: name, brand: extra || "", brewery, venues,
+                        k: fold(name + " " + (extra || ""))});
+  };
+  (DATA.beers || []).filter(b => !b.anchor)
+    .forEach(b => add("beer", b.id, b.name, [b.cs, b.style].filter(Boolean).join(" "), b.breweryId));
+  (DATA.listed || []).forEach(b => add("listed", b.id, b.name, b.cs, b.breweryId));
+  (DATA.breweries || []).forEach(b => add("brewery", b.id, b.name, b.nameEn || "", b.id));
+  (DATA.hints || []).forEach(h => add("hint", null, h.brand, "", null, h.venues));
+  LABEL_IDX = idx;
+  return idx;
+}
+
+const KIND_ORDER = {beer: 0, listed: 1, brewery: 2, hint: 3};
+
+function labelSearch(q){
+  const toks = fold(q).split(/\s+/).filter(t => t.length >= 2);
+  if (!toks.length) return [];
+  const hits = [];
+  for (const it of labelIndex()) {
+    if (!toks.every(t => it.k.indexOf(t) >= 0)) continue;
+    const head = fold(it.label).startsWith(toks[0]) ? 0 : 1;
+    hits.push([head, KIND_ORDER[it.kind], it.label.length, it]);
+  }
+  hits.sort((a, b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2]);
+  return hits.slice(0, 8).map(h => h[3]);
+}
+
+const KIND_WHY = {beer: "full page", listed: "catalogue line",
+                  brewery: "brewery", hint: "unconfirmed mark"};
+
+function labelResults(q){
+  const box = $("#label-out");
+  const hits = labelSearch(q);
+  if (!q.trim()) { box.innerHTML = ""; return; }
+  if (!hits.length) {
+    box.innerHTML = `<p class="note" style="border:0;padding:0;margin-top:10px">${
+      T("Nothing in the atlas reads like that. Try the brewery name instead — it is usually the biggest word on the label.")}</p>`;
+    return;
+  }
+  box.innerHTML = `<div class="bottles" style="margin-top:12px">${hits.map((h, i) => `
+    <button class="bottle" data-hit="${i}">
+      <span class="n">${esc(h.label)}</span>
+      <span class="m">${T(KIND_WHY[h.kind])}${h.brewery && brById[h.brewery] && h.kind !== "brewery"
+        ? " · " + esc(brById[h.brewery].name) : ""}</span>
+    </button>`).join("")}</div>`;
+  box.querySelectorAll("[data-hit]").forEach(b => {
+    b.onclick = () => {
+      const h = hits[+b.dataset.hit];
+      renderAnswer(h, h.kind === "hint" ? "anchor"
+        : (h.kind === "brewery" ? "brewery" : "label"));
+    };
+  });
 }
 
 let camStream = null;
@@ -1171,6 +1247,13 @@ function scanPage(){
     <p class="note" id="scan-note" style="margin-top:0;border:0;padding:0">${T("The barcode is on the back of the bottle — turn it round. That one the prototype reads for real. The front, with the name on it, is the next rung, and that one needs a server: here it is shown, not done.")}</p>
     <video id="cam" hidden playsinline muted></video>
 
+    <h2 style="margin-top:34px">${T("Or read the front and type it")}</h2>
+    <p class="lead" style="max-width:60ch">${T("Whatever is written largest on the label will do — the brewery name usually is. This searches what the atlas already holds, with nothing sent anywhere, and answers even when the bottle has no barcode we know.")}</p>
+    <div class="scan-in" style="margin-top:14px">
+      <input id="label-q" style="width:280px" placeholder="${T("Svijany, Kozel, Únětický…")}" autocomplete="off">
+    </div>
+    <div id="label-out"></div>
+
     <div id="scan-out"></div>
 
     <h2 style="margin-top:40px">${T("Or take one of these ten")}</h2>
@@ -1182,6 +1265,7 @@ function scanPage(){
       </button>`).join("")}</div>`;
 
   $("#scan-cam").onclick = scanCamera;
+  $("#label-q").oninput = e => labelResults(e.target.value);
   $("#scan-go").onclick = () => scanAnswer($("#scan-ean").value.trim());
   $("#scan-ean").onkeydown = e => { if (e.key === "Enter") scanAnswer(e.target.value.trim()); };
   document.querySelectorAll(".bottle").forEach(b => {
