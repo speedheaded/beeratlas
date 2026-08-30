@@ -219,6 +219,39 @@ h2.dist span{font-weight:500;letter-spacing:.06em;text-transform:none;font-size:
 .conf{font-size:14.5px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
 .decl{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 2px;max-width:74ch}
 
+
+/* ── распознавание бутылки ── */
+.scan-in{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:26px 0 8px}
+.scan-in input{font:inherit;font-size:17px;padding:12px 14px;border:2px solid var(--ink);
+  background:var(--card-light);color:var(--ink);width:220px;letter-spacing:.06em}
+.btn-go{border:2px solid var(--ink);background:var(--gold);color:#17190F;padding:13px 20px;
+  font-size:14px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.btn-alt{border:2px solid var(--ink);padding:13px 20px;font-size:14px;font-weight:700;
+  letter-spacing:.11em;text-transform:uppercase;background:var(--card-light)}
+#cam{display:block;width:100%;max-width:420px;border:2px solid var(--ink);background:#000;margin-top:14px}
+#cam[hidden]{display:none}   /* иначе display:block перебивает атрибут hidden */
+.rungs{border:2px solid var(--ink);background:var(--card-light);margin:26px 0 0}
+.rung{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:14px 18px;
+  border-bottom:1px solid var(--line);align-items:start}
+.rung:last-child{border-bottom:0}
+.rung i{font-style:normal;width:26px;height:26px;border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted)}
+.rung.hit i{border-color:var(--green);background:var(--green);color:var(--foam)}
+.rung.hit b{color:var(--ink)}
+.rung.skip{opacity:.45}
+.rung b{display:block;font-size:15.5px;color:var(--muted)}
+.rung span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:2px}
+.answer{border:3px solid var(--green);padding:5px;background:var(--green);margin-top:24px}
+.answer-in{border:1px solid var(--green-light);background:var(--card-light);padding:22px 24px}
+.answer h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:26px;margin:0 0 6px}
+.answer p{font-size:16px;line-height:1.6;color:var(--body);margin:0 0 14px;max-width:60ch}
+.bottles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:2px;
+  background:var(--line);border:2px solid var(--ink);margin-top:16px}
+.bottle{background:var(--card-light);padding:14px 16px;display:block;text-align:left}
+.bottle .n{display:block;font-size:16px;font-weight:600;color:var(--ink)}
+.bottle .m{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;font-variant-numeric:tabular-nums}
+@media (max-width:620px){.scan-in input{width:100%}}
+
 /* sidebar */
 .panel{border:2px solid var(--ink);background:var(--card-light)}
 .panel .head{background:var(--ink);color:var(--card);padding:9px 16px;
@@ -396,6 +429,7 @@ footer{margin-top:40px;padding-top:22px;border-top:4px solid var(--gold);font-si
       <button data-go="#/venues" data-i18n="Where to drink">Where to drink</button>
       <button data-go="#/brewing" data-i18n="How it is made">How it is made</button>
       <button data-go="#/ordering" data-i18n="Ordering in Czech">Ordering in Czech</button>
+      <button data-go="#/scan" data-i18n="Scan a bottle">Scan a bottle</button>
     </nav>
     <span class="langsw"><button data-lang="en">EN</button><button data-lang="cs">CS</button></span>
     <button class="cta" data-go="#/find" data-i18n="Find your beer">Find your beer</button>
@@ -1023,6 +1057,138 @@ function listedPage(id){
     </div></div>`;
 }
 
+
+/* ── распознавание бутылки ──────────────────────────────────────────────
+   Первая ступень настоящая: штрихкод читает сам браузер через
+   BarcodeDetector, локально. Ни зрительной модели, ни сервера, ни платы.
+   Вторая ступень — чтение этикетки — в прототипе не построена, для неё
+   нужен бэкенд, и страница об этом прямо говорит.                      */
+
+const RUNGS = [
+  ["barcode", "Barcode", "Read by the phone itself. Exact when it hits."],
+  ["label",   "Label",   "Reading the name off the label. Needs a server — not built yet."],
+  ["brewery", "Brewery", "Beer unknown, brewery known. Enough to say where it is poured."],
+  ["anchor",  "Anchor",  "Nothing known. We take what the label says into the finder."]
+];
+
+function rungList(hit){
+  const order = ["barcode", "label", "brewery", "anchor"];
+  const at = order.indexOf(hit);
+  return `<div class="rungs">${RUNGS.map(([id, name, why], i) => {
+    const cls = id === hit ? "rung hit" : (i < at ? "rung" : "rung skip");
+    return `<div class="${cls}"><i>${i + 1}</i><div>
+      <b>${T(name)}</b><span>${T(why)}</span></div></div>`;
+  }).join("")}</div>`;
+}
+
+function scanAnswer(ean){
+  const r = (DATA.scan || {})[ean];
+  const el = $("#scan-out");
+  if (!r) {
+    el.innerHTML = `<div class="answer"><div class="answer-in">
+      <h3>${T("Not a barcode we know")}</h3>
+      <p>${T("The atlas holds 139 Czech bottles with a barcode. This is not one of them — which is the honest answer, not a failure of the phone.")}</p>
+      <button class="btn-alt" data-go="#/find">${T("Find your beer")}</button>
+    </div></div>`;
+    return;
+  }
+  const hit = r.kind === "none" ? "anchor" : (r.kind === "brewery" ? "brewery" : "barcode");
+  const br = r.brewery ? brById[r.brewery] : null;
+  let body = "";
+  if (r.kind === "beer") {
+    const b = beerById[r.id] || {};
+    body = `<h3>${esc(b.name || r.label)}</h3>
+      <p>${T("Matched. There is a full page: how it is made, how it differs from a beer you know, and where to drink it.")}</p>
+      <button class="btn-go" data-go="#/beer/${r.id}">${T("Open the beer")}</button>`;
+  } else if (r.kind === "listed") {
+    const l = listedById[r.id] || {};
+    body = `<h3>${esc(l.name || r.label)}</h3>
+      <p>${T("Matched a catalogue line. We know the numbers, the brewery and where to drink it. We have not tasted it, so there is no description.")}</p>
+      <button class="btn-go" data-go="#/listed/${r.id}">${T("Open the line")}</button>`;
+  } else if (r.kind === "brewery") {
+    body = `<h3>${esc(br ? br.name : r.brand)}</h3>
+      <p>${T("This exact beer is not in the atlas. The brewery is, and that answers the question you actually asked: where it is poured in Prague.")}</p>
+      <button class="btn-go" data-go="#/brewery/${r.id}">${T("Where the brewery is poured")}</button>`;
+  } else {
+    const read = [r.label, r.brand, r.abv ? r.abv + " %" : null, r.plato ? r.plato + "°" : null]
+      .filter(Boolean).join(" · ");
+    body = `<h3>${T("Not in the atlas")}</h3>
+      <p>${T("Here is everything the barcode gave us:")} <b>${esc(read)}</b>.
+        ${T("No Prague venue in our data pours it. Rather than invent a page, we hand you to the finder with what we read.")}</p>
+      <button class="btn-alt" data-go="#/find">${T("Find your beer")}</button>`;
+  }
+  el.innerHTML = rungList(hit) + `<div class="answer"><div class="answer-in">${body}</div></div>`;
+  el.scrollIntoView({block: "nearest"});
+}
+
+let camStream = null;
+async function scanCamera(){
+  const out = $("#scan-note"), vid = $("#cam");
+  if (!("BarcodeDetector" in window)) {
+    out.textContent = T("This browser cannot read barcodes. Type the digits instead.");
+    return;
+  }
+  try {
+    camStream = await navigator.mediaDevices.getUserMedia({video: {facingMode: "environment"}});
+  } catch (e) {
+    out.textContent = T("No camera here. Type the digits under the barcode instead.");
+    return;
+  }
+  vid.hidden = false; vid.srcObject = camStream; await vid.play();
+  out.textContent = T("Point the camera at the barcode.");
+  const det = new BarcodeDetector({formats: ["ean_13", "ean_8", "upc_a"]});
+  const tick = async () => {
+    if (!camStream) return;
+    try {
+      const found = await det.detect(vid);
+      if (found.length) {
+        const code = found[0].rawValue;
+        stopCamera(); out.textContent = T("Barcode read:") + " " + code;
+        scanAnswer(code); return;
+      }
+    } catch (e) {}
+    requestAnimationFrame(tick);
+  };
+  tick();
+}
+function stopCamera(){
+  if (camStream) camStream.getTracks().forEach(t => t.stop());
+  camStream = null;
+  const v = $("#cam"); if (v) { v.hidden = true; v.srcObject = null; }
+}
+
+function scanPage(){
+  const demo = (DATA.scanDemo || []).map(e => [e, DATA.scan[e]]).filter(x => x[1]);
+  $("#view").innerHTML = `<p class="crumb">${T("Photograph the bottle")}</p>
+    <h1 style="font-size:44px;margin-bottom:10px">${T("A bottle in your hand is the anchor")}</h1>
+    <p class="lead" style="max-width:60ch">${T("You do not have to remember a beer name. The barcode is read by the phone itself — locally, with no model and no server behind it — and the atlas answers from there. When the barcode misses, it steps down until it can still say where to drink the beer.")}</p>
+
+    <div class="scan-in">
+      <button class="btn-go" id="scan-cam">${T("Read the barcode")}</button>
+      <input id="scan-ean" inputmode="numeric" placeholder="${T("or type the digits")}" maxlength="14">
+      <button class="btn-alt" id="scan-go">${T("Look up")}</button>
+    </div>
+    <p class="note" id="scan-note" style="margin-top:0;border:0;padding:0">${T("The prototype reads barcodes for real. Reading the name off a label is the next rung and needs a server, so here it is shown, not done.")}</p>
+    <video id="cam" hidden playsinline muted></video>
+
+    <div id="scan-out"></div>
+
+    <h2 style="margin-top:40px">${T("Or take one of these ten")}</h2>
+    <p class="lead" style="max-width:60ch">${T("Real barcodes of bottles sold in Czech shops, chosen to land on each of the four rungs — including the two that miss.")}</p>
+    <div class="bottles">${demo.map(([ean, r]) => `
+      <button class="bottle" data-ean="${ean}">
+        <span class="n">${esc(r.label)}</span>
+        <span class="m">${esc(r.brand)} · ${ean}</span>
+      </button>`).join("")}</div>`;
+
+  $("#scan-cam").onclick = scanCamera;
+  $("#scan-go").onclick = () => scanAnswer($("#scan-ean").value.trim());
+  $("#scan-ean").onkeydown = e => { if (e.key === "Enter") scanAnswer(e.target.value.trim()); };
+  document.querySelectorAll(".bottle").forEach(b => {
+    b.onclick = () => { $("#scan-ean").value = b.dataset.ean; scanAnswer(b.dataset.ean); };
+  });
+}
+
 function beersPage(){
   const rows = DATA.beers.filter(b=>!b.anchor).sort((a,b)=>a.name.localeCompare(b.name));
   $("#view").innerHTML = `<p class="crumb">${T("Beers")}</p>
@@ -1204,10 +1370,12 @@ function route(){
   const [, kind, id] = h.split("/");
   document.querySelectorAll(".nav button").forEach(b =>
     b.toggleAttribute("aria-current", b.dataset.go === "#/" + kind + "s" || b.dataset.go === h));
+  stopCamera();
   if (kind === "home" || !kind) homePage();
   else if (kind === "find") finderPage();
   else if (kind === "beers") beersPage();
   else if (kind === "listed") listedPage(id);
+  else if (kind === "scan") scanPage();
   else if (kind === "breweries") breweriesPage();
   else if (kind === "brewery") breweryPage(id);
   else if (kind === "venues") venuesPage();

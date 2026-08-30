@@ -37,7 +37,7 @@ MOCKUP = ROOT / "mockup" / "index.html"
 ROUTES = ["#/cs/", "#/cs/find", "#/cs/beers", "#/cs/breweries",
           "#/cs/brewery/pivovar-svijany", "#/cs/beer/pilsner-urquell",
           "#/cs/beer/matuska-raptor", "#/cs/venues", "#/cs/brewing",
-          "#/cs/ordering", "#/cs/correct"]
+          "#/cs/ordering", "#/cs/correct", "#/cs/scan"]
 
 # слова, которых в чешском тексте быть не может
 EN = (r"\b(the|and|with|from|days?|brewery|breweries|style|this|that|what|where|"

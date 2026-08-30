@@ -98,6 +98,70 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "Scan a bottle":
+   "Načíst láhev",
+ "Photograph the bottle":
+   "Vyfoťte láhev",
+ "A bottle in your hand is the anchor":
+   "Láhev v ruce je ta kotva",
+ "You do not have to remember a beer name. The barcode is read by the phone itself — locally, with no model and no server behind it — and the atlas answers from there. When the barcode misses, it steps down until it can still say where to drink the beer.":
+   "Nemusíte si vzpomínat na název piva. Čárový kód přečte sám telefon — u vás, bez modelu a bez serveru — a atlas odpovídá odtud. Když kód mine, sestoupí o stupeň níž, dokud pořád ještě dokáže říct, kde to pivo vypít.",
+ "Read the barcode":
+   "Načíst čárový kód",
+ "or type the digits":
+   "nebo opište číslice",
+ "Look up":
+   "Najít",
+ "The prototype reads barcodes for real. Reading the name off a label is the next rung and needs a server, so here it is shown, not done.":
+   "Prototyp čte čárové kódy doopravdy. Přečíst název z etikety je další stupeň, na ten je potřeba server — tady je ukázaný, ne provedený.",
+ "Or take one of these ten":
+   "Nebo si vezměte jednu z těchhle deseti",
+ "Real barcodes of bottles sold in Czech shops, chosen to land on each of the four rungs — including the two that miss.":
+   "Skutečné čárové kódy lahví, které se v Česku prodávají, vybrané tak, aby dopadly na každý ze čtyř stupňů — včetně dvou, které minou.",
+ "Barcode":
+   "Čárový kód",
+ "Read by the phone itself. Exact when it hits.":
+   "Přečte ho sám telefon. Když trefí, tak přesně.",
+ "Label":
+   "Etiketa",
+ "Reading the name off the label. Needs a server — not built yet.":
+   "Přečíst název z etikety. Je na to potřeba server — zatím nepostavené.",
+ "Beer unknown, brewery known. Enough to say where it is poured.":
+   "Pivo neznáme, pivovar ano. To stačí na odpověď, kde se čepuje.",
+ "Anchor":
+   "Kotva",
+ "Nothing known. We take what the label says into the finder.":
+   "Nevíme nic. Co se dá vyčíst, bereme do hledání.",
+ "Not a barcode we know":
+   "Tenhle kód neznáme",
+ "The atlas holds 139 Czech bottles with a barcode. This is not one of them — which is the honest answer, not a failure of the phone.":
+   "Atlas má 139 českých lahví s čárovým kódem. Tahle mezi nimi není — a to je poctivá odpověď, ne selhání telefonu.",
+ "Matched. There is a full page: how it is made, how it differs from a beer you know, and where to drink it.":
+   "Trefa. Je k tomu celá stránka: jak se to vaří, čím se to liší od piva, které znáte, a kde to vypít.",
+ "Open the beer":
+   "Otevřít pivo",
+ "Matched a catalogue line. We know the numbers, the brewery and where to drink it. We have not tasted it, so there is no description.":
+   "Trefa do řádku katalogu. Známe čísla, pivovar i to, kde ho vypít. Neochutnali jsme ho, takže tu není popis.",
+ "Open the line":
+   "Otevřít řádek",
+ "This exact beer is not in the atlas. The brewery is, and that answers the question you actually asked: where it is poured in Prague.":
+   "Tohle konkrétní pivo v atlasu není. Pivovar ano, a to odpovídá na otázku, kterou jste doopravdy položili: kde se čepuje v Praze.",
+ "Where the brewery is poured":
+   "Kde se pivovar čepuje",
+ "Not in the atlas":
+   "V atlasu není",
+ "Here is everything the barcode gave us:":
+   "Tohle je všechno, co nám čárový kód dal:",
+ "No Prague venue in our data pours it. Rather than invent a page, we hand you to the finder with what we read.":
+   "Žádný pražský podnik v našich datech ho nečepuje. Místo vymýšlení stránky vás pošleme do hledání s tím, co jsme přečetli.",
+ "This browser cannot read barcodes. Type the digits instead.":
+   "Tenhle prohlížeč čárové kódy neumí. Opište číslice.",
+ "No camera here. Type the digits under the barcode instead.":
+   "Kamera tu není. Opište číslice pod čárovým kódem.",
+ "Point the camera at the barcode.":
+   "Namiřte kameru na čárový kód.",
+ "Barcode read:":
+   "Přečteno:",
  "district not in source":
    "část ve zdroji není",
  "no street":

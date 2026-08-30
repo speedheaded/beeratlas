@@ -122,8 +122,72 @@ for v in venues:
 slim_hints = [{"brand": b, "venues": sorted(vs)} for b, vs in
               sorted(hints.items(), key=lambda kv: (-len(kv[1]), kv[0].lower()))]
 
+# Справочник штрихкодов для распознавания бутылки. Штрихкод читает сам
+# телефон, локально: ни зрительной модели, ни бэкенда, ни платы за вызов.
+# Ступени ответа, по убыванию точности:
+#   beer    — есть полная страница сорта
+#   listed  — есть строка каталога: числа с источником, без описания вкуса
+#   brewery — сорт неизвестен, но пивоварню знаем, а значит знаем и где налить
+#   none    — не знаем ничего; читаем с этикетки что можем и ведём в подбор
+def _key(x):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", x or "")
+    return re.sub(r"[^a-z0-9]+", "", "".join(c for c in t if not unicodedata.combining(c)).lower())
+
+full_idx, listed_idx = {}, {}
+for b in beers:
+    for nm in (b["name"], b.get("menuNameCs")):
+        if nm:
+            full_idx[(b["breweryId"], _key(nm))] = b["id"]
+listed_rows = json.loads(listed_path.read_text(encoding="utf-8")) if listed_path.exists() else []
+for r in listed_rows:
+    listed_idx[(r["breweryId"], _key(r["name"]))] = r["id"]
+
+shelf_path = DATA / "shelf_raw.json"
+scan = {}
+if shelf_path.exists():
+    for x in json.loads(shelf_path.read_text(encoding="utf-8")):
+        ean = x.get("ean")
+        if not ean:
+            continue
+        bid = x.get("breweryId")
+        key = (bid, _key(x.get("name")))
+        if key in full_idx:
+            kind, target = "beer", full_idx[key]
+        elif key in listed_idx:
+            kind, target = "listed", listed_idx[key]
+        elif bid in keep:
+            kind, target = "brewery", bid
+        else:
+            kind, target = "none", None
+        scan[ean] = {
+            "kind": kind, "id": target,
+            "label": x.get("name") or "", "brand": x.get("brands") or "",
+            "abv": x.get("abv"), "plato": x.get("plato"),
+            "brewery": bid if bid in keep else None,
+        }
+
+# десять бутылок для показа — по всем четырём ступеням, чтобы видно было
+# и попадание, и честный промах
+demo, per, seen_b = [], {"beer": 0, "listed": 0, "brewery": 0, "none": 0}, set()
+want = {"beer": 3, "listed": 3, "brewery": 2, "none": 2}
+for ean, r in sorted(scan.items(), key=lambda kv: (kv[1]["kind"], -len(kv[1]["label"]))):
+    lab = (r["label"] or "").lower()
+    if per[r["kind"]] >= want[r["kind"]] or not r["label"]:
+        continue
+    if "nealko" in lab or "bez alkoholu" in lab:      # безалкогольное — не показ
+        continue
+    mark = (r["kind"], r["brewery"] or r["brand"].lower())
+    if mark in seen_b:                                # по одному на пивоварню
+        continue
+    seen_b.add(mark)
+    per[r["kind"]] += 1
+    demo.append(ean)
+
 payload = {
     "hints": slim_hints,
+    "scan": scan,
+    "scanDemo": demo,
     "generatedAt": stats["generatedAt"],
     "listed": slim_listed,
     "process": [{"h": {"en": h, "cs": hc}, "b": {"en": b, "cs": bc}}
