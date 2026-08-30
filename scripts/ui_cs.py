@@ -98,6 +98,10 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "district not in source":
+   "část ve zdroji není",
+ "no street":
+   "bez ulice",
  "Plato":
    "Plato",
  "no gravity in source":

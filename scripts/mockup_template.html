@@ -108,6 +108,11 @@ h1{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:clamp(40p
 .v .n{font-size:18.5px;font-weight:600}
 .v .d{font-size:15px;color:var(--muted)}
 .v .p{font-size:15px;font-weight:600}
+h2.dist{display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  font-family:"Archivo",system-ui,sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  margin:30px 0 0;padding-bottom:7px;border-bottom:2px solid var(--gold)}
+h2.dist span{font-weight:500;letter-spacing:.06em;text-transform:none;font-size:13px}
 .v .hint{display:block;font-size:12.5px;line-height:1.45;color:var(--muted);margin-top:3px}
 .v .hint b{color:var(--body)}
 .v .h{font-size:13px;color:var(--muted);
@@ -524,7 +529,21 @@ function host(u){ try { return new URL(u).hostname.replace(/^www\./, ""); } catc
 const beerById = Object.fromEntries(DATA.beers.map(b => [b.id, b]));
 const brById = Object.fromEntries(DATA.breweries.map(b => [b.id, b]));
 const pourable = DATA.beers.filter(b => !b.anchor && b.venues > 0);
-const venuesFor = bid => DATA.venues.filter(v => v.b.indexOf(bid) >= 0);
+/* Городские части идут своим порядком, а не алфавитным: Praha 2 перед
+   Praha 10, именные части (Praha-Kunratice) после нумерованных, без района —
+   в конец. Иначе десятка встаёт между единицей и двойкой. */
+function districtRank(d){
+  if (!d) return [3, 0, ""];
+  const m = String(d).match(/^Praha\s+(\d{1,2})$/i);
+  if (m) return [0, parseInt(m[1], 10), ""];
+  if (/^Praha[\s-]/i.test(d)) return [1, 0, d];
+  return [2, 0, d];
+}
+function byDistrict(a, b){
+  const x = districtRank(a.d), y = districtRank(b.d);
+  return x[0] - y[0] || x[1] - y[1] || x[2].localeCompare(y[2]) || a.n.localeCompare(b.n);
+}
+const venuesFor = bid => DATA.venues.filter(v => v.b.indexOf(bid) >= 0).sort(byDistrict);
 
 /* ── shared bits ─────────────────────────────────────────────────────── */
 function tally(n){
@@ -1096,16 +1115,24 @@ function breweryPage(id){
 }
 
 function venuesPage(){
-  const vs = DATA.venues.filter(v=>v.p).sort((a,b)=>a.n.localeCompare(b.n));
+  const vs = DATA.venues.filter(v=>v.p).sort(byDistrict);
+  const groups = [];
+  for (const v of vs) {
+    const d = v.d || "";
+    if (!groups.length || groups[groups.length - 1][0] !== d) groups.push([d, []]);
+    groups[groups.length - 1][1].push(v);
+  }
   $("#view").innerHTML = `<p class="crumb">${T("Where to drink")}</p>
     <h1 style="font-size:44px;margin-bottom:8px">${T("%s pubs with a phone number").replace("%s", vs.length)}</h1>
     <p class="lead">${T("Of %s named Prague pubs and bars in OpenStreetMap. This list is the September call sheet — one question: will ten of us fit on a Thursday.").replace("%s", DATA.stats.venuesTotal)}</p>
-    <div class="vlist" style="margin-top:26px">${vs.slice(0,120).map(v=>`<div class="v">
-      <span><span class="n">${esc(v.n)}</span> <span class="d">${esc([v.st,v.d].filter(Boolean).join(" · ")||(LANG==="cs"?"bez adresy":"no address"))}</span>
-        ${(v.bh || []).length ? `<span class="hint">${T("also lists")} ${esc(v.bh.join(", "))} — ${T("not confirmed as breweries")}</span>` : ""}</span>
-      <span class="p"><a href="tel:${esc(v.p.replace(/\s/g,""))}">${esc(v.p)}</a></span>
-      ${hoursCell(v.h)}</div>`).join("")}</div>
-    <p class="note">${T("Showing 120 of %s.").replace("%s", vs.length)}</p>`;
+    ${groups.map(([d, list]) => `
+      <h2 class="dist">${esc(d || T("district not in source"))}
+        <span>${list.length} ${num(list.length, "venue", "venues", "podnik", "podniky", "podniků")}</span></h2>
+      <div class="vlist">${list.map(v=>`<div class="v">
+        <span><span class="n">${esc(v.n)}</span> <span class="d">${esc(v.st || (LANG==="cs"?"bez adresy":"no street"))}</span>
+          ${(v.bh || []).length ? `<span class="hint">${T("also lists")} ${esc(v.bh.join(", "))} — ${T("not confirmed as breweries")}</span>` : ""}</span>
+        <span class="p"><a href="tel:${esc(v.p.replace(/\s/g,""))}">${esc(v.p)}</a></span>
+        ${hoursCell(v.h)}</div>`).join("")}</div>`).join("")}`;
 }
 
 function correctPage(){
