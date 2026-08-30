@@ -98,6 +98,10 @@ UI = {
  "Then, in order": "A pak, popořadě",
  "not confirmed for this beer": "u tohohle piva nepotvrzené",
  "How Czech lager is made →": "Jak se vaří český ležák →",
+ "Plato":
+   "Plato",
+ "no gravity in source":
+   "stupňovitost ve zdroji není",
  "Marks we have not confirmed":
    "Značky, které jsme nepotvrdili",
  "A Prague venue names these on its taps, and that is all we know. No entry in Wikidata, no lineup on a site of their own. Some are real breweries we have not caught up with; some are a brand, a parent company, or the name of a single beer. Until one of those is settled they get no page here, because a page would assert something we cannot back.":
@@ -243,6 +247,75 @@ UI = {
  "Read the style page →": "Přečíst o stylu →",
  "Beer parameters and descriptions are unverified working content for this mockup, not published facts.":
    "Parametry a texty piv jsou neověřený pracovní obsah pro tento prototyp, ne publikovaná fakta.",
+ # ── перенесено из шаблона 30 августа ─────────────────────────────────────
+ "the brewery's own site":
+   "vlastní stránky pivovaru",
+ "Open Food Facts, ODbL":
+   "Open Food Facts, ODbL",
+ "Nobody can answer &ldquo;dryness, 1 to 10&rdquo;. So the atlas never asks. Pick a beer\n          you know — Urquell, Guinness, Corona — and push it: less bitter, darker, fuller.":
+   "Na otázku „suchost, 1 až 10“ nikdo neodpoví. Atlas se tak neptá. Vyberte pivo, které znáte — Prazdroj, Guinness, Corona — a posuňte ho: míň hořké, tmavší, plnější.",
+ "A beer you cannot find is trivia. Each page finishes with Prague venues that carry the\n          brewery, their phone number and their hours.":
+   "Pivo, které nemůžete sehnat, je jen zajímavost. Každá stránka končí pražskými podniky, které daný pivovar čepují, jejich telefonem a otevírací dobou.",
+ "We promise the brewery, not the tap. Which of its beers is on tonight is a question for\n          the bar, and we say so rather than guess.":
+   "Slibujeme pivovar, ne pípu. Které z jeho piv je dnes večer na čepu, je otázka na hospodu, a my to raději řekneme, než abychom hádali.",
+ "Decoction mashing, open fermenters, six weeks cold in a horizontal tank. Not trivia —\n          it is why the beer in front of you tastes the way it does.":
+   "Rmutování, otevřené spilky, šest týdnů v chladu ve vodorovném tanku. Ne zajímavost — je to důvod, proč pivo před vámi chutná tak, jak chutná.",
+ "Each page works out how much of the wort actually fermented, which is the difference\n          between a beer that drinks light and one that drinks full.":
+   "Každá stránka spočítá, kolik mladiny doopravdy prokvasilo, a v tom je rozdíl mezi pivem, které se pije lehce, a tím, které se pije plně.",
+ "Most beer sites state a number and move on. Ours shows its hand: every value carries how we\n        got it. Read from a label, seen in the pub, asked by phone, or":
+   "Většina pivních webů uvede číslo a jde dál. Náš ukazuje karty: u každé hodnoty je, jak jsme k ní přišli. Z etikety, viděno v hospodě, zjištěno telefonem, nebo",
+ "— and estimates are drawn dotted and muted so you can tell at a glance.":
+   "— a odhady jsou tečkované a ztlumené, aby se poznaly na první pohled.",
+ ", not by\n        good intentions. A reader who catches one invented number stops believing the whole page,\n        and they are right to.":
+   ", ne dobrým úmyslem. Čtenář, který přistihne jedno vymyšlené číslo, přestane věřit celé stránce, a má pravdu.",
+ "No scores out of five, no leaderboard of the worst Czech beer. Breweries are people we\n          want to talk to, not targets.":
+   "Žádné známky z pěti, žádný žebříček nejhoršího českého piva. Pivovary jsou lidé, se kterými chceme mluvit, ne terče.",
+ "Nothing is for sale here. Beer is heavy, excise duty is paid in the country it lands in,\n          and a bottle posted across Europe costs more than the beer.":
+   "Nic tu není na prodej. Pivo je těžké, spotřební daň se platí v zemi určení a láhev poslaná přes Evropu stojí víc než pivo samo.",
+ "We do not average strangers' opinions. We describe how a beer differs from one you have\n          had, and let you decide.":
+   "Neprůměrujeme názory cizích lidí. Popisujeme, čím se pivo liší od toho, které jste už pili, a rozhodnutí necháváme vám.",
+ "Everything above is built from two free sources — OpenStreetMap for the venues,\n      Wikidata for the breweries — plus beer data typed for this demo and marked unverified\n      throughout.":
+   "Všechno výše je postavené ze dvou volných zdrojů — OpenStreetMap pro podniky, Wikidata pro pivovary — plus data o pivech napsaná pro tento prototyp a všude označená jako neověřená.",
+ "Degrees on a Czech menu are degrees Plato — how much malt sugar was in the wort before\n          fermentation. Roughly, the alcohol lands near a third of the number: a 10° is about 3.8 %,\n          a 12° about 4.4 %.":
+   "Stupně na českém lístku jsou stupně Plato — kolik sladového cukru bylo v mladině před kvašením. Zhruba platí, že alkohol vyjde okolo třetiny toho čísla: desítka má asi 3,8 %, dvanáctka okolo 4,4 %.",
+ "No open source carries it — it has to be seen in the pub and dated. That column, and\n            &ldquo;will ten of us fit&rdquo;, are what the September phone survey collects.":
+   "Žádný volný zdroj ji nemá — musí se vidět v hospodě a opatřit datem. Právě tenhle sloupec a „vejde se nás tam deset?“ sbírá zářijový telefonický průzkum.",
+ "No Prague venue in OpenStreetMap carries this brewery yet. Under the\n            publishing rule this beer would live as a line on the brewery page, not as a page of\n            its own.":
+   "Zatím žádný pražský podnik v OpenStreetMap tenhle pivovar nečepuje. Podle pravidla publikace by tohle pivo žilo jako řádek na stránce pivovaru, ne jako vlastní stránka.",
+ "— typed from knowledge for this\n              demo, not read off a label. Before launch each is confirmed or deleted.":
+   "— napsaná ze znalosti pro tento prototyp, ne opsaná z etikety. Před spuštěním se každá potvrdí, nebo smaže.",
+ "A stroke is how a Czech waiter counts what you have drunk. Yours stay in\n            this browser — the shared count starts when the site is live.":
+   "Čárka je způsob, jakým český výčepní počítá, co jste vypili. Vaše zůstávají v tomhle prohlížeči — společné počítání začne, až bude web živý.",
+ ": it only sharpens what the atlas\n            suggests you next.":
+   ": jen to zpřesňuje, co vám atlas navrhne příště.",
+ "Nobody can answer &ldquo;dryness, 1 to 10&rdquo;. Everybody can name\n      a beer they have had. Pick one, push it around, and the atlas walks the graph to what is\n      poured in Prague.":
+   "Na otázku „suchost, 1 až 10“ nikdo neodpoví. Ale pivo, které pil, umí jmenovat každý. Vyberte jedno, posuňte ho, a atlas projde grafem k tomu, co se čepuje v Praze.",
+ "Axes you actually moved count for more than the\n      ones you left alone — asking for less bitterness makes a bitterness miss cost more. The match\n      is plain arithmetic, not a model: same input, same answer, every time, and it cannot invent\n      a taste claim.":
+   "Osy, se kterými jste opravdu hnuli, váží víc než ty, které jste nechali být — když si řeknete o menší hořkost, promáchnutí v hořkosti stojí víc. Shoda je čistá aritmetika, ne model: stejný vstup, stejná odpověď, pokaždé, a nemůže si vymyslet tvrzení o chuti.",
+ "Every one belongs to a brewery with at least one Prague venue. That is the\n      publishing rule: no venue, no page.":
+   "Každé patří pivovaru, který má aspoň jeden pražský podnik. To je pravidlo publikace: bez podniku není stránka.",
+ "These venues carry this brewery. Which beer is\n        on the tap tonight is a different question, and open data cannot answer it.":
+   "Tyhle podniky vedou tenhle pivovar. Které z jeho piv je dnes na čepu, je jiná otázka a otevřená data na ni neodpovědí.",
+ "Most numbers on this site are marked unverified, and we\n      would rather be corrected than be polite about it. If you brew the beer, you outrank us.":
+   "Většina čísel na tomhle webu je označená jako neověřená a raději se necháme opravit, než abychom byli zdvořilí. Kdo pivo vaří, má nad námi navrch.",
+ "Original gravity and alcohol, taken from knowledge rather than from your label. Whether\n        the beer is filtered, pasteurised, or neither. Mash schedule, fermentation vessel and\n        lagering time — anything marked":
+   "Stupňovitost a alkohol, vzaté ze znalosti místo z vaší etikety. Jestli je pivo filtrované, pasterizované, nebo ani jedno. Postup rmutování, kvasná nádoba a doba ležení — cokoli označeného jako",
+ "is a guess about your\n        category, not about you.":
+   "je odhad o vaší kategorii, ne o vás.",
+ "It goes into a review queue, not straight onto the page. Once applied, the value changes\n        from":
+   "Půjde do fronty ke kontrole, ne rovnou na stránku. Po zapracování se hodnota změní z",
+ ",\n        carries your name as the source and the date it was confirmed. Nothing is published in your\n        name that you did not send us.":
+   ", ponese vaše jméno jako zdroj a datum potvrzení. Nic se ve vašem jménu nezveřejní, co jste nám neposlali.",
+ "We will not remove an honest description because it is unflattering, and we will not\n        publish marketing copy. Facts about your beer are yours; the opinion about how it tastes\n        stays ours.":
+   "Nesmažeme poctivý popis proto, že je nelichotivý, a nezveřejníme marketingový text. Fakta o vašem pivu jsou vaše; názor na to, jak chutná, zůstává náš.",
+ "This page describes the\n        intended flow. In the mockup there is no form behind it — the first fifty corrections will\n        arrive by email and live in a spreadsheet, which is the right amount of software for fifty\n        of anything.":
+   "Tahle stránka popisuje zamýšlený postup. V prototypu za ní není formulář — prvních padesát oprav přijde e-mailem a bude bydlet v tabulce, což je správné množství softwaru na padesát čehokoli.",
+ "The same seven steps stand behind almost every beer on\n      this site. What changes from brewery to brewery is how long each one is allowed to take.":
+   "Za skoro každým pivem na tomhle webu stojí týchž sedm kroků. Co se pivovar od pivovaru mění, je to, kolik času každý z nich dostane.",
+ "Decoction mashing and\n        a month of cold lagering are expensive. They are also the whole reason Czech lager tastes\n        the way it does, and the first thing an industrial process cuts.":
+   "Rmutování a měsíc studeného ležení jsou drahé. Jsou také celý důvod, proč český ležák chutná tak, jak chutná, a první věc, kterou průmyslový postup škrtne.",
+ "Every beer page shows what is known for that brewery and what is only\n        typical for the style.":
+   "Každá stránka piva ukazuje, co je o pivovaru známo a co je jen typické pro styl.",
 }
 
 # osy srovnání
@@ -294,4 +367,5 @@ SNIPPETS = {
    '(LANG==="cs"?"totéž pivo od jiného pivovaru":"another brewery\'s version of the same beer")',
  '"the same idea at " + x.plato + "°"':
    '(LANG==="cs"?"totéž o "+x.plato+" stupních":"the same idea at "+x.plato+"°")',
+
 }

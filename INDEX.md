@@ -22,6 +22,7 @@ python scripts/build_beers.py       # полные сорта: векторы, �
 python scripts/fetch_lineups.py     # линейки с сайтов пивоварен (сеть, ~30 мин)
 python scripts/fetch_shelf.py       # бутылки и этикетки из Open Food Facts (сеть)
 python scripts/build_listed.py      # второй уровень каталога из снятого сырья
+python scripts/check_cs.py          # языковой паритет (сборка гоняет половину сама)
 python scripts/build_mockup.py      # -> mockup/index.html
 ```
 
@@ -77,7 +78,8 @@ python scripts/build_mockup.py      # -> mockup/index.html
 | [scripts/build_listed.py](scripts/build_listed.py) | Второй уровень каталога. Утверждает правилом; `--skip` показывает исключения |
 | [scripts/review_lineups.py](scripts/review_lineups.py) | Сверка снятого с каталогом: что нового, где расхождения |
 | [scripts/probe_feeds.py](scripts/probe_feeds.py) | Разведка магазинных XML-фидов. Пока безрезультатна, нужен реальный список магазинов |
-| [scripts/build_mockup.py](scripts/build_mockup.py) | Сборка `mockup/index.html` из данных и шаблона |
+| [scripts/build_mockup.py](scripts/build_mockup.py) | Сборка `mockup/index.html` из данных, шаблона и `ui_cs.py`. **Падает, если у строки нет чешского перевода** |
+| [scripts/check_cs.py](scripts/check_cs.py) | Языковой паритет: ключи без перевода статически, необёрнутые литералы — рендером чешских маршрутов |
 
 ## Контент, который правится руками
 
@@ -90,7 +92,7 @@ python scripts/build_mockup.py      # -> mockup/index.html
 | [scripts/beer_text_cs.py](scripts/beer_text_cs.py) | Чешские описания сортов |
 | [scripts/brewery_text_cs.py](scripts/brewery_text_cs.py) | Чешские тексты пивоварен |
 | [scripts/brewing_text_cs.py](scripts/brewing_text_cs.py) | Чешская технология и разбор процесса |
-| [scripts/ui_cs.py](scripts/ui_cs.py), [ui_cs2.py](scripts/ui_cs2.py) | Чешский интерфейс: короткие строки, оси, полюса; длинные абзацы |
+| [scripts/ui_cs.py](scripts/ui_cs.py) | **Единственный источник чешского интерфейса.** Подставляется в шаблон сборкой; копии в `mockup_template.html` больше нет |
 
 ## Данные и код
 
@@ -198,9 +200,12 @@ python scripts/build_mockup.py      # -> mockup/index.html
    маршрутов, переливов нет. Неподтверждённые марки показаны разделом на
    странице пивоварен, а не строкой в списке заведений: там из десяти
    заведений видно было бы одно.
-6. **Защиты в сборке** — провести `ui_cs.py` в сборку подстановкой и добавить
-   проверку необёрнутых строк. Двенадцать англицизмов в чешском режиме нашлись
-   руками; второй раз искать их не хочется.
+6. ~~Защиты в сборке~~ — сделано 30 августа. `ui_cs.py` теперь единственный
+   источник чешского и подставляется в шаблон; копия из шаблона убрана, а
+   мёртвый `ui_cs2.py` удалён. `check_cs.py` ловит обе болезни: ключ без
+   перевода (статически, гоняется каждой сборкой и останавливает её) и
+   необёрнутый литерал (рендером одиннадцати чешских маршрутов). Проверка
+   проверена: паритет ломался нарочно, оба дефекта пойманы.
 
 Ниже порога: замерить плотность тега `brewery=*` в Вене и Берлине — от этого
 зависит, правда ли «любой город ЕС». Час работы, а обещание крупное.

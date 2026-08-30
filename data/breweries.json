@@ -791,6 +791,20 @@
  },
  {
   "id": "pivovar",
+  "wikidata": "Q116056803",
+  "name": "Pivovar",
+  "nameEn": null,
+  "city": "Černá Hora",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q116056803",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 16.5812717,
+  "lat": 49.4147922
+ },
+ {
+  "id": "pivovar",
   "wikidata": "Q38140548",
   "name": "Pivovar",
   "nameEn": null,
@@ -814,20 +828,6 @@
   },
   "lng": 12.8633169,
   "lat": 49.9773908
- },
- {
-  "id": "pivovar",
-  "wikidata": "Q116056803",
-  "name": "Pivovar",
-  "nameEn": null,
-  "city": "Černá Hora",
-  "source": {
-   "method": "official",
-   "source": "https://www.wikidata.org/wiki/Q116056803",
-   "checkedAt": "2026-08-30"
-  },
-  "lng": 16.5812717,
-  "lat": 49.4147922
  },
  {
   "id": "pivovar-rajec-jestrebi",
@@ -3404,20 +3404,6 @@
  },
  {
   "id": "pivovar",
-  "wikidata": "Q114435911",
-  "name": "pivovar",
-  "nameEn": null,
-  "city": "Golčův Jeníkov",
-  "source": {
-   "method": "official",
-   "source": "https://www.wikidata.org/wiki/Q114435911",
-   "checkedAt": "2026-08-30"
-  },
-  "lng": 15.4792486,
-  "lat": 49.8145619
- },
- {
-  "id": "pivovar",
   "wikidata": "Q114554635",
   "name": "pivovar",
   "nameEn": null,
@@ -3443,6 +3429,20 @@
   },
   "lng": 15.5044333,
   "lat": 50.2411575
+ },
+ {
+  "id": "pivovar",
+  "wikidata": "Q114435911",
+  "name": "pivovar",
+  "nameEn": null,
+  "city": "Golčův Jeníkov",
+  "source": {
+   "method": "official",
+   "source": "https://www.wikidata.org/wiki/Q114435911",
+   "checkedAt": "2026-08-30"
+  },
+  "lng": 15.4792486,
+  "lat": 49.8145619
  },
  {
   "id": "pivovar-dasice",
@@ -3644,6 +3644,28 @@
   "founded": 2010
  },
  {
+  "id": "breznak",
+  "name": "Březňák",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + марку держит курируемый сорт Březňák Světlý ležák",
+   "checkedAt": "2026-08-30",
+   "curatedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": false,
+  "story": {
+   "en": "A North Bohemian brand from Velké Březno with a working-town reputation the brewery has never tried to shake. Firm, dry bitterness and no pretence.",
+   "cs": "Severočeská značka z Velkého Března s pověstí dělnického města, které se pivovar nikdy nesnažil zbavit. Pevná suchá hořkost a žádné pózy."
+  },
+  "city": "Velké Březno",
+  "curated": [
+   "city"
+  ]
+ },
+ {
   "id": "guinness",
   "name": "Guinness",
   "wikidata": null,
@@ -3705,47 +3727,8 @@
   ]
  },
  {
-  "id": "stella-artois",
-  "name": "Stella Artois",
-  "wikidata": null,
-  "source": {
-   "method": "unverified",
-   "source": "тег brewery в OpenStreetMap + иностранная марка-якорь, нужна для сравнения",
-   "checkedAt": "2026-08-30"
-  },
-  "needsResearch": true,
-  "curatedBrand": true,
-  "foreign": true,
-  "story": {
-   "en": "Not a Czech brewery. Listed because a Prague venue pours it and because it is a useful yardstick: everything Czech here is maltier, and above the 10° mark considerably more bitter.",
-   "cs": "Není to český pivovar. Uvedena proto, že ji jeden pražský podnik čepuje, a jako užitečné měřítko: všechno české tady je sladovější a nad desítkou i podstatně hořčejší."
-  }
- },
- {
-  "id": "breznak",
-  "name": "březňák",
-  "wikidata": null,
-  "source": {
-   "method": "unverified",
-   "source": "тег brewery в OpenStreetMap + марку держит курируемый сорт Březňák Světlý ležák",
-   "checkedAt": "2026-08-30",
-   "curatedAt": "2026-08-30"
-  },
-  "needsResearch": true,
-  "curatedBrand": true,
-  "foreign": false,
-  "story": {
-   "en": "A North Bohemian brand from Velké Březno with a working-town reputation the brewery has never tried to shake. Firm, dry bitterness and no pretence.",
-   "cs": "Severočeská značka z Velkého Března s pověstí dělnického města, které se pivovar nikdy nesnažil zbavit. Pevná suchá hořkost a žádné pózy."
-  },
-  "city": "Velké Březno",
-  "curated": [
-   "city"
-  ]
- },
- {
   "id": "matuska",
-  "name": "matuška",
+  "name": "Matuška",
   "wikidata": null,
   "source": {
    "method": "unverified",
@@ -3776,5 +3759,22 @@
   "curated": [
    "city"
   ]
+ },
+ {
+  "id": "stella-artois",
+  "name": "Stella Artois",
+  "wikidata": null,
+  "source": {
+   "method": "unverified",
+   "source": "тег brewery в OpenStreetMap + иностранная марка-якорь, нужна для сравнения",
+   "checkedAt": "2026-08-30"
+  },
+  "needsResearch": true,
+  "curatedBrand": true,
+  "foreign": true,
+  "story": {
+   "en": "Not a Czech brewery. Listed because a Prague venue pours it and because it is a useful yardstick: everything Czech here is maltier, and above the 10° mark considerably more bitter.",
+   "cs": "Není to český pivovar. Uvedena proto, že ji jeden pražský podnik čepuje, a jako užitečné měřítko: všechno české tady je sladovější a nad desítkou i podstatně hořčejší."
+  }
  }
 ]

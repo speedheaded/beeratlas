@@ -85,6 +85,10 @@ for b in beers:
     })
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+# Чешский словарь — один источник: scripts/ui_cs.py. Раньше он же лежал
+# литералом в шаблоне, и две копии приходилось править руками; за один
+# день они разошлись на 34 ключа.
+from ui_cs import UI as UI_CS  # noqa: E402
 from brewing_text import PROCESS  # noqa: E402
 from brewing_text_cs import PROCESS as PROCESS_CS  # noqa: E402
 
@@ -138,8 +142,19 @@ payload = {
     },
 }
 
+# Паритет держится сборкой, а не памятью: строка, обёрнутая в T() без ключа
+# в словаре, молча выходит английской. Полная проверка, включая необёрнутые
+# литералы, — python scripts/check_cs.py
+import check_cs  # noqa: E402
+if check_cs.static(verbose=False):
+    print("СБОРКА ОСТАНОВЛЕНА: у части строк нет чешского перевода")
+    check_cs.static()
+    sys.exit(1)
+
 TPL = io.open(ROOT / "scripts" / "mockup_template.html", encoding="utf-8").read()
 html = TPL.replace("/*__DATA__*/null", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
+assert "/*__UI_CS__*/" in html, "в шаблоне нет места для словаря"
+html = html.replace("/*__UI_CS__*/null", json.dumps(UI_CS, ensure_ascii=False, separators=(",", ":")))
 OUT.parent.mkdir(exist_ok=True)
 OUT.write_text(html, encoding="utf-8")
 print(f"записано: {OUT.relative_to(ROOT)}  ({len(html) // 1024} КБ)")

@@ -191,7 +191,7 @@ L["matuska-raptor"] = (
 N["matuska-raptor"] = [
     ("Pokud jste celý týden pili ležák",
      "Tohle bude chutnat obrovsky. To je záměr, ale není to pivo na sezení: při 6,3 % "
-     "a takovém chmelovém aroma je jedno událost a tři omyl."),
+     "a takovém chmelovém aroma je jedno zážitek a tři chyba."),
 ]
 
 L["matuska-zlata-raketa"] = (

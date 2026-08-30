@@ -54,6 +54,42 @@
   "nonAlcoholic": false
  },
  {
+  "id": "breznak-original",
+  "breweryId": "breznak",
+  "name": "Original",
+  "menuNameCs": "Original",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.1,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036551007",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8591036551007",
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/1007/front_cs.23.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
+  "id": "breznak-premium-pils",
+  "breweryId": "breznak",
+  "name": "Premium Pils",
+  "menuNameCs": "Premium Pils",
+  "tier": "listed",
+  "plato": null,
+  "abv": {
+   "value": 5.1,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8591036550376",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-08-30"
+  },
+  "ean": "8591036550376",
+  "image": "https://images.openfoodfacts.org/images/products/859/103/655/0376/front_de.6.400.jpg",
+  "nonAlcoholic": false
+ },
+ {
   "id": "kralovsky-pivovar-krusovice-krusovice-lezak-pet-1-5l",
   "breweryId": "kralovsky-pivovar-krusovice",
   "name": "Krušovice ležák PET 1,5l",
@@ -843,42 +879,6 @@
   },
   "ean": null,
   "image": null,
-  "nonAlcoholic": false
- },
- {
-  "id": "breznak-original",
-  "breweryId": "breznak",
-  "name": "Original",
-  "menuNameCs": "Original",
-  "tier": "listed",
-  "plato": null,
-  "abv": {
-   "value": 5.1,
-   "method": "official",
-   "source": "https://world.openfoodfacts.org/product/8591036551007",
-   "origin": "Open Food Facts, ODbL",
-   "checkedAt": "2026-08-30"
-  },
-  "ean": "8591036551007",
-  "image": "https://images.openfoodfacts.org/images/products/859/103/655/1007/front_cs.23.400.jpg",
-  "nonAlcoholic": false
- },
- {
-  "id": "breznak-premium-pils",
-  "breweryId": "breznak",
-  "name": "Premium Pils",
-  "menuNameCs": "Premium Pils",
-  "tier": "listed",
-  "plato": null,
-  "abv": {
-   "value": 5.1,
-   "method": "official",
-   "source": "https://world.openfoodfacts.org/product/8591036550376",
-   "origin": "Open Food Facts, ODbL",
-   "checkedAt": "2026-08-30"
-  },
-  "ean": "8591036550376",
-  "image": "https://images.openfoodfacts.org/images/products/859/103/655/0376/front_de.6.400.jpg",
   "nonAlcoholic": false
  },
  {

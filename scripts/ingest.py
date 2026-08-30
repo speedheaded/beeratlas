@@ -163,6 +163,9 @@ SPELLING = {
     "unetice": "Únětický pivovar", "uneticky-pivovar": "Únětický pivovar",
     "cerna-hora": "Černá Hora", "kout-na-sumave": "Kout na Šumavě",
     "molson-cors": "Molson Coors",
+    # из тега OSM марки приходят как их набрал картограф, строчными
+    "matuska": "Matuška", "breznak": "Březňák", "konrad": "Konrád",
+    "hubertus": "Hubertus",
 }
 
 # Марка ≠ юридическое название. Wikidata знает компанию, OSM — то, что на кране.
