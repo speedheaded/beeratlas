@@ -72,42 +72,6 @@
   "nonAlcoholic": false
  },
  {
-  "id": "kralovsky-pivovar-krusovice-nealko",
-  "breweryId": "kralovsky-pivovar-krusovice",
-  "name": "Nealko",
-  "menuNameCs": "Nealko",
-  "tier": "listed",
-  "plato": null,
-  "abv": {
-   "value": 0.5,
-   "method": "official",
-   "source": "http://www.krusovice.cz/cs/nase-piva/nealko",
-   "origin": "the brewery's own site",
-   "checkedAt": "2026-08-30"
-  },
-  "ean": null,
-  "image": null,
-  "nonAlcoholic": false
- },
- {
-  "id": "kralovsky-pivovar-krusovice-max",
-  "breweryId": "kralovsky-pivovar-krusovice",
-  "name": "max .",
-  "menuNameCs": "max .",
-  "tier": "listed",
-  "plato": null,
-  "abv": {
-   "value": 0.5,
-   "method": "official",
-   "source": "http://www.krusovice.cz/cs/nase-piva/nealko",
-   "origin": "the brewery's own site",
-   "checkedAt": "2026-08-30"
-  },
-  "ean": null,
-  "image": null,
-  "nonAlcoholic": false
- },
- {
   "id": "pivovar-cvikov-hvozd",
   "breweryId": "pivovar-cvikov",
   "name": "Hvozd",
@@ -384,24 +348,6 @@
   "nonAlcoholic": false
  },
  {
-  "id": "pivovar-svijany-epm",
-  "breweryId": "pivovar-svijany",
-  "name": "EPM",
-  "menuNameCs": "EPM",
-  "tier": "listed",
-  "plato": {
-   "value": 12.2,
-   "method": "official",
-   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/svatecni-bidlovka",
-   "origin": "the brewery's own site",
-   "checkedAt": "2026-08-30"
-  },
-  "abv": null,
-  "ean": null,
-  "image": null,
-  "nonAlcoholic": false
- },
- {
   "id": "pivovar-svijany-pivo-cecilia",
   "breweryId": "pivovar-svijany",
   "name": "Pivo Cecilia",
@@ -620,24 +566,6 @@
   "plato": null,
   "abv": {
    "value": 4.2,
-   "method": "official",
-   "source": "http://www.kozel.cz/cs/nase-piva",
-   "origin": "the brewery's own site",
-   "checkedAt": "2026-08-30"
-  },
-  "ean": null,
-  "image": null,
-  "nonAlcoholic": false
- },
- {
-  "id": "pivovar-velke-popovice",
-  "breweryId": "pivovar-velke-popovice",
-  "name": "≤ .",
-  "menuNameCs": "≤ .",
-  "tier": "listed",
-  "plato": null,
-  "abv": {
-   "value": 0.5,
    "method": "official",
    "source": "http://www.kozel.cz/cs/nase-piva",
    "origin": "the brewery's own site",

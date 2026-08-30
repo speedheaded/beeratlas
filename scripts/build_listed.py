@@ -75,6 +75,15 @@ def clean_name(raw):
     return n
 
 
+# имена, которые на самом деле подписи к числам, а не названия сортов
+LABEL_ONLY = {"epm", "max", "min", "alk", "plato", "nealko", "obsah", "ibu", "ebc"}
+
+
+def is_label(name):
+    letters = "".join(c for c in fold(name) if c.isalpha())
+    return len(letters) < 3 or fold(name).strip(" .:,") in LABEL_ONLY
+
+
 def implausible(plato, abv):
     """Пара чисел, которая не может принадлежать одному пиву.
 
@@ -177,6 +186,9 @@ def main():
             continue
         if c["needsReview"]:
             drop("число двусмысленно, нужен человек")
+            continue
+        if is_label(name):
+            drop("подпись к числу, а не название сорта")
             continue
         if ARTIFACT.search(name):
             drop("остаток разметки, не имя сорта")
