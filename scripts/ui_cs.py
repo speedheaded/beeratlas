@@ -415,6 +415,12 @@ UI = {
  "Glass colour comes from the style, not from a measurement of this beer.":
    "Barva ve sklenici vychází ze stylu, ne z měření tohohle piva.",
 
+ # ── čárky: hlášky u počítadla ────────────────────────────────────────────
+ "One down.": "Jedna je doma.",
+ "Had another?": "Dáte další?",
+ "That is %s.": "To je %s.",
+ "Keep counting.": "Počítáme dál.",
+
 }
 
 # osy srovnání

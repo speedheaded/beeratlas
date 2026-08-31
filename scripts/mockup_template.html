@@ -1595,12 +1595,16 @@ function paintCoaster(fresh){
   c.querySelector("[data-marks]").innerHTML = h ||
     '<span class="none">' + T("your strokes go here") + '</span>';
   const pr = c.querySelector("[data-prompt]");
+  /* Раньше чешские варианты были зашиты здесь же, а в английской ветке
+     стояло 'Liked it? <em>${T("Mark it down.")}</em>' в ОДИНАРНЫХ кавычках —
+     подстановка не срабатывала, и на английской странице печаталось
+     ${T("Mark it down.")} буквально. Всё переведено на T(): чешский живёт
+     только в ui_cs.py, и проверка паритета видит эти строки. */
   if (pr) pr.innerHTML = n === 0
-        ? (LANG === "cs" ? 'Chutnalo? <em>Udělejte čárku.</em>' : 'Liked it? <em>${T("Mark it down.")}</em>')
+        ? T("Liked it?") + ' <em>' + T("Mark it down.") + '</em>'
         : n === 1
-        ? (LANG === "cs" ? 'Jedna je doma. <em>Dáte další?</em>' : 'One down. <em>Had another?</em>')
-        : (LANG === "cs" ? 'To je ' + n + '. <em>Počítáme dál.</em>'
-                         : 'That is ' + n + '. <em>Keep counting.</em>');
+        ? T("One down.") + ' <em>' + T("Had another?") + '</em>'
+        : T("That is %s.").replace("%s", n) + ' <em>' + T("Keep counting.") + '</em>';
   const fill = c.querySelector("[data-beer-fill]");
   if (fill) fill.style.transform = "scaleY(" + Math.min(0.1 + n * 0.075, 1) + ")";
   c.querySelector('[data-vote="down"]').setAttribute("aria-pressed", !!v.down);
