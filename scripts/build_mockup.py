@@ -7,6 +7,7 @@
 Ничего не выдумывает: показывает ровно то, что лежит в data/, включая дыры.
 """
 
+import collections
 import io
 import json
 import sys
@@ -184,6 +185,26 @@ for ean, r in sorted(scan.items(), key=lambda kv: (kv[1]["kind"], -len(kv[1]["la
     per[r["kind"]] += 1
     demo.append(ean)
 
+# Разброс лежания для зелёной полосы на главной. Числа считаются здесь, а не
+# пишутся в текст руками: поменяются данные — поменяется и фраза. Берётся сорт
+# с самым долгим лежанием и обычный срок его же ступени Плато, чтобы сравнение
+# шло между сопоставимыми пивами, а не между ležákem и алем.
+def _lager_days(b):
+    for st in ((b.get("production") or {}).get("en") or {}).get("stages", []):
+        if st["id"] == "lager" and st.get("days"):
+            return st["days"]
+    return None
+
+
+_lagers = [(b, d) for b in beers if not b.get("isAnchor")
+           for d in [_lager_days(b)] if d]
+_top, _top_days = max(_lagers, key=lambda t: t[1][1])
+_tier = (_top.get("plato") or {}).get("value")
+_peers = collections.Counter(
+    tuple(d) for b, d in _lagers
+    if (b.get("plato") or {}).get("value") == _tier and d != _top_days)
+_peer = _peers.most_common(1)[0][0] if _peers else _top_days
+
 payload = {
     "hints": slim_hints,
     "scan": scan,
@@ -202,6 +223,10 @@ payload = {
         "breweriesWikidata": stats["sources"]["wikidata"]["breweries"],
         "breweriesTotal": len(breweries),
         "beersTotal": len([b for b in beers if not b.get("isAnchor")]),
+        "lagerTier": _tier,
+        "lagerPeerLow": _peer[0],
+        "lagerPeerHigh": _peer[1],
+        "lagerLongest": _top_days[1],
         "beersWithVenue": len([b for b in slim_beer if not b["anchor"] and b["venues"] > 0]),
     },
 }

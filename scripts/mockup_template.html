@@ -430,7 +430,6 @@ footer{margin-top:40px;padding-top:22px;border-top:4px solid var(--gold);font-si
 .band p{font-size:17.5px;line-height:1.62;color:var(--green-pale);margin:0 0 14px;max-width:66ch}
 .band p:last-child{margin-bottom:0}
 .band b{color:var(--foam)}
-.band .dot{color:var(--foam);border-bottom:1px dotted var(--gold)}
 
 .nots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin:20px 0 0}
 .not h4{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
@@ -898,9 +897,11 @@ function homePage(){
     </div>
 
     <div class="band">
-      <h2>${T("We mark what we are not sure about")}</h2>
-      <p>${T("Most beer sites state a number and move on. Ours shows its hand: every value carries how we\n        got it. Read from a label, seen in the pub, asked by phone, or")} <span class="dot"> ${T("estimated")} </span> ${T("— and estimates are drawn dotted and muted so you can tell at a glance.")}</p>
-      <p>${T("Anything we have not checked at all is")} <b>${T("blocked from publication by the build")}</b> ${T(", not by\n        good intentions. A reader who catches one invented number stops believing the whole page,\n        and they are right to.")}</p>
+      <h2>${T("The gap between two lagers is measured in months")}</h2>
+      <p>${T("Two %t\u00b0 beers stand side by side on the same menu, for nearly the same money. One lay\n        cold in the tank for %a to %b days, the other for %c. Nothing on the tap badge says which\n        is which.")
+        .replace("%t", S.lagerTier).replace("%a", S.lagerPeerLow)
+        .replace("%b", S.lagerPeerHigh).replace("%c", S.lagerLongest)}</p>
+      <p>${T("It does not taste like better and worse. It is a different fullness and a different\n        finish. Every beer here carries its lagering time, because it is the one number from the\n        cellar you meet in the first mouthful.")}</p>
     </div>
 
     <h2 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:30px;margin:48px 0 4px">${T("What this is not")}</h2>
@@ -923,7 +924,7 @@ function homePage(){
       <button class="door" data-go="#/venues"><b>${T("Where to drink")}</b><span>${T("%s pubs with a phone").replace("%s", S.venuesWithPhone)}</span></button>
     </div>
 
-    <p class="note">${T("Everything above is built from two free sources — OpenStreetMap for the venues,\n      Wikidata for the breweries — plus beer data typed for this demo and marked unverified\n      throughout.")} <a href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></p>`;
+    <p class="note">${T("Everything above is built from two free sources — OpenStreetMap for the venues,\n      Wikidata for the breweries — plus beer data typed for this demo and marked unverified\n      throughout.")} ${T("Estimates are drawn dotted and muted; anything we have not checked at all is blocked\n      from publication by the build, not by good intentions.")} <a href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></p>`;
 }
 
 const PLATO_EN = "It is not the alcohol. Degrees on a Czech menu are degrees Plato — how much "

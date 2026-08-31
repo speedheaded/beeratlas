@@ -40,10 +40,8 @@ UI = {
    "Každé pivo je tu popsané jako vzdálenost od něčeho, co už máte v paměti.",
  "Ends every page with where to drink it": "Každou stránku končí tím, kde to vypít",
  "Shows how it was made and what that did": "Ukazuje, jak se to vařilo a co to udělalo",
- "We mark what we are not sure about": "Označujeme, čím si nejsme jistí",
- "estimated": "odhad",
- "Anything we have not checked at all is": "Cokoli, co jsme vůbec neověřili, je",
- "blocked from publication by the build": "sestavením zablokováno pro publikaci",
+ "The gap between two lagers is measured in months":
+   "Rozdíl mezi dvěma ležáky se měří na měsíce",
  "What this is not": "Čím tohle není",
  "Not a rating site": "Není to hodnoticí web",
  "Not a shop": "Není to obchod",
@@ -348,18 +346,18 @@ UI = {
    "Rmutování, otevřené spilky, šest týdnů v chladu ve vodorovném tanku. Ne zajímavost — je to důvod, proč pivo před vámi chutná tak, jak chutná.",
  "Each page works out how much of the wort actually fermented, which is the difference\n          between a beer that drinks light and one that drinks full.":
    "Každá stránka spočítá, kolik mladiny doopravdy prokvasilo, a v tom je rozdíl mezi pivem, které se pije lehce, a tím, které se pije plně.",
- "Most beer sites state a number and move on. Ours shows its hand: every value carries how we\n        got it. Read from a label, seen in the pub, asked by phone, or":
-   "Většina pivních webů uvede číslo a jde dál. Náš ukazuje karty: u každé hodnoty je, jak jsme k ní přišli. Z etikety, viděno v hospodě, zjištěno telefonem, nebo",
- "— and estimates are drawn dotted and muted so you can tell at a glance.":
-   "— a odhady jsou tečkované a ztlumené, aby se poznaly na první pohled.",
- ", not by\n        good intentions. A reader who catches one invented number stops believing the whole page,\n        and they are right to.":
-   ", ne dobrým úmyslem. Čtenář, který přistihne jedno vymyšlené číslo, přestane věřit celé stránce, a má pravdu.",
  "No scores out of five, no leaderboard of the worst Czech beer. Breweries are people we\n          want to talk to, not targets.":
    "Žádné známky z pěti, žádný žebříček nejhoršího českého piva. Pivovary jsou lidé, se kterými chceme mluvit, ne terče.",
  "Nothing is for sale here. Beer is heavy, excise duty is paid in the country it lands in,\n          and a bottle posted across Europe costs more than the beer.":
    "Nic tu není na prodej. Pivo je těžké, spotřební daň se platí v zemi určení a láhev poslaná přes Evropu stojí víc než pivo samo.",
  "We do not average strangers' opinions. We describe how a beer differs from one you have\n          had, and let you decide.":
    "Neprůměrujeme názory cizích lidí. Popisujeme, čím se pivo liší od toho, které jste už pili, a rozhodnutí necháváme vám.",
+ "Two %t\u00b0 beers stand side by side on the same menu, for nearly the same money. One lay\n        cold in the tank for %a to %b days, the other for %c. Nothing on the tap badge says which\n        is which.":
+   "Na jednom lístku stojí vedle sebe dvě %t\u00b0 piva za skoro stejné peníze. Jedno leželo v tanku %a až %b dní, druhé %c. Z cedule nad pípou to nepoznáte.",
+ "It does not taste like better and worse. It is a different fullness and a different\n        finish. Every beer here carries its lagering time, because it is the one number from the\n        cellar you meet in the first mouthful.":
+   "Nechutná to jako lepší a horší. Je to jiná plnost a jiný konec doušku. U každého piva tu stojí, jak dlouho leželo, protože je to jediný údaj z výroby, který ucítíte hned při prvním loku.",
+ "Estimates are drawn dotted and muted; anything we have not checked at all is blocked\n      from publication by the build, not by good intentions.":
+   "Odhady jsou tečkované a ztlumené; co jsme neověřili vůbec, to sestavení ven nepustí — nespoléháme na dobré úmysly.",
  "Everything above is built from two free sources — OpenStreetMap for the venues,\n      Wikidata for the breweries — plus beer data typed for this demo and marked unverified\n      throughout.":
    "Všechno výše je postavené ze dvou volných zdrojů — OpenStreetMap pro podniky, Wikidata pro pivovary — plus data o pivech napsaná pro tento prototyp a všude označená jako neověřená.",
  "Degrees on a Czech menu are degrees Plato — how much malt sugar was in the wort before\n          fermentation. Roughly, the alcohol lands near a third of the number: a 10° is about 3.8 %,\n          a 12° about 4.4 %.":
