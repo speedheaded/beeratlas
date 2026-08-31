@@ -702,6 +702,49 @@ function glassSvg(b, w, etch){
     <path d="${body}" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>${et}</svg>`;
 }
 
+/* ── выбор котвы для страницы сорта ───────────────────────────────────
+   Раньше здесь стояло жёстко: Урквелл всем, Heineken самому Урквеллу.
+   Для светлого лагера это верно и остаётся. Для американской IPA — нет:
+   у Matuška Raptor все четыре оси говорили «больше», а это нулевая
+   информация. Правило консервативное, меняет котву у четырёх сортов
+   из сорока и не трогает ни одного светлого лагера.
+
+   1. Светлый лагер сравнивается с Урквеллом всегда. Он им и есть
+      ближайший, а Stella или Heineken в этой роли ничего не добавят.
+   2. Прочим стилям ищется ближайшая котва по вектору. Оси, задающие
+      стиль, весят больше: без этого тёмный лагер уезжает к светлому.
+   3. Если и ближайшая далеко — котва остаётся Урквеллом. Сравнивать
+      чешский тёмный лагер с ирландским стаутом на расстоянии 8 значит
+      снова сообщать «отличается во всём». Чинится не алгоритмом, а
+      котвой для тёмного лагера, которой в данных пока нет. */
+const ANCHOR_STYLE_W = { roast: 3.5, hopProfile: 2.0, sourness: 2.0, fruitEster: 1.5 };
+const PALE_LAGER = new Set(["Czech pale lager", "Czech pale lager, unfiltered",
+  "Czech pale special", "Euro pale lager", "Pale lager"]);
+const ANCHOR_MAX = 4.0;
+
+function anchorDistance(a, c) {
+  let sum = 0;
+  for (let i = 0; i < AX.length; i++) {
+    const w = ANCHOR_STYLE_W[AX[i]] || 1;
+    const d = a.f[i] - c.f[i];
+    sum += w * d * d;
+  }
+  return Math.sqrt(sum);
+}
+
+function pickAnchor(b) {
+  const urquell = beerById["pilsner-urquell"];
+  if (b.id === "pilsner-urquell") return beerById["heineken"];
+  if (PALE_LAGER.has(b.style)) return urquell;
+  const pool = DATA.beers.filter(x => (x.anchor || x.id === "pilsner-urquell") && x.id !== b.id);
+  let best = null, bestD = Infinity;
+  for (const c of pool) {
+    const d = anchorDistance(b, c);
+    if (d < bestD) { bestD = d; best = c; }
+  }
+  return (best && bestD <= ANCHOR_MAX) ? best : urquell;
+}
+
 function lvlTag(l){ return '<span class="lvl ' + (l === "brewery" ? "b" : "s") + '">' + T(l === "brewery" ? "brewery" : "style") + "</span>"; }
 
 function brewhouse(pr, beerId){
@@ -898,7 +941,7 @@ const BREW_SHEETS = {
 function beerPage(id){
   const b = beerById[id] || pourable[0];
   const br = brById[b.breweryId] || {};
-  const anchor = beerById[b.id === "pilsner-urquell" ? "heineken" : "pilsner-urquell"];
+  const anchor = pickAnchor(b);
   const vs = venuesFor(b.breweryId);
 
   const diffs = AX.map((ax,i)=>({ax,i,d:b.f[i]-anchor.f[i]}))
