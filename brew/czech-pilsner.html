@@ -1,0 +1,554 @@
+<title>Czech Pilsner from Source</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   Дизайн-система «эмалевая вывеска и пивной картон»
+   Источник истины: design/tokens.css, утверждена 29.08.2026
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --card:        #EAE1CC;
+  --card-light:  #F4EEDD;
+  --foam:        #FBF8EF;
+  --ink:         #17190F;
+  --body:        #35382A;
+  --muted:       #6F6B57;
+  --line:        #CFC5A9;
+  --line-soft:   #DCD2B6;
+  --green:       #1C3A29;
+  --green-light: #7E9A88;
+  --green-pale:  #C4D2C8;
+  --gold:        #B8862B;
+  --gold-bright: #D9A03C;
+  --accent:      #8A5E15;
+  --dotted:      #A89A72;
+  --stale:       #8E2318;
+  --font-display: "Abril Fatface", Georgia, "Times New Roman", serif;
+  --font-text:    "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --card:        #12160F;
+    --card-light:  #1B2117;
+    --foam:        #1B2117;
+    --ink:         #EFE7D0;
+    --body:        #D0C9B1;
+    --muted:       #8E8A72;
+    --line:        #2F3728;
+    --line-soft:   #333B2B;
+    --green:       #24422F;
+    --green-light: #5F7E6B;
+    --green-pale:  #B6C7BB;
+    --accent:      #D9A03C;
+    --dotted:      #7A6C48;
+    --stale:       #D4796A;
+  }
+}
+:root[data-theme="dark"] {
+  --card:        #12160F;
+  --card-light:  #1B2117;
+  --foam:        #1B2117;
+  --ink:         #EFE7D0;
+  --body:        #D0C9B1;
+  --muted:       #8E8A72;
+  --line:        #2F3728;
+  --line-soft:   #333B2B;
+  --green:       #24422F;
+  --green-light: #5F7E6B;
+  --green-pale:  #B6C7BB;
+  --accent:      #D9A03C;
+  --dotted:      #7A6C48;
+  --stale:       #D4796A;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: var(--card);
+  color: var(--body);
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 1.62;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 1. Шапка-вывеска ────────────────────────────────── */
+.sign {
+  background: var(--green);
+  border-bottom: 5px solid var(--gold);
+  color: var(--card-light);
+  padding: 34px 24px 30px;
+  text-align: center;
+}
+.sign-eyebrow {
+  font-size: 12px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--green-pale);
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+.sign h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(34px, 7.5vw, 60px);
+  line-height: 1.04;
+  margin: 0;
+  color: var(--card-light);
+  text-wrap: balance;
+}
+.sign-sub {
+  margin: 16px auto 0;
+  max-width: 46ch;
+  color: var(--green-pale);
+  font-size: 16px;
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+/* ── 2. Пенная кромка ────────────────────────────────── */
+.foam { display: block; width: 100%; height: 22px; }
+.foam path { fill: var(--foam); }
+
+/* ── каркас ──────────────────────────────────────────── */
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 24px 90px;
+}
+section { margin-top: 54px; }
+
+h2 {
+  font-family: var(--font-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+h3 {
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 30px 0 8px;
+  line-height: 1.35;
+}
+p { margin: 0 0 16px; max-width: 65ch; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+b, strong { color: var(--ink); font-weight: 700; }
+
+.lede {
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-top: 40px;
+}
+
+/* ── достоверность (обязательное оформление) ─────────── */
+.v-estimated { color: var(--muted); border-bottom: 1px dotted var(--dotted); }
+.v-official  { font-weight: 700; color: var(--ink); }
+
+/* ── 3. Штамп ────────────────────────────────────────── */
+.target {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.stamp {
+  width: 148px; height: 148px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: inset 0 0 0 4px var(--card), inset 0 0 0 6px var(--gold);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--card-light);
+  flex: none;
+}
+.stamp-figure {
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 1;
+}
+.stamp-label {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--green-pale);
+  margin-top: 8px;
+}
+.specs {
+  flex: 1 1 300px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 15.5px;
+}
+.specs th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 7px 16px 7px 0;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.specs td {
+  text-align: right;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ── сравнение с якорем ──────────────────────────────── */
+.axes { display: grid; gap: 12px; margin: 22px 0 6px; }
+.axis {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 14px;
+  align-items: center;
+  font-size: 14.5px;
+}
+.axis-name {
+  color: var(--muted);
+  text-align: right;
+  letter-spacing: .02em;
+}
+.axis-track {
+  position: relative;
+  height: 9px;
+  background: var(--card-light);
+  border: 1px solid var(--line);
+}
+.axis-fill { position: absolute; inset: 0 auto 0 0; background: var(--green); }
+.axis-fill.hop { background: var(--gold); }
+
+/* ── таблицы ─────────────────────────────────────────── */
+.scroll { overflow-x: auto; margin: 18px 0; }
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+table.data th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  padding: 0 14px 8px 0;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+table.data td {
+  padding: 10px 14px 10px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+table.data td:last-child, table.data th:last-child { padding-right: 0; }
+.num { text-align: right; white-space: nowrap; }
+
+/* ── 4. Двойная рамка — список покупки ───────────────── */
+.label-frame {
+  border: 3px solid var(--green);
+  padding: 5px;
+  background: var(--green);
+  margin: 24px 0;
+}
+.label-inner {
+  border: 1px solid var(--green-light);
+  background: var(--card-light);
+  padding: 26px 26px 22px;
+}
+.label-inner h3 { margin-top: 0; }
+.cart { width: 100%; border-collapse: collapse; font-size: 15px; font-variant-numeric: tabular-nums; }
+.cart th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  padding: 0 12px 9px 0;
+  border-bottom: 1px solid var(--line-soft);
+  white-space: nowrap;
+}
+.cart td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+.cart td:last-child, .cart th:last-child { padding-right: 0; }
+.cart .item { color: var(--ink); font-weight: 600; }
+.cart .sub { display: block; color: var(--muted); font-size: 13px; font-weight: 400; margin-top: 2px; }
+.cart tr.total td { border-bottom: none; padding-top: 15px; font-weight: 700; color: var(--ink); font-size: 17px; }
+.per-glass { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+
+/* ── этапы процесса ──────────────────────────────────── */
+.stage {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.stage:last-child { border-bottom: none; }
+.stage-days {
+  font-family: var(--font-display);
+  font-size: 25px;
+  line-height: 1.05;
+  color: var(--green);
+  text-align: right;
+  padding-top: 2px;
+}
+.stage-days.no-figure { padding-top: 9px; }
+.stage-days.no-figure span { margin-top: 0; }
+.stage-days span {
+  display: block;
+  font-family: var(--font-text);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.stage h3 { margin: 0 0 6px; }
+.stage p { margin: 0 0 10px; font-size: 15.5px; }
+.stage p:last-child { margin-bottom: 0; }
+.stage-note {
+  font-size: 14.5px;
+  color: var(--muted);
+  border-left: 2px solid var(--line);
+  padding-left: 14px;
+}
+
+/* ── врезки ──────────────────────────────────────────── */
+.panel {
+  background: var(--card-light);
+  border: 1px solid var(--line-soft);
+  padding: 22px 24px;
+  margin: 24px 0;
+}
+.panel > :last-child { margin-bottom: 0; }
+.panel h3 { margin-top: 0; }
+
+.foot {
+  margin-top: 54px;
+  padding-top: 22px;
+  border-top: 3px double var(--line);
+  font-size: 14px;
+  color: var(--muted);
+}
+.foot p { max-width: none; }
+
+@media (max-width: 560px) {
+  .axis { grid-template-columns: 88px 1fr; gap: 10px; font-size: 13.5px; }
+  .stage { grid-template-columns: 60px 1fr; gap: 14px; }
+  .label-inner { padding: 20px 18px 18px; }
+  .page { padding: 0 18px 70px; }
+}
+</style>
+
+<header class="sign">
+  <p class="sign-eyebrow">Prague Beer Atlas · Brewing sheet</p>
+  <h1>Czech Pilsner from Source</h1>
+  <p class="sign-sub">A 20-litre recipe for the beer every pale lager is a copy of — built from the ingredients Plzeň actually uses, bought where they are grown and malted.</p>
+</header>
+
+<svg class="foam" viewBox="0 0 1200 22" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 0 h1200 v9 c-22 0-22 7-44 7s-22-6-44-6-22 8-44 8-22-7-44-7-22 6-44 6-22-8-44-8-22 7-44 7-22-6-44-6-22 8-44 8-22-7-44-7-22 6-44 6-22-8-44-8-22 7-44 7-22-6-44-6-22 8-44 8-22-7-44-7-22 6-44 6-22-8-44-8-22 7-44 7-22-6-44-6-22 8-44 8-22-7-44-7-22 6-44 6-22-8-44-8-22 7-44 7-22-6-44-6 V0 Z"/>
+</svg>
+
+<div class="page">
+
+  <p class="lede">Most “Bohemian Pilsner” recipes are a German pilsner with a Czech label. The gap is not the malt bill — it is <b>soft water, a decoction rest, generous low-alpha hops and six weeks of cold</b>. This sheet is the target profile of Pilsner Urquell, the numbers to hit it in a 20 L batch, and the exact shopping list, priced.</p>
+
+  <section>
+    <h2>The target</h2>
+    <div class="target">
+      <div class="stamp">
+        <div class="stamp-figure">12°</div>
+        <div class="stamp-label">Plato</div>
+      </div>
+      <table class="specs">
+        <tbody>
+          <tr><th scope="row">Original gravity</th><td>12 °P · 1.048</td></tr>
+          <tr><th scope="row">Final gravity</th><td>3.5 °P · 1.014</td></tr>
+          <tr><th scope="row">Alcohol</th><td><span class="v-estimated">4.4 % ABV</span></td></tr>
+          <tr><th scope="row">Apparent attenuation</th><td>71 %</td></tr>
+          <tr><th scope="row">Bitterness</th><td><span class="v-estimated">≈ 38 IBU</span></td></tr>
+          <tr><th scope="row">Colour</th><td>7–9 EBC</td></tr>
+          <tr><th scope="row">Grain to glass</th><td>≈ 42 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:24px">That 71 % attenuation is the part people miss. Fermentation is stopped early and roughly <b>3.5 °P of malt stays in the beer</b>. That unfermented sugar is what you read as body — it is why a 4.4 % Czech lager tastes fuller than a 5 % international one.</p>
+  </section>
+
+  <section>
+    <h2>What you are aiming at</h2>
+    <p>Nine axes, scored as a position rather than a rating. If you know Pilsner Urquell, you already know the target; if you do not, the closest widely available anchor is Heineken — <b>then make it far more bitter and far more malty</b>.</p>
+    <div class="axes">
+      <div class="axis"><span class="axis-name">Bitterness</span><span class="axis-track"><span class="axis-fill" style="width:65%"></span></span></div>
+      <div class="axis"><span class="axis-name">Malt sweetness</span><span class="axis-track"><span class="axis-fill" style="width:55%"></span></span></div>
+      <div class="axis"><span class="axis-name">Body</span><span class="axis-track"><span class="axis-fill" style="width:50%"></span></span></div>
+      <div class="axis"><span class="axis-name">Dryness</span><span class="axis-track"><span class="axis-fill" style="width:60%"></span></span></div>
+      <div class="axis"><span class="axis-name">Hop aroma</span><span class="axis-track"><span class="axis-fill hop" style="width:50%"></span></span></div>
+      <div class="axis"><span class="axis-name">Hop character</span><span class="axis-track"><span class="axis-fill hop" style="width:10%"></span></span></div>
+      <div class="axis"><span class="axis-name">Roast</span><span class="axis-track"><span class="axis-fill" style="width:10%"></span></span></div>
+      <div class="axis"><span class="axis-name">Fruit / ester</span><span class="axis-track"><span class="axis-fill" style="width:20%"></span></span></div>
+      <div class="axis"><span class="axis-name">Sourness</span><span class="axis-track"><span class="axis-fill" style="width:10%"></span></span></div>
+    </div>
+    <p style="margin-top:20px"><b>Hop character</b> runs 0 to 10, where 0 is the Saaz end — herbal, earthy, faintly floral — and 10 is New World citrus and tropical fruit. A Czech pilsner sits at <b>1</b>. Everything about the hop schedule below serves that number, and it is the single axis a substitute hop will move.</p>
+  </section>
+
+  <section>
+    <h2>The four things that make it Czech</h2>
+
+    <h3>Water so soft it barely counts</h3>
+    <p>Plzeň water is close to distilled — very low in sulphate and carbonate. That is why the bitterness lands clean instead of harsh. If your tap water is hard, cut it with distilled or RO water; this matters more than any other single decision on the page.</p>
+
+    <h3>Decoction, or a very long single rest</h3>
+    <p>Plzeň still runs a <b>triple decoction</b>: three portions of the mash are pulled, boiled and returned. Almost nobody does it at scale any more, and it is what gives the malt its depth without any specialty grain. If you are not set up for it, a single infusion at 65 °C for 75 minutes gets you most of the way — you will lose some richness and no one will call the beer wrong.</p>
+
+    <h3>Saaz, used generously</h3>
+    <p>Žatecký poloraný červeňák carries only 3.5 % alpha acid, so a Czech pilsner takes three to four times the hop weight of a modern IPA to reach half its bitterness. The bitterness lingers without ever turning resinous. A high-alpha substitute hits the IBU number and misses the beer.</p>
+
+    <h3>Six weeks of cold</h3>
+    <p>Lagering is the step industrial brewing cuts first, and the step you cannot fake. Three to six weeks near 2 °C clears the beer, softens the bitterness and carbonates it naturally. Bottle it at three weeks and you have made a green pilsner, which tastes exactly like it sounds.</p>
+  </section>
+
+  <section>
+    <h2>Recipe · 20 litres into the fermenter</h2>
+
+    <h3>Grain</h3>
+    <p><b>4.5 kg Czech Pilsner malt</b>, 3–4.9 EBC, and nothing else. Assumes 75 % brewhouse efficiency — scale to yours. A single-malt grist is the hardest kind of beer to hide anything in, which is the point.</p>
+
+    <h3>Hop schedule</h3>
+    <div class="scroll">
+      <table class="data">
+        <thead>
+          <tr><th scope="col">Addition</th><th scope="col" class="num">Weight</th><th scope="col" class="num">Boil time</th><th scope="col" class="num">IBU</th><th scope="col">Gives</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Saaz, first wort</td><td class="num">60 g</td><td class="num">60 min</td><td class="num">25</td><td>Clean bittering backbone</td></tr>
+          <tr><td>Saaz, flavour</td><td class="num">30 g</td><td class="num">30 min</td><td class="num">9</td><td>Herbal mid-palate</td></tr>
+          <tr><td>Saaz, aroma</td><td class="num">30 g</td><td class="num">10 min</td><td class="num">4</td><td>Floral lift, no harshness</td></tr>
+          <tr><td class="item"><b>Total</b></td><td class="num"><b>120 g</b></td><td class="num">—</td><td class="num"><b>38</b></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14.5px;color:var(--muted)">IBU by Tinseth at 3.5 % alpha, 20 L, OG 1.048. No dry hop — a Czech pilsner does not have one.</p>
+
+    <h3>Yeast and fermentation</h3>
+    <p><b>22 g dry lager yeast</b> — two 11 g sachets, which is the correct pitch for 20 L of 12 °P wort at lager temperature. Under-pitching a lager is the most common way this beer goes wrong. Ferment at <b>10–12 °C</b>, then drop to 2 °C for lagering.</p>
+  </section>
+
+  <section>
+    <h2>What to buy</h2>
+
+    <div class="label-frame">
+      <div class="label-inner">
+        <h3>One 20-litre batch</h3>
+        <div class="scroll">
+          <table class="cart">
+            <thead>
+              <tr><th scope="col">Ingredient</th><th scope="col" class="num">Need</th><th scope="col" class="num">Buy</th><th scope="col" class="num">Price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a class="item" href="https://www.beerex.cz/en/beerex-malt-pilsner-malt/">Beerex Pilsner Malt</a><span class="sub">3–4.9 EBC · 80.5 % extract</span></td>
+                <td class="num">4.5 kg</td>
+                <td class="num">5 × 1 kg</td>
+                <td class="num">€6.25</td>
+              </tr>
+              <tr>
+                <td><a class="item" href="https://www.beerex.cz/en/saaz-hops-czech-republic/">Saaz hops, Czech Republic</a><span class="sub">Pellets · 3.5–3.6 % alpha</span></td>
+                <td class="num">120 g</td>
+                <td class="num">2 × 100 g</td>
+                <td class="num">€5.56</td>
+              </tr>
+              <tr>
+                <td><a class="item" href="https://www.beerex.cz/en/kvasnice-lallemand-novalager/">Lallemand NovaLager</a><span class="sub">Dry bottom-fermenting</span></td>
+                <td class="num">22 g</td>
+                <td class="num">2 × 11 g</td>
+                <td class="num">€9.56</td>
+              </tr>
+              <tr class="total">
+                <td>Total, ingredients</td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num">€21.37</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="per-glass">≈ <b>€0.53</b> per half-litre — under the price of the same beer in a Prague pub. Brewing more than five batches? The 25 kg malt sack is €24.81, which takes the malt from €1.25 to €0.99 a kilo.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>About these links</h3>
+      <p>They go to <a href="https://www.beerex.cz/en/">Beerex</a>, a wholesaler in Rudná u Prahy that also sells retail. <b>I have no commercial arrangement with them.</b> I picked them because they list prices in euros publicly, sell hops in 100 g and malt in 1 kg, and state they ship worldwide — which is unusual for a Czech supplier at this size.</p>
+      <p style="margin-bottom:0">Prices checked <b>31 August 2026</b> and will drift. Any European homebrew shop with genuine Žatec Saaz and Czech Pilsner malt brews the same beer; the varieties matter, the vendor does not.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Grain to glass · 42 days</h2>
+
+    <div class="stage">
+      <div class="stage-days">1<span>Day</span></div>
+      <div>
+        <h3>Mashing</h3>
+        <p>Crushed malt meets hot water and the grain's own enzymes cut its starch into fermentable sugar. The result is <b>wort</b>: sweet, hopless, not yet beer.</p>
+        <p class="stage-note">Triple decoction at Plzeň. Single infusion at 65 °C for 75 minutes is the accessible substitute.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-days no-figure"><span>Same day</span></div>
+      <div>
+        <h3>Boil and hops</h3>
+        <p>Ninety minutes, uncovered — a long boil drives off DMS, which pilsner malt produces more of than most. Hops go in on the schedule above. Nothing else in the process adds bitterness or aroma.</p>
+        <p class="stage-note">Firmly hopped by international standards and unremarkable by Czech ones.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-days">6–10<span>Days</span></div>
+      <div>
+        <h3>Fermentation</h3>
+        <p>Cool to 10–12 °C and pitch both sachets. Sugar becomes alcohol and CO₂; cold and slow keeps the profile clean. Plzeň historically fermented open, in sandstone cellars, and still runs a small parallel batch that way for comparison.</p>
+        <p class="stage-note">Stop near 71 % attenuation. Let it run dry and you have made a German pilsner.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-days">21–45<span>Days</span></div>
+      <div>
+        <h3>Lagering</h3>
+        <p>Rest cold, near 2 °C. The beer clears, softens, carbonates naturally and loses the harshness of young beer. Three weeks is the floor; six is better.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-days no-figure"><span>Finish</span></div>
+      <div>
+        <h3>Packaging</h3>
+        <p>Plzeň filters for bottle and can, and delivers tank beer unfiltered and unpasteurised. At home, skip both — unfiltered and unpasteurised is the version worth flying to Plzeň for, and you can just make it.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <p><b>How solid are these numbers?</b> The gravities, attenuation and process come from Plzeňský Prazdroj's own published account. The taste axes are my estimates from style and specification, not lab data — they are marked <span class="v-estimated">with a dotted underline</span> throughout, here and across the rest of the atlas. Ingredient specifications and prices are the vendor's own.</p>
+    <p style="margin-bottom:0">Part of <a href="https://claude.ai/code/artifact/38f78384-8306-4c7d-923c-701d3b4bc26e"><b>Prague Beer Atlas</b></a> — an English guide to Czech beer that describes every beer as a distance from one you already know: pick a beer you have had, say how you want it changed, and it names the closest thing and where it is poured. If something here is wrong about a beer you know better than I do, that is exactly the correction I want.</p>
+  </div>
+
+</div>

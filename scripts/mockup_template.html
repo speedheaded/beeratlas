@@ -38,17 +38,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .sign{background:var(--green);border-bottom:5px solid var(--gold)}
 .sign-in{max-width:1180px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
 .wordmark{font-weight:700;font-size:15px;letter-spacing:.19em;text-transform:uppercase;color:var(--foam)}
-.nav{display:flex;gap:22px;flex-wrap:wrap}
+.nav{display:flex;gap:18px;flex-wrap:wrap;flex:1 1 auto;min-width:0}
 .nav button{font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:var(--green-pale);font-weight:500}
 .nav button:hover,.nav button[aria-current="page"]{color:var(--foam)}
 .langsw{margin-left:auto;display:flex;border:1.5px solid var(--gold)}
 .langsw button{font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 11px;color:var(--green-pale)}
 .langsw button[aria-current]{background:var(--gold);color:#17190F}
-.cta{margin-left:14px;font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-bright);
-  font-weight:600;border:1.5px solid var(--gold);padding:7px 14px}
-.cta:hover{background:var(--gold);color:#17190F}
 
 .wrap{max-width:1180px;margin:0 auto;padding:0 26px 80px}
+
+/* лист для домашней варки — врезка в боковой колонке */
+.brewline{margin:26px 0 0;padding:15px 20px;background:var(--card-light);
+  border-left:4px solid var(--gold);font-size:16.5px;max-width:64ch}
+.brewline a{font-weight:600}
+
+.brewsheet{display:block;background:var(--green);color:var(--foam);padding:18px 20px 20px;
+  margin-bottom:22px;border-bottom:4px solid var(--gold);text-decoration:none}
+.brewsheet:hover{background:#16301f}
+.bs-eyebrow{display:block;font-size:10.5px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold-bright);margin-bottom:8px}
+.brewsheet b{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:22px;
+  line-height:1.12;display:block;margin-bottom:7px;color:var(--foam)}
+.bs-sub{display:block;font-size:13.5px;line-height:1.45;color:var(--green-pale)}
 
 /* ── beer page ── */
 .crumb{font-size:12.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:38px 0 16px}
@@ -432,7 +443,6 @@ footer{margin-top:40px;padding-top:22px;border-top:4px solid var(--gold);font-si
       <button data-go="#/scan" data-i18n="Scan a bottle">Scan a bottle</button>
     </nav>
     <span class="langsw"><button data-lang="en">EN</button><button data-lang="cs">CS</button></span>
-    <button class="cta" data-go="#/find" data-i18n="Find your beer">Find your beer</button>
   </div>
 </div>
 <svg width="100%" height="15" viewBox="0 0 1080 15" preserveAspectRatio="none" style="display:block">
@@ -624,7 +634,7 @@ const ICON = {
 
 function lvlTag(l){ return '<span class="lvl ' + (l === "brewery" ? "b" : "s") + '">' + T(l === "brewery" ? "brewery" : "style") + "</span>"; }
 
-function brewhouse(pr){
+function brewhouse(pr, beerId){
   const a = pr.attenuation, tl = pr.timeline;
 
   /* метка полезна, только пока она про меньшинство: если все строки одного
@@ -697,6 +707,9 @@ function brewhouse(pr){
     <h3 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:24px;margin:0 0 14px">${T("Then, in order")}</h3>
     ${stages}
     ${pr.note ? `<p style="font-size:16.5px;line-height:1.6;color:var(--body);max-width:64ch">${pr.note}</p>` : ""}
+    ${BREW_SHEETS[beerId] ? `
+    <p class="brewline"><a href="${BREW_SHEETS[beerId]}" target="_blank" rel="noopener">${
+      T("Want to brew this yourself? Here is the recipe, the ingredients and what they cost →")}</a></p>` : ""}
     <p class="conf">${T("The three figures at the top are computed from this beer's own gravity and strength. Where we do not know what a brewery does, we say what the style normally does rather than invent a mash schedule.")}
       <a href="#/${LANG}/brewing">${T("How Czech lager is made →")}</a></p>
   </section>`;
@@ -806,6 +819,12 @@ const PLATO_CS = "Není to alkohol. Stupně na českém lístku jsou stupně Pla
   + "cukru bylo v mladině před kvašením. Zhruba platí, že alkohol vyjde okolo třetiny toho čísla: "
   + "desítka má asi 3,8 %, dvanáctka okolo 4,4 %.";
 
+/* Листы для домашней варки. Ключ — id сорта, значение — адрес листа.
+   Пока один: Pilsner Urquell. Блок показывается только тем, у кого лист есть. */
+const BREW_SHEETS = {
+  "pilsner-urquell": "https://claude.ai/code/artifact/566c0878-0440-4591-a4b2-51a4a8596525",
+};
+
 function beerPage(id){
   const b = beerById[id] || pourable[0];
   const br = brById[b.breweryId] || {};
@@ -881,7 +900,7 @@ function beerPage(id){
         ${b.plato ? `<section><h2>${LANG==="cs"?"Co znamená "+b.plato+"°":"What the "+b.plato+"° means"}</h2><p>${LANG==="cs"?PLATO_CS:PLATO_EN}</p></section>` : ""}
         ${false ? `<p>${T("Degrees on a Czech menu are degrees Plato — how much malt sugar was in the wort before\n          fermentation. Roughly, the alcohol lands near a third of the number: a 10° is about 3.8 %,\n          a 12° about 4.4 %.")}</p></section>` : ""}
 
-        ${b.prod ? brewhouse(b.prod[LANG] || b.prod.en) : ""}
+        ${b.prod ? brewhouse(b.prod[LANG] || b.prod.en, b.id) : ""}
 
         <div class="where-h"><h2>${T("Where to drink it")}</h2>${tally(vs.length)}</div>
         ${vs.length ? `<div class="vlist">${vs.slice(0,8).map(v=>`
@@ -910,6 +929,13 @@ function beerPage(id){
             <div class="foot">${T("Every dotted value is")} <b> ${T("unverified")} </b> ${T("— typed from knowledge for this\n              demo, not read off a label. Before launch each is confirmed or deleted.")} <a class="fixlink" href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></div>
           </div>
         </div>
+
+        ${BREW_SHEETS[b.id] ? `
+        <a class="brewsheet" href="${BREW_SHEETS[b.id]}" target="_blank" rel="noopener">
+          <span class="bs-eyebrow">${T("Brew it yourself")}</span>
+          <b>${T("Czech Pilsner from Source")}</b>
+          <span class="bs-sub">${T("A 20-litre recipe, the full process, and what the ingredients cost \u2192")}</span>
+        </a>` : ""}
 
         <div class="coaster" data-beer="${b.id}">
           <div class="top"><span class="ttl">${T("Vaše čárky")}</span><span class="cnt" data-cnt>0</span></div>

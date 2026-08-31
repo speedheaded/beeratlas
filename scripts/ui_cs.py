@@ -402,6 +402,16 @@ UI = {
    "Rmutování a měsíc studeného ležení jsou drahé. Jsou také celý důvod, proč český ležák chutná tak, jak chutná, a první věc, kterou průmyslový postup škrtne.",
  "Every beer page shows what is known for that brewery and what is only\n        typical for the style.":
    "Každá stránka piva ukazuje, co je o pivovaru známo a co je jen typické pro styl.",
+
+ # ── list pro domácí vaření ───────────────────────────────────────────────
+ "Brew it yourself": "Uvařte si ho sami",
+ "Czech Pilsner from Source": "Český ležák od zdroje",
+ "A 20-litre recipe, the full process, and what the ingredients cost \u2192":
+   "Recept na 20 litrů, celý postup a kolik stojí suroviny \u2192",
+
+ "Want to brew this yourself? Here is the recipe, the ingredients and what they cost \u2192":
+   "Chcete si ho uvařit sami? Tady je recept, suroviny a kolik stojí \u2192",
+
 }
 
 # osy srovnání
