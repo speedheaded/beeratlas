@@ -21,8 +21,10 @@
 import io
 import json
 import re
+import shutil
 import subprocess
 import sys
+import time
 import tempfile
 from pathlib import Path
 
@@ -30,7 +32,43 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ui_cs import UI  # noqa: E402
 
-CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+def find_chrome():
+    r"""Скрипт гоняется и из Windows, и из WSL, и с линукса. Жёсткий путь
+       C:\... в WSL не существует — а раньше это не роняло проверку, она
+       печатала «браузер не отработал» и всё равно говорила «паритет в порядке».
+       Молча проходящая проверка хуже отсутствующей."""
+    for c in (r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+              r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+              "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe",
+              "/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"):
+        if Path(c).exists():
+            return c
+    for name in ("google-chrome", "chromium", "chromium-browser", "chrome"):
+        found = shutil.which(name)
+        if found:
+            return found
+    return None
+
+
+CHROME = find_chrome()
+
+
+def chrome_url(p):
+    r"""Адрес файла для Chrome. Windows-Chrome, запущенный из WSL, не видит
+       /home/... — путь переводится через wslpath и получается UNC вида
+       \\wsl.localhost\Ubuntu\home\... Его нельзя клеить как "file:///"+path:
+       выходит file://///wsl..., и Chrome отдаёт файл ПРОСТЫМ ТЕКСТОМ вместо
+       HTML. Проба тогда читает исходник, содержимое всех маршрутов совпадает,
+       обход не заканчивается — и раньше это выглядело как «паритет в порядке»."""
+    p = str(p)
+    if CHROME and CHROME.startswith("/mnt/"):
+        try:
+            p = subprocess.run(["wslpath", "-w", p], capture_output=True,
+                               check=True).stdout.decode().strip()
+        except Exception:
+            pass
+    p = p.replace("\\", "/")
+    return "file:" + p if p.startswith("//") else "file:///" + p
 TEMPLATE = ROOT / "scripts" / "mockup_template.html"
 MOCKUP = ROOT / "mockup" / "index.html"
 
@@ -85,31 +123,6 @@ def static(verbose=True):
     return len(missing)
 
 
-PROBE = """<body><iframe id="f" width="1100" height="900" style="border:0"></iframe>
-<pre id="OUT">пусто</pre><script>
-var R=%s, i=0, out=[], f=document.getElementById('f');
-var EN=new RegExp(%s,'i'), OK=new RegExp(%s,'i');
-var DATA_STR={}; %s.forEach(function(x){DATA_STR[x]=1;});
-function step(){
-  if(i>=R.length){document.getElementById('OUT').textContent=out.join("\\n");return;}
-  var r=R[i++]; f.src="file:///%s"+r;
-  setTimeout(function(){
-    try{
-      var d=f.contentDocument, seen={};
-      var w=d.createTreeWalker(d.body,NodeFilter.SHOW_TEXT), n;
-      while((n=w.nextNode())){
-        var t=(n.nodeValue||"").trim();
-        if(t.length<3||seen[t]) continue;
-        if(!EN.test(t)) continue;
-        if(OK.test(t)||DATA_STR[t]) continue;
-        seen[t]=1; out.push(r+" | "+t.slice(0,110));
-      }
-    }catch(e){out.push("ОШИБКА "+r+" "+e.message);}
-    step();
-  },1200);
-}
-step();
-</script>"""
 
 
 def data_strings():
@@ -138,41 +151,99 @@ def data_strings():
     return {x.strip() for x in out if x and len(x.strip()) >= 3}
 
 
+TAGS = re.compile(r"<(script|style)\b.*?</\1>", re.S | re.I)
+
+
+def page_text(html):
+    """Видимый текст страницы. Скрипты и стили выброшены: иначе в проверку
+       едет сам исходник на 576 КБ, где английского сколько угодно."""
+    import html as H
+    return [H.unescape(t).strip()
+            for t in re.split(r"<[^>]+>", TAGS.sub(" ", html))]
+
+
 def rendered():
+    """Раньше здесь была одна страница с iframe, который перебирал маршруты.
+       Под --virtual-time-budget это не работает: таймеры внешней страницы
+       промотываются раньше, чем iframe успевает загрузить 590 КБ, и обход
+       вставал молча. Гоняем браузер по одному разу на маршрут — медленнее,
+       зато каждый маршрут гарантированно отрисован."""
     if not MOCKUP.exists():
         print("нет mockup/index.html — сначала python scripts/build_mockup.py")
-        return 0
-    page = PROBE % (json.dumps(ROUTES), json.dumps(EN), json.dumps(ALLOW.pattern),
-                    json.dumps(sorted(data_strings())), str(MOCKUP).replace("\\", "/"))
-    tmp = Path(tempfile.gettempdir()) / "beeratlas_check_cs.html"
-    tmp.write_text(page, encoding="utf-8")
-    try:
-        out = subprocess.run(
-            [CHROME, "--headless=new", "--disable-gpu", "--allow-file-access-from-files",
-             "--window-size=1200,900", "--virtual-time-budget=40000", "--dump-dom",
-             "file:///" + str(tmp).replace("\\", "/")],
-            capture_output=True, timeout=180).stdout.decode("utf-8", "replace")
-    except Exception as e:
-        print("браузер не отработал: %s" % e)
-        return 0
-    m = re.search(r'<pre id="OUT">(.*?)</pre>', out, re.S)
-    if not m:
-        print("проба не вернула результат — проверьте вручную")
-        return 0
-    import html as H
-    rows = [r for r in H.unescape(m.group(1)).split("\n") if r.strip() and r.strip() != "пусто"]
-    print("\nобойдено чешских маршрутов: %d" % len(ROUTES))
+        return -1
+    if not CHROME:
+        print("Chrome не найден — проверка рендером не выполнена")
+        return -1
+
+    # ALLOW собран без (?i): раньше он уезжал в JavaScript, где такого
+    # синтаксиса нет, а нечувствительность задавалась флагом new RegExp(...,'i').
+    # Здесь сравнение идёт в Python, поэтому флаг нужно поставить явно —
+    # иначе «Prague Beer Atlas» не совпадёт с шаблоном в нижнем регистре.
+    base = chrome_url(MOCKUP)
+    allow = re.compile(ALLOW.pattern, re.I)
+    data = set(data_strings())
+    en = re.compile(EN, re.I)
+    rows, broken = [], 0
+
+    for r in ROUTES:
+        # запущенные вплотную копии Chrome делят профиль по умолчанию и мешают
+        # друг другу: часть маршрутов отдаёт неотрисованную оболочку
+        time.sleep(1.5)
+        # headless отрисовывает не с первой попытки примерно в трети случаев:
+        # страница на 590 КБ иногда не успевает за отведённое виртуальное время
+        parts = None
+        for attempt in range(5):
+            try:
+                out = subprocess.run(
+                    [CHROME, "--headless=new", "--disable-gpu", "--no-first-run",
+                     "--no-default-browser-check", "--disable-extensions",
+                     "--allow-file-access-from-files", "--window-size=1200,900",
+                     "--virtual-time-budget=%d" % (40000 + attempt * 15000),
+                     "--dump-dom", base + r],
+                    capture_output=True, timeout=180).stdout.decode("utf-8", "replace")
+            except Exception as e:
+                print("браузер не отработал на %s: %s" % (r, e))
+                return -1
+            got = page_text(out)
+            if sum(len(t) for t in got) < 400 and attempt < 4:
+                time.sleep(2.0)  # подряд запущенные копии Chrome мешают друг другу
+            # статическая оболочка без отрисовки — около сотни знаков
+            if sum(len(t) for t in got) >= 400:
+                parts = got
+                break
+        if parts is None:
+            print("НЕ ОТРИСОВАЛСЯ за пять попыток: %s" % r)
+            broken += 1
+            continue
+
+        seen = set()
+        for t in parts:
+            if len(t) < 3 or t in seen:
+                continue
+            if not en.search(t) or allow.search(t) or t in data:
+                continue
+            seen.add(t)
+            rows.append("%s | %s" % (r, t[:110]))
+
+    print("\nобойдено чешских маршрутов: %d" % (len(ROUTES) - broken))
+    if broken:
+        print("не отрисовалось маршрутов: %d — паритет НЕ проверен" % broken)
+        return -1
     if rows:
         print("АНГЛИЙСКИЙ В ЧЕШСКОМ РЕЖИМЕ, %d мест:" % len(rows))
-        for r in rows:
-            print("   %s" % r)
+        for x in rows:
+            print("   %s" % x)
     return len(rows)
 
 
 def main():
     bad = static()
     if "--static" not in sys.argv:
-        bad += rendered()
+        r = rendered()
+        if r < 0:
+            print("\nПРОВЕРКА РЕНДЕРОМ НЕ ОТРАБОТАЛА — паритет НЕ подтверждён")
+            return 2
+        bad += r
     if bad:
         print("\nПАРИТЕТ НАРУШЕН: %d мест" % bad)
         return 1
