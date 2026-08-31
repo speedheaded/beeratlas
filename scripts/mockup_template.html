@@ -472,8 +472,8 @@ footer{margin-top:40px;padding-top:22px;border-top:4px solid var(--gold);font-si
 <script>
 const DATA = /*__DATA__*/null;
 const UI_CS = /*__UI_CS__*/null;
-const AXNAME_CS = {"Bitterness": "Hořkost", "Malt sweetness": "Sladová sladkost", "Body": "Plnost", "Dry finish": "Suchý závěr", "Roast": "Praženost", "Fruit": "Ovocnost", "Tartness": "Kyselost", "Hop aroma": "Chmelové aroma", "Hop character": "Charakter chmele"};
-const POLE_CS = {"bitterness": ["měkčí", "hořčejší"], "maltSweetness": ["méně sladové", "sladší"], "body": ["lehčí", "plnější"], "dryness": ["kulatější", "sušší závěr"], "roast": ["méně pražené", "káva, karamel"], "fruitEster": ["čistší", "ovocnější"], "sourness": ["méně kyselé", "kyselejší"], "hopAroma": ["tišší aroma", "výraznější chmelové aroma"], "hopProfile": ["žatecký, bylinný", "citrus, tropy"]};
+const AXNAME_CS = {"Bitterness": "Hořkost", "Malt sweetness": "Sladová sladkost", "Body": "Plnost", "Dry finish": "Suchý závěr", "Roast": "Praženost", "Fruit": "Ovocnost", "Tartness": "Kyselost", "Hop aroma": "Chmelové aroma", "Hop character": "Charakter chmele", "Alcohol": "Alkohol"};
+const POLE_CS = {"bitterness": ["měkčí", "hořčejší"], "maltSweetness": ["méně sladové", "sladší"], "body": ["lehčí", "plnější"], "dryness": ["kulatější", "sušší závěr"], "roast": ["méně pražené", "káva, karamel"], "fruitEster": ["čistší", "ovocnější"], "sourness": ["méně kyselé", "kyselejší"], "hopAroma": ["tišší aroma", "výraznější chmelové aroma"], "hopProfile": ["žatecký, bylinný", "citrus, tropy"], "abv": ["slabší", "silnější"]};
 let LANG = (() => {
   const m = (location.hash || "").match(/^#\/(en|cs)\b/);
   if (m) return m[1];
@@ -578,8 +578,10 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 
 const AX = ["bitterness","maltSweetness","body","dryness","roast","fruitEster","sourness","hopAroma","hopProfile"];
 const AXNAME_EN = {bitterness:"Bitterness",maltSweetness:"Malt sweetness",body:"Body",dryness:"Dry finish",
-  roast:"Roast",fruitEster:"Fruit",sourness:"Tartness",hopAroma:"Hop aroma",hopProfile:"Hop character"};
+  roast:"Roast",fruitEster:"Fruit",sourness:"Tartness",hopAroma:"Hop aroma",hopProfile:"Hop character",
+  abv:"Alcohol"};
 const POLE_EN = {
+  abv:["weaker","stronger"],
   bitterness:["softer","more bitter"], maltSweetness:["drier malt","sweeter"],
   body:["lighter","fuller"], dryness:["rounder","drier finish"],
   roast:["less roast","coffee, caramel"], fruitEster:["cleaner","fruitier"],
@@ -617,6 +619,10 @@ function tally(n){
 const NOUNY = new Set(["coffee, caramel", "Saaz, herbal", "citrus, tropical",
   "káva, karamel", "žatecký, bylinný", "citrus, tropy"]);
 function deltaWord(ax, d, strong){
+  if (ax === "abv") {
+    const pp = (Math.abs(d) * ABV_STEP).toFixed(2).replace(/0$/, "");
+    return (d > 0 ? "+" : "\u2212") + (LANG === "cs" ? pp.replace(".", ",") : pp) + " %";
+  }
   const w = POLE[ax][d > 0 ? 1 : 0];
   if (Math.abs(d) < (strong || 4) || NOUNY.has(w)) return w;
   return (w.startsWith("more ") || w.startsWith("less ") ? (LANG==="cs"?"mnohem ":"much ") : (LANG==="cs"?"mnohem ":"far more ")) + w;
@@ -1077,7 +1083,17 @@ function beerPage(id){
 /* ── finder ──────────────────────────────────────────────────────────── */
 const AXNAME = new Proxy({}, {get:(_,k)=>LANG==="cs"?(AXNAME_CS[AXNAME_EN[k]]||AXNAME_EN[k]):AXNAME_EN[k]});
 const POLE = new Proxy({}, {get:(_,k)=>LANG==="cs"?(POLE_CS[k]||POLE_EN[k]):POLE_EN[k]});
-const SLIDER_AX = ["bitterness","maltSweetness","body","roast","hopProfile"];
+/* Крепость — шестая ось подбора, но природы другой: это не ощущение во рту,
+   а число с этикетки. Взято потому, что это единственный параметр, который
+   человек знает про себя заранее, и потому что градус его не заменяет:
+   Radegast Originál — двенадцатка на 4,0 %, слабее почти всех десяток.
+
+   Шаг мельче вкусовых осей: 82 % каталога лежит между 4,0 и 5,0 %, весь
+   разброс — 2,5 процентных пункта на сорок сортов. Деление в целый пункт
+   перепрыгнуло бы каталог за один щелчок. */
+const ABV_STEP = 0.25;   /* процентных пункта на одно деление ползунка */
+const ABV_UNIT = 0.35;   /* столько п. п. весят как единица вкусовой оси */
+const SLIDER_AX = ["bitterness","maltSweetness","body","roast","hopProfile","abv"];
 const ANCHOR_IDS = ["pilsner-urquell","kozel-cerny","budweiser-budvar-original",
   "guinness-draught","corona-extra","brewdog-punk-ipa","hoegaarden","matuska-raptor"];
 let anchorId = "pilsner-urquell", deltas = {};
@@ -1116,12 +1132,21 @@ function finderPage(){
 function runMatch(){
   const a = beerById[anchorId];
   const target = a.f.map((v,i)=>Math.max(0,Math.min(10, v + (deltas[AX[i]]||0))));
+  const dAbv = deltas.abv || 0;
+  const abvTarget = (a.abv || 0) + dAbv * ABV_STEP;
   const scored = pourable.filter(b=>b.id!==anchorId).map(b=>{
     let s=0;
     for(let i=0;i<AX.length;i++){
       const w = 1 + Math.abs(deltas[AX[i]]||0)*0.6;
       const d = target[i]-b.f[i];
       s += w*d*d;
+    }
+    /* Пока ползунок крепости не тронут, она в счёт не входит вовсе —
+       иначе результаты изменились бы у всех, кто про алкоголь не спрашивал. */
+    if (dAbv && b.abv) {
+      const w = 1 + Math.abs(dAbv) * 0.6;
+      const d = (abvTarget - b.abv) / ABV_UNIT;
+      s += w * d * d;
     }
     return {b, dist:Math.sqrt(s)};
   }).sort((x,y)=>x.dist-y.dist).slice(0,6);
