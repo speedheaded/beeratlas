@@ -142,7 +142,7 @@ def build(beer, flavour, loc="en"):
     if known_en and known_en.get("pasteurised") is False:
         spec["pasteurised"] = False
 
-    days = {**EN.STYLE_DAYS.get(beer["style"], {"ferment": (6, 10), "lager": (21, 45)}),
+    days = {**EN.style_days(beer["style"], (beer.get("plato") or {}).get("value")),
             **EN.DAYS.get(beer["id"], {})}
     days_known = beer["id"] in EN.DAYS
 

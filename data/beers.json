@@ -27,7 +27,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "Heineken, but far more bitter and malty"
@@ -156,7 +156,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -179,10 +179,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": "The cellar comparison batch is the reason the brewery can tell you what it is supposed to taste like. If you take the brewery tour in Plzeň, the unfiltered, unpasteurised beer straight from a cellar barrel is the whole point of going.",
@@ -284,7 +284,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -307,10 +307,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Srovnávací várka ve sklepě je důvod, proč pivovar dokáže říct, jak to má chutnat. Kdo jede na exkurzi do Plzně, jde tam kvůli nefiltrovanému nepasterizovanému pivu přímo ze sklepního sudu.",
@@ -347,7 +347,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -446,7 +446,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -474,10 +474,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Unfiltered and unpasteurised are different things, and this beer is both. Expect a rounder body and a faint bready yeast note the filtered version does not have.",
@@ -573,7 +573,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -601,10 +601,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Nefiltrované a nepasterizované jsou dvě různé věci a tohle pivo je obojí. Čekejte kulatější plnost a jemný kvasnicový chlebový tón.",
@@ -641,7 +641,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -740,8 +740,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -763,10 +763,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Part of the Plzeňský Prazdroj group and brewed to its process: Czech malt, Saaz hops, decoction mashing and cold lagering.",
@@ -862,8 +862,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -885,10 +885,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Součást skupiny Plzeňský Prazdroj a vaří se jejím postupem: český slad, žatecký chmel, rmutování a studené ležení.",
@@ -925,7 +925,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "softer and sweeter than Pilsner Urquell"
@@ -1027,7 +1027,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -1049,10 +1049,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": "Part of the Plzeňský Prazdroj group and brewed to its process: Czech malt, Saaz hops, decoction mashing and cold lagering.",
@@ -1149,7 +1149,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -1171,10 +1171,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": "Součást skupiny Plzeňský Prazdroj a vaří se jejím postupem: český slad, žatecký chmel, rmutování a studené ležení.",
@@ -1211,7 +1211,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "what people order expecting Guinness — it is not"
@@ -1324,8 +1324,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -1341,10 +1341,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": "This is the technical reason it disappoints people expecting Guinness. A dry stout gets its character from unmalted roasted barley and a nitrogen pour; this gets its character from caramel malt and normal CO₂.",
@@ -1440,8 +1440,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -1457,10 +1457,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Tohle je technický důvod, proč lidi zklame, když čekají Guinness. Suchý stout má charakter z nesladovaného praženého ječmene a dusíkového čepování; tohle ho má z karamelového sladu a běžného oxidu uhličitého.",
@@ -1497,7 +1497,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -1596,8 +1596,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -1619,10 +1619,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Part of the Plzeňský Prazdroj group and brewed to its process: Czech malt, Saaz hops, decoction mashing and cold lagering. Brewed in the same Plzeň brewhouse as Pilsner Urquell and deliberately built softer.",
@@ -1718,8 +1718,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -1741,10 +1741,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Součást skupiny Plzeňský Prazdroj a vaří se jejím postupem: český slad, žatecký chmel, rmutování a studené ležení. Vaří se ve stejné plzeňské varně jako Prazdroj a je záměrně stavěný měkčeji.",
@@ -1781,7 +1781,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -1881,7 +1881,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -1903,10 +1903,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": "Part of the Plzeňský Prazdroj group and brewed to its process: Czech malt, Saaz hops, decoction mashing and cold lagering. Brewed in the same Plzeň brewhouse as Pilsner Urquell and deliberately built softer.",
@@ -2003,7 +2003,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -2025,10 +2025,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": "Součást skupiny Plzeňský Prazdroj a vaří se jejím postupem: český slad, žatecký chmel, rmutování a studené ležení. Vaří se ve stejné plzeňské varně jako Prazdroj a je záměrně stavěný měkčeji.",
@@ -2065,7 +2065,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -2164,8 +2164,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -2187,10 +2187,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Brewed in Smíchov, inside Prague, which makes it the shortest journey from brewhouse to tap in the city.",
@@ -2286,8 +2286,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -2309,10 +2309,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": "Vaří se na Smíchově, uvnitř Prahy, což je nejkratší cesta z varny na pípu ve městě.",
@@ -2349,7 +2349,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -2448,7 +2448,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -2471,10 +2471,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Brewed in Smíchov, inside Prague, which makes it the shortest journey from brewhouse to tap in the city.",
@@ -2570,7 +2570,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -2593,10 +2593,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Vaří se na Smíchově, uvnitř Prahy, což je nejkratší cesta z varny na pípu ve městě.",
@@ -2633,7 +2633,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "halfway to a dark lager"
@@ -2735,7 +2735,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -2751,10 +2751,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": "Brewed in Smíchov, inside Prague, which makes it the shortest journey from brewhouse to tap in the city.",
@@ -2851,7 +2851,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -2867,10 +2867,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": "Vaří se na Smíchově, uvnitř Prahy, což je nejkratší cesta z varny na pípu ve městě.",
@@ -2907,7 +2907,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -3006,8 +3006,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -3034,10 +3034,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -3133,8 +3133,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -3161,10 +3161,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -3201,7 +3201,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "Pilsner Urquell, but unfiltered and rounder"
@@ -3302,7 +3302,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -3330,10 +3330,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": "The brewery sells its beer unfiltered and unpasteurised and does not distribute far, which is a deliberate trade: freshness in exchange for range.",
@@ -3429,7 +3429,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -3457,10 +3457,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Pivovar prodává pivo nefiltrované a nepasterizované a nerozváží ho daleko. Je to záměrná výměna: čerstvost za dosah.",
@@ -3497,7 +3497,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "the dark beer people wanted when they ordered Kozel Černý"
@@ -3598,7 +3598,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -3626,10 +3626,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -3725,7 +3725,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -3753,10 +3753,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -3793,7 +3793,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -4111,7 +4111,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "closest regional match to Pilsner Urquell"
@@ -4421,7 +4421,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -4705,7 +4705,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -4999,7 +4999,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -5098,7 +5098,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -5121,10 +5121,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Part of the Plzeňský Prazdroj group and brewed to its process: Czech malt, Saaz hops, decoction mashing and cold lagering.",
@@ -5220,7 +5220,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -5243,10 +5243,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Součást skupiny Plzeňský Prazdroj a vaří se jejím postupem: český slad, žatecký chmel, rmutování a studené ležení.",
@@ -5283,7 +5283,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "the most bitter mainstream Czech lager"
@@ -5384,7 +5384,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -5407,10 +5407,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Marketed on bitterness in a market that sells smoothness. If a Czech lager has ever tasted too soft to you, this is the one built for that complaint.",
@@ -5506,7 +5506,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -5529,10 +5529,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": "Prodává se na hořkosti na trhu, který prodává jemnost. Pokud vám kdy český ležák přišel příliš měkký, tohle je pivo postavené přesně na tu výtku.",
@@ -5569,7 +5569,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "rounder and sweeter than Pilsner Urquell"
@@ -5879,7 +5879,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -6151,7 +6151,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -6250,8 +6250,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -6273,10 +6273,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -6372,8 +6372,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -6395,10 +6395,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -6435,7 +6435,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -6534,8 +6534,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -6551,10 +6551,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -6650,8 +6650,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -6667,10 +6667,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -6707,7 +6707,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -6806,7 +6806,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -6829,10 +6829,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -6928,7 +6928,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -6951,10 +6951,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -6991,7 +6991,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -7091,7 +7091,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -7113,10 +7113,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -7213,7 +7213,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -7235,10 +7235,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -7275,7 +7275,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -7374,7 +7374,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -7397,10 +7397,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -7496,7 +7496,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -7519,10 +7519,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -7559,7 +7559,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -7658,8 +7658,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -7681,10 +7681,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "14–21 days",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -7780,8 +7780,8 @@
       ],
       "note": null,
       "days": [
-       21,
-       45
+       14,
+       21
       ]
      },
      {
@@ -7803,10 +7803,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 17.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "14–21 dní",
+     "total": 26,
      "lvl": "style"
     },
     "note": null,
@@ -7843,7 +7843,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -7942,7 +7942,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -7965,10 +7965,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "30–45 days",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -8064,7 +8064,7 @@
       ],
       "note": null,
       "days": [
-       21,
+       30,
        45
       ]
      },
@@ -8087,10 +8087,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 37.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "30–45 dní",
+     "total": 46,
      "lvl": "style"
     },
     "note": null,
@@ -8127,7 +8127,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -8227,7 +8227,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -8249,10 +8249,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -8349,7 +8349,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -8371,10 +8371,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -8411,7 +8411,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -8511,7 +8511,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -8533,10 +8533,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -8633,7 +8633,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -8655,10 +8655,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -8695,7 +8695,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -8795,7 +8795,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -8817,10 +8817,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 days",
-     "lagerLabel": "21–45 days",
-     "total": 42,
+     "lagerLabel": "21–30 days",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -8917,7 +8917,7 @@
       "note": null,
       "days": [
        21,
-       45
+       30
       ]
      },
      {
@@ -8939,10 +8939,10 @@
     "timeline": {
      "brew": 1,
      "ferment": 8.0,
-     "lager": 33.0,
+     "lager": 25.5,
      "fermentLabel": "6–10 dní",
-     "lagerLabel": "21–45 dní",
-     "total": 42,
+     "lagerLabel": "21–30 dní",
+     "total": 34,
      "lvl": "style"
     },
     "note": null,
@@ -8976,7 +8976,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [
    "BrewDog Punk IPA"
@@ -9229,7 +9229,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -9456,7 +9456,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -9633,7 +9633,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -9810,7 +9810,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -9987,7 +9987,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -10164,7 +10164,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -10403,7 +10403,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",
@@ -10580,7 +10580,7 @@
    },
    "method": "inferred",
    "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-30"
+   "checkedAt": "2026-08-31"
   },
   "tastesLike": [],
   "availability": "core",

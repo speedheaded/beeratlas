@@ -321,6 +321,36 @@ STYLE_DAYS = {
     "German wheat beer":            dict(ferment=(4, 7),  lager=(7, 14)),
 }
 
+# Внутри чешских лагеров срок лежания зависит от плотности: лёгкая десятка
+# лежит вдвое меньше двенадцатки. Раньше комментарий над STYLE_DAYS это
+# обещал, а код брал одно окно на весь стиль — и Braník 10° заявлял тот же
+# срок, что Urquell 12°: у 25 сортов из 40 стояли одинаковые 42 дня.
+#
+# Числа — оценка по чешской практике, не источник. Уровень остаётся «style»,
+# и страница про это говорит. Подтвердит пивовар — станут «brewery».
+PLATO_LAGER = {
+    10: (14, 21),
+    11: (21, 30),
+    12: (30, 45),
+}
+PLATO_STYLES = {
+    "Czech pale lager", "Czech pale lager, unfiltered",
+    "Czech dark lager", "Czech amber lager",
+}
+
+
+def style_days(style, plato=None):
+    """Окно сроков для стиля, уточнённое градусом там, где он что-то значит."""
+    d = STYLE_DAYS.get(style)
+    if d is None:
+        return {"ferment": (6, 10), "lager": (21, 45)}
+    if style in PLATO_STYLES and plato:
+        p = int(round(plato))
+        window = PLATO_LAGER.get(p) or PLATO_LAGER[10 if p < 10 else 12]
+        return {**d, "lager": window}
+    return d
+
+
 # Что происходит на каждом шаге — общий текст, привязанный к этапу.
 STAGE_WHAT = {
     "mash":    ("Mashing", "Starch becomes sugar",
