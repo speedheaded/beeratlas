@@ -156,34 +156,19 @@ b, strong { color: var(--ink); font-weight: 700; }
 .v-estimated { color: var(--muted); border-bottom: 1px dotted var(--dotted); }
 .v-official  { font-weight: 700; color: var(--ink); }
 
-/* ── 3. Штамп ────────────────────────────────────────── */
+/* ── 3. Цель: бокал и таблица ────────────────────────── */
 .target {
   display: flex;
   gap: 30px;
   align-items: center;
   flex-wrap: wrap;
 }
-.stamp {
-  width: 148px; height: 148px;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: inset 0 0 0 4px var(--card), inset 0 0 0 6px var(--gold);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  color: var(--card-light);
-  flex: none;
-}
-.stamp-figure {
+/* ── знак сорта: бокал в цвете пива ──────────────────── */
+.glass { display: block; flex: none; }
+.etch-n {
+  /* градус вытравлен на стекле, как марка на настоящем чешском бокале */
   font-family: var(--font-display);
-  font-size: 46px;
-  line-height: 1;
-}
-.stamp-label {
-  font-size: 10px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--green-pale);
-  margin-top: 8px;
+  font-size: 23px;
 }
 .specs {
   flex: 1 1 300px;
@@ -391,10 +376,25 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
   <section>
     <h2>Cíl</h2>
     <div class="target">
-      <div class="stamp">
-        <div class="stamp-figure">12°</div>
-        <div class="stamp-label">Plato</div>
-      </div>
+      <svg class="glass" viewBox="0 0 100 142" width="150" height="213" role="img"
+       aria-label="Pilsner Urquell, 7–9 EBC">
+      <defs>
+        <clipPath id="cl-target"><path d="M22 16h56l-5 108a8 8 0 0 1-8 7.5H35a8 8 0 0 1-8-7.5z"/></clipPath>
+        <linearGradient id="gr-target" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFBF42" stop-opacity=".84"/>
+          <stop offset="1" stop-color="#FFBF42" stop-opacity="1"/>
+        </linearGradient>
+      </defs>
+      <g clip-path="url(#cl-target)">
+        <rect x="0" y="36" width="100" height="106" fill="url(#gr-target)"/>
+        <rect x="0" y="14" width="100" height="22" fill="var(--foam)"/>
+        <path d="M18 36q7 6 14 0t14 0 14 0 14 0 14 0v7H18z" fill="var(--foam)"/>
+        <rect x="28" y="36" width="7" height="106" fill="#fff" opacity=".17"/>
+      </g>
+      <path d="M22 16h56l-5 108a8 8 0 0 1-8 7.5H35a8 8 0 0 1-8-7.5z" fill="none"
+            stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+      <text x="50" y="96" text-anchor="middle" class="etch-n" fill="var(--ink)" opacity=".44">12°</text>
+    </svg>
       <table class="specs">
         <tbody>
           <tr><th scope="row">Stupňovitost mladiny</th><td>12 °P · 1.048</td></tr>
