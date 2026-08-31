@@ -23,7 +23,7 @@ python scripts/fetch_lineups.py     # линейки с сайтов пивов�
 python scripts/fetch_shelf.py       # бутылки и этикетки из Open Food Facts (сеть)
 python scripts/build_listed.py      # второй уровень каталога из снятого сырья
 python scripts/check_cs.py          # языковой паритет (сборка гоняет половину сама)
-python scripts/build_mockup.py      # -> mockup/index.html
+python scripts/build_mockup.py      # -> index.html (корень: его отдаёт Vercel)
 ```
 
 В сеть ходят три шага: `ingest` (Overpass иногда упирается в лимит, скрипт
@@ -43,7 +43,7 @@ python scripts/build_mockup.py      # -> mockup/index.html
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new \
   --disable-gpu --hide-scrollbars --window-size=1400,2400 \
   --screenshot=out.png --virtual-time-budget=6000 \
-  "file:///E:/python/Beergraph/mockup/index.html#/beer/svijansky-maz"
+  "file:///E:/python/Beergraph/index.html#/beer/svijansky-maz"
 ```
 
 ## Опубликованное
@@ -55,7 +55,7 @@ python scripts/build_mockup.py      # -> mockup/index.html
 | **Бриф v4** | https://claude.ai/code/artifact/221ced02-4a7a-4241-9f66-e3aab0f59e0e |
 | **Макеты на холсте** | https://claude.ai/code/artifact/d3f60601-5bf2-4819-b168-941f84803940 |
 
-Прототип публикуется инструментом Artifact по пути `mockup/index.html` — адрес
+Прототип публикуется инструментом Artifact по пути `index.html` — адрес
 сохраняется, пока публикуется тот же файл.
 
 ---
@@ -83,7 +83,7 @@ python scripts/build_mockup.py      # -> mockup/index.html
 | [scripts/build_listed.py](scripts/build_listed.py) | Второй уровень каталога. Утверждает правилом; `--skip` показывает исключения |
 | [scripts/review_lineups.py](scripts/review_lineups.py) | Сверка снятого с каталогом: что нового, где расхождения |
 | [scripts/probe_feeds.py](scripts/probe_feeds.py) | Разведка магазинных XML-фидов. Пока безрезультатна, нужен реальный список магазинов |
-| [scripts/build_mockup.py](scripts/build_mockup.py) | Сборка `mockup/index.html` из данных, шаблона и `ui_cs.py`. **Падает, если у строки нет чешского перевода** |
+| [scripts/build_mockup.py](scripts/build_mockup.py) | Сборка `index.html` из данных, шаблона и `ui_cs.py`. **Падает, если у строки нет чешского перевода** |
 | [scripts/check_cs.py](scripts/check_cs.py) | Языковой паритет: ключи без перевода статически, необёрнутые литералы — рендером чешских маршрутов |
 
 ## Контент, который правится руками

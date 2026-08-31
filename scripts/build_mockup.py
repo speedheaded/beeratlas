@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-OUT = ROOT / "mockup" / "index.html"
+OUT = ROOT / "index.html"
 
 breweries = json.loads((DATA / "breweries.json").read_text(encoding="utf-8"))
 venues = json.loads((DATA / "venues.json").read_text(encoding="utf-8"))

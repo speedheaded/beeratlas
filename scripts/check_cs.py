@@ -70,7 +70,7 @@ def chrome_url(p):
     p = p.replace("\\", "/")
     return "file:" + p if p.startswith("//") else "file:///" + p
 TEMPLATE = ROOT / "scripts" / "mockup_template.html"
-MOCKUP = ROOT / "mockup" / "index.html"
+MOCKUP = ROOT / "index.html"
 
 ROUTES = ["#/cs/", "#/cs/find", "#/cs/beers", "#/cs/breweries",
           "#/cs/brewery/pivovar-svijany", "#/cs/beer/pilsner-urquell",
@@ -169,7 +169,7 @@ def rendered():
        вставал молча. Гоняем браузер по одному разу на маршрут — медленнее,
        зато каждый маршрут гарантированно отрисован."""
     if not MOCKUP.exists():
-        print("нет mockup/index.html — сначала python scripts/build_mockup.py")
+        print("нет index.html — сначала python scripts/build_mockup.py")
         return -1
     if not CHROME:
         print("Chrome не найден — проверка рендером не выполнена")
