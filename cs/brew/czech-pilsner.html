@@ -340,6 +340,14 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
 
 /* ── переключатель языка ─────────────────────────────── */
 .sign { position: relative; }
+/* возврат в атлас: страница рецепта не должна быть тупиком */
+.home {
+  position: absolute; top: 18px; left: 20px;
+  font-size: 12px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--green-pale);
+  text-decoration: none; border-bottom: 1px solid transparent;
+}
+.home:hover { color: var(--foam); border-bottom-color: var(--gold); }
 .langsw {
   position: absolute; top: 16px; right: 18px;
   display: flex; border: 1.5px solid var(--gold);
@@ -349,16 +357,18 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
   padding: 5px 10px; color: var(--green-pale); text-decoration: none;
 }
 .langsw a[aria-current] { background: var(--gold); color: #17190F; }
-@media (max-width: 560px) { .langsw { position: static; margin: 0 auto 18px; width: max-content; } }
+@media (max-width: 560px) { .home { position: static; display: block; margin-bottom: 14px; }
+  .langsw { position: static; margin: 0 auto 18px; width: max-content; } }
 </style>
 
 <header class="sign">
+  <a class="home" href="/">← Beer Atlas</a>
   <nav class="langsw" aria-label="Jazyk">
     <a href="/brew/czech-pilsner" hreflang="en">EN</a>
     <a href="/cs/brew/czech-pilsner" aria-current="page" hreflang="cs">CS</a>
   </nav>
   <div class="sign-in">
-    <p class="sign-eyebrow">Beer Atlas · List na vaření</p>
+    <p class="sign-eyebrow">List na vaření</p>
     <h1>Český ležák od zdroje</h1>
   </div>
 </header>
@@ -568,7 +578,7 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
 
   <div class="foot">
     <p><b>Jak pevná jsou tahle čísla?</b> Stupňovitost, prokvašení a postup vycházejí z toho, co o sobě zveřejňuje Plzeňský Prazdroj. Osy chuti jsou moje odhady ze stylu a parametrů, ne laboratorní měření — jsou <span class="v-estimated">podtržené tečkovaně</span> tady i všude jinde v atlasu. Parametry a ceny surovin jsou od prodejce.</p>
-    <p style="margin-bottom:0">Součást <a href="https://beeratlas.eu/"><b>Beer Atlasu</b></a> — průvodce českým pivem, kde je každé pivo popsané jako vzdálenost od piva, které už znáte. Jestli je tu něco špatně o pivu, které znáte líp než já, přesně takovou opravu chci slyšet.</p>
+    <p style="margin-bottom:0">Součást <a href="/"><b>Beer Atlasu</b></a> — průvodce českým pivem, kde je každé pivo popsané jako vzdálenost od piva, které už znáte. Jestli je tu něco špatně o pivu, které znáte líp než já, přesně takovou opravu chci slyšet.</p>
   </div>
 
 </div>

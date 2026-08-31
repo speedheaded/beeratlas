@@ -340,6 +340,14 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
 
 /* ── переключатель языка ─────────────────────────────── */
 .sign { position: relative; }
+/* возврат в атлас: страница рецепта не должна быть тупиком */
+.home {
+  position: absolute; top: 18px; left: 20px;
+  font-size: 12px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--green-pale);
+  text-decoration: none; border-bottom: 1px solid transparent;
+}
+.home:hover { color: var(--foam); border-bottom-color: var(--gold); }
 .langsw {
   position: absolute; top: 16px; right: 18px;
   display: flex; border: 1.5px solid var(--gold);
@@ -349,16 +357,18 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
   padding: 5px 10px; color: var(--green-pale); text-decoration: none;
 }
 .langsw a[aria-current] { background: var(--gold); color: #17190F; }
-@media (max-width: 560px) { .langsw { position: static; margin: 0 auto 18px; width: max-content; } }
+@media (max-width: 560px) { .home { position: static; display: block; margin-bottom: 14px; }
+  .langsw { position: static; margin: 0 auto 18px; width: max-content; } }
 </style>
 
 <header class="sign">
+  <a class="home" href="/">← Beer Atlas</a>
   <nav class="langsw" aria-label="Language">
     <a href="/brew/czech-pilsner" aria-current="page" hreflang="en">EN</a>
     <a href="/cs/brew/czech-pilsner" hreflang="cs">CS</a>
   </nav>
   <div class="sign-in">
-    <p class="sign-eyebrow">Beer Atlas · Brewing sheet</p>
+    <p class="sign-eyebrow">Brewing sheet</p>
     <h1>Czech Pilsner from Source</h1>
   </div>
 </header>
@@ -568,7 +578,7 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
 
   <div class="foot">
     <p><b>How solid are these numbers?</b> The gravities, attenuation and process come from Plzeňský Prazdroj's own published account. The taste axes are my estimates from style and specification, not lab data — they are marked <span class="v-estimated">with a dotted underline</span> throughout, here and across the rest of the atlas. Ingredient specifications and prices are the vendor's own.</p>
-    <p style="margin-bottom:0">Part of <a href="https://beeratlas.eu/"><b>Beer Atlas</b></a> — an English guide to Czech beer that describes every beer as a distance from one you already know: pick a beer you have had, say how you want it changed, and it names the closest thing and where it is poured. If something here is wrong about a beer you know better than I do, that is exactly the correction I want.</p>
+    <p style="margin-bottom:0">Part of <a href="/"><b>Beer Atlas</b></a> — an English guide to Czech beer that describes every beer as a distance from one you already know: pick a beer you have had, say how you want it changed, and it names the closest thing and where it is poured. If something here is wrong about a beer you know better than I do, that is exactly the correction I want.</p>
   </div>
 
 </div>
