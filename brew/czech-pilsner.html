@@ -3,6 +3,18 @@
 <link rel="alternate" hreflang="en" href="https://www.beeratlas.eu/brew/czech-pilsner">
 <link rel="alternate" hreflang="cs" href="https://www.beeratlas.eu/cs/brew/czech-pilsner">
 <link rel="alternate" hreflang="x-default" href="https://www.beeratlas.eu/brew/czech-pilsner">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beer Atlas">
+<meta property="og:title" content="Czech Pilsner from Source">
+<meta property="og:description" content="A 20-litre recipe for the beer every pale lager is a copy of — the full process and what the ingredients cost.">
+<meta property="og:url" content="https://www.beeratlas.eu/brew/czech-pilsner">
+<meta property="og:image" content="https://www.beeratlas.eu/brand/ogbrew.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="A 20-litre recipe for the beer every pale lager is a copy of — the full process and what the ingredients cost.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
@@ -342,8 +354,10 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
 /* ── переключатель языка ─────────────────────────────── */
 .sign { position: relative; }
 /* возврат в атлас: страница рецепта не должна быть тупиком */
+.brandmark { width: 22px; height: 22px; flex: none; display: block; }
 .home {
-  position: absolute; top: 18px; left: 20px;
+  position: absolute; top: 15px; left: 20px;
+  display: flex; align-items: center; gap: 9px;
   font-size: 12px; font-weight: 700; letter-spacing: .14em;
   text-transform: uppercase; color: var(--green-pale);
   text-decoration: none; border-bottom: 1px solid transparent;
@@ -363,7 +377,7 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
 </style>
 
 <header class="sign">
-  <a class="home" href="/">← Beer Atlas</a>
+  <a class="home" href="/"><svg class="brandmark" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><defs><radialGradient id="bam" cx="40%" cy="34%" r="76%"><stop offset="0" stop-color="#FFD063"/><stop offset=".62" stop-color="#FFBF42"/><stop offset="1" stop-color="#EFA228"/></radialGradient></defs><circle cx="100" cy="100" r="94" fill="url(#bam)"/><circle cx="100" cy="100" r="94" fill="none" stroke="#17190F" stroke-width="5"/><circle cx="100" cy="100" r="85" fill="none" stroke="#B8862B" stroke-width="1.6"/><circle cx="100" cy="100" r="62" fill="none" stroke="#1C3A29" stroke-width="11"/></svg>Beer Atlas</a>
   <nav class="langsw" aria-label="Language">
     <a href="/brew/czech-pilsner" aria-current="page" hreflang="en">EN</a>
     <a href="/cs/brew/czech-pilsner" hreflang="cs">CS</a>

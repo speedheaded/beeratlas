@@ -1,4 +1,16 @@
 <title>Prague Beer Atlas</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beer Atlas">
+<meta property="og:title" content="Beer Atlas — Czech beer explained">
+<meta property="og:description" content="Every Czech beer described as a distance from one you already know, with where to drink it in Prague.">
+<meta property="og:url" content="https://www.beeratlas.eu/">
+<meta property="og:image" content="https://www.beeratlas.eu/brand/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Every Czech beer described as a distance from one you already know, with where to drink it in Prague.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <!-- Прототип в поиск не отдаём: 70 значений стоят на unverified, а бриф
      запрещает публиковать такие. Убрать эту строку, когда данные
      вычитаны — тогда же снимется и ограничение. -->
@@ -41,7 +53,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 /* ── enamel sign ── */
 .sign{background:var(--green);border-bottom:5px solid var(--gold)}
 .sign-in{max-width:1180px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-.wordmark{font-weight:700;font-size:15px;letter-spacing:.19em;text-transform:uppercase;color:var(--foam)}
+.wordmark{font-weight:700;font-size:15px;letter-spacing:.19em;text-transform:uppercase;color:var(--foam);
+  display:flex;align-items:center;gap:11px}
+/* знак без имени: имя стоит рядом словом, дублировать его в круге незачем */
+.brandmark{width:27px;height:27px;flex:none;display:block}
 .nav{display:flex;gap:18px;flex-wrap:wrap;flex:1 1 auto;min-width:0}
 .nav button{font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:var(--green-pale);font-weight:500}
 .nav button:hover,.nav button[aria-current="page"]{color:var(--foam)}
@@ -441,7 +456,7 @@ footer{margin-top:40px;padding-top:22px;border-top:4px solid var(--gold);font-si
 
 <div class="sign">
   <div class="sign-in">
-    <button class="wordmark" data-go="#/">Beer Atlas</button>
+    <button class="wordmark" data-go="#/"><svg class="brandmark" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><defs><radialGradient id="bam" cx="40%" cy="34%" r="76%"><stop offset="0" stop-color="#FFD063"/><stop offset=".62" stop-color="#FFBF42"/><stop offset="1" stop-color="#EFA228"/></radialGradient></defs><circle cx="100" cy="100" r="94" fill="url(#bam)"/><circle cx="100" cy="100" r="94" fill="none" stroke="#17190F" stroke-width="5"/><circle cx="100" cy="100" r="85" fill="none" stroke="#B8862B" stroke-width="1.6"/><circle cx="100" cy="100" r="62" fill="none" stroke="#1C3A29" stroke-width="11"/></svg>Beer Atlas</button>
     <nav class="nav">
       <button data-go="#/breweries" data-i18n="Pivovary">Pivovary</button>
       <button data-go="#/beers" data-i18n="Beers">Beers</button>

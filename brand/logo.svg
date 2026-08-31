@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Beer Atlas">
+  <title>Beer Atlas</title>
+  <defs>
+    <radialGradient id="bal" cx="40%" cy="34%" r="76%">
+      <stop offset="0" stop-color="#FFD063"/>
+      <stop offset=".62" stop-color="#FFBF42"/>
+      <stop offset="1" stop-color="#EFA228"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="94" fill="url(#bal)"/>
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#17190F" stroke-width="5"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#B8862B" stroke-width="1.6"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#1C3A29" stroke-width="7"/>
+  <text x="100" y="94" text-anchor="middle" fill="#1C3A29"
+        font-family="Abril Fatface, Georgia, serif" font-size="31">Beer</text>
+  <text x="100" y="128" text-anchor="middle" fill="#1C3A29"
+        font-family="Abril Fatface, Georgia, serif" font-size="31">Atlas</text>
+</svg>
