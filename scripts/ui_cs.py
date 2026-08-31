@@ -412,6 +412,9 @@ UI = {
  "Want to brew this yourself? Here is the recipe, the ingredients and what they cost \u2192":
    "Chcete si ho uvařit sami? Tady je recept, suroviny a kolik stojí \u2192",
 
+ "Glass colour comes from the style, not from a measurement of this beer.":
+   "Barva ve sklenici vychází ze stylu, ne z měření tohohle piva.",
+
 }
 
 # osy srovnání

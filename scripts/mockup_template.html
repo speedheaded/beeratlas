@@ -322,6 +322,10 @@ h2.dist span{font-weight:500;letter-spacing:.06em;text-transform:none;font-size:
 .cell{background:var(--card-light);padding:16px 18px;display:block}
 .cell .n{font-size:17.5px;font-weight:600}
 .cell .m{font-size:13.5px;color:var(--muted)}
+.cell-in{display:flex;gap:14px;align-items:center}
+.cell-t{min-width:0}
+.glass{display:block;flex:none}
+.etch-n{font-family:"Abril Fatface",Georgia,serif;font-size:23px}
 .pours{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px}
 .pour{border:2px solid var(--ink);background:var(--card-light);padding:20px;display:flex;gap:18px;
   align-items:flex-start;flex:1 1 300px}
@@ -636,6 +640,53 @@ const ICON = {
   sugar: '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="10" width="8" height="6.5"/><rect x="14" y="13.5" width="8" height="6.5"/><rect x="10" y="4" width="8" height="6.5"/></svg>',
 };
 
+/* ── знак сорта: бокал в настоящем цвете пива ─────────────────────────
+   EBC ни у одного сорта в данных нет, поэтому цвет берётся из типичного
+   диапазона стиля. Это уровень «style», и в интерфейсе он помечен так же,
+   как оценки вкуса. Стиля нет — бокала нет: пустое стекло не рисуем. */
+const EBC_BY_STYLE = {
+  "Czech pale lager": 8, "Czech pale lager, unfiltered": 9, "Czech pale special": 11,
+  "Czech amber lager": 26, "Czech dark lager": 70, "Euro pale lager": 7, "Pale lager": 7,
+  "American IPA": 18, "American pale ale": 14, "Irish dry stout": 125,
+  "Witbier": 6, "German wheat beer": 12,
+};
+const SRM_HEX = ["#FFE699","#FFD878","#FFCA5A","#FFBF42","#FBB123","#F8A733","#F39C00",
+"#EA8F00","#E58500","#DE7C00","#D77200","#CF6900","#CB6200","#C35900","#BB5100","#B54C00",
+"#B04500","#A63E00","#A13700","#9B3200","#952D00","#8E2900","#882300","#821E00","#7B1A00",
+"#771900","#701400","#6A0E00","#660D00","#5E0B00","#5A0A02","#600903","#520907","#4C0505",
+"#470606","#440607","#3F0708","#3B0607","#3A070B","#36080A"];
+
+function beerColour(style){
+  const e = EBC_BY_STYLE[style];
+  if (!e) return null;
+  return SRM_HEX[Math.max(1, Math.min(40, Math.round(e / 1.97))) - 1];
+}
+
+/* w — ширина в пикселях. etch=true вытравливает градус на стекле; в списке
+   он не нужен, там степень и так стоит строкой под названием. */
+function glassSvg(b, w, etch){
+  const c = beerColour(b.style);
+  if (!c) return "";
+  const id = "g" + b.id.replace(/[^a-z0-9]/gi, ""), h = Math.round(w * 1.42);
+  const hazy = /unfiltered/.test(b.style) || b.style === "Witbier" || b.style === "German wheat beer";
+  const dark = (EBC_BY_STYLE[b.style] || 0) > 40;
+  const ef = dark ? "#FBF8EF" : "var(--ink)", eo = dark ? ".66" : ".44";
+  const et = (etch && b.plato)
+    ? `<text x="50" y="96" text-anchor="middle" class="etch-n" fill="${ef}" opacity="${eo}">${b.plato}°</text>` : "";
+  const haze = hazy
+    ? `<circle cx="42" cy="72" r="15" fill="#fff" opacity=".14"/><circle cx="64" cy="98" r="11" fill="#fff" opacity=".11"/>` : "";
+  const body = "M22 16h56l-5 108a8 8 0 0 1-8 7.5H35a8 8 0 0 1-8-7.5z";
+  return `<svg class="glass" viewBox="0 0 100 142" width="${w}" height="${h}" role="img"
+    aria-label="${esc(b.name)}"><defs><clipPath id="c${id}"><path d="${body}"/></clipPath>
+    <linearGradient id="l${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".84"/>
+    <stop offset="1" stop-color="${c}" stop-opacity="1"/></linearGradient></defs>
+    <g clip-path="url(#c${id})"><rect x="0" y="36" width="100" height="106" fill="url(#l${id})"/>
+    <rect x="0" y="14" width="100" height="22" fill="var(--foam)"/>
+    <path d="M18 36q7 6 14 0t14 0 14 0 14 0 14 0v7H18z" fill="var(--foam)"/>${haze}
+    <rect x="28" y="36" width="7" height="106" fill="#fff" opacity=".17"/></g>
+    <path d="${body}" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>${et}</svg>`;
+}
+
 function lvlTag(l){ return '<span class="lvl ' + (l === "brewery" ? "b" : "s") + '">' + T(l === "brewery" ? "brewery" : "style") + "</span>"; }
 
 function brewhouse(pr, beerId){
@@ -872,19 +923,13 @@ function beerPage(id){
     <div class="hero">
       <div>
         <h1>${esc(b.name)}</h1>
-        <div class="rule"><i></i><em>${esc(b.cs)} · ${esc(ST(b.style))}</em></div>
+        <div class="rule"><i></i><em>${esc(b.cs)} · ${esc(ST(b.style))}${b.abv ? " · " + b.abv + " %" : ""}</em></div>
         <p class="lead">${b.lead ? esc(L(b.lead)) : "Description not written yet."}</p>
       </div>
-      <div class="stamp">
-        ${b.plato
-          ? `<span class="fig">${b.plato}°</span><span class="cap">${T("Plato")}</span>
-             <span class="hr"></span><span class="alc">${b.abv ? b.abv + " % alk." : "&nbsp;"}</span>`
-          /* без степени печатали крепость дважды — крупно и подписью под чертой,
-             да ещё с английским «Alcohol» посреди чешской страницы */
-          : `<span class="fig" style="font-size:40px">${b.abv ? b.abv + " %" : "—"}</span>
-             <span class="cap">${T("Alcohol")}</span><span class="hr"></span>
-             <span class="alc">&nbsp;</span>`}
-      </div>
+      ${glassSvg(b, 176, true) || `<div class="stamp">
+        <span class="fig" style="font-size:40px">${b.abv ? b.abv + " %" : "&mdash;"}</span>
+        <span class="cap">${T("Alcohol")}</span><span class="hr"></span><span class="alc">&nbsp;</span>
+      </div>`}
     </div>
 
     <div class="frame"><div class="frame-in">
@@ -1308,9 +1353,12 @@ function beersPage(){
   $("#view").innerHTML = `<p class="crumb">${T("Beers")}</p>
     <h1 style="font-size:44px;margin-bottom:8px">${T("%s Czech beers").replace("%s", rows.length)}</h1>
     <p class="lead">${T("Every one belongs to a brewery with at least one Prague venue. That is the\n      publishing rule: no venue, no page.")}</p>
-    <div class="grid">${rows.map(b=>`<button class="cell" data-go="#/beer/${b.id}">
-      <span class="n">${esc(b.name)}</span>
-      <span class="m">${esc(b.cs)} · ${b.plato ? b.plato+"°" : ""} ${b.abv ? b.abv+" %" : ""}</span></button>`).join("")}</div>
+    <p class="decl">${T("Glass colour comes from the style, not from a measurement of this beer.")} ${lvlTag("style")}</p>
+    <div class="grid">${rows.map(b=>`<button class="cell" data-go="#/beer/${b.id}"><span class="cell-in">
+      ${glassSvg(b, 46, false)}
+      <span class="cell-t"><span class="n">${esc(b.name)}</span>
+      <span class="m">${esc(b.cs)} · ${b.plato ? b.plato+"°" : ""} ${b.abv ? b.abv+" %" : ""}</span></span>
+    </span></button>`).join("")}</div>
     ${LISTED().length ? `<h2 style="margin-top:38px">${T("Known, not yet described")}</h2>
       <p class="decl">${T("Read off the brewery's own pages and off labels, with the source kept. No tasting notes, so they stay out of the anchor match until someone drinks them.")}</p>
       <div class="grid">${LISTED().slice().sort((a,c)=>a.name.localeCompare(c.name)).map(x=>`
