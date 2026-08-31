@@ -1,4 +1,8 @@
 <title>Prague Beer Atlas</title>
+<!-- Прототип в поиск не отдаём: 70 значений стоят на unverified, а бриф
+     запрещает публиковать такие. Убрать эту строку, когда данные
+     вычитаны — тогда же снимется и ограничение. -->
+<meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:wght@400;500;600;700&display=swap">
@@ -822,7 +826,7 @@ const PLATO_CS = "Není to alkohol. Stupně na českém lístku jsou stupně Pla
 /* Листы для домашней варки. Ключ — id сорта, значение — адрес листа.
    Пока один: Pilsner Urquell. Блок показывается только тем, у кого лист есть. */
 const BREW_SHEETS = {
-  "pilsner-urquell": "https://claude.ai/code/artifact/566c0878-0440-4591-a4b2-51a4a8596525",
+  "pilsner-urquell": "https://beeratlas.eu/brew/czech-pilsner",
 };
 
 function beerPage(id){

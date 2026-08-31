@@ -1,0 +1,15 @@
+# В интернет уходит только статика сайта. Всё остальное — стратегия,
+# конвейер сборки и сырые данные — остаётся в репозитории.
+# Без этого файла beeratlas.eu/BRIEF.md отдавал бы полный бриф.
+scripts/
+data/
+design/
+db/
+lib/
+_bmad/
+_bmad-output/
+.claude/
+*.md
+pivni-atlas.html
+.gitignore
+.gitattributes
