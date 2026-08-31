@@ -87,7 +87,7 @@ EN = (r"\b(the|and|with|from|days?|brewery|breweries|style|this|that|what|where|
 # имена собственные и машинные строки: английские слова в них законны
 # без флага (?i) в тексте: он уезжает в JavaScript, где такого синтаксиса нет,
 # скрипт молча падает на разборе и проба возвращает пусто — то есть «всё чисто»
-ALLOW = re.compile(r"(prague beer atlas|open ?food ?facts|openstreetmap|wikidata|"
+ALLOW = re.compile(r"(beer atlas|open ?food ?facts|openstreetmap|wikidata|"
                    r"odbl|cc0|craft|beer factory|bar\b|pub\b|lidl|max laser|"
                    r"cash only|beer knír|beer spot|^mo-|^tu-|^we|^th|^fr|^sa|^su|"
                    r"punk ipa|brewdog|guinness|stella artois|corona|heineken|"
