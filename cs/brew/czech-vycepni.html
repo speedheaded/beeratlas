@@ -223,6 +223,43 @@ b, strong { color: var(--ink); font-weight: 700; }
 .axis-fill { position: absolute; inset: 0 auto 0 0; background: var(--green); }
 .axis-fill.hop { background: var(--gold); }
 
+.axis.ranged { grid-template-columns: 108px 1fr 40px 62px; }
+.axis-val {
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  text-align: right;
+  border-bottom: 1px dotted var(--dotted);
+  justify-self: end;
+}
+.axis-range {
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  text-align: right;
+  letter-spacing: .02em;
+}
+/* Полоса — разброс стиля по каталогу: пивовару нужен допуск, а не точка.
+   Края помечены отдельно, иначе на осях без разброса полосы не видно. */
+.band { position: absolute; top: 0; bottom: 0; background: var(--green-pale); }
+.band.hop { background: var(--gold); opacity: .24; }
+.edge { position: absolute; top: -3px; bottom: -3px; width: 1px; background: var(--muted); opacity: .55; }
+.tick { position: absolute; top: -1px; bottom: -1px; width: 1px; background: var(--line); }
+.ref  { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); }
+.axes-legend {
+  display: flex; flex-wrap: wrap; gap: 8px 20px;
+  margin-top: 16px; font-size: 13px; color: var(--muted);
+}
+.axes-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.axes-legend i { display: inline-block; }
+.axes-legend .k-fill { width: 22px; height: 9px; background: var(--green); border: 1px solid var(--line); }
+.axes-legend .k-band { width: 22px; height: 9px; background: var(--green-pale); border: 1px solid var(--line); }
+.axes-legend .k-ref  { width: 2px; height: 14px; background: var(--ink); }
+@media (max-width: 620px) {
+  .axis.ranged { grid-template-columns: 92px 1fr; }
+  .axis-val, .axis-range { display: none; }
+}
+
 /* ── таблицы ─────────────────────────────────────────── */
 .scroll { overflow-x: auto; margin: 18px 0; }
 table.data {
@@ -440,16 +477,23 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
     <h2>Kam míříte</h2>
     <p>Devět os, chápaných jako poloha, ne jako známka. Cíl je průměr sedmi desítek v tomhle atlasu — Kozel Světlý, Gambrinus 10, Staropramen Světlý, Únětická 10, Krušovice Světlé, Braník a Cvikov Sklář. Vedle ležáku: <b>méně hořké, lehčí, tišší — a o nic míň české</b>.</p>
     <div class="axes">
-      <div class="axis"><span class="axis-name">Hořkost</span><span class="axis-track"><span class="axis-fill" style="width:40%"></span></span></div>
-      <div class="axis"><span class="axis-name">Sladová sladkost</span><span class="axis-track"><span class="axis-fill" style="width:51%"></span></span></div>
-      <div class="axis"><span class="axis-name">Plnost</span><span class="axis-track"><span class="axis-fill" style="width:39%"></span></span></div>
-      <div class="axis"><span class="axis-name">Suchost</span><span class="axis-track"><span class="axis-fill" style="width:51%"></span></span></div>
-      <div class="axis"><span class="axis-name">Chmelové aroma</span><span class="axis-track"><span class="axis-fill hop" style="width:30%"></span></span></div>
-      <div class="axis"><span class="axis-name">Charakter chmele</span><span class="axis-track"><span class="axis-fill hop" style="width:11%"></span></span></div>
-      <div class="axis"><span class="axis-name">Pražení</span><span class="axis-track"><span class="axis-fill" style="width:10%"></span></span></div>
-      <div class="axis"><span class="axis-name">Ovocnost / estery</span><span class="axis-track"><span class="axis-fill" style="width:21%"></span></span></div>
-      <div class="axis"><span class="axis-name">Kyselost</span><span class="axis-track"><span class="axis-fill" style="width:10%"></span></span></div>
+      <div class="axis ranged"><span class="axis-name">Hořkost</span><span class="axis-track"><span class="band" style="left:35%;width:15%"></span><span class="edge" style="left:35%"></span><span class="edge" style="left:calc(50% - 1px)"></span><span class="axis-fill" style="width:40%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(65% - 1px)"></span></span><span class="axis-val">4,0</span><span class="axis-range">3,5–5,0</span></div>
+      <div class="axis ranged"><span class="axis-name">Sladová sladkost</span><span class="axis-track"><span class="band" style="left:45%;width:10%"></span><span class="edge" style="left:45%"></span><span class="edge" style="left:calc(55% - 1px)"></span><span class="axis-fill" style="width:51%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(55% - 1px)"></span></span><span class="axis-val">5,1</span><span class="axis-range">4,5–5,5</span></div>
+      <div class="axis ranged"><span class="axis-name">Plnost</span><span class="axis-track"><span class="band" style="left:30%;width:15%"></span><span class="edge" style="left:30%"></span><span class="edge" style="left:calc(45% - 1px)"></span><span class="axis-fill" style="width:39%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(50% - 1px)"></span></span><span class="axis-val">3,9</span><span class="axis-range">3,0–4,5</span></div>
+      <div class="axis ranged"><span class="axis-name">Suchost</span><span class="axis-track"><span class="band" style="left:45%;width:15%"></span><span class="edge" style="left:45%"></span><span class="edge" style="left:calc(60% - 1px)"></span><span class="axis-fill" style="width:51%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(60% - 1px)"></span></span><span class="axis-val">5,1</span><span class="axis-range">4,5–6,0</span></div>
+      <div class="axis ranged"><span class="axis-name">Chmelové aroma</span><span class="axis-track"><span class="band hop" style="left:25%;width:15%"></span><span class="edge" style="left:25%"></span><span class="edge" style="left:calc(40% - 1px)"></span><span class="axis-fill hop" style="width:30%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(50% - 1px)"></span></span><span class="axis-val">3,0</span><span class="axis-range">2,5–4,0</span></div>
+      <div class="axis ranged"><span class="axis-name">Charakter chmele</span><span class="axis-track"><span class="band hop" style="left:10%;width:5%"></span><span class="edge" style="left:10%"></span><span class="edge" style="left:calc(15% - 1px)"></span><span class="axis-fill hop" style="width:11%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(10% - 1px)"></span></span><span class="axis-val">1,1</span><span class="axis-range">1,0–1,5</span></div>
+      <div class="axis ranged"><span class="axis-name">Praženost</span><span class="axis-track"><span class="edge" style="left:10%"></span><span class="edge" style="left:calc(10% - 1px)"></span><span class="axis-fill" style="width:10%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(10% - 1px)"></span></span><span class="axis-val">1,0</span><span class="axis-range">1,0–1,0</span></div>
+      <div class="axis ranged"><span class="axis-name">Ovocnost</span><span class="axis-track"><span class="band" style="left:20%;width:5%"></span><span class="edge" style="left:20%"></span><span class="edge" style="left:calc(25% - 1px)"></span><span class="axis-fill" style="width:21%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(20% - 1px)"></span></span><span class="axis-val">2,1</span><span class="axis-range">2,0–2,5</span></div>
+      <div class="axis ranged"><span class="axis-name">Kyselost</span><span class="axis-track"><span class="edge" style="left:10%"></span><span class="edge" style="left:calc(10% - 1px)"></span><span class="axis-fill" style="width:10%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span><span class="ref" style="left:calc(10% - 1px)"></span></span><span class="axis-val">1,0</span><span class="axis-range">1,0–1,0</span></div>
     </div>
+    <div class="axes-legend">
+      <span><i class="k-fill"></i>cíl</span>
+      <span><i class="k-band"></i>rozpětí sedmi desítek v atlasu</span>
+      <span><i class="k-ref"></i>Pilsner Urquell</span>
+    </div>
+    <p style="margin-top:20px">Bledý pruh je rozpětí <b>sedmi desítek</b>. Čtěte ho jako toleranci, ne jako druhý cíl: na 4,0 se netrefíte a nemusíte. Černá značka je <b>Plzeň</b> — na sladu, charakteru chmele, ovocnosti a kyselosti sedí přesně na cíli, a celý rozdíl mezi těmi dvěma pivy je ve třech osách, kde nesedí.</p>
+
     <p style="margin-top:20px"><b>Charakter chmele</b> jde od 0 do 10, kde 0 je žatecký konec — bylinný, zemitý, jemně květinový — a 10 je novosvětský citrus a tropické ovoce. Desítka sedí na <b>1</b>, přesně tam co ležák. Mění se síla, chmel ne.</p>
   </section>
 

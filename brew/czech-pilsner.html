@@ -223,6 +223,43 @@ b, strong { color: var(--ink); font-weight: 700; }
 .axis-fill { position: absolute; inset: 0 auto 0 0; background: var(--green); }
 .axis-fill.hop { background: var(--gold); }
 
+.axis.ranged { grid-template-columns: 108px 1fr 40px 62px; }
+.axis-val {
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  text-align: right;
+  border-bottom: 1px dotted var(--dotted);
+  justify-self: end;
+}
+.axis-range {
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  text-align: right;
+  letter-spacing: .02em;
+}
+/* Полоса — разброс стиля по каталогу: пивовару нужен допуск, а не точка.
+   Края помечены отдельно, иначе на осях без разброса полосы не видно. */
+.band { position: absolute; top: 0; bottom: 0; background: var(--green-pale); }
+.band.hop { background: var(--gold); opacity: .24; }
+.edge { position: absolute; top: -3px; bottom: -3px; width: 1px; background: var(--muted); opacity: .55; }
+.tick { position: absolute; top: -1px; bottom: -1px; width: 1px; background: var(--line); }
+.ref  { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); }
+.axes-legend {
+  display: flex; flex-wrap: wrap; gap: 8px 20px;
+  margin-top: 16px; font-size: 13px; color: var(--muted);
+}
+.axes-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.axes-legend i { display: inline-block; }
+.axes-legend .k-fill { width: 22px; height: 9px; background: var(--green); border: 1px solid var(--line); }
+.axes-legend .k-band { width: 22px; height: 9px; background: var(--green-pale); border: 1px solid var(--line); }
+.axes-legend .k-ref  { width: 2px; height: 14px; background: var(--ink); }
+@media (max-width: 620px) {
+  .axis.ranged { grid-template-columns: 92px 1fr; }
+  .axis-val, .axis-range { display: none; }
+}
+
 /* ── таблицы ─────────────────────────────────────────── */
 .scroll { overflow-x: auto; margin: 18px 0; }
 table.data {
@@ -434,16 +471,22 @@ table.data td:last-child, table.data th:last-child { padding-right: 0; }
     <h2>What you are aiming at</h2>
     <p>Nine axes, scored as a position rather than a rating. If you know Pilsner Urquell, you already know the target; if you do not, the closest widely available anchor is Heineken — <b>then make it far more bitter and far more malty</b>.</p>
     <div class="axes">
-      <div class="axis"><span class="axis-name">Bitterness</span><span class="axis-track"><span class="axis-fill" style="width:65%"></span></span></div>
-      <div class="axis"><span class="axis-name">Malt sweetness</span><span class="axis-track"><span class="axis-fill" style="width:55%"></span></span></div>
-      <div class="axis"><span class="axis-name">Body</span><span class="axis-track"><span class="axis-fill" style="width:50%"></span></span></div>
-      <div class="axis"><span class="axis-name">Dryness</span><span class="axis-track"><span class="axis-fill" style="width:60%"></span></span></div>
-      <div class="axis"><span class="axis-name">Hop aroma</span><span class="axis-track"><span class="axis-fill hop" style="width:50%"></span></span></div>
-      <div class="axis"><span class="axis-name">Hop character</span><span class="axis-track"><span class="axis-fill hop" style="width:10%"></span></span></div>
-      <div class="axis"><span class="axis-name">Roast</span><span class="axis-track"><span class="axis-fill" style="width:10%"></span></span></div>
-      <div class="axis"><span class="axis-name">Fruit / ester</span><span class="axis-track"><span class="axis-fill" style="width:20%"></span></span></div>
-      <div class="axis"><span class="axis-name">Sourness</span><span class="axis-track"><span class="axis-fill" style="width:10%"></span></span></div>
+      <div class="axis ranged"><span class="axis-name">Bitterness</span><span class="axis-track"><span class="band" style="left:45%;width:35%"></span><span class="edge" style="left:45%"></span><span class="edge" style="left:calc(80% - 1px)"></span><span class="axis-fill" style="width:65%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">6.5</span><span class="axis-range">4.5–8.0</span></div>
+      <div class="axis ranged"><span class="axis-name">Malt sweetness</span><span class="axis-track"><span class="band" style="left:45%;width:20%"></span><span class="edge" style="left:45%"></span><span class="edge" style="left:calc(65% - 1px)"></span><span class="axis-fill" style="width:55%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">5.5</span><span class="axis-range">4.5–6.5</span></div>
+      <div class="axis ranged"><span class="axis-name">Body</span><span class="axis-track"><span class="band" style="left:45%;width:10%"></span><span class="edge" style="left:45%"></span><span class="edge" style="left:calc(55% - 1px)"></span><span class="axis-fill" style="width:50%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">5.0</span><span class="axis-range">4.5–5.5</span></div>
+      <div class="axis ranged"><span class="axis-name">Dryness</span><span class="axis-track"><span class="band" style="left:45%;width:25%"></span><span class="edge" style="left:45%"></span><span class="edge" style="left:calc(70% - 1px)"></span><span class="axis-fill" style="width:60%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">6.0</span><span class="axis-range">4.5–7.0</span></div>
+      <div class="axis ranged"><span class="axis-name">Hop aroma</span><span class="axis-track"><span class="band hop" style="left:35%;width:25%"></span><span class="edge" style="left:35%"></span><span class="edge" style="left:calc(60% - 1px)"></span><span class="axis-fill hop" style="width:50%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">5.0</span><span class="axis-range">3.5–6.0</span></div>
+      <div class="axis ranged"><span class="axis-name">Hop character</span><span class="axis-track"><span class="band hop" style="left:10%;width:5%"></span><span class="edge" style="left:10%"></span><span class="edge" style="left:calc(15% - 1px)"></span><span class="axis-fill hop" style="width:10%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">1.0</span><span class="axis-range">1.0–1.5</span></div>
+      <div class="axis ranged"><span class="axis-name">Roast</span><span class="axis-track"><span class="edge" style="left:10%"></span><span class="edge" style="left:calc(10% - 1px)"></span><span class="axis-fill" style="width:10%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">1.0</span><span class="axis-range">1.0–1.0</span></div>
+      <div class="axis ranged"><span class="axis-name">Fruit / ester</span><span class="axis-track"><span class="band" style="left:15%;width:15%"></span><span class="edge" style="left:15%"></span><span class="edge" style="left:calc(30% - 1px)"></span><span class="axis-fill" style="width:20%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">2.0</span><span class="axis-range">1.5–3.0</span></div>
+      <div class="axis ranged"><span class="axis-name">Sourness</span><span class="axis-track"><span class="edge" style="left:10%"></span><span class="edge" style="left:calc(10% - 1px)"></span><span class="axis-fill" style="width:10%"></span><span class="tick" style="left:20%"></span><span class="tick" style="left:40%"></span><span class="tick" style="left:60%"></span><span class="tick" style="left:80%"></span></span><span class="axis-val">1.0</span><span class="axis-range">1.0–1.0</span></div>
     </div>
+    <div class="axes-legend">
+      <span><i class="k-fill"></i>the target — Pilsner Urquell</span>
+      <span><i class="k-band"></i>where the eleven Czech 12° pale lagers in the atlas sit</span>
+    </div>
+    <p style="margin-top:20px">The pale band behind each bar is where the <b>eleven Czech 12° pale lagers in this atlas</b> actually sit, and it is worth reading before you brew. At 6.5 bitterness against a spread of 4.5–8.0, Pilsner Urquell is not the middle of its own style — it is near the bitter end of it. Aim for the number, not for "a Czech lager".</p>
+
     <p style="margin-top:20px"><b>Hop character</b> runs 0 to 10, where 0 is the Saaz end — herbal, earthy, faintly floral — and 10 is New World citrus and tropical fruit. A Czech pilsner sits at <b>1</b>. Everything about the hop schedule below serves that number, and it is the single axis a substitute hop will move.</p>
   </section>
 
