@@ -837,7 +837,7 @@ function brewhouse(pr, beerId){
     ${stages}
     ${pr.note ? `<p style="font-size:16.5px;line-height:1.6;color:var(--body);max-width:64ch">${pr.note}</p>` : ""}
     ${BREW_SHEETS[beerId] ? `
-    <p class="brewline"><a href="${BREW_SHEETS[beerId]}" target="_blank" rel="noopener">${
+    <p class="brewline"><a href="${brewHref(BREW_SHEETS[beerId])}" target="_blank" rel="noopener">${
       T("Want to brew this yourself? Here is the recipe, the ingredients and what they cost →")}</a></p>` : ""}
     <p class="conf">${T("The three figures at the top are computed from this beer's own gravity and strength. Where we do not know what a brewery does, we say what the style normally does rather than invent a mash schedule.")}
       <a href="#/${LANG}/brewing">${T("How Czech lager is made →")}</a></p>
@@ -950,11 +950,16 @@ const PLATO_CS = "Není to alkohol. Stupně na českém lístku jsou stupně Pla
   + "cukru bylo v mladině před kvašením. Zhruba platí, že alkohol vyjde okolo třetiny toho čísla: "
   + "desítka má asi 3,8 %, dvanáctka okolo 4,4 %.";
 
-/* Листы для домашней варки. Ключ — id сорта, значение — адрес листа.
-   Пока один: Pilsner Urquell. Блок показывается только тем, у кого лист есть. */
+/* Листы для домашней варки. Ключ — id сорта, значение — slug листа.
+   Блок показывается только тем, у кого лист есть.
+
+   Адрес собирается под язык маршрута. Раньше здесь стоял абсолютный
+   английский URL, и чех со страницы сорта попадал на английский лист,
+   хотя чешская версия рядом лежала. */
 const BREW_SHEETS = {
-  "pilsner-urquell": "https://beeratlas.eu/brew/czech-pilsner",
+  "pilsner-urquell": "czech-pilsner",
 };
+const brewHref = slug => "https://beeratlas.eu/" + (LANG === "cs" ? "cs/" : "") + "brew/" + slug;
 
 function beerPage(id){
   const b = beerById[id] || pourable[0];
@@ -1060,7 +1065,7 @@ function beerPage(id){
         </div>
 
         ${BREW_SHEETS[b.id] ? `
-        <a class="brewsheet" href="${BREW_SHEETS[b.id]}" target="_blank" rel="noopener">
+        <a class="brewsheet" href="${brewHref(BREW_SHEETS[b.id])}" target="_blank" rel="noopener">
           <span class="bs-eyebrow">${T("Brew it yourself")}</span>
           <b>${T("Czech Pilsner from Source")}</b>
           <span class="bs-sub">${T("A 20-litre recipe, the full process, and what the ingredients cost \u2192")}</span>
