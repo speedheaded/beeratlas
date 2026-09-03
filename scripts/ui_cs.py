@@ -332,6 +332,8 @@ UI = {
  "Beer parameters and descriptions are unverified working content for this mockup, not published facts.":
    "Parametry a texty piv jsou neověřený pracovní obsah pro tento prototyp, ne publikovaná fakta.",
  # ── перенесено из шаблона 30 августа ─────────────────────────────────────
+ "Czech Ten-Degree from Source": "Světlé výčepní od zdroje",
+ "The closest sheet we have": "Nejbližší list, který máme",
  "the brewery's own site":
    "vlastní stránky pivovaru",
  "Open Food Facts, ODbL":

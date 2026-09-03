@@ -836,8 +836,8 @@ function brewhouse(pr, beerId){
     <h3 style="font-family:'Abril Fatface',Georgia,serif;font-weight:400;font-size:24px;margin:0 0 14px">${T("Then, in order")}</h3>
     ${stages}
     ${pr.note ? `<p style="font-size:16.5px;line-height:1.6;color:var(--body);max-width:64ch">${pr.note}</p>` : ""}
-    ${BREW_SHEETS[beerId] ? `
-    <p class="brewline"><a href="${brewHref(BREW_SHEETS[beerId])}" target="_blank" rel="noopener">${
+    ${(BREW_SHEETS.find(x => x.exact === beerId) || {}).slug ? `
+    <p class="brewline"><a href="${brewHref(BREW_SHEETS.find(x => x.exact === beerId).slug)}" target="_blank" rel="noopener">${
       T("Want to brew this yourself? Here is the recipe, the ingredients and what they cost →")}</a></p>` : ""}
     <p class="conf">${T("The three figures at the top are computed from this beer's own gravity and strength. Where we do not know what a brewery does, we say what the style normally does rather than invent a mash schedule.")}
       <a href="#/${LANG}/brewing">${T("How Czech lager is made →")}</a></p>
@@ -950,21 +950,36 @@ const PLATO_CS = "Není to alkohol. Stupně na českém lístku jsou stupně Pla
   + "cukru bylo v mladině před kvašením. Zhruba platí, že alkohol vyjde okolo třetiny toho čísla: "
   + "desítka má asi 3,8 %, dvanáctka okolo 4,4 %.";
 
-/* Листы для домашней варки. Ключ — id сорта, значение — slug листа.
-   Блок показывается только тем, у кого лист есть.
+/* Листы для домашней варки. Лист пишется под цель — стиль плюс полоса
+   плотности, — а не под один сорт. Ключ был id сорта, и рецепт на светлый
+   лагер 12°, верный для одиннадцати сортов каталога, показывался ровно на
+   одной странице из тридцати трёх.
+
+   exact — сорт, чьи числа лист берёт за цель. Остальным в полосе он тоже
+   подходит, но обещать «свари вот это» им нельзя: подпись другая.
 
    Адрес собирается под язык маршрута. Раньше здесь стоял абсолютный
    английский URL, и чех со страницы сорта попадал на английский лист,
    хотя чешская версия рядом лежала. */
-const BREW_SHEETS = {
-  "pilsner-urquell": "czech-pilsner",
-};
+/* PALE_LAGER для листов слишком широк: он существует ради выбора якоря и
+   включает Euro pale lager и Czech pale special. Тринадцатиградусный
+   speciál — не ležák, и рецепт на 12° ему не цель. */
+const SHEET_STYLE = new Set(["Czech pale lager", "Czech pale lager, unfiltered"]);
+const BREW_SHEETS = [
+  { slug: "czech-pilsner", title: "Czech Pilsner from Source",
+    exact: "pilsner-urquell",
+    match: b => SHEET_STYLE.has(b.style) && b.plato >= 11.5 && b.plato <= 12.5 },
+  { slug: "czech-vycepni", title: "Czech Ten-Degree from Source",
+    match: b => SHEET_STYLE.has(b.style) && b.plato && b.plato <= 10.5 },
+];
+const brewSheet = b => BREW_SHEETS.find(x => x.match(b)) || null;
 const brewHref = slug => "https://beeratlas.eu/" + (LANG === "cs" ? "cs/" : "") + "brew/" + slug;
 
 function beerPage(id){
   const b = beerById[id] || pourable[0];
   const br = brById[b.breweryId] || {};
   const anchor = pickAnchor(b);
+  const sheet = brewSheet(b);
   const vs = venuesFor(b.breweryId);
 
   const diffs = AX.map((ax,i)=>({ax,i,d:b.f[i]-anchor.f[i]}))
@@ -1064,10 +1079,10 @@ function beerPage(id){
           </div>
         </div>
 
-        ${BREW_SHEETS[b.id] ? `
-        <a class="brewsheet" href="${brewHref(BREW_SHEETS[b.id])}" target="_blank" rel="noopener">
-          <span class="bs-eyebrow">${T("Brew it yourself")}</span>
-          <b>${T("Czech Pilsner from Source")}</b>
+        ${sheet ? `
+        <a class="brewsheet" href="${brewHref(sheet.slug)}" target="_blank" rel="noopener">
+          <span class="bs-eyebrow">${sheet.exact === b.id ? T("Brew it yourself") : T("The closest sheet we have")}</span>
+          <b>${T(sheet.title)}</b>
           <span class="bs-sub">${T("A 20-litre recipe, the full process, and what the ingredients cost \u2192")}</span>
         </a>` : ""}
 
