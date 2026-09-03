@@ -68,6 +68,21 @@ for v in venues:
 AXES = ["bitterness", "maltSweetness", "body", "dryness", "roast",
         "fruitEster", "sourness", "hopAroma", "hopProfile"]
 
+
+def prov(x):
+    """Происхождение числа — только когда оно официальное.
+
+    Строки каталога уже носят src/origin/at рядом с числом, а сорок полных
+    сортов отдавали одно значение без основания: читатель не мог отличить
+    4,6 с этикетки от 4,4, выведенного из стиля. Для непроверенных возвращаем
+    None — тогда шаблон рисует их точечными, как и рисовал.
+    """
+    x = x or {}
+    if x.get("method") != "official":
+        return None
+    return {"origin": x.get("origin"), "src": x.get("source"), "at": x.get("checkedAt")}
+
+
 slim_beer = []
 for b in beers:
     fl = b["flavour"]["value"]
@@ -76,6 +91,8 @@ for b in beers:
         "cs": b["menuNameCs"], "style": b["style"],
         "plato": (b.get("plato") or {}).get("value"),
         "abv": (b.get("abv") or {}).get("value"),
+        "platoP": prov(b.get("plato")),
+        "abvP": prov(b.get("abv")),
         "f": [fl[a] for a in AXES],
         "like": b.get("tastesLike") or [],
         "lead": b.get("lead"),

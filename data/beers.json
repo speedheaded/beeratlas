@@ -30,7 +30,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "Heineken, but far more bitter and malty"
+   {
+    "en": "Heineken, but far more bitter and malty",
+    "cs": "Heineken, ale mnohem hořčejší a sladovější"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -349,7 +352,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Pilsner Urquell before it was filtered — the same bitterness with softer edges",
+    "cs": "Plzeň, než ji přefiltrovali — stejná hořkost, měkčí hrany"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -625,7 +633,11 @@
   },
   "abv": {
    "value": 4.0,
-   "method": "unverified"
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404000572",
+   "origin": "Open Food Facts, ODbL",
+   "sourceName": "Velkopopovicky Kozel Svetly",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -643,7 +655,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "the 10° Kozel — the same beer as the 11, thinner and sweeter",
+    "cs": "desítkový Kozel — totéž pivo jako jedenáctka, jen řidší a sladší"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -909,7 +926,11 @@
   },
   "abv": {
    "value": 4.6,
-   "method": "unverified"
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404005782",
+   "origin": "Open Food Facts, ODbL",
+   "sourceName": "Lager Premium (Kozel 11°)",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -928,7 +949,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "softer and sweeter than Pilsner Urquell"
+   {
+    "en": "softer and sweeter than Pilsner Urquell",
+    "cs": "měkčí a sladší než Plzeň"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -1195,7 +1219,11 @@
   },
   "abv": {
    "value": 3.8,
-   "method": "unverified"
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404001418",
+   "origin": "Open Food Facts, ODbL",
+   "sourceName": "Tmavý velkopopovický kozel",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -1214,7 +1242,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "what people order expecting Guinness — it is not"
+   {
+    "en": "what people order expecting Guinness — it is not",
+    "cs": "co si lidé objednají v očekávání Guinnessu — a není to on"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -1499,7 +1530,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "the best-selling beer in Czechia, and the plainest 10° here",
+    "cs": "nejprodávanější pivo v Česku a nejobyčejnější desítka tady"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -1783,7 +1819,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Gambrinus 10 with more of everything, still made not to argue",
+    "cs": "Gambrinus 10 se vším navíc, pořád dělaný tak, aby nevadil"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -2067,7 +2108,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Prague's own 10° — soft, sweetish, built for volume",
+    "cs": "pražská desítka — měkká, nasládlá, dělaná na objem"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -2351,7 +2397,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Pilsner Urquell's shape without Pilsner Urquell's bitterness",
+    "cs": "tvar Plzně bez hořkosti Plzně"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -2636,7 +2687,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "halfway to a dark lager"
+   {
+    "en": "halfway to a dark lager",
+    "cs": "půl cesty k tmavému ležáku"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -2909,7 +2963,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "a 10° carrying a 12°'s bitterness — unfiltered, from a village north of Prague",
+    "cs": "desítka s hořkostí dvanáctky — nefiltrovaná, z vesnice severně od Prahy"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -3204,7 +3263,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "Pilsner Urquell, but unfiltered and rounder"
+   {
+    "en": "Pilsner Urquell, but unfiltered and rounder",
+    "cs": "Plzeň, ale nefiltrovaná a kulatější"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -3500,7 +3562,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "the dark beer people wanted when they ordered Kozel Černý"
+   {
+    "en": "the dark beer people wanted when they ordered Kozel Černý",
+    "cs": "tmavé pivo, které lidé chtěli, když si objednali Kozla Černého"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -3777,7 +3842,11 @@
   },
   "abv": {
    "value": 4.8,
-   "method": "unverified"
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594030010044",
+   "origin": "Open Food Facts, ODbL",
+   "sourceName": "Svijanský máz",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -3795,7 +3864,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "the best-selling Czech 11° — bread where Pilsner Urquell has bite",
+    "cs": "nejprodávanější česká jedenáctka — chleba tam, kde má Plzeň hranu"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -4114,7 +4188,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "closest regional match to Pilsner Urquell"
+   {
+    "en": "closest regional match to Pilsner Urquell",
+    "cs": "nejbližší regionální obdoba Plzně"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -4404,8 +4481,10 @@
   "abv": {
    "value": 5.2,
    "method": "official",
-   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/svijanska-knezna-13",
-   "checkedAt": "2026-08-30"
+   "source": "http://www.pivovarsvijany.cz/index.php",
+   "origin": "the brewery's own site",
+   "sourceName": "Svijanská Kněžna 13 %",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -4688,8 +4767,11 @@
    "method": "unverified"
   },
   "abv": {
-   "value": 4.8,
-   "method": "unverified"
+   "value": 4.6,
+   "method": "official",
+   "source": "http://www.pivovarsvijany.cz/svijanske-pivo/premiovy-lezak-450",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -4707,7 +4789,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Svijanský Máz unfiltered — the same beer with more bread in it",
+    "cs": "nefiltrovaný Svijanský Máz — totéž pivo, jen s víc chlebem"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -5263,11 +5350,17 @@
   "style": "Czech pale lager",
   "plato": {
    "value": 12,
-   "method": "unverified"
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404010328",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-09-03"
   },
   "abv": {
-   "value": 4.7,
-   "method": "unverified"
+   "value": 5.1,
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594404010328",
+   "origin": "Open Food Facts, ODbL",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -5286,7 +5379,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "the most bitter mainstream Czech lager"
+   {
+    "en": "the most bitter mainstream Czech lager",
+    "cs": "nejhořčejší běžně dostupný český ležák"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -5553,7 +5649,11 @@
   },
   "abv": {
    "value": 5.0,
-   "method": "unverified"
+   "method": "official",
+   "source": "https://world.openfoodfacts.org/product/8594403709841",
+   "origin": "Open Food Facts, ODbL",
+   "sourceName": "Original Czech Lager",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
@@ -5572,7 +5672,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "rounder and sweeter than Pilsner Urquell"
+   {
+    "en": "rounder and sweeter than Pilsner Urquell",
+    "cs": "kulatější a sladší než Plzeň"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -6153,7 +6256,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "one of the sweetest mainstream 10°s — the far end from Radegast",
+    "cs": "jedna z nejsladších běžných desítek — opačný pól než Radegast"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -6437,7 +6545,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "the sweetest dark beer on a Czech shelf — closer to cola than to coffee",
+    "cs": "nejsladší tmavé pivo na českém regálu — blíž kole než kávě"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -6709,7 +6822,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "north-Bohemian 12°: bitter, dry, and unfashionable about it",
+    "cs": "severočeská dvanáctka: hořká, suchá a nemoderní"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -6993,7 +7111,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "an 11° that leans malty — Svijanský Máz's quieter neighbour",
+    "cs": "jedenáctka tažená do sladu — tišší soused Svijanského Máze"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -7277,7 +7400,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "a 12° with nothing exaggerated — the middle of the Czech road",
+    "cs": "dvanáctka bez přehánění — přesný střed české cesty"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -7561,7 +7689,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Prague's cheap 10° — thin on purpose, and honest about it",
+    "cs": "levná pražská desítka — řídká záměrně a bez přetvářky"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -7845,7 +7978,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "a malty 12° from Vysočina — fuller than Pilsner Urquell, less bitter",
+    "cs": "sladová dvanáctka z Vysočiny — plnější než Plzeň, méně hořká"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -8103,22 +8241,28 @@
   "id": "cvikov-sklar",
   "breweryId": "pivovar-cvikov",
   "name": "Cvikov Sklář",
-  "menuNameCs": "Cvikov Sklář 11°",
+  "menuNameCs": "Cvikov Sklář 8°",
   "style": "Czech pale lager",
   "plato": {
-   "value": 11,
-   "method": "unverified"
+   "value": 8,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/sklar-8",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-09-03"
   },
   "abv": {
-   "value": 4.6,
-   "method": "unverified"
+   "value": 3.5,
+   "method": "official",
+   "source": "https://www.pivovarcvikov.cz/cs/nase-piva/sklar-8",
+   "origin": "the brewery's own site",
+   "checkedAt": "2026-09-03"
   },
   "flavour": {
    "value": {
     "bitterness": 5,
-    "maltSweetness": 5.5,
-    "body": 4.5,
-    "dryness": 5.5,
+    "maltSweetness": 4.5,
+    "body": 3.0,
+    "dryness": 6.0,
     "roast": 1,
     "fruitEster": 2,
     "sourness": 1,
@@ -8126,10 +8270,15 @@
     "hopProfile": 1
    },
    "method": "inferred",
-   "source": "выведено из стиля и параметров",
-   "checkedAt": "2026-08-31"
+   "source": "выведено из стиля и параметров: 8° выčepní, 3,5 %",
+   "checkedAt": "2026-09-03"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "an 8° that still tastes bitter — the lightest beer in the atlas",
+    "cs": "osmička, která pořád chutná hořce — nejlehčí pivo v atlasu"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -8413,7 +8562,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "a soft 11° from Kácov — Kozel 11 with a little more malt behind it",
+    "cs": "měkká jedenáctka z Kácova — Kozel 11 s trochou sladu navíc"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -8697,7 +8851,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Moravian 11°, with more bitterness than most beers at this gravity",
+    "cs": "moravská jedenáctka s vyšší hořkostí, než je na tuhle stupňovitost zvykem"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {
@@ -8979,7 +9138,10 @@
    "checkedAt": "2026-08-31"
   },
   "tastesLike": [
-   "BrewDog Punk IPA"
+   {
+    "en": "BrewDog Punk IPA brewed in Bohemia — same citrus, tighter finish",
+    "cs": "BrewDog Punk IPA uvařená v Čechách — stejný citrus, sevřenější závěr"
+   }
   ],
   "availability": "core",
   "isAnchor": false,
@@ -9231,7 +9393,12 @@
    "source": "выведено из стиля и параметров",
    "checkedAt": "2026-08-31"
   },
-  "tastesLike": [],
+  "tastesLike": [
+   {
+    "en": "Punk IPA's lighter cousin — the same citrus, less of everything else",
+    "cs": "lehčí sestřenice Punk IPA — stejný citrus, všeho ostatního míň"
+   }
+  ],
   "availability": "core",
   "isAnchor": false,
   "lead": {

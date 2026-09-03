@@ -98,7 +98,8 @@ h1{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:clamp(40p
 .frame{margin:40px 0 0;border:3px solid var(--green);padding:5px;background:var(--green)}
 .frame-in{border:1px solid var(--green-light);background:var(--card-light);padding:26px 30px 28px}
 .frame h2{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:27px;margin:0 0 3px}
-.frame .sub{font-size:15.5px;color:var(--muted);margin:0 0 26px}
+.frame .sub{font-size:15.5px;color:var(--muted);margin:0 0 10px}
+.frame .verdict{font-size:18px;line-height:1.45;color:var(--ink);margin:0 0 24px;max-width:46ch}
 
 .axes{display:flex;flex-direction:column;gap:15px;max-width:830px}
 .ax{display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:center}
@@ -241,6 +242,8 @@ h2.dist span{font-weight:500;letter-spacing:.06em;text-transform:none;font-size:
   border:1px solid currentColor;padding:1px 5px;vertical-align:1px;margin-left:6px}
 .lvl.b{color:var(--green)}
 .lvl.s{color:var(--muted)}
+.foot .src{font-size:12px;line-height:1.55;color:var(--muted);margin-bottom:6px}
+.foot .src a{color:var(--accent)}
 .conf{font-size:14.5px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
 .decl{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 2px;max-width:74ch}
 
@@ -624,7 +627,9 @@ function deltaWord(ax, d, strong){
   }
   const w = POLE[ax][d > 0 ? 1 : 0];
   if (Math.abs(d) < (strong || 4) || NOUNY.has(w)) return w;
-  return (w.startsWith("more ") || w.startsWith("less ") ? (LANG==="cs"?"mnohem ":"much ") : (LANG==="cs"?"mnohem ":"far more ")) + w;
+  /* «far more» годится только перед more/less: остальные слова уже сравнительные,
+     и выходило «far more softer». Для них усилитель — просто «far». */
+  return (w.startsWith("more ") || w.startsWith("less ") ? (LANG==="cs"?"mnohem ":"much ") : (LANG==="cs"?"mnohem ":"far ")) + w;
 }
 function explain(a, c){
   const diffs = AX.map((ax,i)=>({ax,d:c.f[i]-a.f[i]})).filter(x=>Math.abs(x.d)>=1.5)
@@ -743,6 +748,17 @@ function pickAnchor(b) {
     if (d < bestD) { bestD = d; best = c; }
   }
   return (best && bestD <= ANCHOR_MAX) ? best : urquell;
+}
+
+/* Основание числа. Точечное подчёркивание (.miss) означает «оценка», и до сих
+   пор его получали все числа подряд — включая те, что сверены с этикеткой.
+   Официальные показываем сплошными и называем источник; остальное как было. */
+function provLine(label, p){
+  if (!p) return "";
+  return '<div class="src">' + label + " · " + (p.origin ? esc(T(p.origin)) : "")
+    + (p.at ? " · " + esc(p.at) : "")
+    + (p.src ? ' <a href="' + esc(p.src) + '" target="_blank" rel="noopener">' + T("source →") + "</a>" : "")
+    + "</div>";
 }
 
 function lvlTag(l){ return '<span class="lvl ' + (l === "brewery" ? "b" : "s") + '">' + T(l === "brewery" ? "brewery" : "style") + "</span>"; }
@@ -995,6 +1011,7 @@ function beerPage(id){
     <div class="frame"><div class="frame-in">
       <h2>${LANG==="cs"?"Srovnáno s ":"Compared with "}${esc(anchor.name)}</h2>
       <p class="sub">${T("the beer you have probably already had")}</p>
+      ${b.like && b.like.length ? `<p class="verdict">${esc(L(b.like[0]))}</p>` : ""}
       <div class="axes">${axesHtml}</div>
       <div class="legend">
         <span><i class="k1"></i>${esc(anchor.name)}</span>
@@ -1029,13 +1046,16 @@ function beerPage(id){
           <div class="head">${T("Na etiketě")}</div>
           <div class="in">
             <div class="kv"><span>${T("Gravity")}</span>${b.plato
-              ? `<b class="miss">${b.plato} °P</b>`
+              ? `<b class="${b.platoP ? "" : "miss"}">${b.plato} °P</b>`
               : `<b class="miss" style="font-size:13.5px;font-weight:600">${T("no gravity in source")}</b>`}</div>
-            <div class="kv"><span>${T("Alcohol")}</span>${b.abv ? `<b class="miss">${b.abv} %</b>` : `<b class="miss">—</b>`}</div>
+            <div class="kv"><span>${T("Alcohol")}</span>${b.abv ? `<b class="${b.abvP ? "" : "miss"}">${b.abv} %</b>` : `<b class="miss">—</b>`}</div>
             <div class="kv"><span>${T("Style")}</span><b style="font-size:14.5px;font-weight:600">${esc(ST(b.style))}</b></div>
             <div class="kv"><span>${T("Brewery")}</span><b style="font-size:14.5px;font-weight:600">${
               br.id ? `<button data-go="#/brewery/${br.id}" style="color:var(--accent);font-weight:600">${esc(br.name)}</button>` : "—"}</b></div>
-            <div class="foot">${T("Every dotted value is")} <b> ${T("unverified")} </b> ${T("— typed from knowledge for this\n              demo, not read off a label. Before launch each is confirmed or deleted.")} <a class="fixlink" href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></div>
+            <div class="foot">${provLine(T("Gravity"), b.platoP)}${provLine(T("Alcohol"), b.abvP)}${
+              (b.plato && !b.platoP) || (b.abv && !b.abvP)
+                ? `${T("Every dotted value is")} <b> ${T("unverified")} </b> ${T("— typed from knowledge for this\n              demo, not read off a label. Before launch each is confirmed or deleted.")} `
+                : ""}<a class="fixlink" href="#/${LANG}/correct">${T("Brewery: something wrong here? →")}</a></div>
           </div>
         </div>
 
@@ -1161,7 +1181,8 @@ function runMatch(){
     const vs = venuesFor(b.breweryId).slice(0,3);
     return `<button class="res" data-go="#/beer/${b.id}">
       <span class="res-h"><h3>${esc(b.name)}</h3><span class="cs">${esc(b.cs)}</span></span>
-      <span class="exp">${explain(a,b)}</span>
+      <span class="exp">${a.id === pickAnchor(b).id && b.like && b.like.length
+        ? esc(L(b.like[0])) : explain(a,b)}</span>
       <span class="meta">${b.plato ? b.plato+"° · " : ""}${b.abv ? b.abv+" % · " : ""}${esc(ST(b.style))}
         — ${LANG==="cs"?"čepují:":"poured at"} ${vs.map(v=>esc(v.n)).join(", ")}${b.venues>3 ? " " + T("and %s more").replace("%s", b.venues-3) : ""}</span>
     </button>`;
